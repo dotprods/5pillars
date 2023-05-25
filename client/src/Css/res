@@ -1,0 +1,139 @@
+@media (max-width: 1024px) {
+  .container {
+    height: 40vh;
+  }
+  .mosque {
+    width: 1000px;
+  }
+}
+@media (max-width: 960px) {
+  .mosque {
+    width: 1500px;
+  }
+}
+
+@media (max-width: 830px) {
+  .container {
+    height: 60vh;
+  }
+  .mosque {
+    width: 800px;
+  }
+  .container h1 {
+    font-size: 4rem;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    text-align: left;
+    color: aliceblue;
+  }
+}
+
+@media (max-width: 765px) {
+  .container {
+    height: 60vh;
+  }
+  .course {
+    position: static;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    align-items: center;
+  }
+  .mosque {
+    width: 700px;
+    /* height: 600px; */
+  }
+  .coo:first-child {
+    margin-top: 130%;
+  }
+  .container h1 {
+    font-size: xx-large;
+  }
+}
+
+@media (max-width: 540px) {
+  .container {
+    height: 75vh;
+  }
+  .coo:first-child {
+    margin-top: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    height: 65vh;
+  }
+  .coo:first-child {
+    margin-top: 155%;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    height: 75vh;
+  }
+  .coo:first-child {
+    margin-top: 155%;
+  }
+}
+@media (max-width: 360px) {
+  .container {
+    height: 65vh;
+  }
+}
+@media (max-width: 320px) {
+  .container {
+    height: 85vh;
+  }
+  .coo:first-child {
+    margin-top: 155%;
+  }
+}
+
+/* @media (max-width: 420px) {
+  .container {
+    height: 70vh;
+  }
+  .coo:first-child {
+    margin-top: 330px;
+  }
+  .container h1 {
+    font-size: xx-large;
+  }
+}
+@media (max-width: 389px) {
+  .container {
+    height: 70vh;
+  }
+  .coo:first-child {
+    margin-top: 190px;
+  }
+  .container h1 {
+    font-size: xx-large;
+  }
+} */
+
+/* @media (max-width: 400px) {
+  .container {
+    height: 50vh;
+  }
+  .course {
+    position: static;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    align-items: center;
+  }
+  .mosque {
+    width: 500px;
+  }
+  .coo:first-child {
+    margin-top: 130px;
+  }
+  .container h1 {
+    font-size: xx-large;
+  }
+} */

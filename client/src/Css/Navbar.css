@@ -1,0 +1,128 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200;1,300&family=Poppins:wght@100;200;300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200;1,300&family=Nothing+You+Could+Do&family=Poppins:wght@100;200;300;400;600;700&family=Quicksand&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+li {
+  list-style: none;
+}
+.navbar {
+  z-index: 3;
+  position: fixed;
+  width: 100%;
+  background: transparent;
+  height: 13vh;
+  /* line-height: 10vh; */
+  /* box-shadow: rgba(50, 50, 93, 0.23) 0 30px 30px -20px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border-bottom: 2px solid #013220; */
+}
+.scrolled {
+  background: #a6c6cc;
+}
+.logo {
+  /* font-size: 30px; */
+  margin-left: 1em;
+  width: 17em;
+}
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  width: 75%;
+  /* margin-left: 15%; */
+}
+
+.nav-links li {
+  color: white;
+  font-size: 18px;
+  padding: 0 10px;
+  margin: 0 10px;
+  cursor: pointer;
+  text-transform: capitalize;
+  text-decoration: none;
+  list-style: none;
+  font-size: 20px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.nav-links > :first-child > li {
+  color: white;
+  font-size: 20px;
+  padding: 0;
+  padding: 0 10px;
+  margin: 0 10px;
+  cursor: pointer;
+  text-transform: capitalize;
+  text-decoration: none;
+  list-style: none;
+  /* border-bottom: 1px solid black; */
+  /* border-radius: 30px; */
+}
+.nav-links li:hover {
+  /* scale: 1.22;
+  color: #013220;
+  visibility: visible;
+  opacity: 0.8;
+  */
+  /* background-color: #d89f55;
+  color: #013220;
+  border-radius: 4px; */
+  transition: all 0.3s ease;
+}
+.nav-links Link {
+  text-decoration: none;
+}
+button {
+  border: none;
+  background: none;
+  font-size: 20px;
+}
+.mobile-menu-icon {
+  display: none;
+  background: none;
+}
+
+/* responsive for navigation */
+
+@media (max-width: 768px) {
+  .navbar {
+    background: #d9a25a;
+  }
+  .nav-links li {
+    display: none;
+  }
+  .nav-links-mobile {
+    position: absolute;
+    display: block;
+    list-style: none;
+    box-shadow: rgba(50, 50, 93, 0.23) 0 30px 30px -20px;
+    left: 0;
+    top: 100%;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    background: #fff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .nav-links-mobile li {
+    color: #d48c2d;
+  }
+  ul li {
+    padding: 25px 32px;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+  }
+  .mobile-menu-icon {
+    position: absolute;
+    display: block;
+    right: 20px;
+    color: white;
+  }
+}
