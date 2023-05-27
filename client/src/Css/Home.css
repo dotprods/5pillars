@@ -26,9 +26,9 @@ body::-webkit-scrollbar {
 
 .container h1 {
   font-family: "Quicksand", sans-serif;
-  font-size: 4rem;
+  font-size: 5rem;
   position: absolute;
-  top: 30%;
+  top: 27%;
   left: 20%;
   text-align: left;
   color: aliceblue;
@@ -67,14 +67,14 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: center;
   width: 100%;
-  bottom: -380px;
+  bottom: -320px;
 }
 
 .coo {
   position: relative;
   border-radius: 10px;
-  margin: 15px;
-  height: 420px;
+  margin: 15px 85px 15px 15px;
+  height: 350px;
   width: 250px;
   display: flex;
   flex-direction: column;
@@ -88,6 +88,8 @@ body::-webkit-scrollbar {
   color: #fff;
   font-weight: 200;
   padding: 0 15px 0 15px;
+  font-size: small;
+  margin-top: 10px;
 }
 .coo h3 {
   color: #fff;
@@ -164,8 +166,9 @@ body::-webkit-scrollbar {
   font-weight: 400;
   /* width: 20%; */
   left: 20%;
-  top: 66%;
+  top: 70%;
   padding: 10px;
+  cursor: pointer;
 }
 .line {
   color: gray;
@@ -316,10 +319,24 @@ body::-webkit-scrollbar {
     top: 67%;
     height: 47px;
   }
+  .coo {
+    margin: 15px;
+  }
 }
-/* 
-css for tabs */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
+  .mosque {
+    width: 100%;
+    height: 60%;
+  }
+  .register-btn {
+    position: absolute;
+    top: 50%;
+    width: 150px;
+    height: 50px;
+  }
+}
+/* css for tabs */
+@media (min-width: 769px) and (max-width: 1023px) {
   .container {
     height: 60vh;
   }
@@ -341,12 +358,22 @@ css for tabs */
   .course {
     bottom: -380px;
   }
+  .coo {
+    margin: 15px;
+    text-align: center;
+    align-items: center;
+    height: 390px;
+  }
+  .coo h3 {
+    text-align: center;
+    margin-left: 0px;
+  }
 
   /* .circle {
     height: 20%;
   } */
 }
-@media (min-width: 767px) and (max-width: 768px) {
+@media (min-width: 740px) and (max-width: 768px) {
   .container h3 {
     left: 0;
   }
@@ -362,14 +389,21 @@ css for tabs */
   }
   .coo h3 {
     top: 28%;
+    margin-left: 22px;
   }
   .course {
     bottom: -450px;
   }
+  .wording-cont {
+    margin-top: 470px;
+  }
+  .count {
+    margin-top: 20px;
+  }
 }
 
 /*css for mobile*/
-@media only screen and (max-width: 766px) {
+@media only screen and (max-width: 767px) {
   .container {
     height: 60vh;
   }
@@ -415,7 +449,7 @@ css for tabs */
   .register-btn {
     position: absolute;
     left: 20%;
-    top: 53%;
+    top: 56%;
     height: 44px;
     text-align: center;
   }
@@ -500,26 +534,26 @@ css for tabs */
   margin-top: 10vh;
 }
 .tutor-register {
-  width: 40%;
+  width: 45%;
   display: flex;
 
   position: relative;
   background: #fff;
   border-radius: 10px;
   border: 3px solid #d9a057;
-  height: 300px;
+  height: 400px;
 }
 
 .habibi {
   position: absolute;
-  right: -60px;
+  right: -100px;
   top: -40px;
-  width: 60%;
+  width: 78%;
   height: 130%;
 }
 .tutor-text {
   border-radius: 13px;
-  width: 60%;
+  width: 50%;
   background: #f5f5f5;
   display: flex;
   flex-direction: column;
@@ -536,15 +570,25 @@ css for tabs */
   margin-top: 15px;
   margin-bottom: 10px;
   color: #fff;
+  cursor: pointer;
 }
 .tutor-text h1 {
   color: #0e8d1e;
-  font-size: x-large;
+  font-size: xx-large;
   font-weight: 800;
   font-family: "Quicksand", sans-serif;
 }
 .tutor-text p {
   color: #757575;
+}
+@media only screen and (max-width: 1035px) {
+  .tutor-register {
+    width: 70%;
+    height: 400px;
+  }
+  .habibi {
+    width: 70%;
+  }
 }
 
 @media only screen and (max-width: 766px) {
