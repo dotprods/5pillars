@@ -195,6 +195,9 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div className="feedback">
+        <h1>Student Feedbacks</h1>
+      </div>
 
       <div className="subscribe">
         <img src={mosque2} alt="subscribe-mosque"></img>

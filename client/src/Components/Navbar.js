@@ -13,7 +13,7 @@ function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      if (scrollPosition >= 0.6 * window.innerHeight) {
+      if (scrollPosition >= 0.4 * window.innerHeight) {
         setScrolled(true);
       } else {
         setScrolled(false);

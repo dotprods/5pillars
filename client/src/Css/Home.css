@@ -702,3 +702,11 @@ p {
     width: 50%;
   }
 }
+.feedback {
+  height: 60vh;
+  background: #fff;
+  text-align: center;
+}
+.feedback h1 {
+  color: #757575;
+}
