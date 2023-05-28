@@ -11,21 +11,29 @@ import boy from "../assets/Boy.png";
 import girl from "../assets/Girl.png";
 import { useMotionValue, useTransform, motion } from "framer-motion";
 import Habibi from "../assets/vsd.png";
+import mosque2 from "../assets/Mosque2.png";
+import Footer from "./Footer";
 
 const Home = () => {
   const [counteOn, setCounterOn] = useState(false);
-  // const x = useMotionValue(0);
-  // const y = useMotionValue(0);
-  // const rotateX = useTransform(y, [-100, 100], [30, -30]);
-  // const rotateY = useTransform(x, [-100, 100], [-30, 30]);
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
 
-  // const colors = [
-  //   { value: "#b6a179" },
-  //   { value: "#272425" },
-  //   { value: "#6389cb" },
-  //   { value: "#f2c758" },
-  //   { value: "#ffffff" },
-  // ];
+  const validateEmail = (email) => {
+    // Regular expression for email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const handleSubscribe = () => {
+    if (validateEmail(email)) {
+      // Send the email to the backend using axios
+    } else {
+      setError("Please enter a valid email address.");
+      alert(error);
+    }
+  };
+
   return (
     <>
       {/* <Parallax strength={-600} bgImage={myImage}> */}
@@ -35,7 +43,9 @@ const Home = () => {
         <h1>
           Learn Quran <br /> Online With Us!
         </h1>
-
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <h2 className="register-btn2"> Register Now</h2>
+        </Link>
         <Link to="/" style={{ textDecoration: "none" }}>
           <h2 className="register-btn"> Register Now</h2>
         </Link>
@@ -185,6 +195,24 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <div className="subscribe">
+        <img src={mosque2} alt="subscribe-mosque"></img>
+        <div className="subscribe-text">
+          <h2>subscribe</h2>
+          <p>Be the first to hear our latest news</p>
+          <div className="search-bar">
+            <input
+              type="text"
+              placeholder="Your email address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            ></input>
+            <button onClick={handleSubscribe}>subscribe</button>
+          </div>
+        </div>
+      </div>
+      <Footer />
     </>
   );
 };

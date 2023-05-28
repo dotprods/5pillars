@@ -170,6 +170,20 @@ body::-webkit-scrollbar {
   padding: 10px;
   cursor: pointer;
 }
+.register-btn2 {
+  position: absolute;
+  font-size: large;
+  border-radius: 8px;
+  background: #086271;
+  color: white;
+  font-weight: 400;
+  /* width: 20%; */
+  left: 20%;
+  top: 70%;
+  padding: 13px;
+  cursor: pointer;
+  opacity: 0.4;
+}
 .line {
   color: gray;
   position: absolute;
@@ -319,6 +333,10 @@ body::-webkit-scrollbar {
     top: 67%;
     height: 47px;
   }
+  .register-btn2 {
+    top: 67%;
+    height: 47px;
+  }
   .coo {
     margin: 15px;
   }
@@ -329,6 +347,12 @@ body::-webkit-scrollbar {
     height: 60%;
   }
   .register-btn {
+    position: absolute;
+    top: 50%;
+    width: 150px;
+    height: 50px;
+  }
+  .register-btn2 {
     position: absolute;
     top: 50%;
     width: 150px;
@@ -352,6 +376,10 @@ body::-webkit-scrollbar {
     color: aliceblue;
   }
   .register-btn {
+    top: 55%;
+    height: 43px;
+  }
+  .register-btn2 {
     top: 55%;
     height: 43px;
   }
@@ -384,6 +412,10 @@ body::-webkit-scrollbar {
     height: 450px;
   }
   .register-btn {
+    top: 63%;
+    height: 43px;
+  }
+  .register-btn2 {
     top: 63%;
     height: 43px;
   }
@@ -447,6 +479,13 @@ body::-webkit-scrollbar {
     bottom: 7%;
   }
   .register-btn {
+    position: absolute;
+    left: 20%;
+    top: 56%;
+    height: 44px;
+    text-align: center;
+  }
+  .register-btn2 {
     position: absolute;
     left: 20%;
     top: 56%;
@@ -601,5 +640,65 @@ body::-webkit-scrollbar {
   }
   .habibi {
     right: -40px;
+  }
+}
+.subscribe {
+  display: flex;
+  justify-content: space-evenly;
+  background: #f5f5f5;
+  height: 300px;
+  align-items: center;
+}
+.subscribe .subscribe-text {
+}
+
+.subscribe img {
+  width: 30%;
+}
+.search-bar {
+  background: #efb93c;
+  display: flex;
+  padding: 10px;
+  border-radius: 10px;
+}
+.subscribe-text h2,
+p {
+  color: #757575;
+}
+.subscribe-text p {
+  margin-left: 40px;
+  margin-bottom: 25px;
+}
+.subscribe-text h2 {
+  margin-bottom: 0;
+}
+.search-bar input[type="text"] {
+  background: #f0bf4b;
+  border-radius: 10px;
+  width: 250px;
+  border: none; /* Remove the default border */
+  outline: none; /* Remove the outline when focused */
+  color: white;
+}
+
+.search-bar input::placeholder {
+}
+.search-bar button {
+  border-radius: 8px;
+  background: #f5f5f5;
+  color: #0e8d1e;
+  padding: 8px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+  .subscribe {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .subscribe-text {
+    text-align: center;
+  }
+  .subscribe img {
+    width: 50%;
   }
 }
