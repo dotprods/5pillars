@@ -161,7 +161,7 @@ body::-webkit-scrollbar {
   position: absolute;
   font-size: large;
   border-radius: 8px;
-  background: #086271;
+  background: #056e13;
   color: white;
   font-weight: 400;
   /* width: 20%; */
@@ -174,7 +174,7 @@ body::-webkit-scrollbar {
   position: absolute;
   font-size: large;
   border-radius: 8px;
-  background: #086271;
+  background: #056e13;
   color: white;
   font-weight: 400;
   /* width: 20%; */
@@ -320,13 +320,13 @@ body::-webkit-scrollbar {
   transform: translate(-10%, -50%) scale(1.5);
 }
 .c1 {
-  background: #086271;
+  background: #056e13;
 }
 .c2 {
-  background: #086271;
+  background: #056e13;
 }
 .c3 {
-  background: #086271;
+  background: #056e13;
 }
 @media (max-width: 1035px) {
   .register-btn {
