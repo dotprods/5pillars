@@ -43,7 +43,7 @@ function Navbar() {
         <Link to="/" style={{ textDecoration: "none" }}>
           <li>Home</li>
         </Link>
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <Link to="/packages" style={{ textDecoration: "none" }}>
           <li>Package</li>
         </Link>
         <Link to="/aboutUs" style={{ textDecoration: "none" }}>

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./Components/Home";
 import Register from "./Components/Register";
+import Packages from "./Components/Packages";
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
           </Route>
           <Route path="/register" component={Register} exact>
             <Register />
+          </Route>
+          <Route path="/packages" component={Packages} exact>
+            <Packages />
           </Route>
         </Switch>
       </Router>

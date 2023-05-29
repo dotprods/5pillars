@@ -1,6 +1,7 @@
 import React, { Component, useState, useEffect } from "react";
 import { Link, BrowserRouter as Router } from "react-router-dom";
 import "../Css/Register.css";
+import Navbar from "./Navbar";
 const Register = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [formData, setFormData] = useState({
