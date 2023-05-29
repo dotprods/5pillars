@@ -197,6 +197,44 @@ const Home = () => {
       </div>
       <div className="feedback">
         <h1>Student Feedbacks</h1>
+        <div className="feedback-items">
+          <div className="feedback-item">
+            <div className="feedback-img feed1"></div>
+            <h2 className="name">Zaid</h2>
+            <h3 className="name-course">Hifdh student</h3>
+            <p className="feedback-text">
+              ChatGPT is a sibling model to InstructGPT, which is trained to
+              follow an instruction in a prompt and provide a detailed response.
+              We are excited to introduce ChatGPT to get users’ feedback and
+              learn about its strengths and weaknesses. During the research
+              preview, usage of ChatGPT is free. Try it now at chat.openai.com.
+            </p>
+          </div>
+          <div className="feedback-item feed2">
+            <div className="feedback-img"></div>
+            <h2 className="name">Zaid</h2>
+            <h3 className="name-course">Hifdh student</h3>
+            <p className="feedback-text">
+              ChatGPT is a sibling model to InstructGPT, which is trained to
+              follow an instruction in a prompt and provide a detailed response.
+              We are excited to introduce ChatGPT to get users’ feedback and
+              learn about its strengths and weaknesses. During the research
+              preview, usage of ChatGPT is free. Try it now at chat.openai.com.
+            </p>
+          </div>
+          <div className="feedback-item">
+            <div className="feedback-img feed3"></div>
+            <h2 className="name">Zaid</h2>
+            <h3 className="name-course">Hifdh student</h3>
+            <p className="feedback-text">
+              ChatGPT is a sibling model to InstructGPT, which is trained to
+              follow an instruction in a prompt and provide a detailed response.
+              We are excited to introduce ChatGPT to get users’ feedback and
+              learn about its strengths and weaknesses. During the research
+              preview, usage of ChatGPT is free. Try it now at chat.openai.com.
+            </p>
+          </div>
+        </div>
       </div>
 
       <div className="subscribe">
