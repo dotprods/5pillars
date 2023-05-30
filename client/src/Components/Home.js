@@ -13,6 +13,8 @@ import { useMotionValue, useTransform, motion } from "framer-motion";
 import Habibi from "../assets/vsd.png";
 import mosque2 from "../assets/Mosque2.png";
 import Footer from "./Footer";
+import { BsTriangle } from "react-icons/bs";
+import { FiPlus } from "react-icons/fi";
 
 const Home = () => {
   const [counteOn, setCounterOn] = useState(false);
@@ -43,10 +45,10 @@ const Home = () => {
         <h1>
           Learn Quran <br /> Online With Us!
         </h1>
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <Link to="/register" style={{ textDecoration: "none" }}>
           <h2 className="register-btn2"> Register Now</h2>
         </Link>
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <Link to="/register" style={{ textDecoration: "none" }}>
           <h2 className="register-btn"> Register Now</h2>
         </Link>
 
@@ -199,6 +201,15 @@ const Home = () => {
         <h1>Student Feedbacks</h1>
         <div className="feedback-items">
           <div className="feedback-item">
+            <div className="triangle1">
+              <BsTriangle size={12} />
+            </div>
+            <div className="square"></div>
+            <div className="plus">
+              <FiPlus size={14} />
+            </div>
+            <div className="circle-1"></div>
+
             <div className="feedback-img feed1"></div>
             <h2 className="name">Zaid</h2>
             <h3 className="name-course">Hifdh student</h3>
@@ -210,8 +221,16 @@ const Home = () => {
               preview, usage of ChatGPT is free. Try it now at chat.openai.com.
             </p>
           </div>
-          <div className="feedback-item feed2">
-            <div className="feedback-img"></div>
+          <div className="feedback-item ">
+            <div className="triangle1">
+              <BsTriangle size={12} />
+            </div>
+            <div className="square"></div>
+            <div className="plus">
+              <FiPlus size={14} />
+            </div>
+            <div className="circle-1"></div>
+            <div className="feedback-img feed2"></div>
             <h2 className="name">Zaid</h2>
             <h3 className="name-course">Hifdh student</h3>
             <p className="feedback-text">
@@ -223,6 +242,14 @@ const Home = () => {
             </p>
           </div>
           <div className="feedback-item">
+            <div className="triangle1">
+              <BsTriangle size={12} />
+            </div>
+            <div className="square"></div>
+            <div className="plus">
+              <FiPlus size={14} />
+            </div>
+            <div className="circle-1"></div>
             <div className="feedback-img feed3"></div>
             <h2 className="name">Zaid</h2>
             <h3 className="name-course">Hifdh student</h3>

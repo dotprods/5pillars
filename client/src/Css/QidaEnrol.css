@@ -10,16 +10,17 @@
   width: 100%;
   z-index: 0;
 }
-.packages {
+.qaida-packages {
   display: flex;
   justify-content: space-around;
   margin-top: 195px;
   margin-bottom: 50px;
 }
-.package {
+.qaida-package {
   width: 25%;
 }
-.package-def {
+.qaida-package-def,
+.quran-package-def {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,24 +29,27 @@
   border-radius: 10px;
   background-color: #056e13;
   height: 50vh;
-  padding: 20px;
 }
-.package-def h3 {
+.qaida-package-def h3,
+.quran-package-def h3 {
   margin-top: 25px;
 }
-.package-def h1 {
+.qaida-package-def h1,
+.quran-package-def h1 {
   font-size: 80px;
 }
-.package-def p {
+.quran-package-def p,
+.qaida-package-def p {
   color: rgb(182, 179, 179);
 }
-.package-def h1 span {
+.qaida-package-def h1 span,
+.quran-package-def h1 span {
   font-size: medium;
 }
-.package-button {
+.qaida-package-button {
   margin-top: 15px;
 }
-.package-button button {
+.qaida-package-button button {
   background: #efb836;
   padding: 7px;
   border-radius: 10px;
@@ -53,6 +57,20 @@
   color: #fff;
   cursor: pointer;
   width: 180px;
+}
+.quran-package-buttons button {
+  background: #efb836;
+  padding: 7px;
+  border-radius: 10px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  width: 280px;
+  margin: 10px;
+}
+.quran-package-buttons button span {
+  font-weight: 600;
+  margin-left: 15px;
 }
 .dropdown-btn {
   margin-top: 15px;

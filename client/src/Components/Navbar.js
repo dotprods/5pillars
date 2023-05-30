@@ -44,13 +44,19 @@ function Navbar() {
           <li>Home</li>
         </Link>
         <Link to="/packages" style={{ textDecoration: "none" }}>
-          <li>Package</li>
+          <li>Packages</li>
         </Link>
-        <Link to="/aboutUs" style={{ textDecoration: "none" }}>
-          <li>About</li>
+        <Link to="/aboutus" style={{ textDecoration: "none" }}>
+          <li>About Us</li>
         </Link>
         <Link to="/register" style={{ textDecoration: "none" }}>
-          <li>Register</li>
+          <li>Tutors</li>
+        </Link>
+        <Link to="/register" style={{ textDecoration: "none" }}>
+          <li>Projects</li>
+        </Link>
+        <Link to="/register" style={{ textDecoration: "none" }}>
+          <li>Contact Us</li>
         </Link>
       </ul>
       <button className="mobile-menu-icon" onClick={handleMobileMenu}>

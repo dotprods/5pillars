@@ -19,7 +19,7 @@ body::-webkit-scrollbar {
   height: 100%;
   background-image: url("../assets/pattern.png");
   background-size: cover;
-  z-index: -1; /* Make sure the background is behind other elements */
+  z-index: -2; /* Make sure the background is behind other elements */
   /* background-color: rgba(255, 255, 255, 0.1); */
   opacity: 0.3;
 }
@@ -720,9 +720,10 @@ p {
   justify-content: center;
   width: 20%;
   align-items: center;
-  height: 65vh;
+  height: auto;
   border-radius: 10px;
   padding: 30px;
+  position: relative;
 
   /* Add the box shadow styles */
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
@@ -737,23 +738,87 @@ p {
   height: 90px;
   position: relative;
 }
-.feedback-img::after {
+
+/* Triangle shape */
+.triangle1 {
+  position: absolute;
+  top: 25%;
+  right: 35%;
+  /* width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 12px solid red;
+  background: none; */
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+.triangle1 svg {
+  color: blue;
+}
+.plus {
+  position: absolute;
+  top: 18%;
+  right: 67%;
+  /* width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 12px solid blue;
+  background: none; */
+  transition: opacity 1.2s ease-in-out;
+  opacity: 0;
+}
+.plus svg {
+  color: red;
+}
+.circle-1 {
+  position: absolute;
+  top: 27%;
+  right: 60%;
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  border-radius: 50%;
+  border: #efb93c 2px solid;
+  transition: opacity 1.4s ease-in-out;
+  opacity: 0;
+}
+/* Square shape */
+.square {
+  position: absolute;
+  top: 12%;
+  right: 28%;
+  width: 12px;
+  height: 12px;
+  border: 2px solid green;
+  transition: opacity 1.6s ease-in-out;
+  opacity: 0;
+}
+
+.feedback-item:hover .triangle1,
+.feedback-item:hover .plus,
+.feedback-item:hover .circle-1,
+.feedback-item:hover .square {
+  opacity: 1;
+}
+.feedback-item:hover .feedback-img {
+  box-shadow: 0px 0px 10px 2px rgba(4, 193, 236, 0.6);
+}
+
+/* .feedback-img::after {
   content: "";
   position: absolute;
   width: 100px;
   height: 100px;
   border-radius: 50%;
   background-color: transparent;
-  right: -6px; /* Adjust this value to control the distance between the div and the circle */
+  right: -6px;
   top: 50%;
   transform: translateY(-50%);
   border: 2px solid #d9a057;
-}
-/* .feed1 {
-  background: url("../assets/QurLes.png");
-  background-size: cover;
-  background-position: center;
 } */
+
 .name {
   color: #757575;
   margin-top: 20px;
@@ -766,6 +831,18 @@ p {
 .feedback-item p {
   font-size: small;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .feedback-item {
+    width: 31%;
+    height: auto;
+  }
+  .feedback-item:hover .triangle1,
+  .feedback-item:hover .plus,
+  .feedback-item:hover .circle-1,
+  .feedback-item:hover .square {
+    opacity: 0;
+  }
+}
 @media only screen and (max-width: 766px) {
   .feedback-items {
     flex-direction: column;
@@ -775,5 +852,11 @@ p {
   .feedback-item {
     width: 80%;
     margin-bottom: 10px;
+  }
+  .feedback-item:hover .triangle1,
+  .feedback-item:hover .plus,
+  .feedback-item:hover .circle-1,
+  .feedback-item:hover .square {
+    opacity: 0;
   }
 }

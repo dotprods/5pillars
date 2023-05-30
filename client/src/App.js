@@ -4,6 +4,8 @@ import "./App.css";
 import Home from "./Components/Home";
 import Register from "./Components/Register";
 import Packages from "./Components/Packages";
+import QaidaEnrol from "./Components/QaidaEnrol";
+import AboutUs from "./Components/AboutUs";
 
 function App() {
   return (
@@ -18,6 +20,12 @@ function App() {
           </Route>
           <Route path="/packages" component={Packages} exact>
             <Packages />
+          </Route>
+          <Route path="/qaida" component={QaidaEnrol} exact>
+            <QaidaEnrol />
+          </Route>
+          <Route path="/aboutus" component={AboutUs} exact>
+            <AboutUs />
           </Route>
         </Switch>
       </Router>
