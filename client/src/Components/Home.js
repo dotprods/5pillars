@@ -62,7 +62,7 @@ const Home = () => {
               We have highly qualified tutors who can deliver lessons in Qaida
               and Quran recitation, working with you to achieve your goals.
             </p>
-            <Link to="/" style={{ textDecoration: "none" }}>
+            <Link to="/qaida" style={{ textDecoration: "none" }}>
               <h2 className="learn-btn"> Learn more</h2>
             </Link>
             <hr className="line" />
