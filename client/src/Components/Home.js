@@ -102,8 +102,9 @@ const Home = () => {
         <img src={girl} alt="girl image" className="word-img girl"></img>
         <div className="wording">
           <h2>
-            5 Pillars Academy is an ideal online solution for learning <br />
-            the Quran & enhancing your Islamic knowledge
+            5 Pillars Academy is an ideal <span>online</span> solution for
+            learning <br />
+            the Quran & enhancing <span>your</span> Islamic knowledge
           </h2>
           <p>
             We cater to individuals of all ages and levels of learning, and our

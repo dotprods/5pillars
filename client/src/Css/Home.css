@@ -73,7 +73,8 @@ body::-webkit-scrollbar {
 .coo {
   position: relative;
   border-radius: 10px;
-  margin: 15px 85px 15px 15px;
+  /* margin: 15px 85px 15px 15px; */
+  margin-right: 50px;
   height: 350px;
   width: 250px;
   display: flex;
@@ -220,14 +221,14 @@ body::-webkit-scrollbar {
 } */
 .wording-cont {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   /* height: 100vh; */
   margin-top: 380px;
   align-items: center;
 }
 .word-img {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 250px;
 }
 .wording {
   text-align: center;
@@ -236,7 +237,10 @@ body::-webkit-scrollbar {
   color: #d9a057;
   font-weight: 200;
   font-family: "Quicksand", sans-serif;
-  font-size: xx-large;
+  font-size: 31px;
+}
+.wording h2 span {
+  font-weight: 400;
 }
 .wording-cont p {
   margin-top: 5px;
@@ -262,19 +266,20 @@ body::-webkit-scrollbar {
   font-size: x-large;
   margin-bottom: 10px;
   font-family: "Quicksand", sans-serif;
-  color: black;
+  color: #757575;
 }
 
 .count {
   background: #f5f5f5;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 
   border-radius: 14px;
 }
 .count-in {
   padding: 10px 20px;
-  margin: 1em 0;
+  margin: 1em 30px;
+  text-align: center;
 }
 .count-in h3 {
   color: #0e8d1e;
@@ -286,8 +291,8 @@ body::-webkit-scrollbar {
   color: #0e8d1e;
 }
 .count-in:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(-4px);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px); */
 }
 
 @keyframes loaderAnimation1 {
