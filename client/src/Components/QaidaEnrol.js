@@ -131,7 +131,7 @@ const QaidaEnrol = () => {
               </div>
             </div>
 
-            <div className="qaida-package-button">
+            <div className="qaida-package-button qaida-button">
               <button className="btn-enroll">Enrol Now</button>
             </div>
           </div>

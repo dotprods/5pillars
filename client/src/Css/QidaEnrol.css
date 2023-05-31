@@ -12,21 +12,23 @@
 }
 .qaida-packages {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-top: 195px;
   margin-bottom: 50px;
 }
 .qaida-package {
-  width: 25%;
+  width: 350px;
+  margin-left: 50px;
 }
 .quran-package {
-  width: 35%;
+  width: 550px;
+  margin-left: 50px;
 }
 
 .quran-package-def {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   color: #fff;
   border-radius: 10px;
@@ -47,23 +49,34 @@
 .quran-package-def h3 {
   margin-top: 25px;
   font-size: xx-large;
+  font-family: "Quicksand", sans-serif;
 }
 
 .quran-package-def h3 {
+  margin-top: 15px;
   font-size: xx-large;
 }
 .qaida-package-def h1 {
   font-size: 80px;
+  font-family: "Quicksand", sans-serif;
 }
-.quran-package-def p,
-.qaida-package-def p {
+.quran-package-def p {
   color: rgb(182, 179, 179);
+  font-family: "Quicksand", sans-serif;
+}
+.qaida-package-def p {
+  color: #fff;
+  opacity: 0.4;
 }
 .qaida-package-def h1 span {
   font-size: medium;
+  font-family: "Quicksand", sans-serif;
 }
 .qaida-package-button {
   margin-top: 15px;
+}
+.qaida-button {
+  margin-bottom: 40px;
 }
 .qaida-package-button button {
   background: #efb836;
@@ -102,20 +115,24 @@
 .session2-btn h2 {
   font-weight: 400;
   font-size: large;
+  font-family: "Quicksand", sans-serif;
 }
 .session1-btn h1,
 .session2-btn h1 {
   font-size: 45px;
   margin-top: -15px;
   color: #056e13;
+  font-family: "Quicksand", sans-serif;
 }
 .session1-btn h1 span,
 .session2-btn h1 span {
   font-size: small;
+  font-family: "Quicksand", sans-serif;
 }
 .session1-btn p,
 .session2-btn p {
   font-size: small;
+  font-family: "Quicksand", sans-serif;
 }
 .dropdown-btn {
   margin-top: 15px;
@@ -138,7 +155,7 @@
 .dropdown-content h2 {
   font-size: medium;
   color: #757575;
-
+  font-family: "Quicksand", sans-serif;
   font-weight: 600;
   margin: 25px;
 }
@@ -153,9 +170,11 @@
   .qaida-package {
     width: 95%;
     margin-bottom: 20px;
+    margin-left: 0;
   }
   .quran-package {
     width: 95%;
+    margin-left: 0;
   }
   .session1-btn,
   .session2-btn {
