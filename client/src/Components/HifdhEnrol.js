@@ -5,6 +5,7 @@ import { IoIosArrowUp } from "react-icons/io";
 import Footer from "./Footer";
 import "../Css/HifdhEnrol.css";
 import { MdStars } from "react-icons/md";
+import { Link, useLocation } from "react-router-dom";
 
 const HifdhEnrol = () => {
   const [session2Opacity, setSession2Opacity] = useState(1);
@@ -58,7 +59,9 @@ const HifdhEnrol = () => {
             </h1>
             <p>£64 Billed Monthly (2 sessions P/W)</p>
             <div className="selected-surah-package-button">
-              <button className="btn-enroll">Enrol Now</button>
+              <Link to="/register" style={{ textDecoration: "none" }}>
+                <button className="btn-enroll">Enrol Now</button>
+              </Link>
             </div>
             <h2 className="dropdown-btn" onClick={toggleDropdown}>
               {isDropdownVisible ? (
@@ -119,7 +122,9 @@ const HifdhEnrol = () => {
             </div>
 
             <div className="selected-surah-package-button hifdh-button">
-              <button className="btn-enroll">Enrol Now</button>
+              <Link to="/register" style={{ textDecoration: "none" }}>
+                <button className="btn-enroll">Enrol Now</button>
+              </Link>
             </div>
             {isSession2 && <h1 className="save">SAVE £ 144 ANNUALLY</h1>}
           </div>

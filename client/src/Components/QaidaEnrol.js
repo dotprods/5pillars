@@ -5,6 +5,7 @@ import { IoIosArrowUp } from "react-icons/io";
 import Footer from "./Footer";
 import "../Css/QidaEnrol.css";
 import { MdStars } from "react-icons/md";
+import { Link, useLocation } from "react-router-dom";
 
 const QaidaEnrol = () => {
   // const ses1 = document.getElementById("sess1");
@@ -61,7 +62,9 @@ const QaidaEnrol = () => {
             </h1>
             <p>£48 Billed Monthly (2 sessions P/W)</p>
             <div className="qaida-package-button">
-              <button className="btn-enroll">Enrol Now</button>
+              <Link to="/register" style={{ textDecoration: "none" }}>
+                <button className="btn-enroll">Enrol Now</button>
+              </Link>
             </div>
             <h2 className="dropdown-btn" onClick={toggleDropdown}>
               {isDropdownVisible ? (
@@ -137,7 +140,9 @@ const QaidaEnrol = () => {
             </div>
 
             <div className="qaida-package-button qaida-button">
-              <button className="btn-enroll">Enrol Now</button>
+              <Link to="/register" style={{ textDecoration: "none" }}>
+                <button className="btn-enroll">Enrol Now</button>
+              </Link>
             </div>
             {isSession2 && <h1 className="save">SAVE £ 144 ANNUALLY</h1>}
           </div>

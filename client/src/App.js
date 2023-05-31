@@ -8,6 +8,9 @@ import QaidaEnrol from "./Components/QaidaEnrol";
 import AboutUs from "./Components/AboutUs";
 import HifdhEnrol from "./Components/HifdhEnrol";
 import IslamicStudiesEnrol from "./Components/IslamicStudiesEnroll";
+import Tutors from "./Components/Tutors";
+import Projects from "./Components/Projects";
+import ContactUs from "./Components/ContactUs";
 
 function App() {
   return (
@@ -34,6 +37,15 @@ function App() {
           </Route>
           <Route path="/islamicStudies" component={IslamicStudiesEnrol} exact>
             <IslamicStudiesEnrol />
+          </Route>
+          <Route path="/tutors" component={Tutors} exact>
+            <Tutors />
+          </Route>
+          <Route path="/projects" component={Projects} exact>
+            <Projects />
+          </Route>
+          <Route path="/contactUs" component={ContactUs} exact>
+            <ContactUs />
           </Route>
         </Switch>
       </Router>

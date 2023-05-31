@@ -98,7 +98,7 @@ button {
 
 /* responsive for navigation */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .navbar {
     background: #d9a25a;
   }

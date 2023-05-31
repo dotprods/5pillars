@@ -49,13 +49,13 @@ function Navbar() {
         <Link to="/aboutus" style={{ textDecoration: "none" }}>
           <li>About Us</li>
         </Link>
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <Link to="/tutors" style={{ textDecoration: "none" }}>
           <li>Tutors</li>
         </Link>
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <Link to="/projects" style={{ textDecoration: "none" }}>
           <li>Projects</li>
         </Link>
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <Link to="/contactUs" style={{ textDecoration: "none" }}>
           <li>Contact Us</li>
         </Link>
       </ul>

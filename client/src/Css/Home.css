@@ -774,7 +774,7 @@ p {
   border-right: 6px solid transparent;
   border-bottom: 12px solid red;
   background: none; */
-  transition: opacity 1s ease-in-out;
+  transition: opacity 0.6s ease-in-out;
   opacity: 0;
 }
 .triangle1 svg {
@@ -790,7 +790,7 @@ p {
   border-right: 6px solid transparent;
   border-bottom: 12px solid blue;
   background: none; */
-  transition: opacity 1.2s ease-in-out;
+  transition: opacity 0.7s ease-in-out;
   opacity: 0;
 }
 .plus svg {
@@ -805,7 +805,7 @@ p {
   background: transparent;
   border-radius: 50%;
   border: #efb93c 2px solid;
-  transition: opacity 1.4s ease-in-out;
+  transition: opacity 0.8s ease-in-out;
   opacity: 0;
 }
 /* Square shape */
@@ -816,7 +816,7 @@ p {
   width: 12px;
   height: 12px;
   border: 2px solid green;
-  transition: opacity 1.6s ease-in-out;
+  transition: opacity 1s ease-in-out;
   opacity: 0;
 }
 
