@@ -201,7 +201,7 @@ const Home = () => {
       <div className="feedback">
         <h1>Student Feedbacks</h1>
         <div className="feedback-items">
-          <div className="feedback-item">
+          <div className="feedback-item item1">
             <div className="triangle1">
               <BsTriangle size={12} />
             </div>
@@ -222,7 +222,7 @@ const Home = () => {
               preview, usage of ChatGPT is free. Try it now at chat.openai.com.
             </p>
           </div>
-          <div className="feedback-item ">
+          <div className="feedback-item item2 ">
             <div className="triangle1">
               <BsTriangle size={12} />
             </div>
@@ -242,7 +242,7 @@ const Home = () => {
               preview, usage of ChatGPT is free. Try it now at chat.openai.com.
             </p>
           </div>
-          <div className="feedback-item">
+          <div className="feedback-item item3">
             <div className="triangle1">
               <BsTriangle size={12} />
             </div>
