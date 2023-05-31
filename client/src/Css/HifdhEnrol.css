@@ -10,22 +10,22 @@
   width: 100%;
   z-index: 0;
 }
-.qaida-packages {
+.hifdh-packages {
   display: flex;
   justify-content: center;
   margin-top: 195px;
   margin-bottom: 50px;
 }
-.qaida-package {
-  width: 350px;
+.selected-surah-package {
+  width: 450px;
   margin-left: 50px;
 }
-.quran-package {
+.hifdh-package {
   width: 550px;
   margin-left: 50px;
 }
 
-.quran-package-def {
+.hifdh-package-def {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -35,7 +35,7 @@
   background-color: #056e13;
   height: 55vh;
 }
-.qaida-package-def {
+.selected-surah-package-def {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -45,40 +45,40 @@
   background-color: #056e13;
   height: 55vh;
 }
-.qaida-package-def h3,
-.quran-package-def h3 {
+.selected-surah-package-def h3,
+.hifdh-package-def h3 {
   margin-top: 25px;
   font-size: xx-large;
   font-family: "Quicksand", sans-serif;
 }
 
-.quran-package-def h3 {
+.hifdh-package-def h3 {
   margin-top: 15px;
   font-size: xx-large;
 }
-.qaida-package-def h1 {
+.selected-surah-package-def h1 {
   font-size: 80px;
   font-family: "Quicksand", sans-serif;
 }
-.quran-package-def p {
+.hifdh-package-def p {
   color: rgb(182, 179, 179);
   font-family: "Quicksand", sans-serif;
 }
-.qaida-package-def p {
+.selected-surah-package-def p {
   color: #fff;
   opacity: 0.4;
 }
-.qaida-package-def h1 span {
+.selected-surah-package-def h1 span {
   font-size: medium;
   font-family: "Quicksand", sans-serif;
 }
-.qaida-package-button {
+.selected-surah-package-button {
   margin-top: 15px;
 }
-.qaida-button {
+.selected-surah-button {
   margin-bottom: 40px;
 }
-.qaida-package-button button {
+.selected-surah-package-button button {
   background: #efb836;
   padding: 7px;
   border-radius: 10px;
@@ -156,7 +156,7 @@
   margin-top: 15px;
   cursor: pointer;
 }
-.quran-package-buttons {
+.hifdh-package-buttons {
   display: flex;
   justify-content: space-around;
 }
@@ -179,18 +179,19 @@
 }
 /* #DBDBDB */
 @media (max-width: 767px) {
-  .qaida-packages {
+  .hifdh-packages {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 130px;
   }
-  .qaida-package {
+  .selected-surah-package {
     width: 95%;
     margin-bottom: 20px;
     margin-left: 0;
+    text-align: center;
   }
-  .quran-package {
+  .hifdh-package {
     width: 95%;
     margin-left: 0;
   }

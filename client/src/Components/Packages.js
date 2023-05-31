@@ -70,7 +70,9 @@ const Packages = () => {
             </h1>
             <p>Billed monthly</p>
             <div className="package-button">
-              <button className="btn-learnmore">Learn more</button>
+              <Link to="/hifdh" style={{ textDecoration: "none" }}>
+                <button className="btn-learnmore">Learn more</button>
+              </Link>
             </div>
             <h2 className="dropdown-btn" onClick={toggleDropdown1}>
               {isDropdownVisible1 ? (
@@ -100,8 +102,11 @@ const Packages = () => {
             </h1>
             <p>Billed monthly</p>
             <div className="package-button">
-              <button className="btn-learnmore">Coming Soon</button>
+              <Link to="/islamicStudies" style={{ textDecoration: "none" }}>
+                <button className="btn-learnmore">Coming Soon</button>
+              </Link>
             </div>
+
             <h2 className="dropdown-btn" onClick={toggleDropdown2}>
               {isDropdownVisible2 ? (
                 <IoIosArrowUp size={35} />

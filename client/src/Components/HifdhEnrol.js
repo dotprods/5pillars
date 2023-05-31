@@ -3,12 +3,10 @@ import Navbar from "./Navbar";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 import Footer from "./Footer";
-import "../Css/QidaEnrol.css";
+import "../Css/HifdhEnrol.css";
 import { MdStars } from "react-icons/md";
 
-const QaidaEnrol = () => {
-  // const ses1 = document.getElementById("sess1");
-  // const ses2 = document.getElementById("sess2");
+const HifdhEnrol = () => {
   const [session2Opacity, setSession2Opacity] = useState(1);
   const [session1Opacity, setSession1Opacity] = useState(1);
 
@@ -41,7 +39,6 @@ const QaidaEnrol = () => {
     }
     setSession2(!isSession2);
     setSession1Opacity(isSession2 ? 1 : 0.3);
-    // setSession2Opacity(isSession2 ? 1 : 0.3);
   };
 
   return (
@@ -52,15 +49,15 @@ const QaidaEnrol = () => {
         <Navbar />
       </div>
 
-      <div className="qaida-packages">
-        <div className="qaida-package">
-          <div className="qaida-package-def">
-            <h3>QAIDA</h3>
+      <div className="hifdh-packages">
+        <div className="selected-surah-package">
+          <div className="selected-surah-package-def">
+            <h3>SELECTED SURAHS HIFDH</h3>
             <h1>
-              £6/<span>Session</span>
+              £7/<span>Session</span>
             </h1>
-            <p>£48 Billed Monthly (2 sessions P/W)</p>
-            <div className="qaida-package-button">
+            <p>£64 Billed Monthly (2 sessions P/W)</p>
+            <div className="selected-surah-package-button">
               <button className="btn-enroll">Enrol Now</button>
             </div>
             <h2 className="dropdown-btn" onClick={toggleDropdown}>
@@ -73,36 +70,24 @@ const QaidaEnrol = () => {
           </div>
           {isDropdownVisible && (
             <div className="dropdown-content">
-              <h2>Free Trial Session</h2>
-              <h2>Two sessions per week</h2>
+              <h2> Two sessions per week</h2>
+              <h2>Perfect for adults</h2>
+              <h2>Selected surahs for memorisation</h2>
+              <h2> Reading</h2>
+              <h2> Thajweed</h2>
+              <h2> Bi-Weekly Feedback</h2>
               <h2>One to One Live sessions</h2>
-              <h2> 30 Mins per session</h2>
-              <h2>Weekly Progress report</h2>
-              <h2>Highly qualified tutors with Ijaza</h2>
+              <h2>45 Mins per session</h2>
+              <h2> Weekly Progress report</h2>
+              <h2> Highly qualified tutors with Ijaza</h2>
             </div>
           )}
         </div>
-        <div className="quran-package">
-          <div className="quran-package-def  ">
-            <h3>Quran Recitation</h3>
-            {/* {isSession1 && (
-              <>
-                <h1 style={{ margin: "0 " }}>
-                  £8/<span>Session</span>
-                </h1>
-                <p>£84 Billed Monthly (3 sessions P/W))</p>
-              </>
-            )} */}
-            {/* {isSession2 && (
-              <>
-                <h1 style={{ margin: "0 " }}>
-                  £7/<span>Session</span>
-                </h1>
-                <p>£64 Billed Monthly (2 sessions P/W)</p>
-              </>
-            )} */}
+        <div className="hifdh-package">
+          <div className="hifdh-package-def  ">
+            <h3>HIFDH</h3>
 
-            <div className="quran-package-buttons">
+            <div className="hifdh-package-buttons">
               <div
                 className="session1-btn"
                 id="sess1"
@@ -113,7 +98,7 @@ const QaidaEnrol = () => {
                 <h1>
                   £8/<span>Session</span>
                 </h1>
-                <p>£64 Billed Monthly (3 sessions P/W)</p>
+                <p>£64 Billed Monthly (2 sessions P/W)</p>
               </div>
               <div
                 className="session2-btn"
@@ -121,9 +106,6 @@ const QaidaEnrol = () => {
                 onClick={session2}
                 style={{ opacity: session2Opacity }}
               >
-                {/* <div className="best-value">
-                  <h3>Best Value</h3>
-                </div> */}
                 <div className="star">
                   <h2> Session2</h2>
                   <MdStars size={25} />
@@ -132,11 +114,11 @@ const QaidaEnrol = () => {
                 <h1>
                   £7/<span>Session</span>
                 </h1>
-                <p>£84 Billed Monthly (2 sessions P/W)</p>
+                <p>£84 Billed Monthly (3 sessions P/W)</p>
               </div>
             </div>
 
-            <div className="qaida-package-button qaida-button">
+            <div className="selected-surah-package-button hifdh-button">
               <button className="btn-enroll">Enrol Now</button>
             </div>
             {isSession2 && <h1 className="save">SAVE £ 144 ANNUALLY</h1>}
@@ -147,6 +129,7 @@ const QaidaEnrol = () => {
               <h2>Two sessions per week</h2>
               <h2>Reading</h2>
               <h2>Thajweed</h2>
+              <h2>Two Islamic Studies session per month</h2>
               <h2>Bi-Weekly Feedback</h2>
               <h2>One to One Live sessions</h2>
               <h2>45 Mins per session</h2>
@@ -174,4 +157,4 @@ const QaidaEnrol = () => {
     </>
   );
 };
-export default QaidaEnrol;
+export default HifdhEnrol;

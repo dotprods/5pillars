@@ -104,6 +104,12 @@ const Register = () => {
 
   return (
     <>
+      <div className="background" />
+
+      <div className="other-nav">
+        <Navbar />
+      </div>
+
       <div className="haa"></div>
 
       <div className="regi-head ">

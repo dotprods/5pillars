@@ -6,6 +6,8 @@ import Register from "./Components/Register";
 import Packages from "./Components/Packages";
 import QaidaEnrol from "./Components/QaidaEnrol";
 import AboutUs from "./Components/AboutUs";
+import HifdhEnrol from "./Components/HifdhEnrol";
+import IslamicStudiesEnrol from "./Components/IslamicStudiesEnroll";
 
 function App() {
   return (
@@ -26,6 +28,12 @@ function App() {
           </Route>
           <Route path="/aboutus" component={AboutUs} exact>
             <AboutUs />
+          </Route>
+          <Route path="/hifdh" component={HifdhEnrol} exact>
+            <HifdhEnrol />
+          </Route>
+          <Route path="/islamicStudies" component={IslamicStudiesEnrol} exact>
+            <IslamicStudiesEnrol />
           </Route>
         </Switch>
       </Router>

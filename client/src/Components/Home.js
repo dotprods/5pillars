@@ -76,7 +76,7 @@ const Home = () => {
               Quran and our Selected Surahs program is for anyone who wants to
               memorise the important and often recited surahs
             </p>
-            <Link to="/" style={{ textDecoration: "none" }}>
+            <Link to="/hifdh" style={{ textDecoration: "none" }}>
               <h2 className="learn-btn"> Learn more</h2>
             </Link>
             <hr className="line" />
@@ -89,7 +89,7 @@ const Home = () => {
               Our comprehensive curriculum covers areas such as Hadith, Fiqh,
               Seerah & Islamic History, Aqeedah and contemporary issues
             </p>
-            <Link to="/" style={{ textDecoration: "none" }}>
+            <Link to="/islamicStudies" style={{ textDecoration: "none" }}>
               <h2 className="learn-btn"> Coming Soon</h2>
             </Link>
             <hr className="line" />
