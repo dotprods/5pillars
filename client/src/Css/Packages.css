@@ -12,12 +12,14 @@
 }
 .packages {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-top: 195px;
   margin-bottom: 50px;
 }
 .package {
-  width: 25%;
+  /* width: 25%; */
+  width: 350px;
+  margin-left: 25px;
 }
 .package-def {
   display: flex;
@@ -27,20 +29,24 @@
   color: #fff;
   border-radius: 10px;
   background-color: #056e13;
-  height: 50vh;
+  height: 40vh;
   padding: 20px;
 }
 .package-def h3 {
-  margin-top: 25px;
+  margin-top: 55px;
+  font-family: "Quicksand", sans-serif;
 }
 .package-def h1 {
   font-size: 80px;
+  font-family: "Quicksand", sans-serif;
 }
 .package-def p {
   color: rgb(182, 179, 179);
+  font-family: "Quicksand", sans-serif;
 }
 .package-def h1 span {
   font-size: medium;
+  font-family: "Quicksand", sans-serif;
 }
 .package-button {
   margin-top: 15px;
@@ -71,8 +77,20 @@
 .dropdown-content h2 {
   font-size: medium;
   color: #757575;
+  font-family: "Quicksand", sans-serif;
 
   font-weight: 600;
   margin: 25px;
 }
+.dropdown-content h3 {
+  font-family: "Quicksand", sans-serif;
+}
 /* #DBDBDB */
+@media (max-width: 768px) {
+  .packages {
+    flex-direction: column;
+  }
+  .package {
+    margin-bottom: 20px;
+  }
+}
