@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap");
 
 * {
   padding: 0;
@@ -39,7 +39,8 @@ label {
 select,
 input[type="text"],
 input[type="date"],
-input[type="email"] {
+input[type="email"],
+input[type="tel"] {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -64,4 +65,4 @@ button[type="submit"] {
   .registration-form {
     max-width: 100%;
   }
-}
+} */

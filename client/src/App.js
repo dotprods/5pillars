@@ -11,6 +11,7 @@ import IslamicStudiesEnrol from "./Components/IslamicStudiesEnroll";
 import Tutors from "./Components/Tutors";
 import Projects from "./Components/Projects";
 import ContactUs from "./Components/ContactUs";
+import EnrolForm from "./Components/EnrolForm";
 
 function App() {
   return (
@@ -20,8 +21,8 @@ function App() {
           <Route path="/" component={Home} exact>
             <Home />
           </Route>
-          <Route path="/register" component={Register} exact>
-            <Register />
+          <Route path="/register" component={EnrolForm} exact>
+            <EnrolForm />
           </Route>
           <Route path="/packages" component={Packages} exact>
             <Packages />
