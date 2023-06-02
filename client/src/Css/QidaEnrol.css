@@ -99,6 +99,9 @@
   height: 150px;
   margin: 10px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .session2-btn {
 }
