@@ -19,8 +19,8 @@ function App() {
     <>
       <Router>
         <Switch>
-          <Route path="/" component={NewHome} exact>
-            <NewHome />
+          <Route path="/" component={Home} exact>
+            <Home />
           </Route>
           <Route path="/register" component={EnrolForm} exact>
             <EnrolForm />

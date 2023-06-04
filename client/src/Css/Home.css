@@ -155,7 +155,7 @@ body::-webkit-scrollbar {
   padding: 5px;
 } */
 
-/* .register-btn {
+.register-btn {
   position: absolute;
   font-size: large;
   border-radius: 8px;
@@ -167,8 +167,8 @@ body::-webkit-scrollbar {
   top: 70%;
   padding: 10px;
   cursor: pointer;
-} */
-/* .register-btn2 {
+}
+.register-btn2 {
   position: absolute;
   font-size: large;
   border-radius: 8px;
@@ -181,7 +181,7 @@ body::-webkit-scrollbar {
   padding: 13px;
   cursor: pointer;
   opacity: 0.4;
-} */
+}
 .line {
   color: gray;
   position: absolute;
