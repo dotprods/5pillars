@@ -4,7 +4,7 @@
 }
 .other-nav {
   height: 13vh;
-  background: #efb836;
+  background: #d9a25a;
   position: fixed;
   top: 0;
   width: 100%;
@@ -14,7 +14,8 @@
   display: flex;
   justify-content: center;
   margin-top: 195px;
-  margin-bottom: 50px;
+  margin-bottom: 500px;
+  height: 100%;
 }
 .package {
   /* width: 25%; */
@@ -29,7 +30,7 @@
   color: #fff;
   border-radius: 10px;
   background-color: #056e13;
-  height: 40vh;
+  height: 350px;
   padding: 20px;
 }
 .package-def h3 {
@@ -52,7 +53,7 @@
   margin-top: 15px;
 }
 .package-button button {
-  background: #efb836;
+  background: #d9a25a;
   padding: 7px;
   border-radius: 10px;
   font-weight: 500;
@@ -73,6 +74,7 @@
   padding: 10px;
   text-align: center;
   transition: opacity 0.8s ease;
+  margin-bottom: 50px;
 }
 .dropdown-content h2 {
   font-size: medium;

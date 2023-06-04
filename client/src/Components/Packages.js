@@ -44,9 +44,9 @@ const Packages = () => {
             </div>
             <h2 className="dropdown-btn" onClick={toggleDropdown}>
               {isDropdownVisible ? (
-                <IoIosArrowUp size={35} />
+                <IoIosArrowUp size={40} />
               ) : (
-                <IoIosArrowDown size={30} />
+                <IoIosArrowDown size={40} />
               )}
             </h2>
           </div>
@@ -76,9 +76,9 @@ const Packages = () => {
             </div>
             <h2 className="dropdown-btn" onClick={toggleDropdown1}>
               {isDropdownVisible1 ? (
-                <IoIosArrowUp size={35} />
+                <IoIosArrowUp size={40} />
               ) : (
-                <IoIosArrowDown size={30} />
+                <IoIosArrowDown size={40} />
               )}
             </h2>
           </div>
@@ -109,9 +109,9 @@ const Packages = () => {
 
             <h2 className="dropdown-btn" onClick={toggleDropdown2}>
               {isDropdownVisible2 ? (
-                <IoIosArrowUp size={35} />
+                <IoIosArrowUp size={40} />
               ) : (
-                <IoIosArrowDown size={30} />
+                <IoIosArrowDown size={40} />
               )}
             </h2>
           </div>
