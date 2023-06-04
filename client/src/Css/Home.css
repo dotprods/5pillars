@@ -3,7 +3,7 @@
 body::-webkit-scrollbar {
   display: none;
 }
-.container {
+/* .container {
   position: relative;
   height: 72vh;
   background-image: url("../assets/BG-Page.png");
@@ -19,11 +19,10 @@ body::-webkit-scrollbar {
   height: 100%;
   background-image: url("../assets/pattern.png");
   background-size: cover;
-  z-index: -2; /* Make sure the background is behind other elements */
-  /* background-color: rgba(255, 255, 255, 0.1); */
+  z-index: -2;
   opacity: 0.3;
-}
-
+} */
+/* 
 .container h1 {
   font-family: "Quicksand", sans-serif;
   font-size: 5rem;
@@ -38,8 +37,7 @@ body::-webkit-scrollbar {
   position: absolute;
   right: 0px;
   bottom: 0px;
-  width: 70%; /* Adjust the size as desired */
-  /* Adjust the size as desired */
+  width: 70%; 
   animation: shake2 4s infinite;
 }
 @keyframes shake2 {
@@ -61,8 +59,8 @@ body::-webkit-scrollbar {
   100% {
     transform: translateX(0);
   }
-}
-.course {
+} */
+/* .course {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -73,7 +71,6 @@ body::-webkit-scrollbar {
 .coo {
   position: relative;
   border-radius: 10px;
-  /* margin: 15px 85px 15px 15px; */
   margin-right: 50px;
   height: 350px;
   width: 250px;
@@ -133,7 +130,7 @@ body::-webkit-scrollbar {
   background: url("../assets/IslamicLes.jpg");
   background-size: cover;
   background-position: center;
-}
+} */
 /* .loader {
   position: absolute;
   top: 4%;
@@ -144,7 +141,7 @@ body::-webkit-scrollbar {
 .coo:hover .loader {
   display: block;
 } */
-.learn-btn {
+/* .learn-btn {
   position: absolute;
   color: #fff;
   font-size: large;
@@ -156,35 +153,35 @@ body::-webkit-scrollbar {
   left: 20%;
   bottom: 2%;
   padding: 5px;
-}
+} */
 
-.register-btn {
+/* .register-btn {
   position: absolute;
   font-size: large;
   border-radius: 8px;
   background: #056e13;
   color: white;
   font-weight: 400;
-  /* width: 20%; */
+
   left: 20%;
   top: 70%;
   padding: 10px;
   cursor: pointer;
-}
-.register-btn2 {
+} */
+/* .register-btn2 {
   position: absolute;
   font-size: large;
   border-radius: 8px;
   background: #056e13;
   color: white;
   font-weight: 400;
-  /* width: 20%; */
+
   left: 20%;
   top: 70%;
   padding: 13px;
   cursor: pointer;
   opacity: 0.4;
-}
+} */
 .line {
   color: gray;
   position: absolute;
@@ -338,7 +335,7 @@ body::-webkit-scrollbar {
 .c3 {
   background: #056e13;
 }
-@media (max-width: 1035px) {
+/* @media (max-width: 1035px) {
   .register-btn {
     top: 67%;
     height: 47px;
@@ -368,9 +365,9 @@ body::-webkit-scrollbar {
     width: 150px;
     height: 50px;
   }
-}
+} */
 /* css for tabs */
-@media (min-width: 769px) and (max-width: 1023px) {
+/* @media (min-width: 769px) and (max-width: 1023px) {
   .container {
     height: 60vh;
   }
@@ -406,12 +403,8 @@ body::-webkit-scrollbar {
     text-align: center;
     margin-left: 0px;
   }
-
-  /* .circle {
-    height: 20%;
-  } */
-}
-@media (min-width: 740px) and (max-width: 768px) {
+} */
+/* @media (min-width: 740px) and (max-width: 768px) {
   .container h3 {
     left: 0;
   }
@@ -442,10 +435,10 @@ body::-webkit-scrollbar {
   .count {
     margin-top: 20px;
   }
-}
+} */
 
 /*css for mobile*/
-@media only screen and (max-width: 767px) {
+/* @media only screen and (max-width: 767px) {
   .container {
     height: 60vh;
   }
@@ -514,25 +507,21 @@ body::-webkit-scrollbar {
     display: block;
   }
   .coo:hover .circle {
-    /* box-shadow: 0 0 2px 2px cyan; */
+   
     transform: translate(0%, 0%) scale(1.05);
   }
   .coo:hover .loader {
     display: none;
   }
-  /* .circle {
-    width: 30%;
-    height: 30%;
-  } */
   .count {
     background: white;
     flex-direction: column;
   }
   .count-in {
     border-radius: 20px;
-    /* border: 1px solid black; */
+   
     padding: 10px;
-    /* margin: 5px; */
+ 
     text-align: center;
     width: 100%;
     margin: 0;
@@ -549,7 +538,6 @@ body::-webkit-scrollbar {
   }
   .mission {
     width: 100%;
-    /* height: 300px; */
     border: none;
     border-radius: 10px;
     text-align: center;
@@ -568,7 +556,7 @@ body::-webkit-scrollbar {
     width: 70%;
     margin-top: 10px;
   }
-}
+} */
 @media only screen and (max-width: 376px) {
   .container {
     height: 60vh;

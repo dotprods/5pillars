@@ -12,14 +12,15 @@ import Tutors from "./Components/Tutors";
 import Projects from "./Components/Projects";
 import ContactUs from "./Components/ContactUs";
 import EnrolForm from "./Components/EnrolForm";
+import NewHome from "./Components/NewHome";
 
 function App() {
   return (
     <>
       <Router>
         <Switch>
-          <Route path="/" component={Home} exact>
-            <Home />
+          <Route path="/" component={NewHome} exact>
+            <NewHome />
           </Route>
           <Route path="/register" component={EnrolForm} exact>
             <EnrolForm />

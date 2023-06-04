@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200;1,300&family=Nothing+You+Could+Do&family=Poppins:wght@100;200;300;400;600;700&family=Quicksand&display=swap");
+
+/* .home {
+  height: 73vh;
+  background-image: url("../assets/BG-Page.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.home-content {
+  background: grey;
+  display: flex;
+}
+.palli {
+  max-width: 100%;
+  height: 100%;
+  animation: shake2 4s infinite;
+  background: green;
+}
+@keyframes shake2 {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-2px);
+  }
+  40% {
+    transform: translateX(2px);
+  }
+  60% {
+    transform: translateX(-2px);
+  }
+  80% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.home-content-text {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20%;
+  text-align: center;
+  align-items: center;
+  background: red;
+}
+.home-content-text h1 {
+  width: 1000px;
+} */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/pattern.png");
+  background-size: cover;
+  z-index: -2;
+  opacity: 0.3;
+}
+
+.home {
+  position: relative;
+  background-image: url("../assets/BG-Page.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.palli {
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+  max-width: 100%;
+  animation: shake2 4s infinite;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+}
+
+.home-content-text {
+  text-align: center;
+  margin-right: 25%;
+  position: relative;
+}
+
+.home-content-text h1 {
+  font-size: clamp(40px, 5vw, 105px);
+  margin-bottom: 1rem;
+  text-align: left;
+  font-family: "Quicksand", sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  /* letter-spacing: 0.1em; */
+  /* animation: typing 4s steps(40), blink-caret 0.75s step-end infinite; */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+.home-content-text button {
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  border-radius: 8px;
+  background: #056e13;
+  color: white;
+  font-weight: 400;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 2px rgba(7, 115, 7, 0.2);
+  position: absolute;
+  left: 0;
+  font-family: "Quicksand", sans-serif;
+  z-index: 2;
+}
+@keyframes shake2 {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-2px);
+  }
+  40% {
+    transform: translateX(2px);
+  }
+  60% {
+    transform: translateX(-2px);
+  }
+  80% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.course {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  bottom: -215px;
+}
+
+.coo {
+  position: relative;
+  border-radius: 10px;
+  /* margin: 15px 85px 15px 15px; */
+  margin-right: 50px;
+  height: 300px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.coo p {
+  display: block;
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  font-weight: 200;
+  padding: 0 15px 0 15px;
+  font-size: small;
+  margin-top: 10px;
+}
+.coo h3 {
+  color: #fff;
+  font-size: x-large;
+  position: absolute;
+  top: 40%;
+  left: 12%;
+  font-weight: 500;
+}
+.c2 h3 {
+  position: absolute;
+  left: 18%;
+}
+.c3 h3 {
+  position: absolute;
+  left: 18%;
+}
+.circle {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  z-index: 2;
+  position: absolute;
+  left: 30%;
+  top: 2%;
+}
+.cir1 {
+  background: url("../assets/QurLes.png");
+  background-size: cover;
+  background-position: center;
+}
+.cir2 {
+  background: url("../assets/QurRec.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.cir3 {
+  background: url("../assets/IslamicLes.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.learn-btn {
+  position: absolute;
+  color: #fff;
+  font-size: large;
+  border-radius: 10px;
+  background: transparent;
+  color: #d9a057;
+  font-weight: 400;
+  width: 60%;
+  left: 20%;
+  bottom: 2%;
+  padding: 5px;
+}
+
+/* css for tabs */
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .home-content {
+    height: 70vh;
+  }
+  .coo {
+    margin-right: 0;
+    justify-content: space-evenly;
+    margin: 0 8px;
+  }
+}
+
+/* css for mobile */
+@media screen and (max-width: 767px) {
+  .home-content {
+    height: 65vh;
+  }
+  .home-content-text {
+    margin-right: 0%;
+  }
+  .home-content-text button {
+    font-size: 1rem;
+  }
+  .course {
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    bottom: -950px;
+    align-items: center;
+  }
+  .coo {
+    margin-top: 15px;
+    margin-right: 0px;
+    background: transparent;
+    /* height: 380px; */
+    /* width: 100%; */
+    /* margin: 15px 5px 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+  }
+  .coo p,
+  .coo h3,
+  h2 {
+    color: black;
+  }
+}

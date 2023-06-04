@@ -53,7 +53,7 @@ const Home = () => {
         </Link>
 
         <img src={mosque} alt="mosque image" className="mosque"></img>
-        <div className="course">
+        {/* <div className="course">
           <div className=" coo c1">
             <div className="circle cir1"></div>
             <div className="loader"></div>
@@ -94,7 +94,7 @@ const Home = () => {
             </Link>
             <hr className="line" />
           </div>
-        </div>
+        </div> */}
       </div>
       {/* </Parallax> */}
 
