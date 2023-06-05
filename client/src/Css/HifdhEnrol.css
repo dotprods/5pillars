@@ -33,7 +33,7 @@
   color: #fff;
   border-radius: 10px;
   background-color: #056e13;
-  height: 400px;
+  height: 370px;
 }
 .selected-surah-package-def {
   display: flex;
@@ -43,7 +43,7 @@
   color: #fff;
   border-radius: 10px;
   background-color: #056e13;
-  height: 400px;
+  height: 370px;
 }
 .selected-surah-package-def h3,
 .hifdh-package-def h3 {
@@ -139,6 +139,7 @@
 .star {
   display: flex;
   justify-content: center;
+  margin-top: -10px;
 }
 .star svg {
   color: #efb836;

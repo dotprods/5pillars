@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import "../Css/HifdhEnrol.css";
 import { MdStars } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
+import Medal from "../assets/medal-col.png";
 
 const HifdhEnrol = () => {
   const [session2Opacity, setSession2Opacity] = useState(1);
@@ -111,7 +112,8 @@ const HifdhEnrol = () => {
               >
                 <div className="star">
                   <h2> Session2</h2>
-                  <MdStars size={25} />
+                  {/* <MdStars size={25} /> */}
+                  <img src={Medal} className="medal"></img>
                 </div>
 
                 <h1>
