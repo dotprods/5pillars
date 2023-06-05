@@ -126,6 +126,9 @@ body::-webkit-scrollbar {
   /* letter-spacing: 0.1em; */
   /* animation: typing 4s steps(40), blink-caret 0.75s step-end infinite; */
 }
+.home-content-text span {
+  color: #056e13;
+}
 
 @keyframes typing {
   from {

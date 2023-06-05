@@ -12,6 +12,7 @@ import girl from "../assets/Girl.png";
 import { BsTriangle } from "react-icons/bs";
 import { FiPlus } from "react-icons/fi";
 import { IoIosArrowUp } from "react-icons/io";
+import Typical from "react-typical";
 
 import Footer from "./Footer";
 
@@ -80,7 +81,16 @@ const NewHome = () => {
         <div className="home-content">
           <div className="home-content-text">
             <h1>
-              Learn Quran <br /> With Us Online!
+              Learn
+              <span>
+                {" "}
+                <Typical
+                  loop={Infinity}
+                  wrapper="b"
+                  steps={["Quran", 2000, "Hifdh", 2000, "Islamic Lesson", 2000]}
+                />
+              </span>
+              <br /> With Us Online!
             </h1>
             <Link to="/packages" style={{ textDecoration: "none" }}>
               <button>Register Now</button>
