@@ -14,7 +14,7 @@
   display: flex;
   justify-content: center;
   margin-top: 195px;
-  margin-bottom: 500px;
+  margin-bottom: 100px;
   height: 100%;
 }
 .package {
@@ -74,7 +74,6 @@
   padding: 10px;
   text-align: center;
   transition: opacity 0.8s ease;
-  margin-bottom: 50px;
 }
 .dropdown-content h2 {
   font-size: medium;

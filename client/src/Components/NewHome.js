@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../Css/NewHome.css";
 import Navbar from "./Navbar";
 import mosque from "../assets/mosque.png";
@@ -9,12 +9,17 @@ import Habibi from "../assets/vsd.png";
 import mosque2 from "../assets/Mosque2.png";
 import boy from "../assets/Boy.png";
 import girl from "../assets/Girl.png";
+import { BsTriangle } from "react-icons/bs";
+import { FiPlus } from "react-icons/fi";
+import { IoIosArrowUp } from "react-icons/io";
+
 import Footer from "./Footer";
 
 const NewHome = () => {
   const [counteOn, setCounterOn] = useState(false);
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
+  const [isVisible, setIsVisible] = useState(false);
 
   const validateEmail = (email) => {
     // Regular expression for email validation
@@ -30,9 +35,45 @@ const NewHome = () => {
       alert(error);
     }
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollHeight = window.scrollY;
+      const screenHeight = window.innerHeight;
+
+      if (scrollHeight > screenHeight * 1.3) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       <div className="background" />
+      <div
+        className={`back-to-top-button ${isVisible ? "visible" : ""}`}
+        onClick={scrollToTop}
+      >
+        <IoIosArrowUp size={35} />
+      </div>
+      <Link to="/packages" style={{ textDecoration: "none" }}>
+        <div className="chat"></div>
+      </Link>
+
       <div className="home">
         <Navbar />
 
@@ -41,7 +82,9 @@ const NewHome = () => {
             <h1>
               Learn Quran <br /> With Us Online!
             </h1>
-            <button>Register Now</button>
+            <Link to="/packages" style={{ textDecoration: "none" }}>
+              <button>Register Now</button>
+            </Link>
           </div>
 
           <img src={mosque} alt="mosque image" className="palli"></img>
@@ -193,14 +236,14 @@ const NewHome = () => {
         <h1>Student Feedbacks</h1>
         <div className="feedback-items">
           <div className="feedback-item item1">
-            {/* <div className="triangle1">
+            <div className="triangle1">
               <BsTriangle size={12} />
             </div>
             <div className="square"></div>
             <div className="plus">
               <FiPlus size={14} />
             </div>
-            <div className="circle-1"></div> */}
+            <div className="circle-1"></div>
 
             <div className="feedback-img feed1"></div>
             <h2 className="name">Zaid</h2>
@@ -214,14 +257,14 @@ const NewHome = () => {
             </p>
           </div>
           <div className="feedback-item item2 ">
-            {/* <div className="triangle1">
+            <div className="triangle1">
               <BsTriangle size={12} />
             </div>
             <div className="square"></div>
             <div className="plus">
               <FiPlus size={14} />
-            </div> */}
-            {/* <div className="circle-1"></div> */}
+            </div>
+            <div className="circle-1"></div>
             <div className="feedback-img feed2"></div>
             <h2 className="name">Zaid</h2>
             <h3 className="name-course">Hifdh student</h3>
@@ -234,14 +277,14 @@ const NewHome = () => {
             </p>
           </div>
           <div className="feedback-item item3">
-            {/* <div className="triangle1">
+            <div className="triangle1">
               <BsTriangle size={12} />
             </div>
             <div className="square"></div>
             <div className="plus">
               <FiPlus size={14} />
-            </div> */}
-            {/* <div className="circle-1"></div> */}
+            </div>
+            <div className="circle-1"></div>
             <div className="feedback-img feed3"></div>
             <h2 className="name">Zaid</h2>
             <h3 className="name-course">Hifdh student</h3>
