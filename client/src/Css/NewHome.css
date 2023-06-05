@@ -602,6 +602,9 @@ p {
 
 /* css for mobile */
 @media screen and (max-width: 767px) {
+  .chat {
+    right: 0px;
+  }
   .home-content {
     height: 65vh;
   }
@@ -616,18 +619,32 @@ p {
     flex-direction: column;
     justify-content: space-evenly;
     width: 100%;
-    bottom: -950px;
+    bottom: -1100px;
     align-items: center;
   }
   .coo {
-    margin-top: 15px;
-    margin-right: 0px;
+    margin: 0 7px;
     background: transparent;
+    height: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
   .coo p,
   .coo h3,
   h2 {
     color: black;
+  }
+  .coo p {
+    font-size: large;
+  }
+  .coo h3 {
+    left: 30%;
+  }
+  .circle {
+    left: 40%;
   }
   .count {
     margin-top: 10px;
@@ -635,7 +652,7 @@ p {
   }
   .wording-cont {
     flex-direction: column;
-    margin-top: 1000px;
+    margin-top: 1150px;
   }
   .missions {
     flex-direction: column;
