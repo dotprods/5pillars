@@ -70,9 +70,9 @@ const NewHome = () => {
       >
         <IoIosArrowUp size={35} />
       </div>
-      <Link to="/packages" style={{ textDecoration: "none" }}>
+      <a href="https://wa.me/447756393994">
         <div className="chat"></div>
-      </Link>
+      </a>
 
       <div className="home">
         <Navbar />
