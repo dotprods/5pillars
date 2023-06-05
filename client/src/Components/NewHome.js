@@ -81,9 +81,8 @@ const NewHome = () => {
         <div className="home-content">
           <div className="home-content-text">
             <h1>
-              Learn
+              Learn{" "}
               <span>
-                {" "}
                 <Typical
                   loop={Infinity}
                   wrapper="b"

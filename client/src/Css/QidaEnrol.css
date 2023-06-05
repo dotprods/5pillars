@@ -33,7 +33,7 @@
   color: #fff;
   border-radius: 10px;
   background-color: #056e13;
-  height: 55vh;
+  height: 400px;
 }
 .qaida-package-def {
   display: flex;
@@ -43,7 +43,7 @@
   color: #fff;
   border-radius: 10px;
   background-color: #056e13;
-  height: 55vh;
+  height: 400px;
 }
 .qaida-package-def h3,
 .quran-package-def h3 {

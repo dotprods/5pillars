@@ -30,14 +30,6 @@ const AboutUs = () => {
       name: "Sheikh Ammar Cader",
       position: "Tutor/Co-ordinator",
     },
-    {
-      name: "Azim Mendheria",
-      position: "Web Developer",
-    },
-    {
-      name: "Mohammed Ali",
-      position: "Web Developer",
-    },
 
     // Add more staff members here...
   ];

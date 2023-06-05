@@ -115,7 +115,7 @@ body::-webkit-scrollbar {
 }
 
 .home-content-text h1 {
-  font-size: clamp(40px, 5vw, 105px);
+  font-size: clamp(40px, 4vw, 105px);
   margin-bottom: 1rem;
   text-align: left;
   font-family: "Quicksand", sans-serif;
@@ -207,7 +207,7 @@ body::-webkit-scrollbar {
   text-align: center;
 }
 .coo:hover .circle {
-  transform: translate(-10%, -50%) scale(1.5);
+  transform: translate(-10%, -50%) scale(1.25);
 }
 .c1 {
   background: #056e13;
@@ -614,6 +614,9 @@ p {
   .home-content-text {
     margin-right: 0%;
   }
+  /* .home-content-text h1 {
+    font-size: 4vw;
+  } */
   .home-content-text button {
     font-size: 1rem;
   }

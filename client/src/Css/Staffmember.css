@@ -26,8 +26,7 @@
 }
 
 .staff-member:hover {
-  transform: scale(1.05);
-  /* z-index: -1; */
+  transform: scale(1.03);
 }
 
 .photo {
@@ -166,5 +165,8 @@ p {
 @media (max-width: 767px) {
   .about {
     border: none;
+  }
+  .staff-member:hover {
+    transform: scale(1);
   }
 }

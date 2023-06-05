@@ -68,9 +68,9 @@ const QaidaEnrol = () => {
             </div>
             <h2 className="dropdown-btn" onClick={toggleDropdown}>
               {isDropdownVisible ? (
-                <IoIosArrowUp size={35} />
+                <IoIosArrowUp size={40} />
               ) : (
-                <IoIosArrowDown size={30} />
+                <IoIosArrowDown size={40} />
               )}
             </h2>
           </div>
