@@ -612,7 +612,7 @@ p {
     height: 65vh;
   }
   .home-content-text {
-    margin-right: 0%;
+    margin: 0 5px;
   }
   /* .home-content-text h1 {
     font-size: 4vw;
@@ -620,6 +620,7 @@ p {
   .home-content-text button {
     font-size: 1rem;
   }
+
   .course {
     position: absolute;
     flex-direction: column;

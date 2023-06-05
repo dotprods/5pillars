@@ -81,7 +81,7 @@ const NewHome = () => {
         <div className="home-content">
           <div className="home-content-text">
             <h1>
-              Learn{" "}
+              Learn <br />
               <span>
                 <Typical
                   loop={Infinity}
