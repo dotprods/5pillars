@@ -200,7 +200,8 @@ body::-webkit-scrollbar {
   /* margin-right: 50px; */
   margin: 0 25px;
   height: 300px;
-  width: 250px;
+  /* width: 250px; */
+  width: 17%;
   display: flex;
   flex-direction: column;
   justify-content: center;
