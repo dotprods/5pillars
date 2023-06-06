@@ -32,6 +32,12 @@ input[type="tel"] {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+select {
+  cursor: pointer;
+}
+input[type="checkbox"] {
+  margin-top: 20px;
+}
 
 button[type="submit"] {
   display: block;
