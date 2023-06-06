@@ -206,6 +206,7 @@ body::-webkit-scrollbar {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  align-items: center;
 }
 .coo:hover .circle {
   transform: translate(-10%, -50%) scale(1.25);
@@ -234,16 +235,16 @@ body::-webkit-scrollbar {
   font-size: x-large;
   position: absolute;
   top: 40%;
-  left: 12%;
+  /* left: 12%; */
   font-weight: 500;
 }
 .c2 h3 {
   position: absolute;
-  left: 18%;
+  /* left: 18%; */
 }
 .c3 h3 {
   position: absolute;
-  left: 18%;
+  /* left: 18%; */
 }
 .line {
   color: gray;
