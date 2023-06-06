@@ -265,7 +265,7 @@ body::-webkit-scrollbar {
   transition: all 0.3s ease;
   z-index: 2;
   position: absolute;
-  left: 30%;
+  /* left: 30%; */
   top: 2%;
 }
 .cir1 {
