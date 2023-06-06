@@ -190,7 +190,7 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: center;
   width: 100%;
-  bottom: -215px;
+  bottom: -265px;
 }
 
 .coo {
@@ -199,7 +199,7 @@ body::-webkit-scrollbar {
   /* margin: 15px 85px 15px 15px; */
   /* margin-right: 50px; */
   margin: 0 25px;
-  height: 300px;
+  height: 350px;
   /* width: 250px; */
   width: 17%;
   display: flex;
