@@ -201,7 +201,7 @@ body::-webkit-scrollbar {
   margin: 0 25px;
   height: 350px;
   /* width: 250px; */
-  width: 17%;
+  width: 19%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -209,7 +209,8 @@ body::-webkit-scrollbar {
   align-items: center;
 }
 .coo:hover .circle {
-  transform: translate(-10%, -50%) scale(1.25);
+  transform: translate(-10%, -30%) scale(1.2);
+  border: #056e13 2px solid;
 }
 .c1 {
   background: #056e13;
@@ -269,17 +270,17 @@ body::-webkit-scrollbar {
   top: 2%;
 }
 .cir1 {
-  background: url("../assets/QurLes.png");
+  background: url("../assets/icon1.svg");
   background-size: cover;
   background-position: center;
 }
 .cir2 {
-  background: url("../assets/QurRec.jpg");
+  background: url("../assets/icon2.svg");
   background-size: cover;
   background-position: center;
 }
 .cir3 {
-  background: url("../assets/IslamicLes.jpg");
+  background: url("../assets/icon3.svg");
   background-size: cover;
   background-position: center;
 }
@@ -295,16 +296,21 @@ body::-webkit-scrollbar {
   left: 20%;
   bottom: 2%;
   padding: 5px;
+  margin-bottom: 15px;
 }
 .wording-cont {
   display: flex;
   justify-content: space-around;
-  margin-top: 250px;
+  margin-top: 280px;
   align-items: center;
 }
 .word-img {
   width: 350px;
   height: 250px;
+}
+.girl {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 .wording {
   text-align: center;
@@ -350,6 +356,7 @@ body::-webkit-scrollbar {
 }
 .missions {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 35px 0 0 0;
   margin-top: 5vh;
@@ -429,6 +436,7 @@ body::-webkit-scrollbar {
   background: transparent;
   text-align: center;
   margin-top: 100px;
+  height: 100%;
 }
 .feedback h1 {
   color: #757575;
@@ -439,13 +447,16 @@ body::-webkit-scrollbar {
 }
 .feedback-items {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   margin: 30px 0;
 }
 .feedback-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* width: 20%; */
   width: 300px;
   align-items: center;
   height: 450px;
@@ -459,7 +470,7 @@ body::-webkit-scrollbar {
 }
 .item1,
 .item3 {
-  margin-top: 100px;
+  /* margin-top: 100px; */
 }
 
 .feedback-img {
@@ -596,12 +607,35 @@ p {
 /* css for tabs */
 @media screen and (min-width: 767px) and (max-width: 1023px) {
   .home-content {
-    height: 70vh;
+    height: 50vh;
   }
   .coo {
     margin-right: 0;
     justify-content: space-evenly;
     margin: 0 8px;
+    width: 30%;
+  }
+  .course {
+    bottom: -335px;
+  }
+  .wording-cont {
+    margin-top: 350px;
+  }
+  .mission {
+    margin: 10px 5px;
+  }
+  .feedback-item {
+    margin: 10px auto;
+  }
+  .tutor-register {
+    width: 75%;
+    margin: 0;
+  }
+  .tutor-text {
+    margin: 0;
+  }
+  .subscribe img {
+    width: 350px;
   }
 }
 
@@ -610,6 +644,7 @@ p {
   .chat {
     right: 0px;
   }
+
   .home-content {
     height: 65vh;
   }
@@ -632,7 +667,7 @@ p {
     align-items: center;
   }
   .coo {
-    margin: 0 7px;
+    margin: 10px 7px;
     background: transparent;
     height: 350px;
     width: 100%;
@@ -649,11 +684,8 @@ p {
   .coo p {
     font-size: large;
   }
-  .coo h3 {
-    left: 30%;
-  }
-  .circle {
-    left: 36%;
+  .learn-btn {
+    margin-top: 20px;
   }
   .count {
     margin-top: 10px;
@@ -661,7 +693,7 @@ p {
   }
   .wording-cont {
     flex-direction: column;
-    margin-top: 1150px;
+    margin: 1150px 5px 15px 5px;
   }
   .missions {
     flex-direction: column;
@@ -705,7 +737,7 @@ p {
     margin-bottom: 10px;
     margin-left: 0;
     margin-right: 0;
-    height: 50vh;
+    /* height: 50vh; */
   }
   .subscribe {
     flex-direction: column;

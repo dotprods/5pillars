@@ -7,13 +7,14 @@ import ScrollTigger from "react-scroll-trigger";
 import CountUp from "react-countup";
 import Habibi from "../assets/vsd.png";
 import mosque2 from "../assets/Mosque2.png";
-import boy from "../assets/Boy.png";
-import girl from "../assets/Girl.png";
+// import boy from "../assets/Boy.png";
+// import girl from "../assets/Girl.png";
 import { BsTriangle } from "react-icons/bs";
 import { FiPlus } from "react-icons/fi";
 import { IoIosArrowUp } from "react-icons/io";
 import Typical from "react-typical";
-
+import boy from "../assets/Boy.svg";
+import girl from "../assets/Girl.svg";
 import Footer from "./Footer";
 
 const NewHome = () => {
@@ -21,6 +22,45 @@ const NewHome = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [isVisible, setIsVisible] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    {
+      name: "Zaid",
+      course: "Hifdh student",
+      feedback:
+        "ChatGPT is a sibling model to InstructGPT, which is trained to follow an instruction in a prompt and provide a detailed response. We are excited to introduce ChatGPT to get users’ feedback and learn about its strengths and weaknesses. During the research preview, usage of ChatGPT is free. Try it now at chat.openai.com.",
+      imgClass: "feed1",
+    },
+    {
+      name: "aathiq",
+      course: "Hifdh student",
+      feedback:
+        "ChatGPT is a sibling model to InstructGPT, which is trained to follow an instruction in a prompt and provide a detailed response. We are excited to introduce ChatGPT to get users’ feedback and learn about its strengths and weaknesses. During the research preview, usage of ChatGPT is free. Try it now at chat.openai.com.",
+      imgClass: "feed1",
+    },
+    {
+      name: "Zaid",
+      course: "Hifdh student",
+      feedback:
+        "ChatGPT is a sibling model to InstructGPT, which is trained to follow an instruction in a prompt and provide a detailed response. We are excited to introduce ChatGPT to get users’ feedback and learn about its strengths and weaknesses. During the research preview, usage of ChatGPT is free. Try it now at chat.openai.com.",
+      imgClass: "feed1",
+    },
+    {
+      name: "Zaid",
+      course: "Hifdh student",
+      feedback:
+        "ChatGPT is a sibling model to InstructGPT, which is trained to follow an instruction in a prompt and provide a detailed response. We are excited to introduce ChatGPT to get users’ feedback and learn about its strengths and weaknesses. During the research preview, usage of ChatGPT is free. Try it now at chat.openai.com.",
+      imgClass: "feed1",
+    },
+    {
+      name: "Zaid",
+      course: "Hifdh student",
+      feedback:
+        "ChatGPT is a sibling model to InstructGPT, which is trained to follow an instruction in a prompt and provide a detailed response. We are excited to introduce ChatGPT to get users’ feedback and learn about its strengths and weaknesses. During the research preview, usage of ChatGPT is free. Try it now at chat.openai.com.",
+      imgClass: "feed1",
+    },
+  ];
 
   const validateEmail = (email) => {
     // Regular expression for email validation
@@ -36,6 +76,14 @@ const NewHome = () => {
       alert(error);
     }
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % 5);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -86,7 +134,14 @@ const NewHome = () => {
                 <Typical
                   loop={Infinity}
                   wrapper="b"
-                  steps={["Quran", 2000, "Hifdh", 2000, "Islamic Lesson", 2000]}
+                  steps={[
+                    "Quran Recitation",
+                    2000,
+                    "Hifdh Lessons",
+                    2000,
+                    "Islamic Lessons",
+                    2000,
+                  ]}
                 />
               </span>
               <br /> With Us Online!
@@ -305,8 +360,30 @@ const NewHome = () => {
               preview, usage of ChatGPT is free. Try it now at chat.openai.com.
             </p>
           </div>
+          <div className="feedback-item item1">
+            <div className="triangle1">
+              <BsTriangle size={12} />
+            </div>
+            <div className="square"></div>
+            <div className="plus">
+              <FiPlus size={14} />
+            </div>
+            <div className="circle-1"></div>
+
+            <div className="feedback-img feed1"></div>
+            <h2 className="name">Zaid</h2>
+            <h3 className="name-course">Hifdh student</h3>
+            <p className="feedback-text">
+              ChatGPT is a sibling model to InstructGPT, which is trained to
+              follow an instruction in a prompt and provide a detailed response.
+              We are excited to introduce ChatGPT to get users’ feedback and
+              learn about its strengths and weaknesses. During the research
+              preview, usage of ChatGPT is free. Try it now at chat.openai.com.
+            </p>
+          </div>
         </div>
       </div>
+
       <div className="subscribe">
         <img src={mosque2} alt="subscribe-mosque"></img>
         <div className="subscribe-text">
