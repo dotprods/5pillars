@@ -90,6 +90,7 @@ body::-webkit-scrollbar {
   background-image: url("../assets/BG-Page.png");
   background-size: cover;
   background-position: center;
+  border-bottom-left-radius: 15px;
 }
 
 .palli {
@@ -106,6 +107,7 @@ body::-webkit-scrollbar {
   align-items: center;
   justify-content: center;
   height: 85vh;
+  border-bottom-left-radius: 15px;
 }
 
 .home-content-text {
@@ -668,19 +670,20 @@ p {
     flex-direction: column;
     justify-content: space-evenly;
     width: 100%;
-    bottom: -1100px;
+    bottom: -1300px;
     align-items: center;
   }
   .coo {
     margin: 10px 7px;
     background: transparent;
-    height: 350px;
-    width: 100%;
+    height: 400px;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
+
   .coo p,
   .coo h3,
   h2 {
@@ -690,15 +693,22 @@ p {
     font-size: large;
   }
   .learn-btn {
-    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  .c2 .learn-btn {
+    margin-bottom: -15px;
   }
   .count {
     margin-top: 10px;
     flex-direction: column;
+    height: 450px;
   }
   .wording-cont {
     flex-direction: column;
-    margin: 1150px 5px 15px 5px;
+    margin: 1350px 5px 15px 5px;
+  }
+  .wording-cont h2 {
+    margin: 5px 7px;
   }
   .missions {
     flex-direction: column;
@@ -769,7 +779,7 @@ p {
   }
   .feedback-item {
     width: 80%;
-    margin-bottom: 10px;
+    margin-bottom: 35px;
     margin-left: 0;
     margin-right: 0;
     /* height: 50vh; */
