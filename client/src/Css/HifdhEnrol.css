@@ -79,7 +79,7 @@
   margin-bottom: 40px;
 }
 .selected-surah-package-button button {
-  background: #efb836;
+  background: #d9a25a;
   padding: 7px;
   border-radius: 10px;
   font-weight: 500;
@@ -134,7 +134,7 @@
 .save {
   font-family: "Quicksand", sans-serif;
   margin-bottom: 15px;
-  color: #efb836;
+  color: #d9a25a;
 }
 .star {
   display: flex;

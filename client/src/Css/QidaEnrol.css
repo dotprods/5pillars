@@ -33,7 +33,7 @@
   color: #fff;
   border-radius: 10px;
   background-color: #056e13;
-  height: 450px;
+  height: 420px;
 }
 .qaida-package-def {
   display: flex;
@@ -43,7 +43,7 @@
   color: #fff;
   border-radius: 10px;
   background-color: #056e13;
-  height: 450px;
+  height: 370px;
 }
 .qaida-package-def h3,
 .quran-package-def h3 {
@@ -79,13 +79,22 @@
   margin-bottom: 40px;
 }
 .qaida-package-button button {
-  background: #efb836;
+  background: #d9a25a;
   padding: 7px;
   border-radius: 10px;
   font-weight: 500;
   color: #fff;
   cursor: pointer;
   width: 180px;
+}
+.sub-btn {
+  font-size: medium;
+  color: #d9a25a;
+  background: #f5f5f5;
+  margin: 10px 10px;
+  cursor: pointer;
+  border-radius: 7px;
+  padding: 7px;
 }
 .session1-btn,
 .session2-btn {
@@ -137,7 +146,7 @@
 .save {
   font-family: "Quicksand", sans-serif;
   margin-bottom: 15px;
-  color: #efb836;
+  color: #d9a25a;
 }
 .star {
   display: flex;
@@ -155,6 +164,29 @@
 }
 .star h2 {
   margin-left: 33px;
+}
+.other-session {
+  text-align: center;
+
+  font-size: xx-large;
+}
+@keyframes glowing {
+  0% {
+    background-color: #d9a25a;
+    box-shadow: 0 0 5px #d9a25a;
+  }
+  50% {
+    background-color: #d9a25a;
+    box-shadow: 0 0 20px #d9a25a;
+  }
+  100% {
+    background-color: #d9a25a;
+    box-shadow: 0 0 5px #d9a25a;
+  }
+}
+.session2-sub {
+  animation: glowing 1300ms infinite;
+  color: #f5f5f5;
 }
 .session1-btn p,
 .session2-btn p {
