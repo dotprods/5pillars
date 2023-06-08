@@ -94,7 +94,7 @@
   border-radius: 10px;
   font-weight: 500;
   color: black;
-  cursor: pointer;
+  cursor: no-drop;
   width: 180px;
   height: 150px;
   margin: 10px;

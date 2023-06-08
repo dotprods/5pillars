@@ -108,6 +108,26 @@ const QaidaEnrol = () => {
       <div className="other-nav">
         <Navbar />
       </div>
+      <div className="qaida-about">
+        <h2>Qaida/Quran Recitation </h2>
+        <p>
+          The Qaida course will provide instruction on the Arabic alphabet and
+          Tajweed principles starting from the fundamentals, using Qaida, which
+          is a basic Arabic manual. Developing this foundation is crucial for
+          reading the Holy Quran with accurate pronunciation and rhythm. <br />{" "}
+          <br />
+          At 5 Pillars Academy, our tutors follow a gradual approach, ensuring
+          that even a 5-year old child can easily apply these principles. Our
+          objective is to guide you to a level where you can independently read
+          the Quran. <br /> <br /> This Quran Recitation course is designed for
+          individuals who already possess basic Arabic reading skills and wish
+          to learn Quranic Arabic and recitation. We will cover all the Tajweed
+          principles, Tarteel (appropriate rhythm), and help you read Quranic
+          Arabic with Qirat (recitation) and the correct accent. Each principle
+          will be taught in a step-by step manner to ensure a thorough
+          comprehension.
+        </p>
+      </div>
 
       <div className="qaida-packages">
         <div className="qaida-package">
@@ -175,7 +195,7 @@ const QaidaEnrol = () => {
                 {isSession4 && <h2 className="other-session"> Session4</h2>}
 
                 {isSession1 && (
-                  <h1>
+                  <h1 className="fff">
                     £8/<span>Session</span>
                   </h1>
                 )}
@@ -185,7 +205,7 @@ const QaidaEnrol = () => {
                   </h1>
                 )}
                 {isSession3 && (
-                  <h1>
+                  <h1 className="fff">
                     £8/<span>Session</span>
                   </h1>
                 )}
@@ -202,13 +222,19 @@ const QaidaEnrol = () => {
             </div>
             <div className="btn-row1">
               <button onClick={session1} className="session1-sub sub-btn">
-                Session1
+                Session&nbsp;1
               </button>
-              <button onClick={session2} className="session2-sub sub-btn">
-                Session2
-              </button>
+              <div className="button-s2">
+                <div className="star2">
+                  <MdStars size={20} />
+                </div>
+                <button onClick={session2} className="session2-sub sub-btn">
+                  Session&nbsp;2
+                </button>
+              </div>
+
               <button onClick={session3} className="session3-sub sub-btn">
-                Session3
+                Session&nbsp;3
               </button>
               {/* <button onClick={session4} className="session4-sub sub-btn">
                 Session4
