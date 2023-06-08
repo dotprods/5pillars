@@ -89,11 +89,11 @@
 }
 .session1-btn,
 .session2-btn {
-  background: #ffffff;
+  background: #171717;
   padding: 7px;
   border-radius: 10px;
   font-weight: 500;
-  color: black;
+  color: white;
   cursor: no-drop;
   width: 180px;
   height: 150px;
@@ -163,7 +163,7 @@
 }
 .dropdown-btn svg {
   color: #fff;
-  opacity: 0.3;
+  opacity: 0.5;
 }
 .dropdown-content {
   background: #f5f5f5;
