@@ -10,12 +10,18 @@
   width: 100%;
   z-index: 4;
 }
+
 .packages {
   display: flex;
   justify-content: center;
-  margin-top: 195px;
+  margin-top: 95px;
   margin-bottom: 100px;
   height: 100%;
+}
+.package-heading {
+  color: black;
+  margin-top: 150px;
+  text-align: center;
 }
 .package {
   /* width: 25%; */
@@ -90,8 +96,10 @@
 @media (max-width: 768px) {
   .packages {
     flex-direction: column;
+    align-items: center;
   }
   .package {
     margin-bottom: 20px;
+    margin-left: 0;
   }
 }

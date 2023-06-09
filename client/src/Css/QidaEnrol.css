@@ -27,7 +27,7 @@
 .qaida-packages {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 70px;
   margin-bottom: 50px;
 }
 .qaida-package {
@@ -68,7 +68,7 @@
 }
 
 .quran-package-def h3 {
-  margin-top: 15px;
+  margin-top: 20px;
   font-size: xx-large;
 }
 .qaida-package-def h1 {
@@ -113,19 +113,22 @@
 }
 .session1-btn,
 .session2-btn {
-  background: #171717;
+  background: #f5f5f5;
   padding: 7px;
   border-radius: 10px;
   font-weight: 500;
-  color: white;
+  color: black;
   cursor: grab;
-  width: 180px;
-  height: 200px;
+  width: 250px;
+  height: 180px;
   margin: 10px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+.session2-btn h2 {
+  font-weight: 800;
 }
 
 .best-value {
@@ -176,6 +179,7 @@
   align-items: center;
   margin-top: -10px;
 }
+
 .star svg {
   color: #efb836;
   margin-left: 20px;
@@ -283,9 +287,7 @@
     text-align: center;
     color: #fff;
   }
-  .session2-btn h2 {
-    color: #f5f5f5;
-  }
+
   .star svg {
     color: #efb836;
     margin-left: 10px;

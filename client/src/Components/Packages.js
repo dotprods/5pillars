@@ -28,6 +28,7 @@ const Packages = () => {
       <div className="other-nav">
         <Navbar />
       </div>
+      <h1 className="package-heading">Packages</h1>
 
       <div className="packages">
         <div className="package">
@@ -127,6 +128,8 @@ const Packages = () => {
           )}
         </div>
       </div>
+      <div className="three-steps"></div>
+
       <Footer />
     </>
   );

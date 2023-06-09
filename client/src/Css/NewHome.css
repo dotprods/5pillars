@@ -91,6 +91,7 @@ body::-webkit-scrollbar {
   background-size: cover;
   background-position: center;
   border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .palli {

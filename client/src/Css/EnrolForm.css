@@ -14,13 +14,23 @@
   margin-bottom: 20px;
 }
 
-.toggle-button {
+.toggle-button1 {
   border: none;
   padding: 10px 20px;
   background-color: #eee;
   cursor: pointer;
   transition: background-color 1.3s ease-in-out;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.toggle-button2 {
+  border: none;
+  padding: 10px 20px;
+  background-color: #eee;
+  cursor: pointer;
+  transition: background-color 1.3s ease-in-out;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 select,
 input[type="text"],
@@ -53,10 +63,12 @@ button[type="submit"] {
   color: #757575;
 }
 
-.toggle-button.active {
+.toggle-button1.active,
+.toggle-button2.active {
   background-color: #ccc;
 }
-.toggle-button.active ~ .toggle-button {
+.toggle-button1.active ~ .toggle-button1,
+.toggle-button2.active ~ .toggle-button2 {
   background-color: #eee;
 }
 

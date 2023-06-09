@@ -10,10 +10,28 @@
   width: 100%;
   z-index: 0;
 }
+.hifdh-surah {
+  display: flex;
+  justify-content: center;
+}
+.hifdh-about,
+.surah-about {
+  margin: 190px 10px 0;
+  max-width: 600px;
+  align-items: center;
+  border: 2px solid #d9a25a;
+  border-radius: 10px;
+  padding: 20px;
+}
+.hifdh-about h2,
+.surah-about h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
 .hifdh-packages {
   display: flex;
   justify-content: center;
-  margin-top: 195px;
+  margin-top: 105px;
   margin-bottom: 50px;
 }
 .selected-surah-package {
@@ -33,7 +51,7 @@
   color: #fff;
   border-radius: 10px;
   background-color: #056e13;
-  height: 370px;
+  height: 420px;
 }
 .selected-surah-package-def {
   display: flex;
@@ -87,20 +105,24 @@
   cursor: pointer;
   width: 180px;
 }
+.hifdh-button {
+  margin-bottom: 25px;
+}
 .session1-btn,
 .session2-btn {
-  background: #171717;
+  background: #f5f5f5;
   padding: 7px;
   border-radius: 10px;
   font-weight: 500;
-  color: white;
+  color: black;
   cursor: no-drop;
-  width: 180px;
-  height: 150px;
+  width: 250px;
+  height: 180px;
   margin: 10px;
   text-align: center;
 }
-.session2-btn {
+.session2-btn h2 {
+  font-weight: 800;
 }
 
 .best-value {
@@ -180,6 +202,18 @@
 }
 /* #DBDBDB */
 @media (max-width: 767px) {
+  .hifdh-surah {
+    flex-direction: column;
+  }
+  .hifdh-about,
+  .surah-about {
+    border: none;
+    margin-top: 120px;
+  }
+  .surah-about {
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
   .hifdh-packages {
     flex-direction: column;
     justify-content: center;

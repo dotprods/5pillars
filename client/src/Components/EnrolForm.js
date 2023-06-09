@@ -83,13 +83,13 @@ const EnrolForm = () => {
       <div className="form-container">
         <div className="form-toggle">
           <button
-            className={`toggle-button ${isParent ? "active" : ""}`}
+            className={`toggle-button1 ${isParent ? "active" : ""}`}
             onClick={() => toggleForm(true)}
           >
             As a Parent
           </button>
           <button
-            className={`toggle-button ${isParent ? "" : "active"}`}
+            className={`toggle-button2 ${isParent ? "" : "active"}`}
             onClick={() => toggleForm(false)}
           >
             As a Student
