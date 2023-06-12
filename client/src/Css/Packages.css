@@ -79,7 +79,7 @@
   background: #f5f5f5;
   padding: 10px;
   text-align: center;
-  transition: opacity 0.8s ease;
+  transition: opacity 1.3s ease-in-out;
 }
 .dropdown-content h2 {
   font-size: medium;
@@ -92,6 +92,130 @@
 .dropdown-content h3 {
   font-family: "Quicksand", sans-serif;
 }
+
+.three-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 100px;
+  position: relative;
+
+  width: 100%;
+  margin-top: 200px;
+}
+
+.circle-steps1 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: url("../assets/Boy.svg");
+  border-radius: 50%;
+  background-color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  left: 25%;
+}
+.circle-steps2 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: url("../assets/Boy.svg");
+  border-radius: 50%;
+  background-color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  left: 45%;
+}
+.circle-steps3 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: url("../assets/Boy.svg");
+  border-radius: 50%;
+  background-color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  left: 65%;
+}
+.arrow1 {
+  background: black;
+  width: 10.2%;
+  height: 2px;
+  position: absolute;
+  left: 34.75%;
+}
+.arrow2 {
+  background: black;
+  width: 10.2%;
+  height: 2px;
+  position: absolute;
+  position: absolute;
+  left: 54.75%;
+}
+
+/* .arrow::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 12px solid black;
+  top: -4px;
+  left: -3px;
+} */
+.arrow1::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 12px solid black;
+  top: -4px;
+  right: -3px;
+}
+.arrow2::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 12px solid black;
+  top: -4px;
+  right: -3px;
+}
+
+.circle-steps1:hover {
+  background-color: #ffc107;
+}
+.circle-steps2:hover {
+  background-color: #ffc107;
+}
+.circle-steps3:hover {
+  background-color: #ffc107;
+}
+.circle-steps1:hover .arrow1 {
+  color: red; /* Change the color of arrow1 when circle-steps1 is hovered */
+  width: 5%;
+}
+/* .arrow-steps {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 4px;
+  background-color: greenyellow;
+  transition: background-color 0.3s ease;
+} */
+
+.circle-steps:hover ~ .arrow,
+.circle-steps:hover + .arrow {
+  background-color: #ffc107;
+}
+
 /* #DBDBDB */
 @media (max-width: 768px) {
   .packages {
@@ -101,5 +225,20 @@
   .package {
     margin-bottom: 20px;
     margin-left: 0;
+  }
+  .three-steps {
+    position: static;
+    flex-direction: column;
+    height: auto;
+    justify-content: space-between;
+  }
+  .circle-steps1 {
+    position: static;
+  }
+  .circle-steps2 {
+    position: static;
+  }
+  .circle-steps3 {
+    position: static;
   }
 }

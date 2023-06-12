@@ -5,7 +5,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
 li {
   list-style: none;
@@ -14,7 +13,7 @@ li {
   z-index: 3;
   position: fixed;
   width: 100%;
-  background: transparent;
+  background: #d9a25a;
   height: 13vh;
   /* line-height: 10vh; */
   /* box-shadow: rgba(50, 50, 93, 0.23) 0 30px 30px -20px; */

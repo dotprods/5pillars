@@ -5,9 +5,6 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-.haa {
-  /* height: 11vh; */
-}
 
 .staff-list {
   display: flex;
@@ -144,7 +141,8 @@
 .about {
   /* background: url(../images/bg-splash.png); */
   max-width: 600px;
-  margin: 240px auto;
+  margin: auto;
+  margin-bottom: 75px;
   padding: 40px;
   background: transparent;
   border: 2px solid #d9a057;

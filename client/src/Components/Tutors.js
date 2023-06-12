@@ -1,17 +1,120 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import Navbar from "./Navbar";
+// import NewNavbar from "./NewNav";
+import "../Css/Tutors.css";
+import Footer from "./Footer";
+const tutors = [
+  {
+    name: "Muhammadh Sirajdeen",
+    image: require("../assets/mUser.png"),
+    hoursTaught: " Hours Taught: 1500+(only one to one)",
+    qualification:
+      " Hafidh, Alim and Special course in Thajweedh and Arabic language",
+    numberOfStudents: "Number of students : 100+",
+    experience: "Experience: 5+ Years",
+    aboutMe: "About me:",
+  },
+  {
+    name: " Binth Hassan",
+    image: require("../assets/mUser.png"),
+    hoursTaught: "Hours Taught: 100+",
+    qualification: "Hafidha , Aalima , Qaaria  ",
+    numberOfStudents: "Number of students : 100+",
+    experience: "Experience: 6+ years",
+    aboutMe:
+      " Enthusiastic and ambitious tutor with a Degree in Islamic studies and Qur’anic sciences with experience in guiding students. Motivating the young and old towards Learning the Qur’an in its various fields is my passion.Analysing a range of effective ways of teaching and approaches that would benefit students, expanding my repertoire of knowledge in order to guide holistically and to nuture progressively is what I firmly believe as a teacher. strive towards creating an amicable environment for my students ,making it interactive, interesting and simple, building a positive and loving approach to learning the Qur’an and help achieve their goals in their Qur’anic journey successfully.",
+  },
+  {
+    name: "Noorah Ahamadeen",
+    image: require("../assets/mUser.png"),
+    hoursTaught: "Hours Taught: 804+",
+    qualification:
+      " Hafidh, Alim and Special course in Thajweedh and Arabic languageAalima and Diploma in Counseling and Psychology",
+    numberOfStudents: "Number of students : 64+",
+    experience: "Experience: 6+ Years",
+    aboutMe:
+      "I am Noorah Ahamadeen, an experienced tutor with a passion for teaching. Since graduating, I have solely focused on teaching and have gained extensive experience in handling all types of children. I believe in committing myself to everything I do and being punctual, as I understand the importance of valuing other people's time. My qualifications as an Aalima and a Diploma in Counseling and Psychology have allowed me to have a holistic approach in guiding my students. Seeing the positive outcomes of my teaching has only reaffirmed my belief that this is where my passion lies.",
+  },
+  {
+    name: "Kathija Ahamadeen ",
+    image: require("../assets/wUser.png"),
+    hoursTaught: "Hours Taught: 750+",
+    qualification:
+      " Hafidh, Alim and Special course in Thajweedh and Arabic language",
+    numberOfStudents: "Number of students : 66+",
+    experience:
+      "Experience: In Ain evening class 2 Years ,International classes: 3 years",
+    aboutMe:
+      "Im a graduate of CIT previously known as Ain institute ladies section of the batch 2021. Alhamdulillah I’ve graduated with a certification of very good and I hope to use my qualifications to provide the best teaching service I can provide to my students, to help them understand the beauty of their religion and the bounties of their Creator. I actively believe in the learning power of students and pursuing the limits of their knowledge and in making the lessons engaging and insightful.",
+  },
+  {
+    name: "Usaidh Fazlur Rahman",
+    image: require("../assets/mUser.png"),
+    hoursTaught: "Hours Taught: 1050+",
+    qualification: " Hafidh",
+    numberOfStudents: "Number of students : 30+",
+    experience: "Experience: 5+ Years",
+    aboutMe:
+      "Experienced Quran tutor with a certificate in Qur’anic studies from Darul Uloom Zakariya-South Africa. Motivated and dedicated to enlightening students on their journey to learning the Quran in an exemplary manner.I prioritize the students of Quran in achieving the ultimate coordination in recitation, memorization, and tajweed. I strongly believe in establishing a close relationship with my students in order to motivate and guide them in their journey.",
+  },
+  {
+    name: "Abdullah Izzath",
+    image: require("../assets/mUser.png"),
+    hoursTaught: "Hours Taught: 1000+",
+    qualification: " Alim ",
+    numberOfStudents: "Number of students : 100+",
+    experience: "Experience: 4+ Years",
+    aboutMe:
+      "Experienced Quran tutor with a degree in Islamic Studies. Passionate about guiding students on their Quranic journey. Creates a supportive and engaging learning environment. I emphasize a holistic approach to Quranic education, incorporating recitation, memorization, and  tajweed.I firmly believe in the power of building strong teacher-student relationships. I actively engage with my students, understanding their unique goals, strengths, and areas for improvement",
+  },
+  {
+    name: "Hajara Ibrahim",
+    image: require("../assets/wUser.png"),
+    hoursTaught: "Hours Taught: 4000+",
+    qualification: "Alima",
+    numberOfStudents: "Number of students : 250+",
+    experience: "Experience: 12+ Years",
+    aboutMe:
+      "I’m a dedicated Quran , Arabic and Islamic Studies educator on the journey of enabling my students to achieve their best.In this world that we live in I believe spirituality is the common saviour for all, it is my duty as an educator of the religious studies to facilitate this path and make it accessible and easy upon my students.May Allah guide us and keep us steadfast in His path. Aameen",
+  },
+  {
+    name: "Mymoona Mohamed Zahir",
+    image: require("../assets/wUser.png"),
+    hoursTaught: "Hours Taught: 2000+(only one to one)",
+    qualification: " Hafidha",
+    numberOfStudents: "Number of students : 180+",
+    experience: "Experience: 3+ Years",
+    aboutMe:
+      ": I can teach Quran and Tajweed with best of my knowledge that I gained. I have devised and well plan methodology to help students who are struggling with their revision moreover I can deliver the lesson more convenient and interesting manner which make them easier to understand the lessons. And also I motivate and encourage students to make them interesting over the lessons. May Allah bless you and grant you the knowledge of Quran.",
+  },
+];
 const Tutors = () => {
+  const [isAboutme, setAboutMe] = useState(false);
   return (
     <>
       <div className="background" />
 
-      <div className="other-nav">
+      <div className="">
         <Navbar />
       </div>
-      <h1 style={{ marginTop: "20vh", textAlign: "center" }}>
-        {" "}
-        Under construction
-      </h1>
+      <div className="blank"></div>
+      <div className="tutors-page">
+        <h1>Tutors</h1>
+        <div className="tutors-container">
+          {tutors.map((tutor, index) => (
+            <div key={index} className="tutor-card">
+              <h1>{tutor.name}</h1>
+              <img src={tutor.image} alt={tutor.name} />
+              <h3>{tutor.qualification}</h3>
+              <p>{tutor.experience}</p>
+              <p>{tutor.hoursTaught}</p>
+              <p>{tutor.numberOfStudents}</p>
+              {isAboutme && <p>{tutor.aboutMe}</p>}
+            </div>
+          ))}
+        </div>
+      </div>
+      <Footer />
     </>
   );
 };

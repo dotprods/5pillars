@@ -38,9 +38,10 @@ const AboutUs = () => {
     <>
       <div className="background" />
 
-      <div className="other-nav">
+      <div className="">
         <Navbar />
       </div>
+      <div className="blank"></div>
 
       <div className="about">
         <h1>About Us</h1>

@@ -128,7 +128,13 @@ const Packages = () => {
           )}
         </div>
       </div>
-      <div className="three-steps"></div>
+      <div className="three-steps">
+        <div className="circle-steps1"></div>
+        <div className="arrow1"></div>
+        <div className="circle-steps2"></div>
+        <div className="arrow2"></div>
+        <div className="circle-steps3"></div>
+      </div>
 
       <Footer />
     </>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/Logo-5.png";
 import "../Css/Navbar.css";
@@ -60,7 +61,7 @@ function Navbar() {
         </Link>
       </ul>
       <button className="mobile-menu-icon" onClick={handleMobileMenu}>
-        {mobile ? <FaTimes /> : <FaBars />}
+        {mobile ? <RiCloseLine /> : <RiMenu3Line />}
       </button>
     </nav>
   );

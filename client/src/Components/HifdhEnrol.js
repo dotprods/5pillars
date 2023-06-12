@@ -89,6 +89,16 @@ const HifdhEnrol = () => {
         <Navbar />
       </div>
       <div className="hifdh-surah">
+        <div className="surah-about">
+          <h2>Selected Surahs </h2>
+          <p>
+            Our Selected Surahs program is designed to offer you a unique
+            opportunity to memorize significant Surahs from the Quran at your
+            own pace, ensuring a range of benefits for you. The program
+            carefully curates a collection of Surahs that have been chosen based
+            on their significance, relevance, and beauty.
+          </p>
+        </div>
         <div className="hifdh-about">
           <h2>Hifdh Page </h2>
           <p>
@@ -102,16 +112,6 @@ const HifdhEnrol = () => {
             Whether you are a beginner or have already started your memorisation
             journey, our program offers a nurturing and supportive environment
             to help you succeed.
-          </p>
-        </div>
-        <div className="surah-about">
-          <h2>Selected Surahs </h2>
-          <p>
-            Our Selected Surahs program is designed to offer you a unique
-            opportunity to memorize significant Surahs from the Quran at your
-            own pace, ensuring a range of benefits for you. The program
-            carefully curates a collection of Surahs that have been chosen based
-            on their significance, relevance, and beauty.
           </p>
         </div>
       </div>
