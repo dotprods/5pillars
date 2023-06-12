@@ -32,7 +32,7 @@
   margin: 0 auto;
   overflow: hidden;
   border-radius: 50%;
-  background: #333;
+  background: #fff;
 }
 .team {
   text-align: center;
@@ -89,7 +89,8 @@
 
 .modal-content {
   padding: 20px;
-  max-width: 400px;
+  max-width: 600px;
+  height: 400px;
   text-align: center;
   position: relative;
   border-radius: 9px;

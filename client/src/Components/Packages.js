@@ -25,9 +25,10 @@ const Packages = () => {
     <>
       <div className="background" />
 
-      <div className="other-nav">
+      <div className="">
         <Navbar />
       </div>
+      <div className="blank"></div>
       <h1 className="package-heading">Packages</h1>
 
       <div className="packages">

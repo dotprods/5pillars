@@ -16,7 +16,7 @@
 }
 .hifdh-about,
 .surah-about {
-  margin: 190px 10px 0;
+  margin: 0px 10px 0;
   max-width: 600px;
   align-items: center;
   border: 2px solid #d9a25a;
@@ -208,7 +208,6 @@
   .hifdh-about,
   .surah-about {
     border: none;
-    margin-top: 120px;
   }
   .surah-about {
     margin-top: 40px;
@@ -243,5 +242,8 @@
   }
   .star h2 {
     margin-left: 13px;
+  }
+  .blank {
+    height: 50px;
   }
 }

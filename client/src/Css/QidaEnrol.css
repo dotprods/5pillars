@@ -11,7 +11,7 @@
   z-index: 4;
 }
 .qaida-about {
-  margin: 190px auto 0 auto;
+  margin: 0 auto 0 auto;
   max-width: 600px;
   align-items: center;
   border: 2px solid #d9a25a;
@@ -259,7 +259,7 @@
 /* #DBDBDB */
 @media (max-width: 767px) {
   .qaida-about {
-    margin: 150px auto 0 auto;
+    margin: 0px auto 0 auto;
     width: 90%;
     align-items: center;
     border: none;

@@ -1,8 +1,32 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 // import NewNavbar from "./NewNav";
+import { BsTriangle } from "react-icons/bs";
+import { FiPlus } from "react-icons/fi";
 import "../Css/Tutors.css";
 import Footer from "./Footer";
+const testimonials = [
+  {
+    name: "Sheikh Usaidh ",
+    thoughts:
+      "It's been a profound experience working at 5 pillars academy where tutors across the globe are able to enlighten and guide the students of Quran about the methodology of recitation. The tutors and students are given the freedom to choose the timing as per their need.Moreover, the students are guided and encouraged through one-on -one sessions where the love and dedication for the holy book is witnessed.All in all, 5 Pillars Academy imparts knowledge of the holy book empowering and motivating both student and tutor. ",
+  },
+  {
+    name: "Sheikh Bilal  ",
+    thoughts:
+      "I chose to be an Ustadh for 5pillars academy because their online classes allow greater flexibility in planning our day and working around with family and work especially with our busy schedule. The management is very helpful and supportive in creating a great virtual community. We have the advantage of focusing and giving individual attention to students letting them learn at their own pace with no external pressure of curriculum from the Academy Management.",
+  },
+  {
+    name: "Sheikh Abdullah Izzath ",
+    thoughts:
+      "Alhamdulillah and Jazakumullah khair for accepting me as a tutor at 5pillars academy,  I have been privileged to work with this dedicated team in imparting Quran and Islamic Knowledge, and I ask Allah to accept this great service from all who are contributing to this Academy and keep me a part of this blessed journey, Aameen.",
+  },
+  {
+    name: "Sheikh Ammar  ",
+    thoughts:
+      "I highly recommend 5pillars Academy for their exceptional management, Everyone on the team is well-organized, effective, and constantly available to address any inquiries. They go above and beyond to create a conducive learning atmosphere because they genuinely care about their students' academic performance. Overall, is fantastic experience. I'm delighted to be working here.",
+  },
+];
 const tutors = [
   {
     name: "Muhammadh Sirajdeen",
@@ -89,7 +113,16 @@ const tutors = [
   },
 ];
 const Tutors = () => {
-  const [isAboutme, setAboutMe] = useState(false);
+  const [expandedTutorIndex, setExpandedTutorIndex] = useState(null);
+
+  const handleToggleAboutMe = (index) => {
+    if (expandedTutorIndex === index) {
+      setExpandedTutorIndex(null); // Close the expanded tutor
+    } else {
+      setExpandedTutorIndex(index); // Expand the clicked tutor
+    }
+  };
+
   return (
     <>
       <div className="background" />
@@ -102,17 +135,52 @@ const Tutors = () => {
         <h1>Tutors</h1>
         <div className="tutors-container">
           {tutors.map((tutor, index) => (
-            <div key={index} className="tutor-card">
+            <div
+              key={index}
+              className={`tutor-card ${
+                expandedTutorIndex === index ? "expanded" : ""
+              }`}
+            >
               <h1>{tutor.name}</h1>
               <img src={tutor.image} alt={tutor.name} />
               <h3>{tutor.qualification}</h3>
-              <p>{tutor.experience}</p>
-              <p>{tutor.hoursTaught}</p>
-              <p>{tutor.numberOfStudents}</p>
-              {isAboutme && <p>{tutor.aboutMe}</p>}
+              <p className="info">{tutor.experience}</p>
+              <p className="info">{tutor.hoursTaught}</p>
+              <p className="info info3">{tutor.numberOfStudents}</p>
+
+              {expandedTutorIndex === index && (
+                <p className="aboutme">{tutor.aboutMe}</p>
+              )}
+              <button
+                className="about-btn"
+                onClick={() => handleToggleAboutMe(index)}
+              >
+                {expandedTutorIndex === index ? "Close" : "About Me"}
+              </button>
             </div>
           ))}
         </div>
+      </div>
+      <h1 style={{ textAlign: "center", margin: "120px" }}>
+        Testimonials From Tutors
+      </h1>
+      <div className="testimonials-items">
+        {testimonials.map((testimonials, index) => (
+          <div className="testimonials-item ">
+            <div className="triangle1">
+              <BsTriangle size={12} />
+            </div>
+            <div className="square"></div>
+            <div className="plus">
+              <FiPlus size={14} />
+            </div>
+            <div className="circle--1"></div>
+
+            <div className="testimonials-img feed1"></div>
+            <h2 className="name">{testimonials.name}</h2>
+            <p className="feedback-text">{testimonials.thoughts}</p>
+          </div>
+        ))}
       </div>
       <Footer />
     </>

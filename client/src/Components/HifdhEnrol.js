@@ -85,9 +85,10 @@ const HifdhEnrol = () => {
     <>
       <div className="background" />
 
-      <div className="other-nav">
+      <div className="">
         <Navbar />
       </div>
+      <div className="blank"></div>
       <div className="hifdh-surah">
         <div className="surah-about">
           <h2>Selected Surahs </h2>

@@ -105,9 +105,10 @@ const QaidaEnrol = () => {
     <>
       <div className="background" />
 
-      <div className="other-nav">
+      <div className="">
         <Navbar />
       </div>
+      <div className="blank"></div>
       <div className="qaida-about">
         <h2>Qaida/Quran Recitation </h2>
         <p>
