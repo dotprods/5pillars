@@ -61,7 +61,7 @@ function Navbar() {
         </Link>
       </ul>
       <button className="mobile-menu-icon" onClick={handleMobileMenu}>
-        {mobile ? <RiCloseLine /> : <RiMenu3Line />}
+        {mobile ? <RiCloseLine size={30} /> : <RiMenu3Line size={30} />}
       </button>
     </nav>
   );

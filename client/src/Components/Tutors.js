@@ -162,7 +162,7 @@ const Tutors = () => {
                 className="about-btn"
                 onClick={() => handleToggleAboutMe(index)}
               >
-                {expandedTutorIndex === index ? "Close" : "About Me"}
+                {expandedTutorIndex === index ? "Close This" : "About Me"}
               </button>
             </div>
           ))}
