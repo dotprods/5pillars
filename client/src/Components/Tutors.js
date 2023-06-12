@@ -161,7 +161,10 @@ const Tutors = () => {
           ))}
         </div>
       </div>
-      <h1 style={{ textAlign: "center", margin: "120px" }}>
+      <h1
+        className="testimonials-head"
+        style={{ textAlign: "center", marginTop: "120px" }}
+      >
         Testimonials From Tutors
       </h1>
       <div className="testimonials-items">
