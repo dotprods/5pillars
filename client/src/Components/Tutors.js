@@ -36,7 +36,8 @@ const tutors = [
       " Hafidh, Alim and Special course in Thajweedh and Arabic language",
     numberOfStudents: "Number of students : 100+",
     experience: "Experience: 5+ Years",
-    aboutMe: "About me:",
+    aboutMe:
+      " ☉ 5 years of experience as a Quran tutor working with students of all ages. \n☉ Highly innovative, creative and self motivated individual with a great enthusiasm and determination tosecure a permanent position with a progressive institution. Highly developed leadership skills and theability to prioritize a substantial workload.\n ☉ Believes in a student-centered approach to teaching, where the student's needs and interests are taken into account when designing lessons \n☉ Uses a variety of teaching methods, including lectures, discussions, readings, and multimedia materials, to engage students and foster critical thinking \n ☉ Tailors lessons to the student's learning style and pace, and provides regular feedback to help them improve.",
   },
   {
     name: " Binth Hassan",
@@ -149,7 +150,13 @@ const Tutors = () => {
               <p className="info info3">{tutor.numberOfStudents}</p>
 
               {expandedTutorIndex === index && (
-                <p className="aboutme">{tutor.aboutMe}</p>
+                <ul className="aboutme">
+                  {tutor.aboutMe.split("\n").map((item, i) => (
+                    <li key={i} style={{ marginBottom: "0.5em" }}>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               )}
               <button
                 className="about-btn"
