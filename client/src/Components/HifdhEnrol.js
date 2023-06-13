@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 import Footer from "./Footer";
 import "../Css/HifdhEnrol.css";
 import { MdStars } from "react-icons/md";
+import Loader from "./Loader";
 import {
   Link,
   useNavigate,
@@ -14,6 +15,7 @@ import {
 import Medal from "../assets/medal-col.png";
 
 const HifdhEnrol = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [packages, setPackage] = useState("Hidth-Session2");
   const [amount, setAmount] = useState(7);
   const [session2Opacity, setSession2Opacity] = useState(1);
@@ -117,90 +119,99 @@ const HifdhEnrol = () => {
     setPackage("Hifdh-Sesson3");
     setAmount(8);
   };
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 4000);
+  }, []);
 
   return (
     <>
-      <div className="background" />
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <>
+          <div className="background" />
 
-      <div className="">
-        <Navbar />
-      </div>
-      <div className="blank"></div>
-      <div className="hifdh-surah">
-        <div className="surah-about">
-          <h2>Selected Surahs </h2>
-          <p>
-            Our Selected Surahs program is designed to offer you a unique
-            opportunity to memorize significant Surahs from the Quran at your
-            own pace, ensuring a range of benefits for you. The program
-            carefully curates a collection of Surahs that have been chosen based
-            on their significance, relevance, and beauty.
-          </p>
-        </div>
-        <div className="hifdh-about">
-          <h2>Hifdh Page </h2>
-          <p>
-            Our Hifdh program is designed to provide you with comprehensive
-            guidance and support as you memorise the Quran, one of the greatest
-            acts of devotion in Islam. Our experienced and qualified tutors will
-            assist you in memorizing the Quran with perfect Thajweed. <br />{" "}
-            <br />
-            We follow a structured and personalised approach, tailoring the
-            memorisation process to your individual needs and capabilities.
-            Whether you are a beginner or have already started your memorisation
-            journey, our program offers a nurturing and supportive environment
-            to help you succeed.
-          </p>
-        </div>
-      </div>
-
-      <div className="hifdh-packages">
-        <div className="selected-surah-package">
-          <div className="selected-surah-package-def">
-            <h3>SELECTED SURAHS HIFDH</h3>
-            <h1>
-              £7/<span>Session</span>
-            </h1>
-            <p>£64 Billed Monthly (2 sessions P/W)</p>
-            <div className="selected-surah-package-button">
-              {/* <Link to="/register" style={{ textDecoration: "none" }}> */}
-              <button className="btn-enrol" onClick={surahEvent}>
-                <span className="cir-btn">
-                  <span className="arrow-btn"></span>
-                </span>
-                <span className="text-btn">Enrol Now</span>
-              </button>
-              {/* </Link> */}
-            </div>
-            <h2 className="dropdown-btn" onClick={toggleDropdown}>
-              {isDropdownVisible ? (
-                <IoIosArrowUp size={40} />
-              ) : (
-                <IoIosArrowDown size={40} />
-              )}
-            </h2>
+          <div className="">
+            <Navbar />
           </div>
-          {isDropdownVisible && (
-            <div className="dropdown-content">
-              <h2> Two sessions per week</h2>
-              <h2>Perfect for adults</h2>
-              <h2>Selected surahs for memorisation</h2>
-              <h2> Reading</h2>
-              <h2> Thajweed</h2>
-              <h2> Bi-Weekly Feedback</h2>
-              <h2>One to One Live sessions</h2>
-              <h2>45 Mins per session</h2>
-              <h2> Weekly Progress report</h2>
-              <h2> Highly qualified tutors with Ijaza</h2>
+          <div className="blank"></div>
+          <div className="hifdh-surah">
+            <div className="surah-about">
+              <h2>Selected Surahs </h2>
+              <p>
+                Our Selected Surahs program is designed to offer you a unique
+                opportunity to memorize significant Surahs from the Quran at
+                your own pace, ensuring a range of benefits for you. The program
+                carefully curates a collection of Surahs that have been chosen
+                based on their significance, relevance, and beauty.
+              </p>
             </div>
-          )}
-        </div>
-        <div className="hifdh-package">
-          <div className="hifdh-package-def  ">
-            <h3>HIFDH</h3>
+            <div className="hifdh-about">
+              <h2>Hifdh Page </h2>
+              <p>
+                Our Hifdh program is designed to provide you with comprehensive
+                guidance and support as you memorise the Quran, one of the
+                greatest acts of devotion in Islam. Our experienced and
+                qualified tutors will assist you in memorizing the Quran with
+                perfect Thajweed. <br /> <br />
+                We follow a structured and personalised approach, tailoring the
+                memorisation process to your individual needs and capabilities.
+                Whether you are a beginner or have already started your
+                memorisation journey, our program offers a nurturing and
+                supportive environment to help you succeed.
+              </p>
+            </div>
+          </div>
 
-            <div className="hifdh-package-buttons">
-              {/* <div
+          <div className="hifdh-packages">
+            <div className="selected-surah-package">
+              <div className="selected-surah-package-def">
+                <h3>SELECTED SURAHS HIFDH</h3>
+                <h1>
+                  £7/<span>Session</span>
+                </h1>
+                <p>£64 Billed Monthly (2 sessions P/W)</p>
+                <div className="selected-surah-package-button">
+                  {/* <Link to="/register" style={{ textDecoration: "none" }}> */}
+                  <button className="btn-enrol" onClick={surahEvent}>
+                    <span className="cir-btn">
+                      <span className="arrow-btn"></span>
+                    </span>
+                    <span className="text-btn">Enrol Now</span>
+                  </button>
+                  {/* </Link> */}
+                </div>
+                <h2 className="dropdown-btn" onClick={toggleDropdown}>
+                  {isDropdownVisible ? (
+                    <IoIosArrowUp size={40} />
+                  ) : (
+                    <IoIosArrowDown size={40} />
+                  )}
+                </h2>
+              </div>
+              {isDropdownVisible && (
+                <div className="dropdown-content">
+                  <h2> Two sessions per week</h2>
+                  <h2>Perfect for adults</h2>
+                  <h2>Selected surahs for memorisation</h2>
+                  <h2> Reading</h2>
+                  <h2> Thajweed</h2>
+                  <h2> Bi-Weekly Feedback</h2>
+                  <h2>One to One Live sessions</h2>
+                  <h2>45 Mins per session</h2>
+                  <h2> Weekly Progress report</h2>
+                  <h2> Highly qualified tutors with Ijaza</h2>
+                </div>
+              )}
+            </div>
+            <div className="hifdh-package">
+              <div className="hifdh-package-def  ">
+                <h3>HIFDH</h3>
+
+                <div className="hifdh-package-buttons">
+                  {/* <div
                 className="session1-btn"
                 id="sess1"
                 onClick={session1}
@@ -212,135 +223,140 @@ const HifdhEnrol = () => {
                 </h1>
                 <p>£64 Billed Monthly (2 sessions P/W)</p>
               </div> */}
-              <div
-                className="session2-btn"
-                id="sess2"
-                // style={{ opacity: session2Opacity }}
-              >
-                {isSession1 && <h2 className="other-session"> Session1</h2>}
+                  <div
+                    className="session2-btn"
+                    id="sess2"
+                    // style={{ opacity: session2Opacity }}
+                  >
+                    {isSession1 && <h2 className="other-session"> Session1</h2>}
 
-                {isSession2 && (
-                  <div className="star">
-                    <h2> Session2</h2>
-                    <img src={Medal} className="medal"></img>
+                    {isSession2 && (
+                      <div className="star">
+                        <h2> Session2</h2>
+                        <img src={Medal} className="medal"></img>
+                      </div>
+                    )}
+                    {isSession3 && <h2 className="other-session"> Session3</h2>}
+                    {isSession4 && <h2 className="other-session"> Session4</h2>}
+
+                    {isSession1 && (
+                      <h1 className="fff">
+                        £8/<span>Session</span>
+                      </h1>
+                    )}
+                    {isSession2 && (
+                      <h1>
+                        £7/<span>Session</span>
+                      </h1>
+                    )}
+                    {isSession3 && (
+                      <h1 className="fff">
+                        £8/<span>Session</span>
+                      </h1>
+                    )}
+                    {isSession4 && (
+                      <h1>
+                        £8/<span>Session</span>
+                      </h1>
+                    )}
+
+                    {isSession1 && <p>£64 Billed Monthly (2 sessions P/W)</p>}
+                    {isSession2 && <p>£84 Billed Monthly (3 sessions P/W)</p>}
+                    {isSession3 && <p>£64 Billed Monthly (3 sessions P/W)</p>}
+                    {isSession4 && <p>£64 Billed Monthly (3 sessions P/W)</p>}
                   </div>
-                )}
-                {isSession3 && <h2 className="other-session"> Session3</h2>}
-                {isSession4 && <h2 className="other-session"> Session4</h2>}
-
-                {isSession1 && (
-                  <h1 className="fff">
-                    £8/<span>Session</span>
-                  </h1>
-                )}
-                {isSession2 && (
-                  <h1>
-                    £7/<span>Session</span>
-                  </h1>
-                )}
-                {isSession3 && (
-                  <h1 className="fff">
-                    £8/<span>Session</span>
-                  </h1>
-                )}
-                {isSession4 && (
-                  <h1>
-                    £8/<span>Session</span>
-                  </h1>
-                )}
-
-                {isSession1 && <p>£64 Billed Monthly (2 sessions P/W)</p>}
-                {isSession2 && <p>£84 Billed Monthly (3 sessions P/W)</p>}
-                {isSession3 && <p>£64 Billed Monthly (3 sessions P/W)</p>}
-                {isSession4 && <p>£64 Billed Monthly (3 sessions P/W)</p>}
-              </div>
-            </div>
-            <div className="btn-row1">
-              <button
-                onClick={session1}
-                className="session1-sub sub-btn"
-                style={{ opacity: session1Opacity }}
-              >
-                Session&nbsp;1
-              </button>
-              <div className="button-s2" style={{ opacity: session2Opacity }}>
-                <div className="star2">
-                  <MdStars size={20} />
                 </div>
-                <button onClick={session2} className="session2-sub sub-btn">
-                  Session&nbsp;2
-                </button>
-              </div>
+                <div className="btn-row1">
+                  <button
+                    onClick={session1}
+                    className="session1-sub sub-btn"
+                    style={{ opacity: session1Opacity }}
+                  >
+                    Session&nbsp;1
+                  </button>
+                  <div
+                    className="button-s2"
+                    style={{ opacity: session2Opacity }}
+                  >
+                    <div className="star2">
+                      <MdStars size={20} />
+                    </div>
+                    <button onClick={session2} className="session2-sub sub-btn">
+                      Session&nbsp;2
+                    </button>
+                  </div>
 
-              <button
-                onClick={session3}
-                className="session3-sub sub-btn"
-                style={{ opacity: session3Opacity }}
-              >
-                Session&nbsp;3
-              </button>
-              {/* <button onClick={session4} className="session4-sub sub-btn">
+                  <button
+                    onClick={session3}
+                    className="session3-sub sub-btn"
+                    style={{ opacity: session3Opacity }}
+                  >
+                    Session&nbsp;3
+                  </button>
+                  {/* <button onClick={session4} className="session4-sub sub-btn">
                 Session4
               </button> */}
-            </div>
+                </div>
 
-            <div className="selected-surah-package-button hifdh-button">
-              {/* <Link to="/register" style={{ textDecoration: "none" }}> */}
-              <button className="btn-enrol" onClick={hidthEvent}>
-                <span className="cir-btn">
-                  <span className="arrow-btn"></span>
-                </span>
-                <span className="text-btn">Enrol Now</span>
-              </button>
-              {/* </Link> */}
+                <div className="selected-surah-package-button hifdh-button">
+                  {/* <Link to="/register" style={{ textDecoration: "none" }}> */}
+                  <button className="btn-enrol" onClick={hidthEvent}>
+                    <span className="cir-btn">
+                      <span className="arrow-btn"></span>
+                    </span>
+                    <span className="text-btn">Enrol Now</span>
+                  </button>
+                  {/* </Link> */}
+                </div>
+              </div>
+              {isSession1 && (
+                <div className="dropdown-content">
+                  <h2>Free Trial Session</h2>
+                  <h2>Two sessions per week</h2>
+                  <h2>Reading</h2>
+                  <h2>Thajweed</h2>
+                  <h2>Two Islamic Studies session per month</h2>
+                  <h2>Bi-Weekly Feedback</h2>
+                  <h2>One to One Live sessions</h2>
+                  <h2>45 Mins per session</h2>
+                  <h2>Weekly Progress report</h2>
+                  <h2> Highly qualified tutors with Ijaza</h2>
+                </div>
+              )}
+              {isSession2 && (
+                <div className="dropdown-content">
+                  <h1 className="save">SAVE £ 144 ANNUALLY</h1>
+                  <h2>Free Trial Session</h2>
+                  <h2>Three sessions per week</h2>
+                  <h2>Reading</h2>
+                  <h2>Thajweed</h2>
+                  <h2>Two Islamic Studies session per month</h2>
+                  <h2>Bi-Weekly Feedback</h2>
+                  <h2>One to One Live sessions</h2>
+                  <h2>45 Mins per session</h2>
+                  <h2>Weekly Progress report</h2>
+                  <h2> Highly qualified tutors with Ijaza</h2>
+                </div>
+              )}
+              {isSession3 && (
+                <div className="dropdown-content">
+                  <h2>---------------</h2>
+                  <h2>---------------</h2>
+                  <h2>---------------</h2>
+                  <h2>---------------</h2>
+                  <h2>---------------</h2>
+                  <h2>---------------</h2>
+                  <h2>---------------</h2>
+                  <h2>---------------</h2>
+                  <h2>---------------</h2>
+                  <h2>---------------</h2>
+                </div>
+              )}
             </div>
           </div>
-          {isSession1 && (
-            <div className="dropdown-content">
-              <h2>Free Trial Session</h2>
-              <h2>Two sessions per week</h2>
-              <h2>Reading</h2>
-              <h2>Thajweed</h2>
-              <h2>Two Islamic Studies session per month</h2>
-              <h2>Bi-Weekly Feedback</h2>
-              <h2>One to One Live sessions</h2>
-              <h2>45 Mins per session</h2>
-              <h2>Weekly Progress report</h2>
-              <h2> Highly qualified tutors with Ijaza</h2>
-            </div>
-          )}
-          {isSession2 && (
-            <div className="dropdown-content">
-              <h1 className="save">SAVE £ 144 ANNUALLY</h1>
-              <h2>Free Trial Session</h2>
-              <h2>Three sessions per week</h2>
-              <h2>Reading</h2>
-              <h2>Thajweed</h2>
-              <h2>Two Islamic Studies session per month</h2>
-              <h2>Bi-Weekly Feedback</h2>
-              <h2>One to One Live sessions</h2>
-              <h2>45 Mins per session</h2>
-              <h2>Weekly Progress report</h2>
-              <h2> Highly qualified tutors with Ijaza</h2>
-            </div>
-          )}
-          {isSession3 && (
-            <div className="dropdown-content">
-              <h2>---------------</h2>
-              <h2>---------------</h2>
-              <h2>---------------</h2>
-              <h2>---------------</h2>
-              <h2>---------------</h2>
-              <h2>---------------</h2>
-              <h2>---------------</h2>
-              <h2>---------------</h2>
-              <h2>---------------</h2>
-              <h2>---------------</h2>
-            </div>
-          )}
-        </div>
-      </div>
-      <Footer />
+          <Footer />
+        </>
+      )}
     </>
   );
 };

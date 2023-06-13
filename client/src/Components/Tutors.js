@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Loader from "./Loader";
 import Navbar from "./Navbar";
 // import NewNavbar from "./NewNav";
 import { BsTriangle } from "react-icons/bs";
@@ -114,6 +115,7 @@ const tutors = [
   },
 ];
 const Tutors = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [expandedTutorIndex, setExpandedTutorIndex] = useState(null);
 
   const handleToggleAboutMe = (index) => {
@@ -123,93 +125,104 @@ const Tutors = () => {
       setExpandedTutorIndex(index); // Expand the clicked tutor
     }
   };
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 4000);
+  }, []);
 
   return (
     <>
-      <div className="background" />
-
-      <div className="">
-        <Navbar />
-      </div>
-      <div className="blank"></div>
-      <div className="tutor-about">
-        <h1>Tutors</h1>
-        <p>
-          At 5Pillars Academy, We take great pride in our rigorous vetting
-          process, ensuring that only the most highly qualified tutors make it
-          onto our team, we not only prioritize the qualifications and expertise
-          of our online Quran tutors but also emphasize their ability to adapt
-          to your individual needs. We understand that every student has a
-          unique learning style, level of understanding, and potential. Our
-          tutors are adept at recognizing and catering to these differences,
-          ensuring that your learning experience is tailored to suit you. They
-          are flexible in their teaching approach, providing personalized
-          guidance and support to help you progress at a pace that is
-          comfortable for you. Whether you are a beginner or an advanced
-          learner, our tutors will meet you where you are and help unlock your
-          full learning potential.
-        </p>
-      </div>
-      <div className="tutors-page">
-        <div className="tutors-container">
-          {tutors.map((tutor, index) => (
-            <div
-              key={index}
-              className={`tutor-card ${
-                expandedTutorIndex === index ? "expanded" : ""
-              }`}
-            >
-              <h1>{tutor.name}</h1>
-              <img src={tutor.image} alt={tutor.name} />
-              <h3>{tutor.qualification}</h3>
-              <p className="info">{tutor.experience}</p>
-              <p className="info">{tutor.hoursTaught}</p>
-              <p className="info info3">{tutor.numberOfStudents}</p>
-
-              {expandedTutorIndex === index && (
-                <ul className="aboutme">
-                  {tutor.aboutMe.split("\n").map((item, i) => (
-                    <li key={i} style={{ marginBottom: "0.5em" }}>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              )}
-              <button
-                className="about-btn"
-                onClick={() => handleToggleAboutMe(index)}
-              >
-                {expandedTutorIndex === index ? "Close This" : "About Me"}
-              </button>
-            </div>
-          ))}
-        </div>
-      </div>
-      <h1
-        className="testimonials-head"
-        style={{ textAlign: "center", marginTop: "120px" }}
-      >
-        Testimonials From Tutors
-      </h1>
-      <div className="testimonials-items">
-        {testimonials.map((testimonials, index) => (
-          <div className="testimonials-item ">
-            <div className="triangle1">
-              <BsTriangle size={12} />
-            </div>
-            <div className="square"></div>
-            <div className="plus">
-              <FiPlus size={14} />
-            </div>
-            <div className="circle--1"></div>
-
-            <div className="testimonials-img feed1"></div>
-            <h2 className="name">{testimonials.name}</h2>
-            <p className="feedback-text">{testimonials.thoughts}</p>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <>
+          {" "}
+          <div className="background" />
+          <div className="">
+            <Navbar />
           </div>
-        ))}
-      </div>
-      <Footer />
+          <div className="blank"></div>
+          <div className="tutor-about">
+            <h1>Tutors</h1>
+            <p>
+              At 5Pillars Academy, We take great pride in our rigorous vetting
+              process, ensuring that only the most highly qualified tutors make
+              it onto our team, we not only prioritize the qualifications and
+              expertise of our online Quran tutors but also emphasize their
+              ability to adapt to your individual needs. We understand that
+              every student has a unique learning style, level of understanding,
+              and potential. Our tutors are adept at recognizing and catering to
+              these differences, ensuring that your learning experience is
+              tailored to suit you. They are flexible in their teaching
+              approach, providing personalized guidance and support to help you
+              progress at a pace that is comfortable for you. Whether you are a
+              beginner or an advanced learner, our tutors will meet you where
+              you are and help unlock your full learning potential.
+            </p>
+          </div>
+          <div className="tutors-page">
+            <div className="tutors-container">
+              {tutors.map((tutor, index) => (
+                <div
+                  key={index}
+                  className={`tutor-card ${
+                    expandedTutorIndex === index ? "expanded" : ""
+                  }`}
+                >
+                  <h1>{tutor.name}</h1>
+                  <img src={tutor.image} alt={tutor.name} />
+                  <h3>{tutor.qualification}</h3>
+                  <p className="info">{tutor.experience}</p>
+                  <p className="info">{tutor.hoursTaught}</p>
+                  <p className="info info3">{tutor.numberOfStudents}</p>
+
+                  {expandedTutorIndex === index && (
+                    <ul className="aboutme">
+                      {tutor.aboutMe.split("\n").map((item, i) => (
+                        <li key={i} style={{ marginBottom: "0.5em" }}>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  <button
+                    className="about-btn"
+                    onClick={() => handleToggleAboutMe(index)}
+                  >
+                    {expandedTutorIndex === index ? "Close This" : "About Me"}
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+          <h1
+            className="testimonials-head"
+            style={{ textAlign: "center", marginTop: "120px" }}
+          >
+            Testimonials From Tutors
+          </h1>
+          <div className="testimonials-items">
+            {testimonials.map((testimonials, index) => (
+              <div className="testimonials-item ">
+                <div className="triangle1">
+                  <BsTriangle size={12} />
+                </div>
+                <div className="square"></div>
+                <div className="plus">
+                  <FiPlus size={14} />
+                </div>
+                <div className="circle--1"></div>
+
+                <div className="testimonials-img feed1"></div>
+                <h2 className="name">{testimonials.name}</h2>
+                <p className="feedback-text">{testimonials.thoughts}</p>
+              </div>
+            ))}
+          </div>
+          <Footer />
+        </>
+      )}
     </>
   );
 };

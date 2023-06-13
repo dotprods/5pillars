@@ -1,0 +1,36 @@
+.loader-bg {
+  background-color: #212121;
+  width: 100%;
+  height: 100vh;
+}
+
+.moon,
+.shadow {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgb(216, 216, 216);
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+.shadow {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background: #212121;
+  /*Change these color to the bg of your website*/
+  transition: all 0.3s ease;
+  animation: move_4123 1.2s infinite alternate ease-in-out;
+  transform: translate3d(8px, -8px, 0);
+}
+
+@keyframes move_4123 {
+  100% {
+    transform: translate3d(66px, -66px, 0);
+  }
+}
