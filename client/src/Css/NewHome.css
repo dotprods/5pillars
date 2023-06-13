@@ -98,7 +98,7 @@ body::-webkit-scrollbar {
   position: absolute;
   bottom: 0;
   right: 0px;
-  max-width: 100%;
+  max-width: 97%;
   animation: shake2 4s infinite;
 }
 

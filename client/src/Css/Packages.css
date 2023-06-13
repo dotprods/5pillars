@@ -58,13 +58,73 @@
   margin-top: 15px;
 }
 .package-button button {
-  background: #d9a25a;
+  background: #fff;
   padding: 7px;
-  border-radius: 10px;
+  border-radius: 50px;
   font-weight: 500;
   color: #fff;
   cursor: pointer;
   width: 180px;
+  height: 50px;
+  position: relative;
+  z-index: 1;
+}
+.cir-btn {
+  position: absolute;
+  width: 50px;
+  z-index: 2;
+  height: 50px;
+  border-radius: 50px;
+  left: 0;
+  top: 0px;
+  background: #d9a25a;
+  transition: 0.5s cubic-bezier(1, 0, 0.8, 1);
+}
+.arrow-btn {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transform: rotate(45deg);
+  top: 15px;
+  left: 15px;
+  transition: 0.5s;
+}
+.package-button button:hover .arrow-btn {
+  left: 30px;
+}
+.package-button button:hover .cir-btn {
+  width: 180px;
+}
+.arrow-btn:before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  transform: rotate(-45deg);
+  top: 8px;
+  left: -11px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.package-button button:hover .arrow-btn:before {
+  opacity: 1;
+}
+.text-btn {
+  position: absolute;
+  top: 12px;
+  left: 35px;
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+  width: 150px;
+  z-index: 3;
+  transition: 0.5s;
+}
+.package-button button:hover .text-btn {
+  color: #fff;
 }
 .dropdown-btn {
   margin-top: 15px;
@@ -146,6 +206,7 @@
 }
 .arrow2 {
   background: black;
+  border-bottom: 2px dashed black;
   width: 10.2%;
   height: 2px;
   position: absolute;

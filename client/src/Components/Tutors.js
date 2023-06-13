@@ -132,8 +132,25 @@ const Tutors = () => {
         <Navbar />
       </div>
       <div className="blank"></div>
-      <div className="tutors-page">
+      <div className="tutor-about">
         <h1>Tutors</h1>
+        <p>
+          At 5Pillars Academy, We take great pride in our rigorous vetting
+          process, ensuring that only the most highly qualified tutors make it
+          onto our team, we not only prioritize the qualifications and expertise
+          of our online Quran tutors but also emphasize their ability to adapt
+          to your individual needs. We understand that every student has a
+          unique learning style, level of understanding, and potential. Our
+          tutors are adept at recognizing and catering to these differences,
+          ensuring that your learning experience is tailored to suit you. They
+          are flexible in their teaching approach, providing personalized
+          guidance and support to help you progress at a pace that is
+          comfortable for you. Whether you are a beginner or an advanced
+          learner, our tutors will meet you where you are and help unlock your
+          full learning potential.
+        </p>
+      </div>
+      <div className="tutors-page">
         <div className="tutors-container">
           {tutors.map((tutor, index) => (
             <div

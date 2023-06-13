@@ -127,7 +127,12 @@ const HifdhEnrol = () => {
             <p>£64 Billed Monthly (2 sessions P/W)</p>
             <div className="selected-surah-package-button">
               <Link to="/register" style={{ textDecoration: "none" }}>
-                <button className="btn-enroll">Enrol Now</button>
+                <button className="btn-enrol">
+                  <span className="cir-btn">
+                    <span className="arrow-btn"></span>
+                  </span>
+                  <span className="text-btn">Enrol Now</span>
+                </button>
               </Link>
             </div>
             <h2 className="dropdown-btn" onClick={toggleDropdown}>
@@ -236,7 +241,12 @@ const HifdhEnrol = () => {
 
             <div className="selected-surah-package-button hifdh-button">
               <Link to="/register" style={{ textDecoration: "none" }}>
-                <button className="btn-enroll">Enrol Now</button>
+                <button className="btn-enrol">
+                  <span className="cir-btn">
+                    <span className="arrow-btn"></span>
+                  </span>
+                  <span className="text-btn">Enrol Now</span>
+                </button>
               </Link>
             </div>
           </div>

@@ -41,7 +41,12 @@ const Packages = () => {
             <p>Billed monthly</p>
             <div className="package-button">
               <Link to="/qaida" style={{ textDecoration: "none" }}>
-                <button className="btn-learnmore">Learn more</button>
+                <button className="btn-learnmore">
+                  <span className="cir-btn">
+                    <span className="arrow-btn"></span>
+                  </span>
+                  <span className="text-btn">Learn more</span>
+                </button>
               </Link>
             </div>
             <h2 className="dropdown-btn" onClick={toggleDropdown}>
@@ -73,7 +78,12 @@ const Packages = () => {
             <p>Billed monthly</p>
             <div className="package-button">
               <Link to="/hifdh" style={{ textDecoration: "none" }}>
-                <button className="btn-learnmore">Learn more</button>
+                <button className="btn-learnmore">
+                  <span className="cir-btn">
+                    <span className="arrow-btn"></span>
+                  </span>
+                  <span className="text-btn">Learn more</span>
+                </button>
               </Link>
             </div>
             <h2 className="dropdown-btn" onClick={toggleDropdown1}>
@@ -105,7 +115,12 @@ const Packages = () => {
             <p>Billed monthly</p>
             <div className="package-button">
               <Link to="/islamicStudies" style={{ textDecoration: "none" }}>
-                <button className="btn-learnmore">Coming Soon</button>
+                <button className="btn-learnmore">
+                  <span className="cir-btn">
+                    <span className="arrow-btn"></span>
+                  </span>
+                  <span className="text-btn">Coming Soon</span>
+                </button>
               </Link>
             </div>
 

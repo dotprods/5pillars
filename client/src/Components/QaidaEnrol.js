@@ -11,8 +11,9 @@ import Medal from "../assets/medal-col.png";
 const QaidaEnrol = () => {
   // const ses1 = document.getElementById("sess1");
   // const ses2 = document.getElementById("sess2");
-  // const [session2Opacity, setSession2Opacity] = useState(1);
-  // const [session1Opacity, setSession1Opacity] = useState(1);
+  const [session2Opacity, setSession2Opacity] = useState(1);
+  const [session1Opacity, setSession1Opacity] = useState(0.3);
+  const [session3Opacity, setSession3Opacity] = useState(0.3);
 
   const [isDropdownVisible, setDropdownVisible] = useState(false);
   const [isDropdownVisible1, setDropdownVisible1] = useState(false);
@@ -33,28 +34,30 @@ const QaidaEnrol = () => {
     if (isSession2) {
       setSession2(false);
       // setSession1Opacity(1);
+      setSession2Opacity(0.3);
     }
 
     if (isSession3) {
       setSession3(false);
       // setSession2Opacity(1);
+      setSession3Opacity(0.3);
     }
     if (isSession4) {
       setSession4(false);
       // setSession2Opacity(1);
     }
     setSession1(true);
-    // setSession2Opacity(isSession1 ? 1 : 0.3);
+    setSession1Opacity(1);
   };
 
   const session2 = () => {
     if (isSession1) {
       setSession1(false);
-      // setSession2Opacity(1);
+      setSession1Opacity(0.3);
     }
     if (isSession3) {
       setSession3(false);
-      // setSession2Opacity(1);
+      setSession3Opacity(0.3);
     }
 
     if (isSession4) {
@@ -63,22 +66,23 @@ const QaidaEnrol = () => {
     }
     setSession2(true);
     // setSession1Opacity(isSession2 ? 1 : 0.3);
-    // setSession2Opacity(isSession2 ? 1 : 0.3);
+    setSession2Opacity(1);
   };
   const session3 = () => {
     if (isSession1) {
       setSession1(false);
-      // setSession2Opacity(1);
+      setSession1Opacity(0.3);
     }
     if (isSession2) {
       setSession2(false);
-      // setSession2Opacity(1);
+      setSession2Opacity(0.3);
     }
     if (isSession4) {
       setSession4(false);
       // setSession2Opacity(1);
     }
     setSession3(true);
+    setSession3Opacity(1);
 
     console.log(isSession3);
   };
@@ -140,7 +144,12 @@ const QaidaEnrol = () => {
             <p>£48 Billed Monthly (2 sessions P/W)</p>
             <div className="qaida-package-button">
               <Link to="/register" style={{ textDecoration: "none" }}>
-                <button className="btn-enroll">Enrol Now</button>
+                <button className="btn-enrol">
+                  <span className="cir-btn">
+                    <span className="arrow-btn"></span>
+                  </span>
+                  <span className="text-btn">Enrol Now</span>
+                </button>
               </Link>
             </div>
             <h2 className="dropdown-btn" onClick={toggleDropdown}>
@@ -184,15 +193,33 @@ const QaidaEnrol = () => {
                 id="sess2"
                 // style={{ opacity: session2Opacity }}
               >
-                {isSession1 && <h2 className="other-session"> Session1</h2>}
+                {isSession1 && (
+                  <h2
+                    className="other-session"
+                    style={{ fontWeight: "600", fontSize: "28px" }}
+                  >
+                    Session1
+                  </h2>
+                )}
 
                 {isSession2 && (
                   <div className="star">
-                    <h2> Session2</h2>
+                    <h2 style={{ fontWeight: "600", fontSize: "28px" }}>
+                      {" "}
+                      Session2
+                    </h2>
                     <img src={Medal} className="medal"></img>
                   </div>
                 )}
-                {isSession3 && <h2 className="other-session"> Session3</h2>}
+                {isSession3 && (
+                  <h2
+                    className="other-session"
+                    style={{ fontWeight: "600", fontSize: "28px" }}
+                  >
+                    {" "}
+                    Session3
+                  </h2>
+                )}
                 {isSession4 && <h2 className="other-session"> Session4</h2>}
 
                 {isSession1 && (
@@ -222,10 +249,14 @@ const QaidaEnrol = () => {
               </div>
             </div>
             <div className="btn-row1">
-              <button onClick={session1} className="session1-sub sub-btn">
+              <button
+                onClick={session1}
+                className="session1-sub sub-btn"
+                style={{ opacity: session1Opacity }}
+              >
                 Session&nbsp;1
               </button>
-              <div className="button-s2">
+              <div className="button-s2" style={{ opacity: session2Opacity }}>
                 <div className="star2">
                   <MdStars size={20} />
                 </div>
@@ -233,8 +264,11 @@ const QaidaEnrol = () => {
                   Session&nbsp;2
                 </button>
               </div>
-
-              <button onClick={session3} className="session3-sub sub-btn">
+              <button
+                onClick={session3}
+                className="session3-sub sub-btn"
+                style={{ opacity: session3Opacity }}
+              >
                 Session&nbsp;3
               </button>
               {/* <button onClick={session4} className="session4-sub sub-btn">
@@ -244,7 +278,12 @@ const QaidaEnrol = () => {
 
             <div className="qaida-package-button qaida-button">
               <Link to="/register" style={{ textDecoration: "none" }}>
-                <button className="btn-enroll">Enrol Now</button>
+                <button className="btn-enrol">
+                  <span className="cir-btn">
+                    <span className="arrow-btn"></span>
+                  </span>
+                  <span className="text-btn">Enrol Now</span>
+                </button>
               </Link>
             </div>
           </div>
