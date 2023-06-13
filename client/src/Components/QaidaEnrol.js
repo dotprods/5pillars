@@ -5,12 +5,17 @@ import { IoIosArrowUp } from "react-icons/io";
 import Footer from "./Footer";
 import "../Css/QidaEnrol.css";
 import { MdStars } from "react-icons/md";
-import { Link, useLocation } from "react-router-dom";
+import {
+  Link,
+  useNavigate,
+  createSearchParams,
+  useSearchParams,
+} from "react-router-dom";
 import Medal from "../assets/medal-col.png";
 
 const QaidaEnrol = () => {
-  // const ses1 = document.getElementById("sess1");
-  // const ses2 = document.getElementById("sess2");
+  const [packages, setPackage] = useState("Quran Recitation-Session2");
+  const [amount, setAmount] = useState(7);
   const [session2Opacity, setSession2Opacity] = useState(1);
   const [session1Opacity, setSession1Opacity] = useState(0.3);
   const [session3Opacity, setSession3Opacity] = useState(0.3);
@@ -22,6 +27,8 @@ const QaidaEnrol = () => {
   const [isSession2, setSession2] = useState(true);
   const [isSession3, setSession3] = useState(false);
   const [isSession4, setSession4] = useState(false);
+
+  const navigate = useNavigate();
 
   const toggleDropdown = () => {
     setDropdownVisible(!isDropdownVisible);
@@ -48,6 +55,8 @@ const QaidaEnrol = () => {
     }
     setSession1(true);
     setSession1Opacity(1);
+    setAmount(8);
+    setPackage("Quran Recitation-Session1");
   };
 
   const session2 = () => {
@@ -67,6 +76,8 @@ const QaidaEnrol = () => {
     setSession2(true);
     // setSession1Opacity(isSession2 ? 1 : 0.3);
     setSession2Opacity(1);
+    setAmount(7);
+    setPackage("Quran Recitation-Session2");
   };
   const session3 = () => {
     if (isSession1) {
@@ -84,7 +95,29 @@ const QaidaEnrol = () => {
     setSession3(true);
     setSession3Opacity(1);
 
-    console.log(isSession3);
+    setAmount(8);
+    setPackage("Quran Recitation-Session3");
+  };
+
+  const QaidaEvent = () => {
+    navigate({
+      pathname: "/register",
+      search: createSearchParams({
+        package: "Qaida",
+        fee: 6,
+      }).toString(),
+    });
+  };
+  const QuranEvent = () => {
+    navigate({
+      pathname: "/register",
+      search: createSearchParams({
+        package: packages,
+        fee: amount,
+      }).toString(),
+    });
+    console.log(packages);
+    console.log(amount);
   };
 
   // const session4 = () => {
@@ -143,14 +176,14 @@ const QaidaEnrol = () => {
             </h1>
             <p>£48 Billed Monthly (2 sessions P/W)</p>
             <div className="qaida-package-button">
-              <Link to="/register" style={{ textDecoration: "none" }}>
-                <button className="btn-enrol">
-                  <span className="cir-btn">
-                    <span className="arrow-btn"></span>
-                  </span>
-                  <span className="text-btn">Enrol Now</span>
-                </button>
-              </Link>
+              {/* <Link to="/register" style={{ textDecoration: "none" }}> */}
+              <button className="btn-enrol" onClick={QaidaEvent}>
+                <span className="cir-btn">
+                  <span className="arrow-btn"></span>
+                </span>
+                <span className="text-btn">Enrol Now</span>
+              </button>
+              {/* </Link> */}
             </div>
             <h2 className="dropdown-btn" onClick={toggleDropdown}>
               {isDropdownVisible ? (
@@ -277,14 +310,14 @@ const QaidaEnrol = () => {
             </div>
 
             <div className="qaida-package-button qaida-button">
-              <Link to="/register" style={{ textDecoration: "none" }}>
-                <button className="btn-enrol">
-                  <span className="cir-btn">
-                    <span className="arrow-btn"></span>
-                  </span>
-                  <span className="text-btn">Enrol Now</span>
-                </button>
-              </Link>
+              {/* <Link to="/register" style={{ textDecoration: "none" }}> */}
+              <button className="btn-enrol" onClick={QuranEvent}>
+                <span className="cir-btn">
+                  <span className="arrow-btn"></span>
+                </span>
+                <span className="text-btn">Enrol Now</span>
+              </button>
+              {/* </Link> */}
             </div>
           </div>
           {isSession1 && (

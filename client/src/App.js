@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./Components/Home";
 import Register from "./Components/Register";
@@ -17,40 +17,19 @@ import NewHome from "./Components/NewHome";
 function App() {
   return (
     <>
-      <Router>
-        <Switch>
-          <Route path="/" component={NewHome} exact>
-            <NewHome />
-          </Route>
-          <Route path="/register" component={EnrolForm} exact>
-            <EnrolForm />
-          </Route>
-          <Route path="/packages" component={Packages} exact>
-            <Packages />
-          </Route>
-          <Route path="/qaida" component={QaidaEnrol} exact>
-            <QaidaEnrol />
-          </Route>
-          <Route path="/aboutus" component={AboutUs} exact>
-            <AboutUs />
-          </Route>
-          <Route path="/hifdh" component={HifdhEnrol} exact>
-            <HifdhEnrol />
-          </Route>
-          <Route path="/islamicStudies" component={IslamicStudiesEnrol} exact>
-            <IslamicStudiesEnrol />
-          </Route>
-          <Route path="/tutors" component={Tutors} exact>
-            <Tutors />
-          </Route>
-          <Route path="/projects" component={Projects} exact>
-            <Projects />
-          </Route>
-          <Route path="/contactUs" component={ContactUs} exact>
-            <ContactUs />
-          </Route>
-        </Switch>
-      </Router>
+      <Routes>
+        <Route path="/" element={<NewHome />} />
+        <Route path="/register" element={<EnrolForm />} />
+        <Route path="/packages" element={<Packages />} />
+        <Route path="/qaida" element={<QaidaEnrol />} />
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/hifdh" element={<HifdhEnrol />} />
+        <Route path="/islamicStudies" element={<IslamicStudiesEnrol />} />
+        <Route path="/tutors" element={<Tutors />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contactUs" element={<ContactUs />} />
+        <Route path="/tutorForm" element={<NewHome />} />
+      </Routes>
     </>
   );
 }

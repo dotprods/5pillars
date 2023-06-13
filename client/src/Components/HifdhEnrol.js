@@ -5,13 +5,20 @@ import { IoIosArrowUp } from "react-icons/io";
 import Footer from "./Footer";
 import "../Css/HifdhEnrol.css";
 import { MdStars } from "react-icons/md";
-import { Link, useLocation } from "react-router-dom";
+import {
+  Link,
+  useNavigate,
+  createSearchParams,
+  useSearchParams,
+} from "react-router-dom";
 import Medal from "../assets/medal-col.png";
 
 const HifdhEnrol = () => {
+  const [packages, setPackage] = useState("Hidth-Session2");
+  const [amount, setAmount] = useState(7);
   const [session2Opacity, setSession2Opacity] = useState(1);
-  const [session1Opacity, setSession1Opacity] = useState(1);
-
+  const [session1Opacity, setSession1Opacity] = useState(0.3);
+  const [session3Opacity, setSession3Opacity] = useState(0.3);
   const [isDropdownVisible, setDropdownVisible] = useState(false);
   const [isDropdownVisible1, setDropdownVisible1] = useState(false);
   const [fee, setFee] = useState();
@@ -20,6 +27,8 @@ const HifdhEnrol = () => {
   const [isSession3, setSession3] = useState(false);
   const [isSession4, setSession4] = useState(false);
 
+  const navigate = useNavigate();
+
   const toggleDropdown = () => {
     setDropdownVisible(!isDropdownVisible);
   };
@@ -27,32 +36,57 @@ const HifdhEnrol = () => {
     setDropdownVisible1(!isDropdownVisible1);
   };
 
+  const surahEvent = () => {
+    navigate({
+      pathname: "/register",
+      search: createSearchParams({
+        package: "Selected Surah Hifdh",
+        fee: 7,
+      }).toString(),
+    });
+  };
+  const hidthEvent = () => {
+    navigate({
+      pathname: "/register",
+      search: createSearchParams({
+        package: packages,
+        fee: amount,
+      }).toString(),
+    });
+    console.log(packages);
+    console.log(amount);
+  };
+
   const session1 = () => {
     if (isSession2) {
       setSession2(false);
       // setSession1Opacity(1);
+      setSession2Opacity(0.3);
     }
 
     if (isSession3) {
       setSession3(false);
       // setSession2Opacity(1);
+      setSession3Opacity(0.3);
     }
     if (isSession4) {
       setSession4(false);
       // setSession2Opacity(1);
     }
     setSession1(true);
-    // setSession2Opacity(isSession1 ? 1 : 0.3);
+    setSession1Opacity(1);
+    setPackage("Hifdh-Sesson1");
+    setAmount(8);
   };
 
   const session2 = () => {
     if (isSession1) {
       setSession1(false);
-      // setSession2Opacity(1);
+      setSession1Opacity(0.3);
     }
     if (isSession3) {
       setSession3(false);
-      // setSession2Opacity(1);
+      setSession3Opacity(0.3);
     }
 
     if (isSession4) {
@@ -61,24 +95,27 @@ const HifdhEnrol = () => {
     }
     setSession2(true);
     // setSession1Opacity(isSession2 ? 1 : 0.3);
-    // setSession2Opacity(isSession2 ? 1 : 0.3);
+    setSession2Opacity(1);
+    setPackage("Hifdh-Sesson2");
+    setAmount(7);
   };
   const session3 = () => {
     if (isSession1) {
       setSession1(false);
-      // setSession2Opacity(1);
+      setSession1Opacity(0.3);
     }
     if (isSession2) {
       setSession2(false);
-      // setSession2Opacity(1);
+      setSession2Opacity(0.3);
     }
     if (isSession4) {
       setSession4(false);
       // setSession2Opacity(1);
     }
     setSession3(true);
-
-    console.log(isSession3);
+    setSession3Opacity(1);
+    setPackage("Hifdh-Sesson3");
+    setAmount(8);
   };
 
   return (
@@ -126,14 +163,14 @@ const HifdhEnrol = () => {
             </h1>
             <p>£64 Billed Monthly (2 sessions P/W)</p>
             <div className="selected-surah-package-button">
-              <Link to="/register" style={{ textDecoration: "none" }}>
-                <button className="btn-enrol">
-                  <span className="cir-btn">
-                    <span className="arrow-btn"></span>
-                  </span>
-                  <span className="text-btn">Enrol Now</span>
-                </button>
-              </Link>
+              {/* <Link to="/register" style={{ textDecoration: "none" }}> */}
+              <button className="btn-enrol" onClick={surahEvent}>
+                <span className="cir-btn">
+                  <span className="arrow-btn"></span>
+                </span>
+                <span className="text-btn">Enrol Now</span>
+              </button>
+              {/* </Link> */}
             </div>
             <h2 className="dropdown-btn" onClick={toggleDropdown}>
               {isDropdownVisible ? (
@@ -219,10 +256,14 @@ const HifdhEnrol = () => {
               </div>
             </div>
             <div className="btn-row1">
-              <button onClick={session1} className="session1-sub sub-btn">
+              <button
+                onClick={session1}
+                className="session1-sub sub-btn"
+                style={{ opacity: session1Opacity }}
+              >
                 Session&nbsp;1
               </button>
-              <div className="button-s2">
+              <div className="button-s2" style={{ opacity: session2Opacity }}>
                 <div className="star2">
                   <MdStars size={20} />
                 </div>
@@ -231,7 +272,11 @@ const HifdhEnrol = () => {
                 </button>
               </div>
 
-              <button onClick={session3} className="session3-sub sub-btn">
+              <button
+                onClick={session3}
+                className="session3-sub sub-btn"
+                style={{ opacity: session3Opacity }}
+              >
                 Session&nbsp;3
               </button>
               {/* <button onClick={session4} className="session4-sub sub-btn">
@@ -240,14 +285,14 @@ const HifdhEnrol = () => {
             </div>
 
             <div className="selected-surah-package-button hifdh-button">
-              <Link to="/register" style={{ textDecoration: "none" }}>
-                <button className="btn-enrol">
-                  <span className="cir-btn">
-                    <span className="arrow-btn"></span>
-                  </span>
-                  <span className="text-btn">Enrol Now</span>
-                </button>
-              </Link>
+              {/* <Link to="/register" style={{ textDecoration: "none" }}> */}
+              <button className="btn-enrol" onClick={hidthEvent}>
+                <span className="cir-btn">
+                  <span className="arrow-btn"></span>
+                </span>
+                <span className="text-btn">Enrol Now</span>
+              </button>
+              {/* </Link> */}
             </div>
           </div>
           {isSession1 && (

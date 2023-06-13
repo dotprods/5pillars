@@ -5,13 +5,10 @@ const ContactUs = () => {
     <>
       <div className="background" />
 
-      <div className="other-nav">
+      <div className="">
         <Navbar />
       </div>
-      <h1 style={{ marginTop: "20vh", textAlign: "center" }}>
-        {" "}
-        Under construction
-      </h1>
+      <div className="blank"></div>
     </>
   );
 };
