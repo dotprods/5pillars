@@ -180,7 +180,7 @@ const QaidaEnrol = () => {
           <div className="qaida-packages">
             <div className="qaida-package">
               <div className="qaida-package-def">
-                <h3>QAIDA</h3>
+                <h3>Qaida</h3>
                 <h1>
                   £6/<span>Session</span>
                 </h1>
