@@ -11,7 +11,9 @@ import mosque2 from "../assets/Mosque2.png";
 // import girl from "../assets/Girl.png";
 import { BsTriangle } from "react-icons/bs";
 import { FiPlus } from "react-icons/fi";
+import { FcFaq } from "react-icons/fc";
 import { IoIosArrowUp } from "react-icons/io";
+import { SiWhatsapp } from "react-icons/si";
 import Typical from "react-typical";
 import boy from "../assets/Boy.svg";
 import girl from "../assets/Girl.svg";
@@ -140,9 +142,28 @@ const NewHome = () => {
           >
             <IoIosArrowUp size={35} />
           </div>
-          <a href="https://wa.me/447756393994">
+          {/* <a href="https://wa.me/447756393994">
             <div className="chat"></div>
-          </a>
+          </a> */}
+
+          <div className="floating-container">
+            <div className="floating-button">+</div>
+            <div className="element-container">
+              {/* <a href="google.com">
+                <span className="float-element tooltip-left">
+                  <FcFaq size={40} />
+                </span>
+              </a> */}
+              <a href="https://wa.me/447756393994">
+                <span className="float-element">
+                  <SiWhatsapp size={30} />
+                </span>
+              </a>
+              <span className="float-element">
+                <FcFaq size={35} />
+              </span>
+            </div>
+          </div>
 
           <div className="home">
             <Navbar />
@@ -307,6 +328,16 @@ const NewHome = () => {
               </p>
             </div>
           </div>
+          <h1
+            style={{
+              textAlign: "center",
+              fontSize: "50px",
+              marginTop: "100px",
+              color: "#757575",
+            }}
+          >
+            Tutors
+          </h1>
           <div className="tutor">
             <div className="tutor-register">
               <div className="tutor-text">
