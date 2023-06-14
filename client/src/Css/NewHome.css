@@ -276,8 +276,7 @@ html, body {
   font-weight: 500;
 }
 .home-content-text span {
-  font-weight: 600;
-  color: #056e13;
+  margin-bottom: -60px;
 }
 
 @keyframes typing {
@@ -512,7 +511,7 @@ html, body {
   margin-top: 5vh;
 }
 .mission {
-  width: 400px;
+  width: 500px;
   /* height: 300px; */
   border: 3px solid #d9a057;
   border-radius: 10px;
@@ -532,7 +531,7 @@ html, body {
   display: flex;
   justify-content: center;
   margin-bottom: 10vh;
-  margin-top: 30px;
+  margin-top: 130px;
 }
 .tutor-register {
   width: 700px;
@@ -876,7 +875,7 @@ p {
 
   .tutor {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 50px;
   }
   .tutor-register {
     width: 63%;

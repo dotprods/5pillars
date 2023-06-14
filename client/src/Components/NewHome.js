@@ -7,14 +7,13 @@ import ScrollTigger from "react-scroll-trigger";
 import CountUp from "react-countup";
 import Habibi from "../assets/vsd.png";
 import mosque2 from "../assets/Mosque2.png";
-// import boy from "../assets/Boy.png";
-// import girl from "../assets/Girl.png";
 import { BsTriangle } from "react-icons/bs";
 import { FiPlus } from "react-icons/fi";
 import { FcFaq } from "react-icons/fc";
 import { IoIosArrowUp } from "react-icons/io";
 import { SiWhatsapp } from "react-icons/si";
 import Typical from "react-typical";
+import TypeWriterEffect from "react-typewriter-effect";
 import boy from "../assets/Boy.svg";
 import girl from "../assets/Girl.svg";
 import Loader from "./Loader";
@@ -170,24 +169,26 @@ const NewHome = () => {
 
             <div className="home-content">
               <div className="home-content-text">
+                {/* <div style={{ display: "flex", alignItems: "center" }}> */}
+                <h1 style={{ marginBottom: "-15px" }}>Learn</h1>
                 <h1>
-                  Learn <br />
-                  <span>
-                    <Typical
-                      loop={Infinity}
-                      wrapper="b"
-                      steps={[
-                        "Quran Recitation",
-                        2000,
-                        "Hifdh Lessons",
-                        2000,
-                        "Islamic Lessons",
-                        2000,
-                      ]}
-                    />
-                  </span>
-                  <br /> With Us Online!
+                  <TypeWriterEffect
+                    textStyle={{
+                      fontFamily: "Quicksand",
+                      color: "#056e13",
+                      fontWeight: 600,
+                      fontSize: "1.2em",
+                    }}
+                    startDelay={2000}
+                    cursorColor="#056e13"
+                    multiText={["Quran", "Hifdth", "Islamic Lessons"]}
+                    multiTextDelay={1000}
+                    typeSpeed={30}
+                    multiTextLoop
+                  />
                 </h1>
+                {/* </div> */}
+                <h1 style={{ marginTop: "-40px" }}>With Us Online</h1>
                 <Link to="/packages" style={{ textDecoration: "none" }}>
                   <button>Register Now</button>
                 </Link>
@@ -328,16 +329,7 @@ const NewHome = () => {
               </p>
             </div>
           </div>
-          <h1
-            style={{
-              textAlign: "center",
-              fontSize: "50px",
-              marginTop: "100px",
-              color: "#757575",
-            }}
-          >
-            Tutors
-          </h1>
+
           <div className="tutor">
             <div className="tutor-register">
               <div className="tutor-text">

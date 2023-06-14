@@ -137,3 +137,16 @@
     font-size: xx-large;
   }
 } */
+
+/*                   <Typical
+                      loop={Infinity}
+                      wrapper="b"
+                      steps={[
+                        "Quran ",
+                        1000,
+                        "Hifdh ",
+                        1000,
+                        "Islamic lesson ",
+                        1000,
+                      ]}
+                    /> */
