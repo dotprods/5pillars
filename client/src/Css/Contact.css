@@ -1,0 +1,173 @@
+.contact-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.contact-form {
+  width: 600px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+}
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact-form h1 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 50px;
+}
+.loc-map {
+  width: 600px;
+  height: 600px;
+  border-radius: 10px;
+  margin-left: 100px;
+}
+.loc-map iframe {
+  border-radius: 10px;
+}
+.inputBox {
+  position: relative;
+  width: 350px;
+  margin-top: 50px;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  color: #000;
+  font-size: 1em;
+  background: transparent;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transition: 0.1s;
+  border-bottom-left-radius: 8px;
+}
+
+.inputBox span {
+  margin-top: 5px;
+  position: absolute;
+  left: 0;
+  transform: translateY(-4px);
+  margin-left: 10px;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 12px;
+  color: #000;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 3px;
+  border-radius: 8px;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+  transform: translateX(113px) translateY(-15px);
+  font-size: 0.8em;
+  padding: 5px 10px;
+  background: #000;
+  letter-spacing: 0.2em;
+  color: #fff;
+  border: 2px;
+}
+
+.inputBox input:valid,
+.inputBox input:focus {
+  border: 2px solid #000;
+  border-radius: 8px;
+}
+
+.contactForm button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  margin-top: 30px;
+}
+
+.contactForm button.contact-submit {
+  width: 12rem;
+  height: auto;
+}
+
+.contactForm button.contact-submit .submit-circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+
+.contactForm button.contact-submit .submit-circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+.contactForm button.contact-submit .submit-circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+.contactForm button.contact-submit .submit-circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+.contactForm button.contact-submit .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contactForm button:hover .submit-circle {
+  width: 100%;
+}
+
+.contactForm button:hover .submit-circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+.contactForm button:hover .button-text {
+  color: #fff;
+}

@@ -751,6 +751,7 @@ p {
   .home-content {
     height: 50vh;
   }
+
   .coo {
     margin-right: 0;
     justify-content: space-evenly;
@@ -783,6 +784,12 @@ p {
 
 /* css for mobile */
 @media screen and (max-width: 767px) {
+  .floating-container {
+    margin: 10px;
+  }
+  .back-to-top-button {
+    margin: 10px;
+  }
   .chat {
     right: 0px;
   }
