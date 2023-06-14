@@ -171,3 +171,21 @@
 .contactForm button:hover .button-text {
   color: #fff;
 }
+@media only screen and (max-width: 766px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .loc-map {
+    margin-left: 0px;
+    width: 90%;
+    margin-top: 50px;
+  }
+  .contact-form {
+    width: 90%;
+    height: 550px;
+  }
+  .inputBox input {
+    width: 80%;
+  }
+}
