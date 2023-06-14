@@ -144,7 +144,7 @@ const Tutors = () => {
           </div>
           <div className="blank"></div>
           <div className="tutor-about">
-            <h1>Tutors</h1>
+            <h1 style={{ fontSize: "50px" }}>Tutors</h1>
             <p>
               At 5Pillars Academy, We take great pride in our rigorous vetting
               process, ensuring that only the most highly qualified tutors make
@@ -204,7 +204,7 @@ const Tutors = () => {
           </h1>
           <div className="testimonials-items">
             {testimonials.map((testimonials, index) => (
-              <div className="testimonials-item ">
+              <div className="testimonials-item " key={index}>
                 <div className="triangle1">
                   <BsTriangle size={12} />
                 </div>

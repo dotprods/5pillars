@@ -202,7 +202,8 @@
     border: none;
   }
   .about-btn {
-    left: 140px;
+    left: 36%;
+    bottom: 10px;
   }
   .testimonials-item {
     margin-left: 0;

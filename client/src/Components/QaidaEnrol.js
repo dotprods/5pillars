@@ -158,7 +158,7 @@ const QaidaEnrol = () => {
           </div>
           <div className="blank"></div>
           <div className="qaida-about">
-            <h2>Qaida/Quran Recitation </h2>
+            <h2 style={{ fontSize: "50px" }}>Qaida/Quran Recitation </h2>
             <p>
               The Qaida course will provide instruction on the Arabic alphabet
               and Tajweed principles starting from the fundamentals, using

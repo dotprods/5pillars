@@ -21,6 +21,7 @@
 .package-heading {
   color: black;
   text-align: center;
+  font-size: 30px;
 }
 .package {
   /* width: 25%; */

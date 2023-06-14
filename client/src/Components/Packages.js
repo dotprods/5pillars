@@ -40,7 +40,9 @@ const Packages = () => {
             <Navbar />
           </div>
           <div className="blank"></div>
-          <h1 className="package-heading">Packages</h1>
+          <h1 className="package-heading" style={{ fontSize: "60px" }}>
+            Packages
+          </h1>
           <div className="packages">
             <div className="package">
               <div className="package-def">
