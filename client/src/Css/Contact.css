@@ -44,8 +44,8 @@
   color: #000;
   font-size: 1em;
   background: transparent;
-  border-left: 2px solid #000;
-  border-bottom: 2px solid #000;
+  border-left: 2px solid #002b61;
+  border-bottom: 2px solid #002b61;
   transition: 0.1s;
   border-bottom-left-radius: 8px;
 }
@@ -62,7 +62,7 @@
   padding: 10px;
   pointer-events: none;
   font-size: 12px;
-  color: #000;
+  color: #002b61;
   text-transform: uppercase;
   transition: 0.5s;
   letter-spacing: 3px;
@@ -74,7 +74,7 @@
   transform: translateX(113px) translateY(-15px);
   font-size: 0.8em;
   padding: 5px 10px;
-  background: #000;
+  background: #002b61;
   letter-spacing: 0.2em;
   color: #fff;
   border: 2px;
@@ -82,7 +82,7 @@
 
 .inputBox input:valid,
 .inputBox input:focus {
-  border: 2px solid #000;
+  border: 2px solid #002b61;
   border-radius: 8px;
 }
 
@@ -113,7 +113,7 @@
   margin: 0;
   width: 3rem;
   height: 3rem;
-  background: #282936;
+  background: #002b61;
   border-radius: 1.625rem;
 }
 
@@ -155,7 +155,7 @@
   bottom: 0;
   padding: 0.75rem 0;
   margin: 0 0 0 1.85rem;
-  color: #282936;
+  color: #002b61;
   font-weight: 700;
   line-height: 1.6;
   text-align: center;
@@ -173,6 +173,28 @@
 
 .contactForm button:hover .button-text {
   color: #fff;
+}
+.social-cont {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+.social-media {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  height: 300px;
+  align-items: center;
+}
+.social-media svg {
+  color: #d9a25a;
+}
+.social-media h2,
+p {
+  margin-top: 10px;
 }
 @media only screen and (max-width: 766px) {
   .contact-container {
@@ -207,5 +229,18 @@
   .inputBox input {
     align-items: center;
     width: 80%;
+  }
+  .social-cont {
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  }
+  .social-media {
+    width: 90%;
+    border: none;
+    background: none;
+    box-shadow: none;
+    height: 250px;
   }
 }

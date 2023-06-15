@@ -170,7 +170,7 @@ const NewHome = () => {
             <div className="home-content">
               <div className="home-content-text">
                 {/* <div style={{ display: "flex", alignItems: "center" }}> */}
-                <h1 style={{ marginBottom: "-15px" }}>Learn</h1>
+                <h1 style={{ marginBottom: "-10px" }}>Learn</h1>
                 <h1>
                   <TypeWriterEffect
                     textStyle={{

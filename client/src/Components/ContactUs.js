@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { SiGmail } from "react-icons/si";
+import { MdAddIcCall } from "react-icons/md";
+import { ImLocation2 } from "react-icons/im";
+
 import Loader from "./Loader";
 import Navbar from "./Navbar";
 import "../Css/Contact.css";
@@ -69,6 +73,23 @@ const ContactUs = () => {
                   measure acres/hectares on map
                 </a>
               </iframe>
+            </div>
+          </div>
+          <div className="social-cont">
+            <div className="social-media">
+              <SiGmail size={70} />
+              <h2>Call Us</h2>
+              <p>info@5pillarsacademy.com</p>
+            </div>
+            <div className="social-media">
+              <MdAddIcCall size={70} />
+              <h2>Email</h2>
+              <p>+44 7756393994</p>
+            </div>
+            <div className="social-media">
+              <ImLocation2 size={70} />
+              <h2>ImLocation</h2>
+              <p>20-22 Wenlock Road , London N1 7GU</p>
             </div>
           </div>
           <Footer />
