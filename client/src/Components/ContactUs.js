@@ -26,7 +26,7 @@ const ContactUs = () => {
             <div className="contact-form">
               <h1>Leave Us A Message</h1>
               <form className="contactForm">
-                <div class="inputBox">
+                <div className="inputBox">
                   <input
                     type="textfield"
                     required="required"
