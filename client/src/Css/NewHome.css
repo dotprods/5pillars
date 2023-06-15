@@ -30,13 +30,13 @@ body::-webkit-scrollbar {
   line-height: 40px;
   cursor: pointer;
   transition: opacity 0.3s;
-  z-index: 9999;
+  z-index: 9998;
   align-items: center;
   text-align: center;
   margin: 35px 25px;
 }
 .back-to-top-button img {
-  width: 60%;
+  width: 90%;
 }
 @-webkit-keyframes come-in {
   0% {

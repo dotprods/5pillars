@@ -79,16 +79,64 @@
 }
 
 .about-btn {
-  position: absolute;
-  bottom: 30px;
-  margin-top: 65px;
-  left: 175px;
+  /* left: 175px;
   background: #d9a25a;
   padding: 8px 15px;
   border-radius: 10px;
   color: #fff;
   font-size: medium;
+  position: absolute;
+  bottom: 30px; */
+  /* margin-top: 45px; */
+
   cursor: pointer;
+  --color: #d9a25a;
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2.5em;
+  margin: 20px;
+  position: absolute;
+  left: 155px;
+  bottom: 5px;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
+}
+.about-btn:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.about-btn:hover {
+  color: #fff;
+}
+
+.about-btn:before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+
+.about-btn:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+.about-btn:active:before {
+  background: #d9a25a;
+  transition: background 0s;
 }
 .testimonials-items {
   display: flex;
@@ -202,8 +250,8 @@
     border: none;
   }
   .about-btn {
-    left: 36%;
-    bottom: 10px;
+    left: 26%;
+    bottom: -6px;
   }
   .testimonials-item {
     margin-left: 0;

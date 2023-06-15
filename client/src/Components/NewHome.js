@@ -18,7 +18,7 @@ import boy from "../assets/Boy.svg";
 import girl from "../assets/Girl.svg";
 import Loader from "./Loader";
 import Footer from "./Footer";
-import Arrowup from "../assets/arrowup.png";
+import Arrowup from "../assets/arrowDouble.png";
 
 const NewHome = () => {
   const [isLoading, setIsLoading] = useState(true);
