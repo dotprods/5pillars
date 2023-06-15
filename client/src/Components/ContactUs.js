@@ -78,17 +78,17 @@ const ContactUs = () => {
           <div className="social-cont">
             <div className="social-media">
               <SiGmail size={70} />
-              <h2>Call Us</h2>
+              <h2>Mail</h2>
               <p>info@5pillarsacademy.com</p>
             </div>
             <div className="social-media">
               <MdAddIcCall size={70} />
-              <h2>Email</h2>
+              <h2>Call Us</h2>
               <p>+44 7756393994</p>
             </div>
             <div className="social-media">
               <ImLocation2 size={70} />
-              <h2>ImLocation</h2>
+              <h2>Location</h2>
               <p>20-22 Wenlock Road , London N1 7GU</p>
             </div>
           </div>

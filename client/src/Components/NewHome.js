@@ -18,6 +18,7 @@ import boy from "../assets/Boy.svg";
 import girl from "../assets/Girl.svg";
 import Loader from "./Loader";
 import Footer from "./Footer";
+import Arrowup from "../assets/arrowup.png";
 
 const NewHome = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -139,7 +140,8 @@ const NewHome = () => {
             className={`back-to-top-button ${isVisible ? "visible" : ""}`}
             onClick={scrollToTop}
           >
-            <IoIosArrowUp size={35} />
+            {/* <IoIosArrowUp size={35} /> */}
+            <img src={Arrowup}></img>
           </div>
           {/* <a href="https://wa.me/447756393994">
             <div className="chat"></div>
