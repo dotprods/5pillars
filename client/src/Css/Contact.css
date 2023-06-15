@@ -5,7 +5,7 @@
 }
 .contact-form {
   width: 600px;
-  height: 500px;
+  height: 600px;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(10px);
@@ -48,6 +48,9 @@
   border-bottom: 2px solid #000;
   transition: 0.1s;
   border-bottom-left-radius: 8px;
+}
+.bigOne {
+  height: 100px;
 }
 
 .inputBox span {
@@ -183,9 +186,26 @@
   }
   .contact-form {
     width: 90%;
-    height: 550px;
+    height: 600px;
   }
+  .inputBox {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .inputBox span {
+    margin-top: 5px;
+    position: absolute;
+    left: 40px;
+  }
+  .inputBox input:valid ~ span,
+  .inputBox input:focus ~ span {
+    transform: translateX(163px) translateY(-38px);
+  }
+
   .inputBox input {
+    align-items: center;
     width: 80%;
   }
 }

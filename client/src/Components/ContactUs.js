@@ -27,15 +27,23 @@ const ContactUs = () => {
               <h1>Leave Us A Message</h1>
               <form className="contactForm">
                 <div class="inputBox">
-                  <input type="text" required="required" className="in"></input>
+                  <input
+                    type="textfield"
+                    required="required"
+                    className="in"
+                  ></input>
                   <span>Full Name</span>
                 </div>
                 <div className="inputBox">
-                  <input type="email" required="required"></input>
+                  <input type="textfield" required="required"></input>
                   <span>Email</span>
                 </div>
                 <div className="inputBox">
-                  <input type="text" required="required"></input>
+                  <input
+                    className="bigOne"
+                    type="textfield"
+                    required="required"
+                  ></input>
                   <span>Message</span>
                 </div>
 
