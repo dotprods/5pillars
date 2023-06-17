@@ -9,6 +9,66 @@ import "../Css/Contact.css";
 import Footer from "./Footer";
 const ContactUs = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [formData2, setFormData2] = useState({
+    fullName: "",
+    email: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState({
+    fullName: "",
+    email: "",
+    message: "",
+  });
+  const handleChange = (e) => {
+    const { name, value, type } = e.target;
+    const fieldValue = value;
+    setFormData2((prevData) => ({
+      ...prevData,
+      [name]: fieldValue,
+    }));
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      [name]: "",
+    }));
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    let formIsValid = true;
+    const newErrors = { ...errors };
+
+    // Validation logic
+    if (formData2.fullName === "") {
+      formIsValid = false;
+      newErrors.gender = "Please select a gender";
+    }
+    if (formData2.message.trim() === "") {
+      formIsValid = false;
+      newErrors.firstName = "Please enter your first name";
+    }
+
+    if (formData2.email.trim() === "") {
+      formIsValid = false;
+      newErrors.email = "Please enter your email address";
+    } else if (!isValidEmail(formData2.email)) {
+      formIsValid = false;
+      newErrors.email = "Please enter a valid email address";
+    }
+
+    if (formIsValid) {
+      // Perform form submission logic here
+      console.log(formData2);
+    } else {
+      setErrors(newErrors);
+    }
+  };
+
+  const isValidEmail = (email) => {
+    // Basic email validation regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -29,29 +89,55 @@ const ContactUs = () => {
           <div className="contact-container">
             <div className="contact-form">
               <h1>Leave Us A Message</h1>
-              <form className="contactForm">
+              <form className="contactForm" onSubmit={handleSubmit}>
                 <div className="inputBox">
                   <input
                     type="textfield"
+                    id="fullName"
+                    name="fullName"
+                    value={formData2.fullName}
+                    onChange={handleChange}
                     required="required"
-                    className="in"
                   ></input>
                   <span>Full Name</span>
                 </div>
                 <div className="inputBox">
-                  <input type="textfield" required="required"></input>
+                  <input
+                    type="textfield"
+                    required="required"
+                    id="email"
+                    name="email"
+                    value={formData2.email}
+                    onChange={handleChange}
+                  ></input>
                   <span>Email</span>
                 </div>
-                <div className="inputBox">
+                {/* <div className="inputBox">
                   <input
                     className="bigOne"
                     type="textfield"
                     required="required"
+                    id="message"
+                    name="messsage"
+                    value={formData2.message}
+                    onChange={handleChange}
                   ></input>
                   <span>Message</span>
+                </div> */}
+                <div className="inputBox">
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData2.message}
+                    onChange={handleChange}
+                    rows={8}
+                    cols={60}
+                    required
+                  />
+                  <span className="message-span">Message</span>
                 </div>
 
-                <button className="contact-submit">
+                <button className="contact-submit" type="submit">
                   <span className="submit-circle" aria-hidden="true">
                     <span className="icon arrow"></span>
                   </span>

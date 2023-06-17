@@ -36,7 +36,8 @@
   margin-top: 50px;
 }
 
-.inputBox input {
+.inputBox input,
+.inputBox textarea {
   width: 100%;
   padding: 10px;
   outline: none;
@@ -70,7 +71,9 @@
 }
 
 .inputBox input:valid ~ span,
-.inputBox input:focus ~ span {
+.inputBox input:focus ~ span,
+.inputBox textarea:valid ~ span,
+.inputBox textarea:focus ~ span {
   transform: translateX(113px) translateY(-15px);
   font-size: 0.8em;
   padding: 5px 10px;
@@ -81,7 +84,9 @@
 }
 
 .inputBox input:valid,
-.inputBox input:focus {
+.inputBox input:focus,
+.inputBox textarea:valid,
+.inputBox textarea:focus {
   border: 2px solid #002b61;
   border-radius: 8px;
 }
@@ -212,7 +217,7 @@ p {
   }
   .contact-form {
     width: 90%;
-    height: 600px;
+    height: 700px;
   }
   .inputBox {
     align-items: center;
@@ -229,8 +234,12 @@ p {
   .inputBox input:focus ~ span {
     transform: translateX(163px) translateY(-38px);
   }
-
-  .inputBox input {
+  .inputBox textarea:valid ~ span,
+  .inputBox textarea:focus ~ span {
+    transform: translateX(165px) translateY(-88px);
+  }
+  .inputBox input,
+  .inputBox textarea {
     align-items: center;
     width: 80%;
   }
