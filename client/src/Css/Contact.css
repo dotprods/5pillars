@@ -50,6 +50,10 @@
   transition: 0.1s;
   border-bottom-left-radius: 8px;
 }
+.invalid {
+  border-left: 2px solid red;
+  border-bottom: 2px solid red;
+}
 .bigOne {
   height: 100px;
 }

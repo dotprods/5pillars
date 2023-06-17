@@ -19,6 +19,9 @@ import girl from "../assets/Girl.svg";
 import Loader from "./Loader";
 import Footer from "./Footer";
 import Arrowup from "../assets/arrowDouble.png";
+// import "animate.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const NewHome = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -74,6 +77,10 @@ const NewHome = () => {
     }, 3000);
     return () => clearInterval(interval);
   }, [slides.length]);
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {
@@ -147,7 +154,7 @@ const NewHome = () => {
             <div className="chat"></div>
           </a> */}
 
-          <div className="floating-container">
+          <div className=" floating-container">
             <div className="floating-button">+</div>
             <div className="element-container">
               {/* <a href="google.com">
@@ -170,7 +177,7 @@ const NewHome = () => {
             <Navbar />
 
             <div className="home-content">
-              <div className="home-content-text">
+              <div className=" home-content-text">
                 {/* <div style={{ display: "flex", alignItems: "center" }}> */}
                 <h1 style={{ marginBottom: "-10px" }}>Learn</h1>
                 <h1>
@@ -198,7 +205,7 @@ const NewHome = () => {
 
               <img src={mosque} alt="mosque image" className="palli"></img>
 
-              <div className="course">
+              <div className=" course" data-aos="fade-down">
                 <div className=" coo c1">
                   <div className="circle cir1"></div>
                   <div className="loader"></div>
@@ -244,7 +251,11 @@ const NewHome = () => {
               </div>
             </div>
           </div>
-          <div className="wording-cont">
+          <div
+            className="wording-cont"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          >
             <img src={girl} alt="girl image" className="word-img girl"></img>
             <div className="wording">
               <h2>
@@ -264,7 +275,7 @@ const NewHome = () => {
             onEnter={() => setCounterOn(true)}
             onExit={() => setCounterOn(false)}
           >
-            <div className="count">
+            <div className="count" data-aos="fade-up" data-aos-duration="2000">
               <div className="count-in">
                 <h3>
                   {counteOn && (
@@ -303,8 +314,12 @@ const NewHome = () => {
               </div>
             </div>
           </ScrollTigger>
-          <div className="missions">
-            <div className="mission">
+          <div className=" missions">
+            <div
+              className="mission"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               <h2>Why Choose us</h2>
               <p>
                 At 5Pillars Academy, we are committed to delivering the highest
@@ -318,7 +333,11 @@ const NewHome = () => {
               <hr className="line2" />
             </div>
 
-            <div className="mission">
+            <div
+              className="mission"
+              data-aos="fade-down"
+              data-aos-duration="2000"
+            >
               <h2>What we will do</h2>
               <p>
                 We strive to create an environment that is
@@ -332,7 +351,7 @@ const NewHome = () => {
             </div>
           </div>
 
-          <div className="tutor">
+          <div className="tutor" data-aos="flip-left" data-aos-duration="2000">
             <div className="tutor-register">
               <div className="tutor-text">
                 <h1>
@@ -346,10 +365,14 @@ const NewHome = () => {
               </div>
             </div>
           </div>
-          <div className="feedback">
+          <div className=" feedback">
             <h1>Student Feedbacks</h1>
             <div className="feedback-items">
-              <div className="feedback-item item1">
+              <div
+                className="feedback-item item1"
+                data-aos="flip-up"
+                data-aos-duration="2000"
+              >
                 <div className="triangle1">
                   <BsTriangle size={12} />
                 </div>
@@ -371,7 +394,11 @@ const NewHome = () => {
                   chat.openai.com.
                 </p>
               </div>
-              <div className="feedback-item item2 ">
+              <div
+                className="feedback-item item2 "
+                data-aos="flip-down"
+                data-aos-duration="2500"
+              >
                 <div className="triangle1">
                   <BsTriangle size={12} />
                 </div>
@@ -392,7 +419,11 @@ const NewHome = () => {
                   chat.openai.com.
                 </p>
               </div>
-              <div className="feedback-item item3">
+              <div
+                className="feedback-item item3"
+                data-aos="flip-up"
+                data-aos-duration="3000"
+              >
                 <div className="triangle1">
                   <BsTriangle size={12} />
                 </div>
@@ -413,7 +444,11 @@ const NewHome = () => {
                   chat.openai.com.
                 </p>
               </div>
-              <div className="feedback-item item1">
+              <div
+                className="feedback-item item1"
+                data-aos="flip-down"
+                data-aos-duration="3500"
+              >
                 <div className="triangle1">
                   <BsTriangle size={12} />
                 </div>
@@ -438,7 +473,7 @@ const NewHome = () => {
             </div>
           </div>
 
-          <div className="subscribe">
+          <div className="subscribe" data-aos="zoom-out-up">
             <img src={mosque2} alt="subscribe-mosque"></img>
             <div className="subscribe-text">
               <h2>subscribe</h2>

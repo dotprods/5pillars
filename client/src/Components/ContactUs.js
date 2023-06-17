@@ -15,9 +15,9 @@ const ContactUs = () => {
     message: "",
   });
   const [errors, setErrors] = useState({
-    fullName: "",
-    email: "",
-    message: "",
+    fullName: false,
+    email: false,
+    message: false,
   });
   const handleChange = (e) => {
     const { name, value, type } = e.target;
@@ -40,16 +40,16 @@ const ContactUs = () => {
     // Validation logic
     if (formData2.fullName === "") {
       formIsValid = false;
-      newErrors.gender = "Please select a gender";
+      newErrors.fullName = true;
     }
     if (formData2.message.trim() === "") {
       formIsValid = false;
-      newErrors.firstName = "Please enter your first name";
+      newErrors.message = true;
     }
 
     if (formData2.email.trim() === "") {
       formIsValid = false;
-      newErrors.email = "Please enter your email address";
+      newErrors.email = true;
     } else if (!isValidEmail(formData2.email)) {
       formIsValid = false;
       newErrors.email = "Please enter a valid email address";
@@ -98,6 +98,7 @@ const ContactUs = () => {
                     value={formData2.fullName}
                     onChange={handleChange}
                     required="required"
+                    className={` ${errors.fullName ? "invalid" : ""}`}
                   ></input>
                   <span>Full Name</span>
                 </div>
