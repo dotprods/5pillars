@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200;1,300&family=Nothing+You+Could+Do&family=Poppins:wght@100;200;300;400;600;700&family=Quicksand&display=swap");
 
-:root {
-  --animate-delay: 2s;
-}
 body::-webkit-scrollbar {
   display: none;
 }
@@ -937,8 +934,18 @@ p {
     /* height: 50vh; */
   }
   .subscribe {
+    width: 80%;
     flex-direction: column;
+
+    margin: auto;
     margin-bottom: 10px;
+  }
+
+  .search-bar input[type="text"] {
+    width: 150px;
+  }
+  .search-bar button {
+    margin-left: 10px;
   }
   .subscribe-text {
     text-align: center;

@@ -53,7 +53,7 @@
   justify-content: space-around;
   align-items: center;
   color: #fff;
-  border-radius: 10px;
+  border-radius: 25% 0;
   background-color: #056e13;
   height: 420px;
 }
@@ -63,8 +63,9 @@
   justify-content: space-between;
   align-items: center;
   color: #fff;
-  border-radius: 10px;
+  border-radius: 25% 0;
   background-color: #056e13;
+  padding: 20px;
   height: 370px;
 }
 .selected-surah-package-def h3,
