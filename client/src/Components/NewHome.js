@@ -473,7 +473,12 @@ const NewHome = () => {
             </div>
           </div>
 
-          <div className="subscribe" data-aos="zoom-out-up">
+          <div
+            className="subscribe"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+          >
             <img src={mosque2} alt="subscribe-mosque"></img>
             <div className="subscribe-text">
               <h2>subscribe</h2>
