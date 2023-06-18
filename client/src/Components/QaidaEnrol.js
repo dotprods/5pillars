@@ -16,97 +16,210 @@ import Medal from "../assets/medal-col.png";
 
 const QaidaEnrol = () => {
   const [packages, setPackage] = useState("Quran Recitation-Session2");
+  const [qaidaPackage, setQaidaPackage] = useState("Qaida-Session2");
   const [amount, setAmount] = useState(7);
+  const [qaidaAmount, setQaidaAmount] = useState(7);
   const [isLoading, setIsLoading] = useState(true);
   const [session2Opacity, setSession2Opacity] = useState(1);
-  const [session1Opacity, setSession1Opacity] = useState(0.3);
-  const [session3Opacity, setSession3Opacity] = useState(0.3);
+  const [session1Opacity, setSession1Opacity] = useState(0.5);
+  const [session3Opacity, setSession3Opacity] = useState(0.5);
+  const [session4Opacity, setSession4Opacity] = useState(0.5);
+  const [session2QaidaOpacity, setSession2QaidaOpacity] = useState(1);
+  const [session1QaidaOpacity, setSession1QaidaOpacity] = useState(0.5);
+  const [session3QaidaOpacity, setSession3QaidaOpacity] = useState(0.5);
+  const [session4QaidaOpacity, setSessionQaida4Opacity] = useState(0.5);
 
-  const [isDropdownVisible, setDropdownVisible] = useState(false);
-  const [isDropdownVisible1, setDropdownVisible1] = useState(false);
-  const [fee, setFee] = useState();
   const [isSession1, setSession1] = useState(false);
   const [isSession2, setSession2] = useState(true);
   const [isSession3, setSession3] = useState(false);
   const [isSession4, setSession4] = useState(false);
+  const [isQaidaSession1, setQaidaSession1] = useState(false);
+  const [isQaidaSession2, setQaidaSession2] = useState(true);
+  const [isQaidaSession3, setQaidaSession3] = useState(false);
+  const [isQaidaSession4, setQaidaSession4] = useState(false);
 
   const navigate = useNavigate();
-
-  const toggleDropdown = () => {
-    setDropdownVisible(!isDropdownVisible);
-  };
-  const toggleDropdown1 = () => {
-    setDropdownVisible1(!isDropdownVisible1);
-  };
 
   const session1 = () => {
     if (isSession2) {
       setSession2(false);
       // setSession1Opacity(1);
-      setSession2Opacity(0.3);
+      setSession2Opacity(0.5);
     }
 
     if (isSession3) {
       setSession3(false);
       // setSession2Opacity(1);
-      setSession3Opacity(0.3);
+      setSession3Opacity(0.5);
     }
     if (isSession4) {
       setSession4(false);
       // setSession2Opacity(1);
+      setSession4Opacity(0.5);
     }
     setSession1(true);
     setSession1Opacity(1);
     setAmount(8);
-    setPackage("Quran Recitation-Session1");
+    setPackage("Quran Recitation-Session 1");
   };
 
   const session2 = () => {
     if (isSession1) {
       setSession1(false);
-      setSession1Opacity(0.3);
+      setSession1Opacity(0.5);
     }
     if (isSession3) {
       setSession3(false);
-      setSession3Opacity(0.3);
+      setSession3Opacity(0.5);
     }
 
     if (isSession4) {
       setSession4(false);
       // setSession2Opacity(1);
+      setSession4Opacity(0.5);
     }
     setSession2(true);
     // setSession1Opacity(isSession2 ? 1 : 0.3);
     setSession2Opacity(1);
     setAmount(7);
-    setPackage("Quran Recitation-Session2");
+    setPackage("Quran Recitation-Session 2");
   };
   const session3 = () => {
     if (isSession1) {
       setSession1(false);
-      setSession1Opacity(0.3);
+      setSession1Opacity(0.5);
     }
     if (isSession2) {
       setSession2(false);
-      setSession2Opacity(0.3);
+      setSession2Opacity(0.5);
     }
     if (isSession4) {
       setSession4(false);
       // setSession2Opacity(1);
+      setSession4Opacity(0.5);
     }
     setSession3(true);
     setSession3Opacity(1);
 
     setAmount(8);
-    setPackage("Quran Recitation-Session3");
+    setPackage("Quran Recitation-Session 3");
+  };
+  const session4 = () => {
+    if (isSession1) {
+      setSession1(false);
+      setSession1Opacity(0.5);
+    }
+    if (isSession2) {
+      setSession2(false);
+      setSession2Opacity(0.5);
+    }
+    if (isSession3) {
+      setSession3(false);
+      // setSession2Opacity(1);
+      setSession3Opacity(0.5);
+    }
+    setSession4(true);
+    setSession4Opacity(1);
+
+    setAmount(8);
+    setPackage("Quran Recitation-Session 4");
+  };
+  const Qidasession1 = () => {
+    if (isQaidaSession2) {
+      setQaidaSession2(false);
+      // setSession1Opacity(1);
+      setSession2QaidaOpacity(0.5);
+    }
+
+    if (isQaidaSession3) {
+      setQaidaSession3(false);
+      // setSession2Opacity(1);
+      setSession3QaidaOpacity(0.5);
+    }
+    if (isQaidaSession4) {
+      setQaidaSession4(false);
+      // setSession2Opacity(1);
+      setSessionQaida4Opacity(0.5);
+    }
+    setQaidaSession1(true);
+    setSession1QaidaOpacity(1);
+    setQaidaAmount(6);
+    setQaidaPackage("Qaida-Session 1");
+  };
+
+  const Qidasession2 = () => {
+    if (isQaidaSession1) {
+      setQaidaSession1(false);
+      // setSession1Opacity(1);
+      setSession1QaidaOpacity(0.5);
+    }
+
+    if (isQaidaSession3) {
+      setQaidaSession3(false);
+      // setSession2Opacity(1);
+      setSession3QaidaOpacity(0.5);
+    }
+    if (isQaidaSession4) {
+      setQaidaSession4(false);
+      // setSession2Opacity(1);
+      setSessionQaida4Opacity(0.5);
+    }
+    setQaidaSession2(true);
+    setSession2QaidaOpacity(1);
+    setQaidaAmount(6);
+    setQaidaPackage("Qaida-Session 2");
+  };
+  const Qidasession3 = () => {
+    if (isQaidaSession1) {
+      setQaidaSession1(false);
+      // setSession1Opacity(1);
+      setSession1QaidaOpacity(0.5);
+    }
+
+    if (isQaidaSession2) {
+      setQaidaSession2(false);
+      // setSession2Opacity(1);
+      setSession2QaidaOpacity(0.5);
+    }
+    if (isQaidaSession4) {
+      setQaidaSession4(false);
+      // setSession2Opacity(1);
+      setSessionQaida4Opacity(0.5);
+    }
+    setQaidaSession3(true);
+    setSession3QaidaOpacity(1);
+    setQaidaAmount(6);
+    setQaidaPackage("Qaida-Session 3");
+  };
+  const Qidasession4 = () => {
+    if (isQaidaSession1) {
+      setQaidaSession1(false);
+      // setSession1Opacity(1);
+      setSession1QaidaOpacity(0.5);
+    }
+
+    if (isQaidaSession2) {
+      setQaidaSession2(false);
+      // setSession2Opacity(1);
+      setSession2QaidaOpacity(0.5);
+    }
+    if (isQaidaSession3) {
+      setQaidaSession3(false);
+      // setSession2Opacity(1);
+      setSession3QaidaOpacity(0.5);
+    }
+    setQaidaSession4(true);
+    setSessionQaida4Opacity(1);
+    setQaidaAmount(6);
+    setQaidaPackage("Qaida-Session 4");
   };
 
   const QaidaEvent = () => {
     navigate({
       pathname: "/register",
       search: createSearchParams({
-        package: "Qaida",
-        fee: 6,
+        package: qaidaPackage,
+        fee: qaidaAmount,
       }).toString(),
     });
   };
@@ -122,23 +235,6 @@ const QaidaEnrol = () => {
     console.log(amount);
   };
 
-  // const session4 = () => {
-  //   if (isSession1) {
-  //     setSession1(false);
-  //     // setSession2Opacity(1);
-  //   }
-  //   if (isSession2) {
-  //     setSession2(false);
-  //     // setSession2Opacity(1);
-  //   }
-  //   if (isSession3) {
-  //     setSession3(false);
-  //     // setSession2Opacity(1);
-  //   }
-  //   setSession4(true);
-
-  //   console.log(isSession3);
-  // };
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -181,32 +277,178 @@ const QaidaEnrol = () => {
             <div className="qaida-package">
               <div className="qaida-package-def">
                 <h3>Qaida</h3>
-                <h1>
-                  £6/<span>Session</span>
-                </h1>
-                <p>£48 Billed Monthly (2 sessions P/W)</p>
-                <div className="qaida-package-button">
-                  {/* <Link to="/register" style={{ textDecoration: "none" }}> */}
+                <div className="quran-package-buttons">
+                  <div
+                    className="session2-btn"
+                    id="sess2"
+                    // style={{ opacity: session2Opacity }}
+                  >
+                    {isQaidaSession1 && (
+                      <h2
+                        className="other-session"
+                        style={{ fontWeight: "600", fontSize: "28px" }}
+                      >
+                        Session 1
+                      </h2>
+                    )}
+
+                    {isQaidaSession2 && (
+                      <div className="star">
+                        <h2 style={{ fontWeight: "600", fontSize: "28px" }}>
+                          Session 2
+                        </h2>
+                        <img src={Medal} className="medal"></img>
+                      </div>
+                    )}
+                    {isQaidaSession3 && (
+                      <h2
+                        className="other-session"
+                        style={{ fontWeight: "600", fontSize: "28px" }}
+                      >
+                        Session 3
+                      </h2>
+                    )}
+                    {isQaidaSession4 && (
+                      <h2
+                        className="other-session"
+                        style={{ fontWeight: "600", fontSize: "28px" }}
+                      >
+                        Session 4
+                      </h2>
+                    )}
+
+                    {isQaidaSession1 && (
+                      <h1 className="fff">
+                        £6/<span>Session</span>
+                      </h1>
+                    )}
+                    {isQaidaSession2 && (
+                      <h1>
+                        £6/<span>Session</span>
+                      </h1>
+                    )}
+                    {isQaidaSession3 && (
+                      <h1 className="fff">
+                        £6/<span>Session</span>
+                      </h1>
+                    )}
+                    {isQaidaSession4 && (
+                      <h1>
+                        £6/<span>Session</span>
+                      </h1>
+                    )}
+                    {isQaidaSession1 && (
+                      <p>£48 Billed Monthly (2 sessions P/W)</p>
+                    )}
+                    {isQaidaSession2 && (
+                      <p>£72 Billed Monthly (3 sessions P/W)</p>
+                    )}
+                    {isQaidaSession3 && (
+                      <p>£96 Billed Monthly (4 sessions P/W)</p>
+                    )}
+                    {isQaidaSession4 && (
+                      <p>£120 Billed Monthly (5 sessions P/W)</p>
+                    )}
+                  </div>
+                </div>
+                <div className="btn-row">
+                  <div className="btn-row1">
+                    <button
+                      onClick={Qidasession1}
+                      className="session1-sub sub-btn"
+                      style={{ opacity: session1QaidaOpacity }}
+                    >
+                      Session&nbsp;1
+                    </button>
+                    <div
+                      className="button-s2"
+                      style={{ opacity: session2QaidaOpacity }}
+                    >
+                      {/* <div className="star2">
+                        <MdStars size={20} />
+                      </div> */}
+                      <button
+                        onClick={Qidasession2}
+                        className="session2-sub sub-btn"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 36 24"
+                        >
+                          <path d="m18 0 8 12 10-8-4 20H4L0 4l10 8 8-12z"></path>
+                        </svg>
+                        Session&nbsp;2
+                      </button>
+                    </div>
+                  </div>
+                  <div className="btn-row2">
+                    <button
+                      onClick={Qidasession3}
+                      className="session3-sub sub-btn"
+                      style={{ opacity: session3QaidaOpacity }}
+                    >
+                      Session&nbsp;3
+                    </button>
+                    <button
+                      onClick={Qidasession4}
+                      className="session4-sub sub-btn"
+                      style={{ opacity: session4QaidaOpacity }}
+                    >
+                      Session&nbsp;4
+                    </button>
+                  </div>
+                </div>
+
+                <div className="qaida-package-button qaida-button">
                   <button className="btn-enrol" onClick={QaidaEvent}>
                     <span className="cir-btn">
                       <span className="arrow-btn"></span>
                     </span>
                     <span className="text-btn">Enrol Now</span>
                   </button>
-                  {/* </Link> */}
                 </div>
-                <h2 className="dropdown-btn" onClick={toggleDropdown}>
+                {/* <h2 className="dropdown-btn" onClick={toggleDropdown}>
                   {isDropdownVisible ? (
                     <IoIosArrowUp size={40} />
                   ) : (
                     <IoIosArrowDown size={40} />
                   )}
-                </h2>
+                </h2> */}
               </div>
-              {isDropdownVisible && (
+              {isQaidaSession1 && (
                 <div className="dropdown-content">
                   <h2>Free Trial Session</h2>
                   <h2>Two sessions per week</h2>
+                  <h2>One to One Live sessions</h2>
+                  <h2> 30 Mins per session</h2>
+                  <h2>Weekly Progress report</h2>
+                  <h2>Highly qualified tutors with Ijaza</h2>
+                </div>
+              )}
+              {isQaidaSession2 && (
+                <div className="dropdown-content">
+                  <h2>Free Trial Session</h2>
+                  <h2>Three sessions per week</h2>
+                  <h2>One to One Live sessions</h2>
+                  <h2> 30 Mins per session</h2>
+                  <h2>Weekly Progress report</h2>
+                  <h2>Highly qualified tutors with Ijaza</h2>
+                </div>
+              )}
+              {isQaidaSession3 && (
+                <div className="dropdown-content">
+                  <h2>Free Trial Session</h2>
+                  <h2>Four sessions per week</h2>
+                  <h2>One to One Live sessions</h2>
+                  <h2> 30 Mins per session</h2>
+                  <h2>Weekly Progress report</h2>
+                  <h2>Highly qualified tutors with Ijaza</h2>
+                </div>
+              )}
+              {isQaidaSession4 && (
+                <div className="dropdown-content">
+                  <h2>Free Trial Session</h2>
+                  <h2>Five sessions per week</h2>
                   <h2>One to One Live sessions</h2>
                   <h2> 30 Mins per session</h2>
                   <h2>Weekly Progress report</h2>
@@ -241,15 +483,14 @@ const QaidaEnrol = () => {
                         className="other-session"
                         style={{ fontWeight: "600", fontSize: "28px" }}
                       >
-                        Session1
+                        Session 1
                       </h2>
                     )}
 
                     {isSession2 && (
                       <div className="star">
                         <h2 style={{ fontWeight: "600", fontSize: "28px" }}>
-                          {" "}
-                          Session2
+                          Session 2
                         </h2>
                         <img src={Medal} className="medal"></img>
                       </div>
@@ -259,11 +500,17 @@ const QaidaEnrol = () => {
                         className="other-session"
                         style={{ fontWeight: "600", fontSize: "28px" }}
                       >
-                        {" "}
-                        Session3
+                        Session 3
                       </h2>
                     )}
-                    {isSession4 && <h2 className="other-session"> Session4</h2>}
+                    {isSession4 && (
+                      <h2
+                        className="other-session"
+                        style={{ fontWeight: "600", fontSize: "28px" }}
+                      >
+                        Session 4
+                      </h2>
+                    )}
 
                     {isSession1 && (
                       <h1 className="fff">
@@ -277,49 +524,66 @@ const QaidaEnrol = () => {
                     )}
                     {isSession3 && (
                       <h1 className="fff">
-                        £8/<span>Session</span>
+                        £7/<span>Session</span>
                       </h1>
                     )}
                     {isSession4 && (
                       <h1>
-                        £8/<span>Session</span>
+                        £6/<span>Session</span>
                       </h1>
                     )}
-                    {isSession1 && <p>£64 Billed Monthly (3 sessions P/W)</p>}
-                    {isSession2 && <p>£84 Billed Monthly (2 sessions P/W)</p>}
-                    {isSession3 && <p>£64 Billed Monthly (3 sessions P/W)</p>}
-                    {isSession4 && <p>£64 Billed Monthly (3 sessions P/W)</p>}
+                    {isSession1 && <p>£64 Billed Monthly (2 sessions P/W)</p>}
+                    {isSession2 && <p>£84 Billed Monthly (3 sessions P/W)</p>}
+                    {isSession3 && <p>£112 Billed Monthly (4 sessions P/W)</p>}
+                    {isSession4 && <p>£120 Billed Monthly (5 sessions P/W)</p>}
                   </div>
                 </div>
-                <div className="btn-row1">
-                  <button
-                    onClick={session1}
-                    className="session1-sub sub-btn"
-                    style={{ opacity: session1Opacity }}
-                  >
-                    Session&nbsp;1
-                  </button>
-                  <div
-                    className="button-s2"
-                    style={{ opacity: session2Opacity }}
-                  >
-                    <div className="star2">
-                      <MdStars size={20} />
+                <div className="btn-row">
+                  <div className="btn-row1">
+                    <button
+                      onClick={session1}
+                      className="session1-sub sub-btn"
+                      style={{ opacity: session1Opacity }}
+                    >
+                      Session&nbsp;1
+                    </button>
+                    <div
+                      className="button-s2"
+                      style={{ opacity: session2Opacity }}
+                    >
+                      {/* <div className="star2">
+                        <MdStars size={20} />
+                      </div> */}
+                      <button
+                        onClick={session2}
+                        className="session2-sub sub-btn"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 36 24"
+                        >
+                          <path d="m18 0 8 12 10-8-4 20H4L0 4l10 8 8-12z"></path>
+                        </svg>
+                        Session&nbsp;2
+                      </button>
                     </div>
-                    <button onClick={session2} className="session2-sub sub-btn">
-                      Session&nbsp;2
+                  </div>
+                  <div className="btn-row2">
+                    <button
+                      onClick={session3}
+                      className="session3-sub sub-btn"
+                      style={{ opacity: session3Opacity }}
+                    >
+                      Session&nbsp;3
+                    </button>
+                    <button
+                      onClick={session4}
+                      className="session4-sub sub-btn"
+                      style={{ opacity: session4Opacity }}
+                    >
+                      Session&nbsp;4
                     </button>
                   </div>
-                  <button
-                    onClick={session3}
-                    className="session3-sub sub-btn"
-                    style={{ opacity: session3Opacity }}
-                  >
-                    Session&nbsp;3
-                  </button>
-                  {/* <button onClick={session4} className="session4-sub sub-btn">
-                Session4
-              </button> */}
                 </div>
 
                 <div className="qaida-package-button qaida-button">
@@ -363,16 +627,30 @@ const QaidaEnrol = () => {
               )}
               {isSession3 && (
                 <div className="dropdown-content">
-                  <h2>---------------</h2>
-                  <h2>---------------</h2>
-                  <h2>---------------</h2>
-                  <h2>---------------</h2>
-                  <h2>---------------</h2>
-                  <h2>---------------</h2>
-                  <h2>---------------</h2>
-                  <h2>---------------</h2>
-                  <h2>---------------</h2>
-                  <h2>---------------</h2>
+                  <h2>Free Trial Session</h2>
+                  <h2>Four sessions per week</h2>
+                  <h2>Reading</h2>
+                  <h2>Thajweed</h2>
+                  <h2>Two Islamic Studies session per month</h2>
+                  <h2>Bi-Weekly Feedback</h2>
+                  <h2>One to One Live sessions</h2>
+                  <h2>45 Mins per session</h2>
+                  <h2>Weekly Progress report</h2>
+                  <h2> Highly qualified tutors with Ijaza</h2>
+                </div>
+              )}
+              {isSession4 && (
+                <div className="dropdown-content">
+                  <h2>Free Trial Session</h2>
+                  <h2>Five sessions per week</h2>
+                  <h2>Reading</h2>
+                  <h2>Thajweed</h2>
+                  <h2>Two Islamic Studies session per month</h2>
+                  <h2>Bi-Weekly Feedback</h2>
+                  <h2>One to One Live sessions</h2>
+                  <h2>45 Mins per session</h2>
+                  <h2>Weekly Progress report</h2>
+                  <h2> Highly qualified tutors with Ijaza</h2>
                 </div>
               )}
             </div>

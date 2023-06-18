@@ -39,7 +39,7 @@
   margin-bottom: 50px;
 }
 .selected-surah-package {
-  width: 450px;
+  width: 550px;
   margin-left: 50px;
 }
 .hifdh-package {
@@ -55,30 +55,27 @@
   color: #fff;
   border-radius: 25% 0;
   background-color: #056e13;
-  height: 420px;
+  height: auto;
+  padding: 20px;
 }
 .selected-surah-package-def {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   color: #fff;
   border-radius: 25% 0;
   background-color: #056e13;
+  height: auto;
   padding: 20px;
-  height: 370px;
 }
 .selected-surah-package-def h3,
 .hifdh-package-def h3 {
-  margin-top: 25px;
+  margin-top: 15px;
   font-size: xx-large;
   font-family: "Quicksand", sans-serif;
 }
 
-.hifdh-package-def h3 {
-  margin-top: 15px;
-  font-size: xx-large;
-}
 .selected-surah-package-def h1 {
   font-size: 80px;
   font-family: "Quicksand", sans-serif;
@@ -88,18 +85,19 @@
   font-family: "Quicksand", sans-serif;
 }
 .selected-surah-package-def p {
-  color: #fff;
-  opacity: 0.4;
+  color: rgb(182, 179, 179);
+  font-family: "Quicksand", sans-serif;
 }
 .selected-surah-package-def h1 span {
   font-size: medium;
   font-family: "Quicksand", sans-serif;
 }
-.selected-surah-package-button {
-  margin-top: 15px;
-}
-.selected-surah-button {
-  margin-bottom: 40px;
+/* .selected-surah-package-button {
+  margin-top: 5px;
+} */
+.hifdh-button {
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 .selected-surah-package-button button {
   background: #fff;
@@ -170,9 +168,9 @@
 .selected-surah-package-button button:hover .text-btn {
   color: #fff;
 }
-.hifdh-button {
+/* .hifdh-button {
   margin-bottom: 25px;
-}
+} */
 .session1-btn,
 .session2-btn {
   background: #f5f5f5;
@@ -254,9 +252,10 @@
 }
 .dropdown-content {
   background: #f5f5f5;
-  padding: 10px;
+  border-radius: 0 25%;
   text-align: center;
   transition: opacity 0.8s ease;
+  padding: 10px;
 }
 .dropdown-content h2 {
   font-size: medium;
@@ -297,8 +296,8 @@
   }
   .session1-btn,
   .session2-btn {
-    width: 180px;
-    height: 150px;
+    width: 200px;
+    height: 170px;
     margin: 10px;
     text-align: center;
   }

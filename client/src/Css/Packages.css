@@ -137,7 +137,7 @@
 }
 .dropdown-content {
   background: #f5f5f5;
-  padding: 10px;
+  border-radius: 0 25%;
   text-align: center;
   transition: opacity 1.3s ease-in-out;
 }

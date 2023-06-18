@@ -31,11 +31,11 @@
   margin-bottom: 50px;
 }
 .qaida-package {
-  width: 350px;
+  width: 35%;
   margin-left: 50px;
 }
 .quran-package {
-  width: 550px;
+  width: 35%;
   margin-left: 50px;
 }
 
@@ -47,18 +47,18 @@
   color: #fff;
   border-radius: 25% 0;
   background-color: #056e13;
-  height: 420px;
+  height: auto;
   z-index: 0;
 }
 .qaida-package-def {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   color: #fff;
   border-radius: 25% 0;
   background-color: #056e13;
-  height: 370px;
+  height: auto;
 }
 .qaida-package-def h3,
 .quran-package-def h3 {
@@ -68,7 +68,7 @@
 }
 
 .quran-package-def h3 {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   font-size: xx-large;
 }
 .qaida-package-def h1 {
@@ -80,8 +80,8 @@
   font-family: "Quicksand", sans-serif;
 }
 .qaida-package-def p {
-  color: #fff;
-  opacity: 0.4;
+  color: rgb(182, 179, 179);
+  font-family: "Quicksand", sans-serif;
 }
 .qaida-package-def h1 span {
   font-size: medium;
@@ -171,7 +171,31 @@
   border-radius: 7px;
   padding: 7px;
   font-weight: 600;
+  width: 140px;
+  margin-left: 10px;
+  cursor: pointer;
+  --border-width: 0.125em;
+  --curve-size: 0.5em;
+  clip-path: polygon(
+    /* Top-left */ 0% var(--curve-size),
+    var(--curve-size) 0,
+    /* top-right */ 100% 0,
+    100% calc(100% - var(--curve-size)),
+    /* bottom-right 1 */ calc(100% - var(--curve-size)) 100%,
+    /* bottom-right 2 */ 0 100%
+  );
 }
+/* .sub-btn:hover,
+.sub-btn:focus-visible {
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: 0.05em;
+}
+
+.sub-btn:active {
+  background: var(--color);
+  color: #fff;
+} */
 .session1-btn,
 .session2-btn {
   background: #f5f5f5;
@@ -226,8 +250,14 @@
   font-size: small;
   font-family: "Quicksand", sans-serif;
 }
-.btn-row1 {
+.btn-row {
   display: flex;
+  flex-direction: column;
+}
+.btn-row1,
+.btn-row2 {
+  display: flex;
+  margin-top: 10px;
 }
 .save {
   font-family: "Quicksand", sans-serif;
@@ -284,7 +314,45 @@
 }
 .session2-sub {
   /* animation: glowing 1300ms infinite; */
-  background: #f5f5f5;
+  /* background: transparent; */
+  width: fit-content;
+  display: flex;
+  padding: 0.6em 1.1em;
+  gap: 0.4rem;
+  font-weight: bold;
+  border-radius: 7px;
+  text-shadow: 2px 2px 3px rgb(136 0 136 / 50%);
+  background: linear-gradient(
+      15deg,
+      #880088,
+      #aa2068,
+      #cc3f47,
+      #de6f3d,
+      #f09f33,
+      #de6f3d,
+      #cc3f47,
+      #aa2068,
+      #880088
+    )
+    no-repeat;
+  background-size: 300%;
+  background-position: left center;
+  transition: background 0.3s ease;
+  color: #fff;
+  margin-left: 10px;
+}
+.session2-sub:hover {
+  background-size: 320%;
+  background-position: right center;
+}
+.session2-sub:hover svg {
+  fill: #fff;
+}
+
+.session2-sub svg {
+  width: 23px;
+  fill: #f09f33;
+  transition: 0.3s ease;
 }
 .session1-btn p,
 .session2-btn p {
@@ -306,7 +374,7 @@
 }
 .dropdown-content {
   background: #f5f5f5;
-  padding: 10px;
+  border-radius: 0 25%;
   text-align: center;
   transition: opacity 0.8s ease;
 }
@@ -342,8 +410,8 @@
   }
   .session1-btn,
   .session2-btn {
-    width: 180px;
-    height: 150px;
+    width: 200px;
+    height: 170px;
     margin: 10px;
     text-align: center;
     color: #fff;
