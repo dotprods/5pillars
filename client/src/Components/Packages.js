@@ -204,7 +204,7 @@ const Packages = () => {
             {/* <div className="arrow2"></div> */}
             {/* <div className="circle-steps3"></div> */}
           </div>
-          {/* <Footer /> */}
+          <Footer />
         </>
       )}
     </>
