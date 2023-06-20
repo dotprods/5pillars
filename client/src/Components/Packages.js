@@ -170,7 +170,7 @@ const Packages = () => {
               <div className="circlee-1"></div>
               <div className="circle-steps1"></div>
               <h2>Enrol</h2>
-              <div className="arrow dotted" style={{ width: "200px" }}></div>
+              <div className="arrow dotted"></div>
             </div>
 
             <div className="second-step steps">
@@ -184,7 +184,7 @@ const Packages = () => {
               <div className="circlee-1"></div>
               <div className="circle-steps2"></div>
               <h2>Free Trial</h2>
-              <div className="arrow dotted" style={{ width: "200px" }}></div>
+              <div className="arrow dotted"></div>
             </div>
 
             <div className="third-step steps">

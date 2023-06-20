@@ -11,6 +11,7 @@ import {
 
 const EnrolForm = () => {
   const [searchparams] = useSearchParams();
+  const [checked, setChecked] = useState(false);
   const prevPackage = searchparams.get("package");
   const prevAmount = searchparams.get("fee");
   const [isLoading, setIsLoading] = useState(true);
@@ -28,7 +29,7 @@ const EnrolForm = () => {
     surname: "",
     gender: "",
     dob: "",
-    agree: false,
+    agree: checked,
   });
   const [studentData, setStudentData] = useState({
     firstName: "",
@@ -38,7 +39,7 @@ const EnrolForm = () => {
     phone: "",
     email: "",
     country: "",
-    agree: false,
+    agree: checked,
   });
   useEffect(() => {
     setAmount(prevAmount);
@@ -632,12 +633,12 @@ const EnrolForm = () => {
                     </div>
                     <div className="form-group">
                       <label>
-                        <input
+                        {/* <input
                           type="checkbox"
                           name="agree"
                           checked={parentData.agree}
                           onChange={(e) => handleFormChange(e, "parent")}
-                        />
+                        /> */}
                         I agree to the terms and conditions
                       </label>
                       {/* {errors.agree && <span className="error">{errors.agree}</span>}
@@ -1090,12 +1091,12 @@ const EnrolForm = () => {
                   </div>
                   <div className="form-group">
                     <label>
-                      <input
+                      {/* <input
                         type="checkbox"
                         name="agree"
                         checked={studentData.agree}
                         onChange={(e) => handleFormChange(e, "student")}
-                      />
+                      /> */}
                       I agree to the terms and conditions
                     </label>
                     {/* {errors.agree && <span className="error">{errors.agree}</span>}

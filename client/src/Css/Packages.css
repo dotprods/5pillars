@@ -229,64 +229,84 @@
 .steps:hover .dotted {
   background-image: linear-gradient(90deg, #ffc107 5px, #fff 0);
 }
-.steps:hover .arrow {
-  &:before {
-    border-left: 10px solid #ffc107;
-  }
+.steps:hover .arrow::after {
+  background-color: #d9a25a;
+  border: #d9a25a solid 2px;
+}
+.steps:hover .arrow::before {
+  background-color: #d9a25a;
+  border: #d9a25a solid 2px;
 }
 .circle-steps1 {
   /* position: absolute; */
   width: 180px;
   height: 180px;
-  background: url("../assets/Boy.svg");
+  background-image: url("../assets//step1.png");
+  background-size: cover;
+  background-position: center;
   border-radius: 50%;
-  background-color: #d9a25a;
   cursor: pointer;
   transition: background-color 0.3s ease;
   /* left: 25%; */
-  border: #d9a25a 4px solid;
 }
 .circle-steps2 {
   /* position: absolute; */
   width: 180px;
   height: 180px;
-  background: url("../assets/Boy.svg");
+  background-image: url("../assets//step2.png");
+  background-size: cover;
+  background-position: center;
   border-radius: 50%;
-  background-color: #d9a25a;
   cursor: pointer;
   transition: background-color 0.3s ease;
   /* left: 45%; */
-  border: #d9a25a 4px solid;
 }
 .circle-steps3 {
   /* position: absolute; */
   width: 180px;
   height: 180px;
-  background: url("../assets/Boy.svg");
+  background-image: url("../assets//stp3.png");
+  background-size: cover;
+  background-position: center;
   border-radius: 50%;
-  background-color: #d9a25a;
   cursor: pointer;
   transition: background-color 0.3s ease;
   /* left: 65%; */
-  border: #d9a25a 4px solid;
 }
 .arrow {
   height: 4px;
   background-color: transparent;
   position: relative;
-  &:before {
-    position: absolute;
-    content: "  ";
-    display: inline-block;
-    right: -20px;
-    top: -8px;
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid black;
-    border-right: 10px solid transparent;
-  }
+  width: 190px;
+}
+.arrow::before {
+  position: absolute;
+  content: "  ";
+  display: inline-block;
+  right: -20px;
+  top: -5px;
+  width: 10px;
+  height: 10px;
+  /* background: white; */
+  border: black 2px solid;
+  border-radius: 50%;
+  background-color: white;
+  transition: background-color 0.8s ease;
+  z-index: 3;
+}
+
+.arrow::after {
+  position: absolute;
+  content: "  ";
+  display: inline-block;
+  left: -18px;
+  top: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border: black 2px solid;
+  transition: background-color 0.8s ease;
+  border-radius: 50%;
 }
 
 .dotted {
@@ -296,93 +316,30 @@
   position: absolute;
   right: -76%;
   top: 40%;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-image 0.8s ease;
 }
-/* .dotted2 {
-  background-image: linear-gradient(90deg, #3f6a02 5px, #fff 0);
-  background-size: 13px 5px;
-  background-position: 0 100%;
-  position: absolute;
-  right: -76%;
-  top: 40%;
-} */
-/* .arrow1 {
-  background: black;
-  width: 10.2%;
-  height: 2px;
-  position: absolute;
-  left: 34.75%;
-}
-.arrow2 {
-  background: black;
-  border-bottom: 2px dashed black;
-  width: 10.2%;
-  height: 2px;
-  position: absolute;
-  position: absolute;
-  left: 54.75%;
-} */
 
-/* .arrow::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-right: 12px solid black;
-  top: -4px;
-  left: -3px;
-} */
-/* .arrow1::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 12px solid black;
-  top: -4px;
-  right: -3px;
-}
-.arrow2::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 12px solid black;
-  top: -4px;
-  right: -3px;
-} */
-
-.circle-steps1:hover {
-  background-color: #ffc107;
-}
-.circle-steps2:hover {
-  background-color: #ffc107;
-}
-.circle-steps3:hover {
-  background-color: #ffc107;
-}
-.circle-steps1:hover .arrow1 {
-  color: red; /* Change the color of arrow1 when circle-steps1 is hovered */
-  width: 5%;
-}
-/* .arrow-steps {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100px;
-  height: 4px;
-  background-color: greenyellow;
-  transition: background-color 0.3s ease;
-} */
-
-.circle-steps:hover ~ .arrow,
-.circle-steps:hover + .arrow {
-  background-color: #ffc107;
+/* css for tabs */
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .steps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: #d9a25a; */
+    align-items: center;
+    margin: 0 20px;
+    position: relative;
+    padding: 25px;
+  }
+  .arrow {
+    width: 190px;
+  }
+  .arrow::before {
+    right: 100px;
+  }
+  .arrow::after {
+    left: -17px;
+  }
 }
 
 /* #DBDBDB */
@@ -409,5 +366,11 @@
   }
   .circle-steps3 {
     position: static;
+  }
+  .three-steps {
+    flex-direction: column;
+  }
+  .arrow {
+    display: none;
   }
 }
