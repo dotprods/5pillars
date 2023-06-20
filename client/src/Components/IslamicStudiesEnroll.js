@@ -28,19 +28,25 @@ const IslamicStudiesEnrol = () => {
         <>
           {" "}
           <div className="background" />
-          <div className="other-nav">
+          <div className="">
             <Navbar />
           </div>
-          <div className="hifdh-packages">
-            <div className="selected-surah-package">
-              <div className="selected-surah-package-def">
+          <div className="blank"></div>
+          <div className="islamic-studies">
+            <div className="islamic-studies-package">
+              <div className="islamic-studies-package-def">
                 <h3>ISLAMIC STUDIES</h3>
                 <h1>
                   £5/<span>Session</span>
                 </h1>
                 <p>Billed Monthly</p>
-                <div className="selected-surah-package-button">
-                  <button className="btn-enroll">Coming Soon</button>
+                <div className="islamic-studies-package-button ">
+                  <button className="btn-enrol">
+                    <span className="cir-btn">
+                      <span className="arrow-btn"></span>
+                    </span>
+                    <span className="text-btn">Coming soon</span>
+                  </button>
                 </div>
                 <h2 className="dropdown-btn" onClick={toggleDropdown}>
                   {isDropdownVisible ? (

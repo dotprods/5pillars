@@ -5,6 +5,8 @@ import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 import Loader from "./Loader";
 import Footer from "./Footer";
+import { BsTriangle } from "react-icons/bs";
+import { FiPlus } from "react-icons/fi";
 import { Link, useLocation } from "react-router-dom";
 
 const Packages = () => {
@@ -157,13 +159,52 @@ const Packages = () => {
             </div>
           </div>
           <div className="three-steps">
-            <div className="circle-steps1"></div>
-            <div className="arrow1"></div>
-            <div className="circle-steps2"></div>
-            <div className="arrow2"></div>
-            <div className="circle-steps3"></div>
+            <div className="first-step steps">
+              <div className="trianglee1">
+                <BsTriangle size={12} />
+              </div>
+              <div className="squaree"></div>
+              <div className="pluss">
+                <FiPlus size={14} />
+              </div>
+              <div className="circlee-1"></div>
+              <div className="circle-steps1"></div>
+              <h2>Enrol</h2>
+              <div className="arrow dotted" style={{ width: "200px" }}></div>
+            </div>
+
+            <div className="second-step steps">
+              <div className="trianglee1">
+                <BsTriangle size={12} />
+              </div>
+              <div className="squaree"></div>
+              <div className="pluss">
+                <FiPlus size={14} />
+              </div>
+              <div className="circlee-1"></div>
+              <div className="circle-steps2"></div>
+              <h2>Free Trial</h2>
+              <div className="arrow dotted" style={{ width: "200px" }}></div>
+            </div>
+
+            <div className="third-step steps">
+              <div className="trianglee1">
+                <BsTriangle size={12} />
+              </div>
+              <div className="squaree"></div>
+              <div className="pluss">
+                <FiPlus size={14} />
+              </div>
+              <div className="circlee-1"></div>
+              <div className="circle-steps3"></div>
+              <h2>Tutor Allocated</h2>
+            </div>
+            {/* <div className="arrow1"></div> */}
+            {/* <div className="circle-steps2"></div> */}
+            {/* <div className="arrow2"></div> */}
+            {/* <div className="circle-steps3"></div> */}
           </div>
-          <Footer />
+          {/* <Footer /> */}
         </>
       )}
     </>
