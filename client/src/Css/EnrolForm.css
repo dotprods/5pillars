@@ -314,20 +314,23 @@ input[type="checkbox"] {
   overflow-y: scroll;
 }
 .terms-content h1 {
+  color: white;
   text-align: center;
 }
 .terms-content h3 {
+  color: white;
   margin: 15px 0;
 }
 .terms-content ul li {
   list-style-type: disc;
-  color: black;
+  color: white;
   margin-top: 8px;
 }
 .terms-content p {
-  color: black;
+  color: white;
 }
 .terms-content h4 {
+  color: white;
   margin-top: 10px;
 }
 .terms-content p span {
