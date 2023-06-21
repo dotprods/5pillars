@@ -309,28 +309,28 @@ input[type="checkbox"] {
   /* text-align: center;
   position: relative; */
   border-radius: 9px;
-  background: #757575;
+  background: white;
   color: #171717;
   overflow-y: scroll;
 }
 .terms-content h1 {
-  color: white;
+  color: black;
   text-align: center;
 }
 .terms-content h3 {
-  color: white;
+  color: black;
   margin: 15px 0;
 }
 .terms-content ul li {
   list-style-type: disc;
-  color: white;
+  color: black;
   margin-top: 8px;
 }
 .terms-content p {
-  color: white;
+  color: black;
 }
 .terms-content h4 {
-  color: white;
+  color: black;
   margin-top: 10px;
 }
 .terms-content p span {
