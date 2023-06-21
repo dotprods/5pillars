@@ -122,6 +122,7 @@ input[type="checkbox"] {
 
 .parent-form button[type="submit"],
 .student-form button[type="submit"] {
+  margin-top: 20px;
   display: block;
   width: 100%;
   padding: 10px;
@@ -285,6 +286,97 @@ input[type="checkbox"] {
 .pack:nth-child(1):hover span {
   background: #056e13;
 }
+.terms {
+  cursor: pointer;
+  color: #021b48;
+}
+.trems-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 12;
+}
+.terms-content {
+  padding: 40px;
+  width: 700px;
+  height: 90vh;
+  /* text-align: center;
+  position: relative; */
+  border-radius: 9px;
+  background: #757575;
+  color: #171717;
+  overflow-y: scroll;
+}
+.terms-content h1 {
+  text-align: center;
+}
+.terms-content h3 {
+  margin: 15px 0;
+}
+.terms-content ul li {
+  list-style-type: disc;
+  color: black;
+  margin-top: 8px;
+}
+.terms-content p {
+  color: black;
+}
+.terms-content h4 {
+  margin-top: 10px;
+}
+.terms-content p span {
+  font-weight: 600;
+}
+.terms-btn {
+  margin: 25px 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+.terms-btn button {
+  margin: auto 18px;
+  cursor: pointer;
+}
+.terms-btn button {
+  padding: 10px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+.terms-btn button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #212121;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+.terms-btn button:hover {
+  color: #e8e8e8;
+}
+.terms-btn button:hover::before {
+  width: 100%;
+}
 @media only screen and (max-width: 766px) {
   .amount-card {
     position: relative;
@@ -311,4 +403,11 @@ input[type="checkbox"] {
     display: flex;
     justify-content: space-around;
   } */
+  .terms-content {
+    width: 90%;
+  }
+  .terms-content ul li {
+    text-align: left;
+    margin: 0px 0;
+  }
 }

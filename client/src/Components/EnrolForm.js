@@ -11,7 +11,9 @@ import {
 
 const EnrolForm = () => {
   const [searchparams] = useSearchParams();
-  const [checked, setChecked] = useState(false);
+  const [showTerms, setShowTerms] = useState(false);
+  const [sChecked, setSChecked] = useState(false);
+  const [pChecked, setPChecked] = useState(false);
   const prevPackage = searchparams.get("package");
   const prevAmount = searchparams.get("fee");
   const [isLoading, setIsLoading] = useState(true);
@@ -29,7 +31,6 @@ const EnrolForm = () => {
     surname: "",
     gender: "",
     dob: "",
-    agree: checked,
   });
   const [studentData, setStudentData] = useState({
     firstName: "",
@@ -39,7 +40,6 @@ const EnrolForm = () => {
     phone: "",
     email: "",
     country: "",
-    agree: checked,
   });
   useEffect(() => {
     setAmount(prevAmount);
@@ -52,9 +52,22 @@ const EnrolForm = () => {
     }, 4000);
   }, []);
 
+  const handleSTermsAndCondition = () => {
+    setSChecked(true);
+    console.log("Student: ", sChecked);
+    setShowTerms(!showTerms);
+  };
+  const handlePTermsAndCondition = () => {
+    setPChecked(true);
+    console.log("parent: ", pChecked);
+  };
+  const handleShowTerms = () => {
+    setShowTerms(!showTerms);
+  };
+
   const handleFormChange = (e, formType) => {
-    const { name, value, type, checked } = e.target;
-    const fieldValue = type === "checkbox" ? checked : value;
+    const { name, value } = e.target;
+    const fieldValue = value;
     if (formType === "parent") {
       setParentData({ ...parentData, [name]: fieldValue });
     } else {
@@ -65,6 +78,11 @@ const EnrolForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Store the data in the database or perform any other desired action
+    if (sChecked) {
+      console.log("dandanaka done", sChecked);
+    } else {
+      console.log("dandanaka fail", sChecked);
+    }
     console.log("Parent Data:", parentData);
     console.log("Student Data:", studentData);
     // Reset the form fields
@@ -79,7 +97,6 @@ const EnrolForm = () => {
       surname: "",
       gender: "",
       dob: "",
-      agree: false,
     });
     setStudentData({
       firstName: "",
@@ -89,12 +106,12 @@ const EnrolForm = () => {
       phone: "",
       email: "",
       country: "",
-      agree: false,
     });
   };
 
   const toggleForm = (isParent) => {
     setIsParent(isParent);
+    setSChecked(false);
   };
 
   return (
@@ -631,16 +648,10 @@ const EnrolForm = () => {
                         onChange={(e) => handleFormChange(e, "parent")}
                       />
                     </div>
-                    <div className="form-group">
-                      <label>
-                        {/* <input
-                          type="checkbox"
-                          name="agree"
-                          checked={parentData.agree}
-                          onChange={(e) => handleFormChange(e, "parent")}
-                        /> */}
-                        I agree to the terms and conditions
-                      </label>
+                    <div className="form-group ">
+                      <p className="terms" onClick={handleShowTerms}>
+                        Terms and conditions
+                      </p>
                       {/* {errors.agree && <span className="error">{errors.agree}</span>}
               <Link
                 to="/condition"
@@ -1089,16 +1100,11 @@ const EnrolForm = () => {
                       <option value="Zimbabwe">Zimbabwe</option>
                     </select>
                   </div>
-                  <div className="form-group">
-                    <label>
-                      {/* <input
-                        type="checkbox"
-                        name="agree"
-                        checked={studentData.agree}
-                        onChange={(e) => handleFormChange(e, "student")}
-                      /> */}
-                      I agree to the terms and conditions
-                    </label>
+                  <div className="form-group ">
+                    <p className="terms" onClick={handleShowTerms}>
+                      Terms and conditions
+                    </p>
+
                     {/* {errors.agree && <span className="error">{errors.agree}</span>}
               <Link
                 to="/condition"
@@ -1113,7 +1119,206 @@ const EnrolForm = () => {
                 </form>
               </div>
             </div>
+            {showTerms && (
+              <div className="trems-container">
+                <div className="terms-content">
+                  <h1>Terms And Conditions</h1>
+                  <h3>General</h3>
+                  <ul style={{ listStyle: "bullets" }}>
+                    <li>
+                      Students are required to be logged in and ready 5 minutes
+                      prior to session starting.
+                    </li>
+                    <li>
+                      If a student is late to a session, there is no guarantee
+                      that the tutor may be able to flifil the session time at
+                      the end as an extension.
+                    </li>
+                    <li>
+                      Each session may vary from 30 minutes to 45 minutes,
+                      depending on package.
+                    </li>
+                    <li>
+                      Students must inform the tutor/admin in advance if they
+                      wish to reschedlie (atleast 2 hours) prior to the session
+                      starting, the tutor/admin will provide alternative
+                      date/time to student.
+                    </li>
+                    <li>
+                      Student must reschedule the missed session within four
+                      weeks, as the tutor will be paid for the session at
+                      original scheduled time & date.
+                    </li>
+                    <li>
+                      If a student is absent without prior notice, it’s at the
+                      tutor’s discretion to arrange a reschedlied session.
+                    </li>
+                    <li>
+                      If a student wishes to take a short break (e.g. two weeks)
+                      they must inform the Admin via info@5pillarsacademy.com at
+                      least two weeks prior. Their subscription can be paused
+                      for that period.
+                    </li>
+                    <li>
+                      If a student is not satisfied with their tutor, they must
+                      inform management via info@5pillarsacademy.com or by
+                      calling us on +44775 639 3994.
+                    </li>
+                    <li>Terms & Conditions are subject to change. </li>
+                  </ul>
+                  <h3>Payment</h3>
+                  <ul>
+                    <li>
+                      Payments are collected in advance of each month via a
+                      subscription’s payment method.
+                    </li>
+                    <li>
+                      The student will automatically be charged each month based
+                      on their start date for a period of four weeks.
+                    </li>
+                    <li>
+                      f we fail to collect payment for any reason, they sessions
+                      will be suspended until the arrears are brought up to
+                      date.
+                    </li>
+                    <li>
+                      Students must ensure they always provide updated card
+                      details.
+                    </li>
+                  </ul>
+                  <h3>Coupons & Discounts </h3>
+                  <ul>
+                    <li>
+                      Only one coupon maybe applied to each subscription at any
+                      given time and reserve the right to withdraw any code at
+                      any time.
+                    </li>
+                    <li>
+                      Family discount can only be applied to immediate
+                      siblings/parents.
+                    </li>
+                    <li>
+                      Family discount is subject to change and withdrawal at any
+                      time.
+                    </li>
+                  </ul>
+                  <h3>Refunds </h3>
+                  <p>
+                    At 5pillars Academy, we are committed to providing a
+                    high-quality online learning experience for our students.
+                    However, we understand that there may be instances where a
+                    refund is requested. Our refund policy is as follows:
+                  </p>
+                  <ul>
+                    <li>
+                      If a student has not taken their first online class, they
+                      are eligible for a refund of their fee minus £10 admin
+                      charge.
+                    </li>
+                    <li>
+                      If a student has taken 50% or less than their scheduled
+                      classes for that month, then they will be refunded on a
+                      pro-rata basis.
+                    </li>
+                  </ul>
+                  <p>
+                    To request a refund or cancel your subscription, please
+                    contact our customer support team at
+                    <span> refunds@5pillarsacademy.com</span>. We will process
+                    your request as quickly as possible. Please note that any
+                    refunds will be issued using the same payment method that
+                    was used for the original transaction. Refunds may take up
+                    to 7 -10 working days to process.
+                  </p>
+                  <h3>Exceptions:</h3>
+                  <p>
+                    In some cases, we may make exceptions to our refund policy.
+                    For example, if there are extenuating circumstances that
+                    prevented a student from attending classes or if there was a
+                    technical issue with our platform that prevented a student
+                    from accessing course materials. In such cases, we will
+                    review the request on a case-by-case basis and determine
+                    whether a refund is appropriate.
+                  </p>
+                  <h3>Cancellation: </h3>
+                  <p>
+                    If a student wishes to cancel their enrolment at 5pillars
+                    Academy, they can do so at any time by contacting our
+                    customer support team. If the cancellation request is
+                    received before the start of the month, the fee for that
+                    month will not be charged. If the cancellation request is
+                    received after the start of the month, the fee for that
+                    month will not be refunded.
+                  </p>
+                  <h3>Privacy Policy </h3>
+                  <p>
+                    At 5pillars Academy Ltd, we take the privacy of our
+                    customers and users seriously and are committed to
+                    protecting their personal data in accordance with the
+                    General Data Protection Regulation (GDPR). This privacy
+                    policy outlines how we collect, process, and use personal
+                    data.
+                  </p>
+                  <h4>What data we collect:</h4>
+                  <p>
+                    We may collect personal data such as name, address, email
+                    address, phone number, and payment information from our
+                    customers and users. We may also collect non-personal data
+                    such as website usage information.
+                  </p>
+                  <h4>How we use the data: </h4>
+                  <p>
+                    We will only use personal data for internal purposes such as
+                    providing our products and services, processing payments,
+                    and communicating with our customers and users. We may also
+                    use personal data to send marketing communications about our
+                    products and services, but only if the individual has given
+                    their explicit consent. We will not share personal data with
+                    any third party without the individual's explicit consent,
+                    except where required by law.
+                  </p>
+                  <h4>How we protect the data: </h4>
+                  <p>
+                    We take appropriate technical and organizational measures to
+                    protect personal data from unauthorized access, accidental
+                    loss, or destruction. We ensure that our employees,
+                    contractors, and service providers who have access to
+                    personal data are bound by appropriate confidentiality
+                    obligations.
+                  </p>
+                  <h4>Data retention: </h4>
+                  <p>
+                    We will only retain personal data for as long as necessary
+                    to fulfill the purposes for which it was collected,
+                    including any legal or accounting requirements.
+                  </p>
+                  <h4>Individual rights: </h4>
+                  <p>
+                    Individuals have the right to request access to,
+                    rectification, erasure, or restriction of their personal
+                    data. They also have the right to object to the processing
+                    of their personal data or to withdraw their consent at any
+                    time. Individuals have the right to lodge a complaint with a
+                    supervisory authority if they believe that their data has
+                    been processed in violation of GDPR.
+                  </p>
+                  <h3>Contact us: </h3>
+                  <p>
+                    If you have any questions or concerns about our use of
+                    personal data or would like to exercise your individual
+                    rights, please contact us at{" "}
+                    <span>info@5pillarsacademy.com</span> or call us on{" "}
+                    <span>+44775 639 3994.</span>
+                  </p>
+                  <div className="terms-btn">
+                    <button onClick={handleShowTerms}>Close</button>
+                    <button onClick={handleSTermsAndCondition}>Accept</button>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
+          {sChecked && <p>Valid</p>}
         </>
       )}
     </>
