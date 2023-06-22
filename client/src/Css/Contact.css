@@ -115,7 +115,7 @@
   height: auto;
 }
 
-.contactForm button.contact-submit .submit-circle {
+.contactForm button.contact-submit .submit-circle-contact {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: relative;
   display: block;
@@ -126,7 +126,7 @@
   border-radius: 1.625rem;
 }
 
-.contactForm button.contact-submit .submit-circle .icon {
+.contactForm button.contact-submit .submit-circle-contact .icon {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
   top: 0;
@@ -135,7 +135,7 @@
   background: #fff;
 }
 
-.contactForm button.contact-submit .submit-circle .icon.arrow {
+.contactForm button.contact-submit .submit-circle-contact .icon.arrow-contact {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   left: 0.625rem;
   width: 1.125rem;
@@ -143,7 +143,10 @@
   background: none;
 }
 
-.contactForm button.contact-submit .submit-circle .icon.arrow::before {
+.contactForm
+  button.contact-submit
+  .submit-circle-contact
+  .icon.arrow-contact::before {
   position: absolute;
   content: "";
   top: -0.29rem;
@@ -171,11 +174,11 @@
   text-transform: uppercase;
 }
 
-.contactForm button:hover .submit-circle {
+.contactForm button:hover .submit-circle-contact {
   width: 100%;
 }
 
-.contactForm button:hover .submit-circle .icon.arrow {
+.contactForm button:hover .submit-circle-contact .icon.arrow-contact {
   background: #fff;
   transform: translate(1rem, 0);
 }

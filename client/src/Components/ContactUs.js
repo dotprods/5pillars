@@ -139,8 +139,8 @@ const ContactUs = () => {
                 </div>
 
                 <button className="contact-submit" type="submit">
-                  <span className="submit-circle" aria-hidden="true">
-                    <span className="icon arrow"></span>
+                  <span className="submit-circle-contact" aria-hidden="true">
+                    <span className="icon arrow-contact"></span>
                   </span>
                   <span className="button-text">Send</span>
                 </button>

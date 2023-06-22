@@ -103,7 +103,7 @@
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-select,
+/* select,
 input[type="text"],
 input[type="date"],
 input[type="email"],
@@ -112,6 +112,31 @@ input[type="tel"] {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+} */
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  color: #000;
+  font-size: 1em;
+  background: transparent;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  transition: 0.1s;
+  border-bottom-left-radius: 8px;
+  margin-top: 15px;
+}
+.form-group span {
+  color: red;
+}
+
+.parent-form input:focus,
+.student-form input:focus {
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 8px;
 }
 select {
   cursor: pointer;
@@ -133,10 +158,11 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 .form-group label {
+  margin-bottom: 15px;
   color: #757575;
 }
 .form-group {
-  margin-bottom: 8px;
+  margin-bottom: 20px;
 }
 
 .toggle-button1.active,

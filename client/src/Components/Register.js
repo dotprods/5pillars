@@ -13,6 +13,7 @@ const Register = () => {
     country: "",
     email: "",
     package: "",
+
     agree: false,
   });
 

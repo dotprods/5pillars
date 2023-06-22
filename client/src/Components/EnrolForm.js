@@ -20,6 +20,28 @@ const EnrolForm = () => {
   const [isParent, setIsParent] = useState(true);
   const [amount, setAmount] = useState(7);
   const [packages, setPackage] = useState("Qaida");
+  const [pErrors, setPErrors] = useState({
+    parentFName: "",
+    parentLName: "",
+    phone: "",
+    email: "",
+    country: "",
+    relationship: "",
+    firstName: "",
+    surname: "",
+    gender: "",
+    dob: "",
+  });
+  const [sErrors, setSErrors] = useState({
+    firstName: "",
+    surname: "",
+    gender: "",
+    dob: "",
+    phone: "",
+    email: "",
+    country: "",
+  });
+
   const [parentData, setParentData] = useState({
     parentFName: "",
     parentLName: "",
@@ -70,22 +92,81 @@ const EnrolForm = () => {
     const fieldValue = value;
     if (formType === "parent") {
       setParentData({ ...parentData, [name]: fieldValue });
+      setPErrors((prevErrors) => ({
+        ...prevErrors,
+        [name]: "",
+      }));
     } else {
       setStudentData({ ...studentData, [name]: fieldValue });
+      setSErrors((prevErrors) => ({
+        ...prevErrors,
+        [name]: "",
+      }));
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmitParent = (e) => {
     e.preventDefault();
-    // Store the data in the database or perform any other desired action
-    if (sChecked) {
-      console.log("dandanaka done", sChecked);
-    } else {
-      console.log("dandanaka fail", sChecked);
+    console.log(showTerms);
+    if (!sChecked) {
+      setShowTerms(true);
     }
+    console.log(showTerms);
+    let formIsValid = true;
+    const newErrors = { ...pErrors };
+    // Store the data in the database or perform any other desired action
+    if (parentData.parentFName === "") {
+      formIsValid = false;
+      newErrors.parentFName = "Please Enter Name";
+    }
+    if (parentData.parentLName === "") {
+      formIsValid = false;
+      newErrors.parentLName = "Please Enter Name";
+    }
+    if (parentData.phone === "") {
+      formIsValid = false;
+      newErrors.phone = "Please Enter Phone Number";
+    }
+    if (parentData.email.trim() === "") {
+      formIsValid = false;
+      newErrors.email = "Please Enter Email";
+    } else if (!isValidEmail(parentData.email)) {
+      formIsValid = false;
+      newErrors.email = "please Enter Valid email";
+    }
+    if (parentData.country === "") {
+      formIsValid = false;
+      newErrors.country = "Please Select Your Country";
+    }
+    if (parentData.relationship === "") {
+      formIsValid = false;
+      newErrors.relationship = "Please Enter Your relationship";
+    }
+    if (parentData.firstName === "") {
+      formIsValid = false;
+      newErrors.firstName = "Please Enter Your child's  Name";
+    }
+    if (parentData.surname === "") {
+      formIsValid = false;
+      newErrors.surname = "Please Enter Your child's  SurName";
+    }
+    if (parentData.gender === "") {
+      formIsValid = false;
+      newErrors.gender = "Please Enter Your child's  gender";
+    }
+    if (parentData.dob === "") {
+      formIsValid = false;
+      newErrors.dob = "Please Enter Your child's  dob";
+    }
+    if (formIsValid) {
+      // Perform form submission logic here
+      console.log(parentData);
+    } else {
+      setPErrors(newErrors);
+    }
+
     console.log("Parent Data:", parentData);
-    console.log("Student Data:", studentData);
-    // Reset the form fields
+
     setParentData({
       parentFName: "",
       parentLName: "",
@@ -98,6 +179,54 @@ const EnrolForm = () => {
       gender: "",
       dob: "",
     });
+  };
+  const handleSubmitStudent = (e) => {
+    e.preventDefault();
+    // Store the data in the database or perform any other desired action
+    let formIsValid = true;
+    const newErrors = { ...sErrors };
+    if (!sChecked) {
+      setShowTerms(true);
+    }
+    if (studentData.firstName === "") {
+      formIsValid = false;
+      newErrors.firstName = "Please Enter Name";
+    }
+    if (studentData.surname === "") {
+      formIsValid = false;
+      newErrors.surname = "Please Enter Name";
+    }
+    if (studentData.gender === "") {
+      formIsValid = false;
+      newErrors.gender = "Please select your gender";
+    }
+    if (studentData.dob === "") {
+      formIsValid = false;
+      newErrors.dob = "Please enter your dob";
+    }
+    if (studentData.phone === "") {
+      formIsValid = false;
+      newErrors.phone = "Please enter your phone number";
+    }
+    if (studentData.email.trim() === "") {
+      formIsValid = false;
+      newErrors.email = "Please enter your email";
+    } else if (!isValidEmail(studentData.email)) {
+      formIsValid = false;
+      newErrors.email = "Please enter valid email";
+    }
+    if (studentData.country === "") {
+      formIsValid = false;
+      newErrors.country = "Please select your country";
+    }
+
+    if (formIsValid) {
+      // Perform form submission logic here
+      console.log(studentData);
+    } else {
+      setSErrors(newErrors);
+    }
+    // Reset the form fields
     setStudentData({
       firstName: "",
       surname: "",
@@ -114,6 +243,11 @@ const EnrolForm = () => {
     setSChecked(false);
   };
 
+  const isValidEmail = (email) => {
+    // Basic email validation regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
   return (
     <>
       {isLoading ? (
@@ -165,12 +299,13 @@ const EnrolForm = () => {
               </div>
 
               <div className={`form-wrapper ${isParent ? "show" : ""}`}>
-                <form className="parent-form" onSubmit={handleSubmit}>
+                <form className="parent-form" onSubmit={handleSubmitParent}>
                   <div className="parent-details">
                     <h1>Your details (parent/Guardian)</h1>
 
                     <div className="form-group">
                       <label htmlFor="parentFName">First Name:</label>
+                      {/* {!pErrors.parentFName && ( */}
                       <input
                         type="text"
                         id="parentFName"
@@ -178,6 +313,11 @@ const EnrolForm = () => {
                         value={parentData.parentFName}
                         onChange={(e) => handleFormChange(e, "parent")}
                       />
+                      {/* )} */}
+
+                      {pErrors.parentFName && (
+                        <span className="error">{pErrors.parentFName}</span>
+                      )}
                     </div>
                     <div className="form-group">
                       <label htmlFor="parentLName">Last Name:</label>
@@ -188,6 +328,9 @@ const EnrolForm = () => {
                         value={parentData.parentLName}
                         onChange={(e) => handleFormChange(e, "parent")}
                       />
+                      {pErrors.parentLName && (
+                        <span className="error">{pErrors.parentLName}</span>
+                      )}
                     </div>
                     <div className="form-group">
                       <label htmlFor="phone">
@@ -200,6 +343,9 @@ const EnrolForm = () => {
                         value={parentData.phone}
                         onChange={(e) => handleFormChange(e, "parent")}
                       />
+                      {pErrors.phone && (
+                        <span className="error">{pErrors.phone}</span>
+                      )}
                     </div>
                     <div className="form-group">
                       <label htmlFor="email">Email Address:</label>
@@ -210,19 +356,20 @@ const EnrolForm = () => {
                         value={parentData.email}
                         onChange={(e) => handleFormChange(e, "parent")}
                       />
+                      {pErrors.email && (
+                        <span className="error">{pErrors.email}</span>
+                      )}
                     </div>
-                    <div className="form-group">
+                    {/* <div className="form-group">
                       <label htmlFor="confirmEmail">
-                        {" "}
                         Confirm Email Address:
                       </label>
                       <input
                         type="email"
                         id="confirmEmail"
                         name="confirmEmail"
-                        // value={formData.email}
                       />
-                    </div>
+                    </div> */}
                     <div className="form-group">
                       <label htmlFor="country"> Country of Residnce:</label>
                       <select
@@ -583,6 +730,9 @@ const EnrolForm = () => {
                         <option value="Zambia">Zambia</option>
                         <option value="Zimbabwe">Zimbabwe</option>
                       </select>
+                      {pErrors.country && (
+                        <span className="error">{pErrors.country}</span>
+                      )}
                     </div>
                     <div className="form-group">
                       <label htmlFor="relationship">
@@ -595,6 +745,9 @@ const EnrolForm = () => {
                         value={parentData.relationship}
                         onChange={(e) => handleFormChange(e, "parent")}
                       />
+                      {pErrors.relationship && (
+                        <span className="error">{pErrors.relationship}</span>
+                      )}
                     </div>
                   </div>
 
@@ -611,6 +764,9 @@ const EnrolForm = () => {
                         value={parentData.firstName}
                         onChange={(e) => handleFormChange(e, "parent")}
                       />
+                      {pErrors.firstName && (
+                        <span className="error">{pErrors.firstName}</span>
+                      )}
                     </div>
                     <div className="form-group">
                       <label htmlFor="relationship">
@@ -623,6 +779,9 @@ const EnrolForm = () => {
                         value={parentData.surname}
                         onChange={(e) => handleFormChange(e, "parent")}
                       />
+                      {pErrors.surname && (
+                        <span className="error">{pErrors.surname}</span>
+                      )}
                     </div>
                     <div className="form-group">
                       <label htmlFor="gender">Gender:</label>
@@ -637,6 +796,9 @@ const EnrolForm = () => {
                         <option value="Female">Female</option>
                         <option value="Other">Other</option>
                       </select>
+                      {pErrors.gender && (
+                        <span className="error">{pErrors.gender}</span>
+                      )}
                     </div>
                     <div className="form-group">
                       <label htmlFor="dob">Your Child's DOB:</label>
@@ -647,6 +809,9 @@ const EnrolForm = () => {
                         value={parentData.dob}
                         onChange={(e) => handleFormChange(e, "parent")}
                       />
+                      {pErrors.dob && (
+                        <span className="error">{pErrors.dob}</span>
+                      )}
                     </div>
                     <div className="form-group ">
                       <p className="terms" onClick={handleShowTerms}>
@@ -668,7 +833,7 @@ const EnrolForm = () => {
               </div>
 
               <div className={`form-wrapper ${!isParent ? "show" : ""}`}>
-                <form className="student-form" onSubmit={handleSubmit}>
+                <form className="student-form" onSubmit={handleSubmitStudent}>
                   <h1>Your details</h1>
 
                   <div className="form-group">
@@ -680,6 +845,9 @@ const EnrolForm = () => {
                       value={studentData.firstName}
                       onChange={(e) => handleFormChange(e, "student")}
                     />
+                    {sErrors.firstName && (
+                      <span className="error">{sErrors.firstName}</span>
+                    )}
                   </div>
                   <div className="form-group">
                     <label htmlFor="surname">Your surname:</label>
@@ -690,6 +858,9 @@ const EnrolForm = () => {
                       value={studentData.surname}
                       onChange={(e) => handleFormChange(e, "student")}
                     />
+                    {sErrors.surname && (
+                      <span className="error">{sErrors.surname}</span>
+                    )}
                   </div>
                   <div className="form-group">
                     <label htmlFor="gender">Gender:</label>
@@ -704,6 +875,9 @@ const EnrolForm = () => {
                       <option value="Female">Female</option>
                       <option value="Other">Other</option>
                     </select>
+                    {sErrors.gender && (
+                      <span className="error">{sErrors.gender}</span>
+                    )}
                   </div>
                   <div className="form-group">
                     <label htmlFor="dob">Your DOB:</label>
@@ -714,6 +888,9 @@ const EnrolForm = () => {
                       value={studentData.dob}
                       onChange={(e) => handleFormChange(e, "student")}
                     />
+                    {sErrors.dob && (
+                      <span className="error">{sErrors.dob}</span>
+                    )}
                   </div>
                   <div className="form-group">
                     <label htmlFor="phone">
@@ -726,6 +903,9 @@ const EnrolForm = () => {
                       value={studentData.phone}
                       onChange={(e) => handleFormChange(e, "student")}
                     />
+                    {sErrors.phone && (
+                      <span className="error">{sErrors.phone}</span>
+                    )}
                   </div>
                   <div className="form-group">
                     <label htmlFor="email">Email Address:</label>
@@ -736,10 +916,12 @@ const EnrolForm = () => {
                       value={studentData.email}
                       onChange={(e) => handleFormChange(e, "student")}
                     />
+                    {sErrors.email && (
+                      <span className="error">{sErrors.email}</span>
+                    )}
                   </div>
-                  <div className="form-group">
+                  {/* <div className="form-group">
                     <label htmlFor="confirmEmail">
-                      {" "}
                       Confirm Email Address:
                     </label>
                     <input
@@ -748,7 +930,7 @@ const EnrolForm = () => {
                       name="confirmEmail"
                       // value={formData.email}
                     />
-                  </div>
+                  </div> */}
                   <div className="form-group">
                     <label htmlFor="country"> Country of Residnce:</label>
                     <select
@@ -1099,6 +1281,9 @@ const EnrolForm = () => {
                       <option value="Zambia">Zambia</option>
                       <option value="Zimbabwe">Zimbabwe</option>
                     </select>
+                    {sErrors.country && (
+                      <span className="error">{sErrors.country}</span>
+                    )}
                   </div>
                   <div className="form-group ">
                     <p className="terms" onClick={handleShowTerms}>
