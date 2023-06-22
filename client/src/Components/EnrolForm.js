@@ -165,8 +165,6 @@ const EnrolForm = () => {
       setPErrors(newErrors);
     }
 
-    console.log("Parent Data:", parentData);
-
     setParentData({
       parentFName: "",
       parentLName: "",

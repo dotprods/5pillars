@@ -98,8 +98,8 @@
   line-height: 2.5em;
   margin: 20px;
   position: absolute;
-  left: 155px;
-  bottom: 5px;
+  left: 135px;
+  bottom: 3px;
   overflow: hidden;
   border: 2px solid var(--color);
   transition: color 0.5s;
