@@ -163,14 +163,14 @@ html, body {
 }
 .floating-container .float-element:nth-child(1) {
   background: #056e13;
-  box-shadow: 0 20px 20px -10px rgba(66, 165, 245, 0.5);
+  box-shadow: 0 20px 20px -10px rgba(20, 59, 3, 0.5);
   align-items: center;
   display: flex;
   justify-content: center;
 }
 .floating-container .float-element:nth-child(2) {
   background: #171717;
-  box-shadow: 0 20px 20px -10px rgba(164, 165, 164, 0.5);
+  box-shadow: 0 20px 20px -10px rgba(0, 8, 0, 0.5);
   align-items: center;
   display: flex;
   justify-content: center;
