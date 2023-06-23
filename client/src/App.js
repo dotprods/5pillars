@@ -13,6 +13,7 @@ import Projects from "./Components/Projects";
 import ContactUs from "./Components/ContactUs";
 import EnrolForm from "./Components/EnrolForm";
 import NewHome from "./Components/NewHome";
+import TutorForm from "./Components/TutorForm";
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
         <Route path="/tutors" element={<Tutors />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contactUs" element={<ContactUs />} />
-        <Route path="/tutorForm" element={<NewHome />} />
+        <Route path="/tutorForm" element={<TutorForm />} />
       </Routes>
     </>
   );

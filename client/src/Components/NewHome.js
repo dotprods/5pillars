@@ -357,7 +357,9 @@ const NewHome = () => {
                 <h1>
                   Become a Tutor <br /> with 5 Pillars
                 </h1>
-                <button className="tutor-btn">Register</button>
+                <Link to="/tutorForm" style={{ textDecoration: "none" }}>
+                  <button className="tutor-btn">Register</button>
+                </Link>
                 <p>As a Tutor</p>
               </div>
               <div className="tutor-image">

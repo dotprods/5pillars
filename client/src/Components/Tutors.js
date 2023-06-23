@@ -137,7 +137,6 @@ const Tutors = () => {
         <Loader />
       ) : (
         <>
-          {" "}
           <div className="background" />
           <div className="">
             <Navbar />
