@@ -183,6 +183,7 @@ const EnrolForm = () => {
     // Store the data in the database or perform any other desired action
     let formIsValid = true;
     const newErrors = { ...sErrors };
+
     if (!sChecked) {
       setShowTerms(true);
     }

@@ -6,6 +6,19 @@ import "../Css/TutorForm.css";
 
 const TutorForm = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState({
+    firstName: "",
+    surName: "",
+    gender: "",
+    dob: "",
+    isAalim: "",
+    isHifdh: "",
+    qualifications: "",
+    isTaughtOnline: "",
+    available: "",
+    experience: "",
+    about: "",
+  });
   const [tutorDtails, setTutorDetails] = useState({
     firstName: "",
     surName: "",
@@ -41,7 +54,28 @@ const TutorForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    let formIsValid = true;
+    const newErrors = { ...error };
+    if (tutorDtails.firstName === "") {
+      formIsValid = false;
+      error.firstName = "Please Enter Name";
+    }
+    if (tutorDtails.surName === "") {
+      formIsValid = false;
+      error.surName = "Please Enter Name";
+    }
     console.log(tutorDtails);
+    console.log("error", error);
+  };
+  const handleFormChange = (e) => {
+    const { name, value } = e.target;
+    const fieldValue = value;
+    setTutorDetails({ ...tutorDtails, [name]: fieldValue });
+    setError((prevErrors) => ({
+      ...prevErrors,
+      [name]: "",
+    }));
   };
   return (
     <>
@@ -58,50 +92,102 @@ const TutorForm = () => {
             <form className="tutor-form" onSubmit={handleSubmit}>
               <div className="tutor-form-group">
                 <label htmlFor="email">First Name</label>
-                <input type="text"></input>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  value={tutorDtails.firstName}
+                  onChange={(e) => handleFormChange(e)}
+                ></input>
+                {error.firstName && (
+                  <span className="error">{error.firstName}</span>
+                )}
               </div>
               <div className="tutor-form-group">
                 <label htmlFor="lastName">Last Name</label>
-                <input type="text"></input>
+                <input
+                  type="text"
+                  id="surName"
+                  name="surName"
+                  value={tutorDtails.surName}
+                  onChange={(e) => handleFormChange(e)}
+                ></input>
+                {error.surName && (
+                  <span className="error">{error.surName}</span>
+                )}
               </div>
               <div className="tutor-form-group">
                 <label htmlFor="gender">Gender</label>
-                <select id="gender" name="gender">
+                <select
+                  id="gender"
+                  name="gender"
+                  value={tutorDtails.gender}
+                  onChange={(e) => handleFormChange(e)}
+                >
                   <option value="">select Gender</option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
                 </select>
+                {error.gender && <span className="error">{error.gender}</span>}
               </div>
               <div className="tutor-form-group">
                 <label htmlFor="date">Date of birth</label>
-                <input type="date"></input>
+                <input
+                  type="date"
+                  id="dob"
+                  name="dob"
+                  value={tutorDtails.dob}
+                  onChange={(e) => handleFormChange(e)}
+                ></input>
+                {error.dob && <span className="error">{error.dob}</span>}
               </div>
               <div className="tutor-form-group">
                 <label htmlFor="Aalim">Aalim?</label>
-                <select id="Aalim" name="Aalim">
+                <select
+                  id="isAalim"
+                  name="isAalim"
+                  value={tutorDtails.isAalim}
+                  onChange={(e) => handleFormChange(e)}
+                >
                   <option value="">select </option>
                   <option value="yes">Yes</option>
                   <option value="no">No</option>
                 </select>
+                {error.isAalim && (
+                  <span className="error">{error.isAalim}</span>
+                )}
               </div>
               <div className="tutor-form-group">
                 <label htmlFor="hifdth">Hifdth</label>
-                <select id="hifdth" name="hifdth">
+                <select
+                  id="isHifdh"
+                  name="isHifdh"
+                  value={tutorDtails.isHifdh}
+                  onChange={(e) => handleFormChange(e)}
+                >
                   <option value="">select</option>
                   <option value="Complete">Complete</option>
                   <option value="incomplete">Incomplete</option>
                   <option value="no">No</option>
                 </select>
+                {error.isHifdh && (
+                  <span className="error">{error.isHifdh}</span>
+                )}
               </div>
               <div className="tutor-form-group">
                 <label htmlFor="textarea">Additional Qualifications</label>
                 <textarea
-                  name="textarea"
-                  id="textarea"
+                  name="qualifications"
+                  id="qualifications"
                   rows="6"
                   cols="30"
                   required=""
+                  value={tutorDtails.qualifications}
+                  onChange={(e) => handleFormChange(e)}
                 ></textarea>
+                {error.qualifications && (
+                  <span className="error">{error.qualifications}</span>
+                )}
               </div>
               <div className="tutor-form-group">
                 <label htmlFor="days">Days Available to teach</label>
@@ -163,36 +249,58 @@ const TutorForm = () => {
                     <label className="cb"> Sunday</label>
                   </div>
                 </div>
+                {error.available && (
+                  <span className="error">{error.available}</span>
+                )}
               </div>
 
               <div className="tutor-form-group">
                 <label htmlFor="online">Have taught online</label>
-                <select id="online" name="online">
+                <select
+                  id="isTaughtOnline"
+                  name="isTaughtOnline"
+                  value={tutorDtails.isTaughtOnline}
+                  onChange={(e) => handleFormChange(e)}
+                >
                   <option value="">select </option>
                   <option value="yes">Yes</option>
                   <option value="no">No</option>
                 </select>
+                {error.isTaughtOnline && (
+                  <span className="error">{error.isTaughtOnline}</span>
+                )}
               </div>
 
               <div className="tutor-form-group">
                 <label htmlFor="experience">Teaching Experience</label>
-                <select id="experience" name="experience">
+                <select
+                  id="experience"
+                  name="experience"
+                  value={tutorDtails.experience}
+                  onChange={(e) => handleFormChange(e)}
+                >
                   <option value="">select </option>
                   <option value="1-3 years">1-3 Years</option>
                   <option value="4-6 years">4-6 Years</option>
                   <option value="7+ years">7+ Years</option>
                 </select>
+                {error.experience && (
+                  <span className="error">{error.experience}</span>
+                )}
               </div>
 
               <div className="tutor-form-group">
                 <label htmlFor="textarea">About you?</label>
                 <textarea
-                  name="textarea"
-                  id="textarea"
+                  name="about"
+                  id="about"
                   rows="10"
                   cols="50"
                   required=""
+                  value={tutorDtails.about}
+                  onChange={(e) => handleFormChange(e)}
                 ></textarea>
+                {error.about && <span className="error">{error.about}</span>}
               </div>
               <button className="tutor-form-submit-btn" type="submit">
                 Submit

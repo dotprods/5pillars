@@ -57,6 +57,9 @@
   padding: 12px 16px;
   border-radius: 8px;
 }
+.tutor-form-container .tutor-form-group span {
+  color: red;
+}
 
 .tutor-form-container .tutor-form-group textarea {
   width: 100%;
