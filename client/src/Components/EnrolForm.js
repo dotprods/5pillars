@@ -20,6 +20,24 @@ const EnrolForm = () => {
   const [isParent, setIsParent] = useState(true);
   const [amount, setAmount] = useState(7);
   const [packages, setPackage] = useState("Qaida");
+  const sessionURLs = {
+    "Qaida-Session 1": "https://buy.stripe.com/test_8wM8xL3mU83X1zi28b",
+    "Qaida-Session 2": "https://buy.stripe.com/test_aEU15j1eMac5fq800i",
+    "Qaida-Session 3": "https://buy.stripe.com/test_14k15j4qY3NH2Dm3ct",
+    "Qaida-Session 4": "https://buy.stripe.com/test_aEU5lzaPm2JDfq87sI",
+    "Quran Recitation-Session 1": "https://buy.stripe.com/test_4gw15jaPm6ZT5PyfZd",
+    "Quran Recitation-Session 2": "https://buy.stripe.com/test_6oE8xLbTq2JD6TC9AO",
+    "Quran Recitation-Session 3": "https://buy.stripe.com/test_eVadS58Hefwpfq86oB",
+    "Quran Recitation-Session 4": "https://buy.stripe.com/test_6oEcO1cXu981fq83co",
+    "Selected Surah Hifdh-Session 1": "https://buy.stripe.com/test_fZeeW96z6fwp2Dm3ck",
+    "Selected Surah Hifdh-Session 2": "https://buy.stripe.com/test_00g29n7DaeslgucdQZ",
+    "Selected Surah Hifdh-Session 3": "https://buy.stripe.com/test_cN26pDcXu6ZTa5O6oy",
+    "Selected Surah Hifdh-Session 4": "https://buy.stripe.com/test_fZe01f0aIesl6TC4gr",
+    "Hifdh-Sesson 1": "https://buy.stripe.com/4gw8xL1eMesl5Py3cj",
+    "Hifdh-Sesson 2": "https://buy.stripe.com/test_28oeW92iQ0Bv91K14a",
+    "Hifdh-Sesson 3": "https://buy.stripe.com/test_fZeaFT3mU83X91K3ch",
+    "Hidth-Session 4": "https://buy.stripe.com/test_8wMdS5bTqfwp1zi3cg",
+  };
   const [pErrors, setPErrors] = useState({
     parentFName: "",
     parentLName: "",
@@ -161,6 +179,16 @@ const EnrolForm = () => {
     if (formIsValid) {
       // Perform form submission logic here
       console.log(parentData);
+      console.log("Package is: ", packages);
+      console.log("Amount is: ", amount);
+      const packageURL = sessionURLs[packages];
+      console.log("Package URL is: ", packageURL);
+      if (packageURL) {
+        window.location.href = packageURL;
+
+      } else {
+        console.error("Invalid package: ", packages);
+      }
     } else {
       setPErrors(newErrors);
     }
@@ -222,6 +250,17 @@ const EnrolForm = () => {
     if (formIsValid) {
       // Perform form submission logic here
       console.log(studentData);
+      console.log("Package is: ", packages);
+      console.log("Amount is: ", amount);
+      const packageURL = sessionURLs[packages];
+      console.log("Package URL is: ", packageURL);
+      if (packageURL) {
+        window.location.href = packageURL;
+
+      } else {
+        console.error("Invalid package: ", packages);
+      }
+
     } else {
       setSErrors(newErrors);
     }
