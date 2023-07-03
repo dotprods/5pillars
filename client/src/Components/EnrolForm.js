@@ -22,7 +22,7 @@ const EnrolForm = () => {
   const [packages, setPackage] = useState("Qaida");
   const sessionURLs = {
     "Qaida-Session 1": "https://buy.stripe.com/test_8wM8xL3mU83X1zi28b",
-    "Qaida-Session 2": "https://buy.stripe.com/test_aEU15j1eMac5fq800i",
+    "Qaida-Session2": "https://buy.stripe.com/test_aEU15j1eMac5fq800i",
     "Qaida-Session 3": "https://buy.stripe.com/test_14k15j4qY3NH2Dm3ct",
     "Qaida-Session 4": "https://buy.stripe.com/test_aEU5lzaPm2JDfq87sI",
     "Quran Recitation-Session 1": "https://buy.stripe.com/test_4gw15jaPm6ZT5PyfZd",
@@ -34,7 +34,7 @@ const EnrolForm = () => {
     "Selected Surah Hifdh-Session 3": "https://buy.stripe.com/test_cN26pDcXu6ZTa5O6oy",
     "Selected Surah Hifdh-Session 4": "https://buy.stripe.com/test_fZe01f0aIesl6TC4gr",
     "Hifdh-Sesson 1": "https://buy.stripe.com/4gw8xL1eMesl5Py3cj",
-    "Hifdh-Sesson 2": "https://buy.stripe.com/test_28oeW92iQ0Bv91K14a",
+    "Hidth-Sesson 2": "https://buy.stripe.com/test_28oeW92iQ0Bv91K14a",
     "Hifdh-Sesson 3": "https://buy.stripe.com/test_fZeaFT3mU83X91K3ch",
     "Hidth-Session 4": "https://buy.stripe.com/test_8wMdS5bTqfwp1zi3cg",
   };
@@ -125,14 +125,15 @@ const EnrolForm = () => {
 
   const handleSubmitParent = (e) => {
     e.preventDefault();
-    console.log(showTerms);
-    if (!sChecked) {
-      setShowTerms(true);
-    }
-    console.log(showTerms);
+
     let formIsValid = true;
     const newErrors = { ...pErrors };
     // Store the data in the database or perform any other desired action
+    if (!sChecked) {
+      formIsValid = false;
+      setShowTerms(true);
+    }
+
     if (parentData.parentFName === "") {
       formIsValid = false;
       newErrors.parentFName = "Please Enter Name";
@@ -176,7 +177,7 @@ const EnrolForm = () => {
       formIsValid = false;
       newErrors.dob = "Please Enter Your child's  dob";
     }
-    if (formIsValid) {
+    if (formIsValid && sChecked) {
       // Perform form submission logic here
       console.log(parentData);
       console.log("Package is: ", packages);
@@ -185,6 +186,18 @@ const EnrolForm = () => {
       console.log("Package URL is: ", packageURL);
       if (packageURL) {
         window.location.href = packageURL;
+        setParentData({
+          parentFName: "",
+          parentLName: "",
+          phone: "",
+          email: "",
+          country: "",
+          relationship: "",
+          firstName: "",
+          surname: "",
+          gender: "",
+          dob: "",
+        });
 
       } else {
         console.error("Invalid package: ", packages);
@@ -193,18 +206,7 @@ const EnrolForm = () => {
       setPErrors(newErrors);
     }
 
-    setParentData({
-      parentFName: "",
-      parentLName: "",
-      phone: "",
-      email: "",
-      country: "",
-      relationship: "",
-      firstName: "",
-      surname: "",
-      gender: "",
-      dob: "",
-    });
+
   };
   const handleSubmitStudent = (e) => {
     e.preventDefault();
@@ -213,6 +215,7 @@ const EnrolForm = () => {
     const newErrors = { ...sErrors };
 
     if (!sChecked) {
+      formIsValid = false;
       setShowTerms(true);
     }
     if (studentData.firstName === "") {
@@ -247,7 +250,7 @@ const EnrolForm = () => {
       newErrors.country = "Please select your country";
     }
 
-    if (formIsValid) {
+    if (formIsValid && sChecked) {
       // Perform form submission logic here
       console.log(studentData);
       console.log("Package is: ", packages);
@@ -256,24 +259,23 @@ const EnrolForm = () => {
       console.log("Package URL is: ", packageURL);
       if (packageURL) {
         window.location.href = packageURL;
-
       } else {
         console.error("Invalid package: ", packages);
       }
-
+      // Reset the form fields
+      setStudentData({
+        firstName: "",
+        surname: "",
+        gender: "",
+        dob: "",
+        phone: "",
+        email: "",
+        country: "",
+      });
     } else {
       setSErrors(newErrors);
     }
-    // Reset the form fields
-    setStudentData({
-      firstName: "",
-      surname: "",
-      gender: "",
-      dob: "",
-      phone: "",
-      email: "",
-      country: "",
-    });
+
   };
 
   const toggleForm = (isParent) => {
