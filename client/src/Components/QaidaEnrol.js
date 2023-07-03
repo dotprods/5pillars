@@ -15,8 +15,8 @@ import {
 import Medal from "../assets/medal-col.png";
 
 const QaidaEnrol = () => {
-  const [packages, setPackage] = useState("Quran Recitation-Session2");
-  const [qaidaPackage, setQaidaPackage] = useState("Qaida-Session2");
+  const [packages, setPackage] = useState("Quran Recitation-Session 2");
+  const [qaidaPackage, setQaidaPackage] = useState("Qaida-Session 2");
   const [amount, setAmount] = useState(7);
   const [qaidaAmount, setQaidaAmount] = useState(7);
   const [isLoading, setIsLoading] = useState(true);

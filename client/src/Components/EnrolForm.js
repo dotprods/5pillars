@@ -22,17 +22,25 @@ const EnrolForm = () => {
   const [packages, setPackage] = useState("Qaida");
   const sessionURLs = {
     "Qaida-Session 1": "https://buy.stripe.com/test_8wM8xL3mU83X1zi28b",
-    "Qaida-Session2": "https://buy.stripe.com/test_aEU15j1eMac5fq800i",
+    "Qaida-Session 2": "https://buy.stripe.com/test_aEU15j1eMac5fq800i",
     "Qaida-Session 3": "https://buy.stripe.com/test_14k15j4qY3NH2Dm3ct",
     "Qaida-Session 4": "https://buy.stripe.com/test_aEU5lzaPm2JDfq87sI",
-    "Quran Recitation-Session 1": "https://buy.stripe.com/test_4gw15jaPm6ZT5PyfZd",
-    "Quran Recitation-Session 2": "https://buy.stripe.com/test_6oE8xLbTq2JD6TC9AO",
-    "Quran Recitation-Session 3": "https://buy.stripe.com/test_eVadS58Hefwpfq86oB",
-    "Quran Recitation-Session 4": "https://buy.stripe.com/test_6oEcO1cXu981fq83co",
-    "Selected Surah Hifdh-Session 1": "https://buy.stripe.com/test_fZeeW96z6fwp2Dm3ck",
-    "Selected Surah Hifdh-Session 2": "https://buy.stripe.com/test_00g29n7DaeslgucdQZ",
-    "Selected Surah Hifdh-Session 3": "https://buy.stripe.com/test_cN26pDcXu6ZTa5O6oy",
-    "Selected Surah Hifdh-Session 4": "https://buy.stripe.com/test_fZe01f0aIesl6TC4gr",
+    "Quran Recitation-Session 1":
+      "https://buy.stripe.com/test_4gw15jaPm6ZT5PyfZd",
+    "Quran Recitation-Session 2":
+      "https://buy.stripe.com/test_6oE8xLbTq2JD6TC9AO",
+    "Quran Recitation-Session 3":
+      "https://buy.stripe.com/test_eVadS58Hefwpfq86oB",
+    "Quran Recitation-Session 4":
+      "https://buy.stripe.com/test_6oEcO1cXu981fq83co",
+    "Selected Surah Hifdh-Session 1":
+      "https://buy.stripe.com/test_fZeeW96z6fwp2Dm3ck",
+    "Selected Surah Hifdh-Session 2":
+      "https://buy.stripe.com/test_00g29n7DaeslgucdQZ",
+    "Selected Surah Hifdh-Session 3":
+      "https://buy.stripe.com/test_cN26pDcXu6ZTa5O6oy",
+    "Selected Surah Hifdh-Session 4":
+      "https://buy.stripe.com/test_fZe01f0aIesl6TC4gr",
     "Hifdh-Sesson 1": "https://buy.stripe.com/4gw8xL1eMesl5Py3cj",
     "Hidth-Session 2": "https://buy.stripe.com/test_28oeW92iQ0Bv91K14a",
     "Hifdh-Session 3": "https://buy.stripe.com/test_fZeaFT3mU83X91K3ch",
@@ -84,6 +92,7 @@ const EnrolForm = () => {
   useEffect(() => {
     setAmount(prevAmount);
     setPackage(prevPackage);
+    console.log(packages);
   }, [prevAmount, prevPackage]);
 
   useEffect(() => {
@@ -198,15 +207,12 @@ const EnrolForm = () => {
           gender: "",
           dob: "",
         });
-
       } else {
         console.error("Invalid package: ", packages);
       }
     } else {
       setPErrors(newErrors);
     }
-
-
   };
   const handleSubmitStudent = (e) => {
     e.preventDefault();
@@ -275,7 +281,6 @@ const EnrolForm = () => {
     } else {
       setSErrors(newErrors);
     }
-
   };
 
   const toggleForm = (isParent) => {
