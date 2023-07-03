@@ -22,7 +22,7 @@ const EnrolForm = () => {
   const [packages, setPackage] = useState("Qaida");
   const sessionURLs = {
     "Qaida-Session 1": "https://buy.stripe.com/test_8wM8xL3mU83X1zi28b",
-    "Qaida-Session2": "https://buy.stripe.com/test_aEU15j1eMac5fq800i",
+    "Qaida-Session 2": "https://buy.stripe.com/test_aEU15j1eMac5fq800i",
     "Qaida-Session 3": "https://buy.stripe.com/test_14k15j4qY3NH2Dm3ct",
     "Qaida-Session 4": "https://buy.stripe.com/test_aEU5lzaPm2JDfq87sI",
     "Quran Recitation-Session 1": "https://buy.stripe.com/test_4gw15jaPm6ZT5PyfZd",
