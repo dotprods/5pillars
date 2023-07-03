@@ -34,8 +34,8 @@ const EnrolForm = () => {
     "Selected Surah Hifdh-Session 3": "https://buy.stripe.com/test_cN26pDcXu6ZTa5O6oy",
     "Selected Surah Hifdh-Session 4": "https://buy.stripe.com/test_fZe01f0aIesl6TC4gr",
     "Hifdh-Sesson 1": "https://buy.stripe.com/4gw8xL1eMesl5Py3cj",
-    "Hidth-Sesson 2": "https://buy.stripe.com/test_28oeW92iQ0Bv91K14a",
-    "Hifdh-Sesson 3": "https://buy.stripe.com/test_fZeaFT3mU83X91K3ch",
+    "Hidth-Session 2": "https://buy.stripe.com/test_28oeW92iQ0Bv91K14a",
+    "Hifdh-Session 3": "https://buy.stripe.com/test_fZeaFT3mU83X91K3ch",
     "Hidth-Session 4": "https://buy.stripe.com/test_8wMdS5bTqfwp1zi3cg",
   };
   const [pErrors, setPErrors] = useState({
