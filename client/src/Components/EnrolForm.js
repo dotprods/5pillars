@@ -132,7 +132,7 @@ const EnrolForm = () => {
     }
   };
 
-  const handleSubmitParent = (e) => {
+  const handleSubmitParent = async(e) => {
     e.preventDefault();
 
     let formIsValid = true;
@@ -193,6 +193,19 @@ const EnrolForm = () => {
       console.log("Amount is: ", amount);
       const packageURL = sessionURLs[packages];
       console.log("Package URL is: ", packageURL);
+      try {
+        fetch('https://www.5pillarsacademy.com/api/addParentStudent.php', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(parentData)
+      })
+      .then(response => response.json())
+      .then(data => console.log(data));
+      } catch (error) {
+        console.error(error);
+      }
       if (packageURL) {
         window.location.href = packageURL;
         setParentData({
@@ -214,7 +227,7 @@ const EnrolForm = () => {
       setPErrors(newErrors);
     }
   };
-  const handleSubmitStudent = (e) => {
+  const handleSubmitStudent = async(e) => {
     e.preventDefault();
     // Store the data in the database or perform any other desired action
     let formIsValid = true;
@@ -263,6 +276,20 @@ const EnrolForm = () => {
       console.log("Amount is: ", amount);
       const packageURL = sessionURLs[packages];
       console.log("Package URL is: ", packageURL);
+      try {
+        fetch('https://www.5pillarsacademy.com/api/addStudent.php', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(studentData)
+        })
+        .then(response => response.json())
+        .then(data => console.log(data));
+
+      } catch (error) {
+        console.error(error);
+      }
       if (packageURL) {
         window.location.href = packageURL;
       } else {
