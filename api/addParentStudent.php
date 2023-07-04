@@ -19,26 +19,32 @@
 
     // Get data from the HTTP POST request
     $data = json_decode(file_get_contents('php://input'), true);
-    var_dump($data);
-    
-    $parentFName = $data['parentFName'];
-    $parentLName = $data['parentLName'];
-    $phone = $data['phone'];
-    $email = $data['email'];
-    $country = $data['country'];
-    $relationship = $data['relationship'];
-    $firstName = $data['firstName'];
-    $surname = $data['surname'];
-    $gender = $data['gender'];
-    $dob = $data['dob'];
+    error_log(print_r($data, true));
+ 	
+    if ($data != null) {
+      $parentFName = $data['parentFName'];
+      $parentLName = $data['parentLName'];
+      $phone = $data['phone'];
+      $email = $data['email'];
+      $country = $data['country'];
+      $relationship = $data['relationship'];
+      $firstName = $data['firstName'];
+      $surname = $data['surname'];
+      $gender = $data['gender'];
+      $dob = $data['dob'];
+      $package = $data['package'];
+      $amount = $data['amount'];
 
-    $sql = "INSERT INTO ParentFormData (parentFName, parentLName, phone, email, country, relationship, firstName, surname, gender, dob) 
-    VALUES ('$parentFName', '$parentLName', '$phone', '$email', '$country', '$relationship', '$firstName', '$surname', '$gender', '$dob')";
+      $sql = "INSERT INTO ParentFormData (parentFName, parentLName, phone, email, country, relationship, firstName, surname, gender, dob,  package, amount) 
+      VALUES ('$parentFName', '$parentLName', '$phone', '$email', '$country', '$relationship', '$firstName', '$surname', '$gender', '$dob',  '$package', '$amount')";
 
-    if ($conn->query($sql) === TRUE) {
-        echo json_encode(array('message' => "New record created successfully"));
+      if ($conn->query($sql) === TRUE) {
+          echo json_encode(array('message' => "New record created successfully"));
+      } else {
+          echo json_encode(array('message' => "Error: " . $sql . "<br>" . $conn->error));
+      }
     } else {
-        echo json_encode(array('message' => "Error: " . $sql . "<br>" . $conn->error));
+       echo json_encode(array('message' => "No data to insert"));
     }
 
     $conn->close();

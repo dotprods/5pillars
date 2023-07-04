@@ -19,25 +19,30 @@
 
     // Get data from the HTTP POST request
     $data = json_decode(file_get_contents('php://input'), true);
-    var_dump($data);
-    
-    $firstName = $data['firstName'];
-    $surname = $data['surname'];
-    $gender = $data['gender'];
-    $dob = $data['dob'];
-    $phone = $data['phone'];
-    $email = $data['email'];
-    $country = $data['country'];
-    $package = $data['package'];
-    $amount = $data['amount'];
+    error_log(print_r($data, true));
 
-    $sql = "INSERT INTO StudentFormData (firstName, surname, gender, dob, phone, email, country, package, amount) 
-    VALUES ('$firstName', '$surname', '$gender', '$dob', '$phone', '$email', '$country', '$package', '$amount')";
 
-    if ($conn->query($sql) === TRUE) {
-        echo json_encode(array('message' => "New record created successfully"));
+    if ($data != null) {
+        $firstName = $data['firstName'];
+        $surname = $data['surname'];
+        $gender = $data['gender'];
+        $dob = $data['dob'];
+        $phone = $data['phone'];
+        $email = $data['email'];
+        $country = $data['country'];
+        $package = $data['package'];
+        $amount = $data['amount'];
+
+        $sql = "INSERT INTO StudentFormData (firstName, surname, gender, dob, phone, email, country, package, amount) 
+        VALUES ('$firstName', '$surname', '$gender', '$dob', '$phone', '$email', '$country', '$package', '$amount')";
+
+        if ($conn->query($sql) === TRUE) {
+            echo json_encode(array('message' => "New record created successfully"));
+        } else {
+            echo json_encode(array('message' => "Error: " . $sql . "<br>" . $conn->error));
+        }
     } else {
-        echo json_encode(array('message' => "Error: " . $sql . "<br>" . $conn->error));
+        echo json_encode(array('message' => "No data to insert"));
     }
 
     $conn->close();
