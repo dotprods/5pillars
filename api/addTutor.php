@@ -19,28 +19,33 @@
 
     // Get data from the HTTP POST request
     $data = json_decode(file_get_contents('php://input'), true);
-    var_dump($data);
-    
-    $firstName = $data['firstName'];
-    $surName = $data['surName'];
-    $gender = $data['gender'];
-    $dob = $data['dob'];
-    $isAalim = $data['isAalim'];
-    $isHifdh = $data['isHifdh'];
-    $qualifications = $data['qualifications'];
-    $isTaughtOnline = $data['isTaughtOnline'];
-    $available = implode(",", $data['available']);
-    $experience = $data['experience'];
-    $about = $data['about'];
 
-    $sql = "INSERT INTO tutors (firstName, surName, gender, dob, isAalim, isHifdh, qualifications, isTaughtOnline, available, experience, about) 
-    VALUES ('$firstName', '$surName', '$gender', '$dob', '$isAalim', '$isHifdh', '$qualifications', '$isTaughtOnline', '$available', '$experience', '$about')";
+    error_log(print_r($data, true));
 
-    if ($conn->query($sql) === TRUE) {
-        echo json_encode(array('message' => "New record created successfully"));
-    } else {
-        echo json_encode(array('message' => "Error: " . $sql . "<br>" . $conn->error));
+
+    if ($data != null) {
+      $firstName = $data['firstName'];
+      $surName = $data['surName'];
+      $gender = $data['gender'];
+      $dob = $data['dob'];
+      $isAalim = $data['isAalim'];
+      $isHifdh = $data['isHifdh'];
+      $qualifications = $data['qualifications'];
+      $isTaughtOnline = $data['isTaughtOnline'];
+      $available = implode(",", $data['available']);
+      $experience = $data['experience'];
+      $about = $data['about'];
+	
+      $sql = "INSERT INTO tutors (firstName, surName, gender, dob, isAalim, isHifdh, qualifications, isTaughtOnline, available, experience, about) 
+      VALUES ('$firstName', '$surName', '$gender', '$dob', '$isAalim', '$isHifdh', '$qualifications', '$isTaughtOnline', '$available', '$experience', '$about')";
+
+      if ($conn->query($sql) === TRUE) {
+          echo json_encode(array('message' => "New record created successfully"));
+      } else {
+          echo json_encode(array('message' => "Error: " . $sql . "<br>" . $conn->error));
+      }
+	} else {
+        echo json_encode(array('message' => "No data to insert"));
     }
-
     $conn->close();
 ?>
