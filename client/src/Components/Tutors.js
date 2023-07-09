@@ -6,6 +6,8 @@ import { BsTriangle } from "react-icons/bs";
 import { FiPlus } from "react-icons/fi";
 import "../Css/Tutors.css";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
+import Habibi from "../assets/vsd.png";
 const testimonials = [
   {
     name: "Sheikh Usaidh ",
@@ -160,6 +162,23 @@ const Tutors = () => {
               you are and help unlock your full learning potential.
             </p>
           </div>
+          <div className="tutor">
+            <div className="tutor-register">
+              <div className="tutor-text">
+                <h1>
+                  Become a Tutor <br /> with 5 Pillars
+                </h1>
+                <Link to="/tutorForm" style={{ textDecoration: "none" }}>
+                  <button className="tutor-btn">Register</button>
+                </Link>
+                <p>As a Tutor</p>
+              </div>
+              <div className="tutor-image">
+                <img className="habibi" src={Habibi} alt="Habibi"></img>
+              </div>
+            </div>
+          </div>
+
           <div className="tutors-page">
             <div className="tutors-container">
               {tutors.map((tutor, index) => (

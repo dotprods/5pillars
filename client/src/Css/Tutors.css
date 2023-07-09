@@ -36,11 +36,23 @@
   border: 2px solid #d9a25a;
   border-radius: 10px;
   padding: 20px;
+  text-align: center;
 }
 .tutor-about h1 {
   text-align: center;
   margin-bottom: 20px;
   font-weight: 600;
+}
+/* register */
+.tutor-reg {
+  width: 700px;
+  display: flex;
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  border: 3px solid #d9a057;
+  height: 400px;
+  margin: 100px auto 75px auto;
 }
 
 /* .tutor-card p {

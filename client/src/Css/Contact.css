@@ -4,11 +4,12 @@
   margin-bottom: 50px;
 }
 .contact-form {
-  width: 600px;
+  width: 700px;
   height: 600px;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(10px);
+  padding-bottom: 630px;
 }
 .contactForm {
   display: flex;
@@ -222,9 +223,14 @@ p {
     width: 90%;
     margin-top: 50px;
   }
+  .contactForm {
+    margin: auto;
+  }
   .contact-form {
     width: 90%;
     height: 700px;
+    /* margin: auto; */
+    margin-right: 0;
   }
   .inputBox {
     align-items: center;
@@ -235,26 +241,27 @@ p {
   .inputBox span {
     margin-top: 5px;
     position: absolute;
-    left: 40px;
+    left: 70px;
   }
   .inputBox input:valid ~ span,
   .inputBox input:focus ~ span {
-    transform: translateX(163px) translateY(-38px);
+    transform: translateX(63px) translateY(-30px);
   }
   .inputBox textarea:valid ~ span,
   .inputBox textarea:focus ~ span {
-    transform: translateX(165px) translateY(-88px);
+    transform: translateX(65px) translateY(-88px);
   }
   .inputBox input,
   .inputBox textarea {
     align-items: center;
-    width: 80%;
+    width: 70%;
   }
   .social-cont {
     flex-direction: column;
     align-items: center;
     background: rgba(255, 255, 255, 0.05);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    margin: auto;
   }
   .social-media {
     width: 90%;
@@ -262,5 +269,6 @@ p {
     background: none;
     box-shadow: none;
     height: 250px;
+    margin: auto;
   }
 }

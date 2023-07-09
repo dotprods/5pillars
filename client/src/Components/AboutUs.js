@@ -55,7 +55,7 @@ const AboutUs = () => {
           </div>
           <div className="blank"></div>
           <div className="about">
-            <h1 style={{ fontSize: "50px" }}>About Us</h1>
+            <h1 style={{ fontSize: "50px" }}>Our Vision</h1>
             <p>
               Our vision at 5 Pillars Academy, is to be the leading online
               Islamic learning platform that connects individuals with tutors

@@ -13,15 +13,16 @@
 .hifdh-surah {
   margin: 0 auto 0 auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   border: 2px solid #d9a25a;
-  max-width: 1000px;
+  max-width: 800px;
   border-radius: 10px;
 }
 .hifdh-about,
 .surah-about {
   margin: 0px 10px 0;
-  max-width: 600px;
+  /* max-width: 600px; */
   align-items: center;
   /* border: 2px solid #d9a25a; */
   border-radius: 10px;

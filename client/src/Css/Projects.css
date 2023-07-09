@@ -1,0 +1,89 @@
+* {
+  text-align: center;
+}
+
+.milestones {
+  display: flex;
+  /* background: black; */
+  height: 300px;
+}
+.milestone {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-color: rgba(10, 126, 16, 0.5);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.in-low,
+.in-high {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: green;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.milestone-cont {
+  width: auto;
+  height: auto;
+  /* background-color: gold; */
+  text-align: center;
+  display: none;
+  margin-top: 25px;
+  transition: all 1.3s;
+}
+.milestone-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 430px;
+  cursor: pointer;
+}
+.milestone-container:hover .milestone-cont {
+  display: block;
+}
+/* .low1,
+.low2,
+.low3 {
+  position: absolute;
+  top: 30%;
+}
+.high1,
+.high2,
+.high3 {
+  position: absolute;
+  top: 0;
+}
+.high1 {
+  left: 0;
+}
+.high2 {
+  left: 35%;
+}
+.high3 {
+  left: 70%;
+}
+.low1 {
+  left: 18%;
+}
+.low2 {
+  left: 53%;
+}
+.low3 {
+  right: 0;
+} */
+.in-high h1,
+.in-low h1 {
+  text-align: center;
+  color: white;
+}
+.milestone-cont h3 {
+  font-size: medium;
+}

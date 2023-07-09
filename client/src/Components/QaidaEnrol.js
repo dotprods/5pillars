@@ -351,6 +351,7 @@ const QaidaEnrol = () => {
                     )}
                   </div>
                 </div>
+                <p>How Sessions would you like per week ?</p>
                 <div className="btn-row">
                   <div className="btn-row1">
                     <button
@@ -358,7 +359,7 @@ const QaidaEnrol = () => {
                       className="session1-sub sub-btn"
                       style={{ opacity: session1QaidaOpacity }}
                     >
-                      Session&nbsp;1
+                      2&nbsp;Sessions
                     </button>
                     <div
                       className="button-s2"
@@ -377,7 +378,7 @@ const QaidaEnrol = () => {
                         >
                           <path d="m18 0 8 12 10-8-4 20H4L0 4l10 8 8-12z"></path>
                         </svg>
-                        Session&nbsp;2
+                        3&nbsp;Sessions
                       </button>
                     </div>
                   </div>
@@ -387,14 +388,14 @@ const QaidaEnrol = () => {
                       className="session3-sub sub-btn"
                       style={{ opacity: session3QaidaOpacity }}
                     >
-                      Session&nbsp;3
+                      4&nbsp;Sessions
                     </button>
                     <button
                       onClick={Qidasession4}
                       className="session4-sub sub-btn"
                       style={{ opacity: session4QaidaOpacity }}
                     >
-                      Session&nbsp;4
+                      5&nbsp;Sessions
                     </button>
                   </div>
                 </div>
@@ -538,6 +539,8 @@ const QaidaEnrol = () => {
                     {isSession4 && <p>£120 Billed Monthly (5 sessions P/W)</p>}
                   </div>
                 </div>
+                <p>How Sessions would you like per week ?</p>
+
                 <div className="btn-row">
                   <div className="btn-row1">
                     <button
@@ -545,7 +548,7 @@ const QaidaEnrol = () => {
                       className="session1-sub sub-btn"
                       style={{ opacity: session1Opacity }}
                     >
-                      Session&nbsp;1
+                      2&nbsp; Sessions
                     </button>
                     <div
                       className="button-s2"
@@ -564,7 +567,7 @@ const QaidaEnrol = () => {
                         >
                           <path d="m18 0 8 12 10-8-4 20H4L0 4l10 8 8-12z"></path>
                         </svg>
-                        Session&nbsp;2
+                        3&nbsp;Sessions
                       </button>
                     </div>
                   </div>
@@ -574,14 +577,14 @@ const QaidaEnrol = () => {
                       className="session3-sub sub-btn"
                       style={{ opacity: session3Opacity }}
                     >
-                      Session&nbsp;3
+                      4&nbsp;Sessions
                     </button>
                     <button
                       onClick={session4}
                       className="session4-sub sub-btn"
                       style={{ opacity: session4Opacity }}
                     >
-                      Session&nbsp;4
+                      5&nbsp;Sessions
                     </button>
                   </div>
                 </div>

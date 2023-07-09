@@ -190,7 +190,7 @@ const NewHome = () => {
                     }}
                     startDelay={2000}
                     cursorColor="#056e13"
-                    multiText={["Quran", "Hifdth", "Islamic Lessons"]}
+                    multiText={["Qaida", "Quran", "Hifdh"]}
                     multiTextDelay={1000}
                     typeSpeed={30}
                     multiTextLoop

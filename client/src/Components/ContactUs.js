@@ -80,7 +80,6 @@ const ContactUs = () => {
         <Loader />
       ) : (
         <>
-          {" "}
           <div className="background" />
           <div className="">
             <Navbar />
@@ -113,18 +112,6 @@ const ContactUs = () => {
                   ></input>
                   <span>Email</span>
                 </div>
-                {/* <div className="inputBox">
-                  <input
-                    className="bigOne"
-                    type="textfield"
-                    required="required"
-                    id="message"
-                    name="messsage"
-                    value={formData2.message}
-                    onChange={handleChange}
-                  ></input>
-                  <span>Message</span>
-                </div> */}
                 <div className="inputBox">
                   <textarea
                     id="message"
@@ -146,7 +133,7 @@ const ContactUs = () => {
                 </button>
               </form>
             </div>
-            <div className="loc-map">
+            {/* <div className="loc-map">
               <iframe
                 width="100%"
                 height="600"
@@ -160,7 +147,7 @@ const ContactUs = () => {
                   measure acres/hectares on map
                 </a>
               </iframe>
-            </div>
+            </div> */}
           </div>
           <div className="social-cont">
             <div className="social-media">
@@ -173,11 +160,11 @@ const ContactUs = () => {
               <h2>Call Us</h2>
               <p>+44 7756393994</p>
             </div>
-            <div className="social-media">
+            {/* <div className="social-media">
               <ImLocation2 size={70} />
               <h2>Location</h2>
               <p>20-22 Wenlock Road , London N1 7GU</p>
-            </div>
+            </div> */}
           </div>
           <Footer />
         </>

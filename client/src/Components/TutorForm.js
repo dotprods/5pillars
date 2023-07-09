@@ -3,7 +3,6 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Loader from "./Loader";
 import "../Css/TutorForm.css";
-import axios from 'axios';
 
 const TutorForm = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -53,7 +52,7 @@ const TutorForm = () => {
     }, 4000);
   }, []);
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     let formIsValid = true;
@@ -70,20 +69,20 @@ const TutorForm = () => {
     if (formIsValid) {
       console.log(tutorDtails);
       try {
-        fetch('https://www.5pillarsacademy.com/api/addTutor.php', {
-          method: 'POST',
+        fetch("https://www.5pillarsacademy.com/api/addTutor.php", {
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json'
+            "Content-Type": "application/json",
           },
-          body: JSON.stringify(tutorDtails)
-      })
-      .then(response => response.json())
-      .then(data => console.log(data));
+          body: JSON.stringify(tutorDtails),
+        })
+          .then((response) => response.json())
+          .then((data) => console.log(data));
       } catch (error) {
         console.error(error);
       }
-    }else{
-       console.log("error", error);
+    } else {
+      console.log("error", error);
     }
   };
   const handleFormChange = (e) => {
