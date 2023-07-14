@@ -19,7 +19,7 @@ const TutorForm = () => {
     experience: "",
     about: "",
   });
-  const [tutorDtails, setTutorDetails] = useState({
+  const [tutorDetails, setTutorDetails] = useState({
     firstName: "",
     surName: "",
     gender: "",
@@ -57,24 +57,60 @@ const TutorForm = () => {
 
     let formIsValid = true;
     const newErrors = { ...error };
-    if (tutorDtails.firstName === "") {
+    if (tutorDetails.firstName === "") {
       formIsValid = false;
       error.firstName = "Please Enter Name";
     }
-    if (tutorDtails.surName === "") {
+    if (tutorDetails.surName === "") {
       formIsValid = false;
       error.surName = "Please Enter Name";
     }
+    if (tutorDetails.gender === "") {
+      formIsValid = false;
+      error.gender = "Please Select the gender";
+    }
+    if (tutorDetails.dob === "") {
+      formIsValid = false;
+      error.dob = "Please Enter the dob";
+    }
+    if (tutorDetails.isAalim === "") {
+      formIsValid = false;
+      error.isAalim = "Please Select one";
+    }
+    if (tutorDetails.isHifdh === "") {
+      formIsValid = false;
+      error.isHifdh = "Please Select One";
+    }
+    if (tutorDetails.qualifications === "") {
+      formIsValid = false;
+      error.qualifications = "Please Enter some qualifications";
+    }
+    if (tutorDetails.available.length == 0) {
+      formIsValid = false;
+      error.available = "Please Select any option";
+    }
+    if (tutorDetails.isTaughtOnline === "") {
+      formIsValid = false;
+      error.isTaughtOnline = "Please Select  the option";
+    }
+    if (tutorDetails.experience === "") {
+      formIsValid = false;
+      error.experience = "Please select";
+    }
+    if (tutorDetails.about === "") {
+      formIsValid = false;
+      error.about = "Please add some details about you";
+    }
     // If the form is valid, submit it
     if (formIsValid) {
-      console.log(tutorDtails);
+      console.log(tutorDetails);
       try {
         fetch("https://www.5pillarsacademy.com/api/addTutor.php", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(tutorDtails),
+          body: JSON.stringify(tutorDetails),
         })
           .then((response) => response.json())
           .then((data) => console.log(data));
@@ -82,13 +118,14 @@ const TutorForm = () => {
         console.error(error);
       }
     } else {
+      console.log(tutorDetails);
       console.log("error", error);
     }
   };
   const handleFormChange = (e) => {
     const { name, value } = e.target;
     const fieldValue = value;
-    setTutorDetails({ ...tutorDtails, [name]: fieldValue });
+    setTutorDetails({ ...tutorDetails, [name]: fieldValue });
     setError((prevErrors) => ({
       ...prevErrors,
       [name]: "",
@@ -113,7 +150,7 @@ const TutorForm = () => {
                   type="text"
                   id="firstName"
                   name="firstName"
-                  value={tutorDtails.firstName}
+                  value={tutorDetails.firstName}
                   onChange={(e) => handleFormChange(e)}
                 ></input>
                 {error.firstName && (
@@ -126,7 +163,7 @@ const TutorForm = () => {
                   type="text"
                   id="surName"
                   name="surName"
-                  value={tutorDtails.surName}
+                  value={tutorDetails.surName}
                   onChange={(e) => handleFormChange(e)}
                 ></input>
                 {error.surName && (
@@ -138,7 +175,7 @@ const TutorForm = () => {
                 <select
                   id="gender"
                   name="gender"
-                  value={tutorDtails.gender}
+                  value={tutorDetails.gender}
                   onChange={(e) => handleFormChange(e)}
                 >
                   <option value="">select Gender</option>
@@ -153,7 +190,7 @@ const TutorForm = () => {
                   type="date"
                   id="dob"
                   name="dob"
-                  value={tutorDtails.dob}
+                  value={tutorDetails.dob}
                   onChange={(e) => handleFormChange(e)}
                 ></input>
                 {error.dob && <span className="error">{error.dob}</span>}
@@ -163,7 +200,7 @@ const TutorForm = () => {
                 <select
                   id="isAalim"
                   name="isAalim"
-                  value={tutorDtails.isAalim}
+                  value={tutorDetails.isAalim}
                   onChange={(e) => handleFormChange(e)}
                 >
                   <option value="">select </option>
@@ -179,7 +216,7 @@ const TutorForm = () => {
                 <select
                   id="isHifdh"
                   name="isHifdh"
-                  value={tutorDtails.isHifdh}
+                  value={tutorDetails.isHifdh}
                   onChange={(e) => handleFormChange(e)}
                 >
                   <option value="">select</option>
@@ -199,7 +236,7 @@ const TutorForm = () => {
                   rows="6"
                   cols="30"
                   required=""
-                  value={tutorDtails.qualifications}
+                  value={tutorDetails.qualifications}
                   onChange={(e) => handleFormChange(e)}
                 ></textarea>
                 {error.qualifications && (
@@ -276,7 +313,7 @@ const TutorForm = () => {
                 <select
                   id="isTaughtOnline"
                   name="isTaughtOnline"
-                  value={tutorDtails.isTaughtOnline}
+                  value={tutorDetails.isTaughtOnline}
                   onChange={(e) => handleFormChange(e)}
                 >
                   <option value="">select </option>
@@ -293,7 +330,7 @@ const TutorForm = () => {
                 <select
                   id="experience"
                   name="experience"
-                  value={tutorDtails.experience}
+                  value={tutorDetails.experience}
                   onChange={(e) => handleFormChange(e)}
                 >
                   <option value="">select </option>
@@ -314,7 +351,7 @@ const TutorForm = () => {
                   rows="10"
                   cols="50"
                   required=""
-                  value={tutorDtails.about}
+                  value={tutorDetails.about}
                   onChange={(e) => handleFormChange(e)}
                 ></textarea>
                 {error.about && <span className="error">{error.about}</span>}
