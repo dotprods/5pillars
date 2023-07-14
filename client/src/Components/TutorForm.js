@@ -6,7 +6,7 @@ import "../Css/TutorForm.css";
 
 const TutorForm = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState({
+  const [tutorError, setError] = useState({
     firstName: "",
     surName: "",
     gender: "",
@@ -56,50 +56,50 @@ const TutorForm = () => {
     e.preventDefault();
 
     let formIsValid = true;
-    const newErrors = { ...error };
+    const newErrors = { ...tutorError };
     if (tutorDetails.firstName === "") {
       formIsValid = false;
-      error.firstName = "Please Enter Name";
+      newErrors.firstName = "Please Enter Name";
     }
     if (tutorDetails.surName === "") {
       formIsValid = false;
-      error.surName = "Please Enter Name";
+      newErrors.surName = "Please Enter Name";
     }
     if (tutorDetails.gender === "") {
       formIsValid = false;
-      error.gender = "Please Select the gender";
+      newErrors.gender = "Please Select the gender";
     }
     if (tutorDetails.dob === "") {
       formIsValid = false;
-      error.dob = "Please Enter the dob";
+      newErrors.dob = "Please Enter the dob";
     }
     if (tutorDetails.isAalim === "") {
       formIsValid = false;
-      error.isAalim = "Please Select one";
+      newErrors.isAalim = "Please Select one";
     }
     if (tutorDetails.isHifdh === "") {
       formIsValid = false;
-      error.isHifdh = "Please Select One";
+      newErrors.isHifdh = "Please Select One";
     }
     if (tutorDetails.qualifications === "") {
       formIsValid = false;
-      error.qualifications = "Please Enter some qualifications";
+      newErrors.qualifications = "Please Enter some qualifications";
     }
     if (tutorDetails.available.length == 0) {
       formIsValid = false;
-      error.available = "Please Select any option";
+      newErrors.available = "Please Select any option";
     }
     if (tutorDetails.isTaughtOnline === "") {
       formIsValid = false;
-      error.isTaughtOnline = "Please Select  the option";
+      newErrors.isTaughtOnline = "Please Select  the option";
     }
     if (tutorDetails.experience === "") {
       formIsValid = false;
-      error.experience = "Please select";
+      newErrors.experience = "Please select";
     }
     if (tutorDetails.about === "") {
       formIsValid = false;
-      error.about = "Please add some details about you";
+      newErrors.about = "Please add some details about you";
     }
     // If the form is valid, submit it
     if (formIsValid) {
@@ -115,11 +115,12 @@ const TutorForm = () => {
           .then((response) => response.json())
           .then((data) => console.log(data));
       } catch (error) {
-        console.error(error);
+        console.tutorError(tutorError);
       }
     } else {
+      setError(newErrors);
       console.log(tutorDetails);
-      console.log("error", error);
+      console.log("tutorError", tutorError);
     }
   };
   const handleFormChange = (e) => {
@@ -153,8 +154,8 @@ const TutorForm = () => {
                   value={tutorDetails.firstName}
                   onChange={(e) => handleFormChange(e)}
                 ></input>
-                {error.firstName && (
-                  <span className="error">{error.firstName}</span>
+                {tutorError.firstName && (
+                  <span className="tutorError">{tutorError.firstName}</span>
                 )}
               </div>
               <div className="tutor-form-group">
@@ -166,8 +167,8 @@ const TutorForm = () => {
                   value={tutorDetails.surName}
                   onChange={(e) => handleFormChange(e)}
                 ></input>
-                {error.surName && (
-                  <span className="error">{error.surName}</span>
+                {tutorError.surName && (
+                  <span className="tutorError">{tutorError.surName}</span>
                 )}
               </div>
               <div className="tutor-form-group">
@@ -182,7 +183,9 @@ const TutorForm = () => {
                   <option value="male">Male</option>
                   <option value="female">Female</option>
                 </select>
-                {error.gender && <span className="error">{error.gender}</span>}
+                {tutorError.gender && (
+                  <span className="tutorError">{tutorError.gender}</span>
+                )}
               </div>
               <div className="tutor-form-group">
                 <label htmlFor="date">Date of birth</label>
@@ -193,7 +196,9 @@ const TutorForm = () => {
                   value={tutorDetails.dob}
                   onChange={(e) => handleFormChange(e)}
                 ></input>
-                {error.dob && <span className="error">{error.dob}</span>}
+                {tutorError.dob && (
+                  <span className="tutorError">{tutorError.dob}</span>
+                )}
               </div>
               <div className="tutor-form-group">
                 <label htmlFor="Aalim">Aalim?</label>
@@ -207,8 +212,8 @@ const TutorForm = () => {
                   <option value="yes">Yes</option>
                   <option value="no">No</option>
                 </select>
-                {error.isAalim && (
-                  <span className="error">{error.isAalim}</span>
+                {tutorError.isAalim && (
+                  <span className="tutorError">{tutorError.isAalim}</span>
                 )}
               </div>
               <div className="tutor-form-group">
@@ -224,8 +229,8 @@ const TutorForm = () => {
                   <option value="incomplete">Incomplete</option>
                   <option value="no">No</option>
                 </select>
-                {error.isHifdh && (
-                  <span className="error">{error.isHifdh}</span>
+                {tutorError.isHifdh && (
+                  <span className="tutorError">{tutorError.isHifdh}</span>
                 )}
               </div>
               <div className="tutor-form-group">
@@ -239,8 +244,10 @@ const TutorForm = () => {
                   value={tutorDetails.qualifications}
                   onChange={(e) => handleFormChange(e)}
                 ></textarea>
-                {error.qualifications && (
-                  <span className="error">{error.qualifications}</span>
+                {tutorError.qualifications && (
+                  <span className="tutorError">
+                    {tutorError.qualifications}
+                  </span>
                 )}
               </div>
               <div className="tutor-form-group">
@@ -303,8 +310,8 @@ const TutorForm = () => {
                     <label className="cb"> Sunday</label>
                   </div>
                 </div>
-                {error.available && (
-                  <span className="error">{error.available}</span>
+                {tutorError.available && (
+                  <span className="tutorError">{tutorError.available}</span>
                 )}
               </div>
 
@@ -320,8 +327,10 @@ const TutorForm = () => {
                   <option value="yes">Yes</option>
                   <option value="no">No</option>
                 </select>
-                {error.isTaughtOnline && (
-                  <span className="error">{error.isTaughtOnline}</span>
+                {tutorError.isTaughtOnline && (
+                  <span className="tutorError">
+                    {tutorError.isTaughtOnline}
+                  </span>
                 )}
               </div>
 
@@ -338,8 +347,8 @@ const TutorForm = () => {
                   <option value="4-6 years">4-6 Years</option>
                   <option value="7+ years">7+ Years</option>
                 </select>
-                {error.experience && (
-                  <span className="error">{error.experience}</span>
+                {tutorError.experience && (
+                  <span className="tutorError">{tutorError.experience}</span>
                 )}
               </div>
 
@@ -354,7 +363,9 @@ const TutorForm = () => {
                   value={tutorDetails.about}
                   onChange={(e) => handleFormChange(e)}
                 ></textarea>
-                {error.about && <span className="error">{error.about}</span>}
+                {tutorError.about && (
+                  <span className="tutorError">{tutorError.about}</span>
+                )}
               </div>
               <button className="tutor-form-submit-btn" type="submit">
                 Submit

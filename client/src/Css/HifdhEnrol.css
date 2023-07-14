@@ -266,6 +266,28 @@
   margin: 25px;
 }
 /* #DBDBDB */
+/* css for tabs */
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .hifdh-packages {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .hifdh-surah {
+    width: 80%;
+  }
+  .selected-surah-package,
+  .hifdh-package {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hifdh-package {
+    margin-top: 50px;
+  }
+}
+
 @media (max-width: 767px) {
   .hifdh-surah {
     flex-direction: column;
