@@ -72,10 +72,14 @@
 .proj {
   border: 1px solid #d9a25a;
   width: 400px;
+  height: 370px;
   margin: 20px;
   padding: 10px;
   border-radius: 10px;
   background: white;
+}
+.expandProj {
+  height: auto;
 }
 .proj p {
   margin-top: 20px;
@@ -85,7 +89,7 @@
 }
 .first-project button,
 .second-project button {
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 15px;
   cursor: pointer;
   /* css */
@@ -99,8 +103,39 @@
   color: white;
   box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
 }
+
+.fourth-project button {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  position: relative;
+  font-size: 1em;
+  padding: 0.7em 1.4em;
+  background-color: #d9a25a;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.5em;
+  color: white;
+  box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+}
+.fifth-project button {
+  margin-top: 80px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  position: relative;
+  font-size: 1em;
+  padding: 0.7em 1.4em;
+  background-color: #d9a25a;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.5em;
+  color: white;
+  box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+}
 .first-project button::before,
-.second-project button::before {
+.second-project button::before,
+.fourth-project button::before,
+.fifth-project button::before {
   position: absolute;
   content: "";
   height: 0;
@@ -119,21 +154,37 @@
   transition: 0.3s;
 }
 .first-project button:hover::before,
-.second-project button:hover::before {
+.second-project button:hover::before,
+.fourth-project button:hover::before,
+.fifth-project button:hover::before {
   width: 1.6em;
   height: 1.6em;
 }
 .first-project button:active,
-.second-project button:active {
+.second-project button:active,
+.fourth-project button:active,
+.fifth-project button:active {
   box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
   transform: translate(0.1em, 0.1em);
 }
-
-.third-project p {
+.third-project p,
+.list {
   color: black;
   text-align: start;
   cursor: pointer;
 }
-.third-project p:hover {
+.list {
+  font-weight: 400;
+}
+.third-project p:hover,
+.list:hover {
   font-weight: 600;
+}
+@media (max-width: 767px) {
+  .project-about {
+    width: 90%;
+  }
+  .proj {
+    height: 420px;
+  }
 }
