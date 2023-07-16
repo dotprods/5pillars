@@ -387,15 +387,15 @@ const NewHome = () => {
                 <div className="circle-1"></div>
 
                 <div className="feedback-img feed1"></div>
-                <h2 className="name">Zaid</h2>
+                <h2 className="name">Umar</h2>
                 <h3 className="name-course">Hifdh student</h3>
                 <p className="feedback-text">
-                  ChatGPT is a sibling model to InstructGPT, which is trained to
-                  follow an instruction in a prompt and provide a detailed
-                  response. We are excited to introduce ChatGPT to get users’
-                  feedback and learn about its strengths and weaknesses. During
-                  the research preview, usage of ChatGPT is free. Try it now at
-                  chat.openai.com.
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                  The point of using Lorem Ipsum is that it has a more-or-less
+                  normal distribution of letters, as opposed to using 'Content
+                  here, content here', making it look like readable English.
+                  Many desktop publishing packages and web page editors now use
                 </p>
               </div>
               <div
@@ -412,15 +412,15 @@ const NewHome = () => {
                 </div>
                 <div className="circle-1"></div>
                 <div className="feedback-img feed2"></div>
-                <h2 className="name">Zaid</h2>
+                <h2 className="name">AbuBakkar</h2>
                 <h3 className="name-course">Hifdh student</h3>
                 <p className="feedback-text">
-                  ChatGPT is a sibling model to InstructGPT, which is trained to
-                  follow an instruction in a prompt and provide a detailed
-                  response. We are excited to introduce ChatGPT to get users’
-                  feedback and learn about its strengths and weaknesses. During
-                  the research preview, usage of ChatGPT is free. Try it now at
-                  chat.openai.com.
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                  The point of using Lorem Ipsum is that it has a more-or-less
+                  normal distribution of letters, as opposed to using 'Content
+                  here, content here', making it look like readable English.
+                  Many desktop publishing packages and web page editors now use
                 </p>
               </div>
               <div
@@ -437,15 +437,15 @@ const NewHome = () => {
                 </div>
                 <div className="circle-1"></div>
                 <div className="feedback-img feed3"></div>
-                <h2 className="name">Zaid</h2>
+                <h2 className="name">Ali</h2>
                 <h3 className="name-course">Hifdh student</h3>
                 <p className="feedback-text">
-                  ChatGPT is a sibling model to InstructGPT, which is trained to
-                  follow an instruction in a prompt and provide a detailed
-                  response. We are excited to introduce ChatGPT to get users’
-                  feedback and learn about its strengths and weaknesses. During
-                  the research preview, usage of ChatGPT is free. Try it now at
-                  chat.openai.com.
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                  The point of using Lorem Ipsum is that it has a more-or-less
+                  normal distribution of letters, as opposed to using 'Content
+                  here, content here', making it look like readable English.
+                  Many desktop publishing packages and web page editors now use
                 </p>
               </div>
               <div
@@ -463,15 +463,15 @@ const NewHome = () => {
                 <div className="circle-1"></div>
 
                 <div className="feedback-img feed1"></div>
-                <h2 className="name">Zaid</h2>
+                <h2 className="name">Usman</h2>
                 <h3 className="name-course">Hifdh student</h3>
                 <p className="feedback-text">
-                  ChatGPT is a sibling model to InstructGPT, which is trained to
-                  follow an instruction in a prompt and provide a detailed
-                  response. We are excited to introduce ChatGPT to get users’
-                  feedback and learn about its strengths and weaknesses. During
-                  the research preview, usage of ChatGPT is free. Try it now at
-                  chat.openai.com.
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                  The point of using Lorem Ipsum is that it has a more-or-less
+                  normal distribution of letters, as opposed to using 'Content
+                  here, content here', making it look like readable English.
+                  Many desktop publishing packages and web page editors now use
                 </p>
               </div>
             </div>
