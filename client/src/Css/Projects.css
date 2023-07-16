@@ -199,7 +199,16 @@
   .project-about h2 {
     font-size: 30px;
   }
+  .expandProj {
+    height: auto;
+  }
   .project-about {
     border: none;
   }
+  /* .project-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+  } */
 }
