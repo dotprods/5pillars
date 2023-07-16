@@ -256,7 +256,7 @@ const HifdhEnrol = () => {
           <div className="blank"></div>
           <div className="hifdh-surah">
             <div className="surah-about">
-              <h2 style={{ fontSize: "50px" }}>Selected Surahs </h2>
+              <h2 className="surah-heading">Selected Surahs </h2>
               <p>
                 Our Selected Surahs program is designed to offer you a unique
                 opportunity to memorize significant Surahs from the Quran at
@@ -266,7 +266,7 @@ const HifdhEnrol = () => {
               </p>
             </div>
             <div className="hifdh-about">
-              <h2 style={{ fontSize: "50px" }}>Hifdh Page </h2>
+              <h2 className="hifdh-heading">Hifdh Page </h2>
               <p>
                 Our Hifdh program is designed to provide you with comprehensive
                 guidance and support as you memorise the Quran, one of the

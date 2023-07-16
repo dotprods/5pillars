@@ -23,6 +23,9 @@
   margin-bottom: 20px;
   font-weight: 600;
 }
+.qaida-heading {
+  font-size: 50px;
+}
 
 .qaida-packages {
   display: flex;
@@ -408,6 +411,12 @@
 
 /* #DBDBDB */
 @media (max-width: 767px) {
+  .blank {
+    height: 120px;
+  }
+  .qaida-heading {
+    font-size: 35px;
+  }
   .qaida-about {
     margin: 0px auto 0 auto;
     width: 90%;

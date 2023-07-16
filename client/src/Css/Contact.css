@@ -214,7 +214,11 @@ p {
   margin-top: 10px;
 }
 @media only screen and (max-width: 766px) {
+  .contact-form h1 {
+    font-size: 30px;
+  }
   .contact-container {
+    margin-top: 50px;
     flex-direction: column;
     align-items: center;
   }
@@ -228,7 +232,7 @@ p {
   }
   .contact-form {
     width: 90%;
-    height: 700px;
+    height: 550px;
     /* margin: auto; */
     margin-right: 0;
   }

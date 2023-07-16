@@ -791,6 +791,9 @@ p {
 
 /* css for mobile */
 @media screen and (max-width: 767px) {
+  .blank {
+    height: 120px;
+  }
   .floating-container {
     margin: 10px;
   }

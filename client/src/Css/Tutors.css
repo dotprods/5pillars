@@ -11,6 +11,9 @@
   justify-content: center;
   margin-top: 2rem;
 }
+.tutors-heading {
+  font-size: 50px;
+}
 
 .tutor-card {
   position: relative;
@@ -261,6 +264,9 @@
   }
 }
 @media (max-width: 767px) {
+  .tutors-heading {
+    font-size: 35px;
+  }
   .tutor-about {
     margin: 0px auto 0 auto;
     width: 90%;

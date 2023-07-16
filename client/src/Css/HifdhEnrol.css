@@ -28,6 +28,10 @@
   border-radius: 10px;
   padding: 20px;
 }
+.surah-heading,
+.hifdh-heading {
+  font-size: 50px;
+}
 .hifdh-about h2,
 .surah-about h2 {
   text-align: center;
@@ -289,6 +293,10 @@
 }
 
 @media (max-width: 767px) {
+  .surah-heading,
+  .hifdh-heading {
+    font-size: 35px;
+  }
   .hifdh-surah {
     flex-direction: column;
     border: none;
@@ -305,7 +313,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 130px;
+    margin-top: 90px;
   }
   .selected-surah-package {
     width: 95%;

@@ -13,6 +13,9 @@
   align-items: center;
   /* position: relative; */
 }
+.aboutus-heading {
+  font-size: 50px;
+}
 
 .staff-member {
   width: 400px;
@@ -36,7 +39,7 @@
 }
 .team {
   text-align: center;
-  font-size: xx-large;
+  font-size: 50px;
 }
 .container-aboutUs {
   display: flex;
@@ -170,8 +173,14 @@ p {
 }
 
 @media (max-width: 767px) {
+  .aboutus-heading {
+    font-size: 35px;
+  }
   .about {
     border: none;
+  }
+  .team {
+    font-size: 35px;
   }
   .staff-member:hover {
     transform: scale(1);

@@ -132,7 +132,7 @@ const EnrolForm = () => {
     }
   };
 
-  const handleSubmitParent = async(e) => {
+  const handleSubmitParent = async (e) => {
     e.preventDefault();
 
     let formIsValid = true;
@@ -173,6 +173,18 @@ const EnrolForm = () => {
       formIsValid = false;
       newErrors.country = "Please select your country";
     }
+    if (parentData.relationship === "") {
+      formIsValid = false;
+      newErrors.relationship = "Please enter the relationship";
+    }
+    if (parentData.firstName === "") {
+      formIsValid = false;
+      newErrors.firstName = "Please enter the first name";
+    }
+    if (parentData.surname === "") {
+      formIsValid = false;
+      newErrors.surname = "Please enter the sur name";
+    }
     // Validate packages and amount
     if (packages === "") {
       formIsValid = false;
@@ -189,52 +201,52 @@ const EnrolForm = () => {
       console.log("Amount is: ", amount);
       const packageURL = sessionURLs[packages];
       console.log("Package URL is: ", packageURL);
-      
+
       const dataToSend = {
         ...parentData,
-        package: packages, 
-        amount: amount 
+        package: packages,
+        amount: amount,
       };
 
       console.log(JSON.stringify(dataToSend));
 
       try {
-        fetch('https://www.5pillarsacademy.com/api/addParentStudent.php', {
-          method: 'POST',
+        fetch("https://www.5pillarsacademy.com/api/addParentStudent.php", {
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json'
+            "Content-Type": "application/json",
           },
-          body: JSON.stringify(dataToSend)
+          body: JSON.stringify(dataToSend),
         })
-        .then(response => response.json())
-        .then(data => {
-          console.log(data);
-          if(data.message === "New record created successfully") {
-            if (packageURL) {
-              window.location.href = packageURL;
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            if (data.message === "New record created successfully") {
+              if (packageURL) {
+                window.location.href = packageURL;
+              } else {
+                console.error("Invalid package: ", packages);
+                newErrors.packages = "Invalid package selected";
+              }
+              setParentData({
+                parentFName: "",
+                parentLName: "",
+                phone: "",
+                email: "",
+                country: "",
+                relationship: "",
+                firstName: "",
+                surname: "",
+                gender: "",
+                dob: "",
+                package: "",
+                amount: "",
+              });
             } else {
-              console.error("Invalid package: ", packages);
-              newErrors.packages = "Invalid package selected";
+              console.error("Server error:", data.message);
             }
-            setParentData({
-              parentFName: "",
-              parentLName: "",
-              phone: "",
-              email: "",
-              country: "",
-              relationship: "",
-              firstName: "",
-              surname: "",
-              gender: "",
-              dob: "",
-              package: "", 
-              amount: "" 
-            });
-          } else {
-            console.error("Server error:", data.message);
-          }
-        })
-        .catch(error => console.error("Fetch error:", error));
+          })
+          .catch((error) => console.error("Fetch error:", error));
       } catch (error) {
         console.error(error);
       }
@@ -243,12 +255,12 @@ const EnrolForm = () => {
     }
   };
 
-  const handleSubmitStudent = async(e) => {
+  const handleSubmitStudent = async (e) => {
     e.preventDefault();
     // Store the data in the database or perform any other desired action
     let formIsValid = true;
     const newErrors = { ...sErrors };
-  
+
     if (!sChecked) {
       formIsValid = false;
       setShowTerms(true);
@@ -293,7 +305,7 @@ const EnrolForm = () => {
       formIsValid = false;
       newErrors.amount = "Please enter the amount";
     }
-  
+
     if (formIsValid && sChecked) {
       // Perform form submission logic here
       console.log(studentData);
@@ -301,50 +313,50 @@ const EnrolForm = () => {
       console.log("Amount is: ", amount);
       const packageURL = sessionURLs[packages];
       console.log("Package URL is: ", packageURL);
-      
+
       const dataToSend = {
         ...studentData,
-        package: packages, 
-        amount: amount 
+        package: packages,
+        amount: amount,
       };
 
       console.log(JSON.stringify(dataToSend));
-  
+
       try {
-        fetch('https://www.5pillarsacademy.com/api/addStudent.php', {
-          method: 'POST',
+        fetch("https://www.5pillarsacademy.com/api/addStudent.php", {
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json'
+            "Content-Type": "application/json",
           },
-          body: JSON.stringify(dataToSend)
+          body: JSON.stringify(dataToSend),
         })
-        .then(response => response.json())
-        .then(data => {
-          console.log(data);
-          if(data.message === "New record created successfully") {
-            // Reset the form fields
-            if (packageURL) {
-              window.location.href = packageURL;
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            if (data.message === "New record created successfully") {
+              // Reset the form fields
+              if (packageURL) {
+                window.location.href = packageURL;
+              } else {
+                console.error("Invalid package: ", packages);
+                newErrors.packages = "Invalid package selected";
+              }
+              setStudentData({
+                firstName: "",
+                surname: "",
+                gender: "",
+                dob: "",
+                phone: "",
+                email: "",
+                country: "",
+                package: "",
+                amount: "",
+              });
             } else {
-              console.error("Invalid package: ", packages);
-              newErrors.packages = "Invalid package selected";
+              console.error("Server error:", data.message);
             }
-            setStudentData({
-              firstName: "",
-              surname: "",
-              gender: "",
-              dob: "",
-              phone: "",
-              email: "",
-              country: "",
-              package: "", 
-              amount: "" 
-            });
-          } else {
-            console.error("Server error:", data.message);
-          }
-        })
-        .catch(error => console.error("Fetch error:", error));
+          })
+          .catch((error) => console.error("Fetch error:", error));
       } catch (error) {
         console.error(error);
       }
@@ -428,7 +440,6 @@ const EnrolForm = () => {
                         value={parentData.parentFName}
                         onChange={(e) => handleFormChange(e, "parent")}
                       />
-                      {/* )} */}
 
                       {pErrors.parentFName && (
                         <span className="error">{pErrors.parentFName}</span>

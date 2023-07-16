@@ -14,14 +14,14 @@
 .packages {
   display: flex;
   justify-content: center;
-  margin-top: 95px;
+  margin-top: 45px;
   margin-bottom: 100px;
   height: 100%;
 }
 .package-heading {
   color: black;
   text-align: center;
-  font-size: 30px;
+  font-size: 60px;
 }
 .package {
   /* width: 25%; */
@@ -344,6 +344,12 @@
 
 /* #DBDBDB */
 @media (max-width: 768px) {
+  .blank {
+    height: 0px;
+  }
+  .package-heading {
+    font-size: 45px;
+  }
   .packages {
     flex-direction: column;
     align-items: center;

@@ -145,7 +145,7 @@ const Tutors = () => {
           </div>
           <div className="blank"></div>
           <div className="tutor-about">
-            <h1 style={{ fontSize: "50px" }}>Our Tutors</h1>
+            <h1 className="tutors-heading">Our Tutors</h1>
             <p>
               At 5Pillars Academy, We take great pride in our rigorous vetting
               process, ensuring that only the most highly qualified tutors make
