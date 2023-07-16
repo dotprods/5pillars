@@ -22,6 +22,7 @@ import Arrowup from "../assets/arrowDouble.png";
 // import "animate.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import HotNews from "./HotNews";
 
 const NewHome = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -143,6 +144,7 @@ const NewHome = () => {
       ) : (
         <>
           <div className="background" />
+          <HotNews />
           <div
             className={`back-to-top-button ${isVisible ? "visible" : ""}`}
             onClick={scrollToTop}

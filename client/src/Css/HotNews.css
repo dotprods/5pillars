@@ -1,0 +1,127 @@
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 12;
+}
+.popup-content {
+  position: relative;
+  width: 400px;
+  height: 460px;
+  background: white;
+  border-radius: 8px;
+}
+.close-button {
+  position: absolute;
+  top: -12px;
+  right: 10px;
+  background: rgb(218, 215, 215);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.popup-content img {
+  width: 380px;
+  height: 380px;
+  margin-top: 5%;
+}
+.hotNews-btn {
+  bottom: 0px;
+  left: 0%;
+  cursor: pointer;
+  width: 390px;
+  font-size: x-large;
+  font-weight: 600;
+  position: relative;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #f47820;
+  transition: all 0.2s ease;
+}
+.hotNews-btn:active {
+  transform: scale(0.95);
+}
+.hotNews-btn:before,
+.hotNews-btn:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+.hotNews-btn:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #ff7f50 20%, transparent 30%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #ff7f50 15%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: orangeTopBubbles 0.6s ease;
+}
+@keyframes orangeTopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+.hotNews-btn:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #ff7f50 15%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: orangeBottomBubbles 0.6s ease;
+}
+@keyframes orangeBottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}

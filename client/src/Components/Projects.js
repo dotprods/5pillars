@@ -4,6 +4,8 @@ import "../Css/Projects.css";
 import { number } from "prop-types";
 import Footer from "./Footer";
 import Loader from "./Loader";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Projects = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -153,6 +155,9 @@ const Projects = () => {
       setIsLoading(false);
     }, 4000);
   }, []);
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <>
       {isLoading ? (
@@ -241,7 +246,7 @@ const Projects = () => {
           </div>
         </div>
       </div> */}
-          <div className="project-about">
+          <div className="project-about" data-aos="zoom-out-up">
             <h2>Introduction</h2>
             <p>
               5Pillars Academy is an online platform designed to help Muslims
@@ -355,7 +360,7 @@ const Projects = () => {
             >
               <h3>Islamic Lifestyle Project</h3>
 
-              <p onClick={() => handleProj3(1)}>
+              <p onClick={() => handleProj3(1)} className="list">
                 • Empowering Muslims in Today's World
               </p>
               {showProj3.proj1 && (
@@ -368,7 +373,7 @@ const Projects = () => {
                   well-being.
                 </p>
               )}
-              <p onClick={() => handleProj3(2)}>
+              <p onClick={() => handleProj3(2)} className="list">
                 • Navigating the Modern World with Islam in Their Hearts
               </p>
               {showProj3.proj2 && (
@@ -394,7 +399,7 @@ const Projects = () => {
                   </p>
                 </>
               )}
-              <p onClick={() => handleProj3(3)}>
+              <p onClick={() => handleProj3(3)} className="list">
                 • Strengthening Families and Overcoming Challenges
               </p>
               {showProj3.proj3 && (
@@ -414,7 +419,7 @@ const Projects = () => {
                   </p>
                 </>
               )}
-              <p onClick={() => handleProj3(4)}>
+              <p onClick={() => handleProj3(4)} className="list">
                 • Nurturing Young Married Couples in their Journey
               </p>
               {showProj3.proj4 && (
@@ -436,7 +441,7 @@ const Projects = () => {
                   </p>
                 </>
               )}
-              <p onClick={() => handleProj3(5)}>
+              <p onClick={() => handleProj3(5)} className="list">
                 • Health and Well-being in an Islamic Lifestyle
               </p>
               {showProj3.proj5 && (

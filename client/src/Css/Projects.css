@@ -64,10 +64,14 @@
   border-radius: 10px;
   padding: 20px;
 }
+.project-about h2 {
+  font-size: 40px;
+}
 .project-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 50px;
 }
 .proj {
   border: 1px solid #d9a25a;
@@ -77,6 +81,11 @@
   padding: 10px;
   border-radius: 10px;
   background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+.proj:hover {
+  transform: scale(1.03);
 }
 .expandProj {
   height: auto;
@@ -167,7 +176,7 @@
   box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
   transform: translate(0.1em, 0.1em);
 }
-.third-project p,
+
 .list {
   color: black;
   text-align: start;
@@ -176,7 +185,7 @@
 .list {
   font-weight: 400;
 }
-.third-project p:hover,
+
 .list:hover {
   font-weight: 600;
 }
@@ -186,5 +195,11 @@
   }
   .proj {
     height: 420px;
+  }
+  .project-about h2 {
+    font-size: 30px;
+  }
+  .project-about {
+    border: none;
   }
 }
