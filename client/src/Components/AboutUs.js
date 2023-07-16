@@ -4,6 +4,10 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "../Css/Staffmember.css";
 import Loader from "./Loader";
+import Hisham from "../assets/members/Hisham.jpeg";
+import Salman from "../assets/members/salman.jpeg";
+import Wafiq from "../assets/members/wafiq.jpeg";
+import Wazeer from "../assets/members/shuhail_wazeer.jpeg";
 
 const AboutUs = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -11,22 +15,22 @@ const AboutUs = () => {
     {
       name: "Hisham Mohamed",
       position: "Director/Co-Founder",
-      photo: "",
+      photo: Hisham,
     },
     {
       name: "Sheikh Salman Siddiq",
       position: "Director/Co-Founder",
-      photo: "",
+      photo: Salman,
     },
     {
       name: "Hafidh Wafik Mohamed",
       position: "Director/Co-Founder",
-      photo: "",
+      photo: Wafiq,
     },
     {
       name: "Sheikh Suhail Wazeer",
       position: "Director/Co-Founder",
-      photo: "",
+      photo: Wazeer,
     },
     {
       name: "Sheikh Ammar Cader",
