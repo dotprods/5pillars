@@ -21,6 +21,7 @@
     $data = json_decode(file_get_contents('php://input'), true);
     error_log(print_r($data, true));
 
+    $response = array();
 
     if ($data != null) {
         $firstName = $data['firstName'];
@@ -37,13 +38,58 @@
         VALUES ('$firstName', '$surname', '$gender', '$dob', '$phone', '$email', '$country', '$package', '$amount')";
 
         if ($conn->query($sql) === TRUE) {
-            echo json_encode(array('message' => "New record created successfully"));
+            $response['db'] = "New record created successfully";
         } else {
-            echo json_encode(array('message' => "Error: " . $sql . "<br>" . $conn->error));
+            $response['db'] = "Error: " . $sql . "<br>" . $conn->error;
         }
     } else {
-        echo json_encode(array('message' => "No data to insert"));
+        $response['db'] = "No data to insert";
     }
 
     $conn->close();
+    
+    // Send confirmation email
+    $url = 'https://api.sendgrid.com/v3/mail/send';
+    $apiKey = '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'; // replace with your SendGrid API Key
+    $templateId = 'd-87b31ed95abd454f9e9a429758887555'; // replace with your SendGrid template ID
+
+    $jsonData = [
+        'personalizations' => [
+            [
+                'to' => [
+                    [
+                        'email' => $email
+                    ]
+                ],
+                'dynamic_template_data' => [
+                    'firstName' => $firstName,
+                    'surname' => $surname
+                ]
+            ]
+        ],
+        'from' => [
+            'email' => 'fahim.20210482@iit.ac.lk'
+        ],
+        'template_id' => $templateId
+    ];
+
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json', 'Authorization: Bearer ' . $apiKey]);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($jsonData));
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+    $emailResponse = curl_exec($ch);
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    if ($httpCode == 202) {
+        $response['email'] = 'Email sent successfully';
+    } else {
+        $response['email'] = 'Failed to send email. Response code: ' . $httpCode . ' Response body: ' . $emailResponse;
+    }
+
+    echo json_encode($response);
 ?>

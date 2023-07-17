@@ -221,7 +221,7 @@ const EnrolForm = () => {
           .then((response) => response.json())
           .then((data) => {
             console.log(data);
-            if (data.message === "New record created successfully") {
+            if (data.db === "New record created successfully" && data.email === "Email sent successfully") {
               if (packageURL) {
                 window.location.href = packageURL;
               } else {
@@ -243,13 +243,13 @@ const EnrolForm = () => {
                 amount: "",
               });
             } else {
-              console.error("Server error:", data.message);
+              console.error("Server error:", data);
             }
           })
           .catch((error) => console.error("Fetch error:", error));
       } catch (error) {
         console.error(error);
-      }
+      }    
     } else {
       setPErrors(newErrors);
     }
@@ -333,7 +333,7 @@ const EnrolForm = () => {
           .then((response) => response.json())
           .then((data) => {
             console.log(data);
-            if (data.message === "New record created successfully") {
+            if (data.db === "New record created successfully" && data.email === "Email sent successfully") {
               // Reset the form fields
               if (packageURL) {
                 window.location.href = packageURL;
@@ -353,13 +353,13 @@ const EnrolForm = () => {
                 amount: "",
               });
             } else {
-              console.error("Server error:", data.message);
+              console.error("Server error:", data);
             }
           })
           .catch((error) => console.error("Fetch error:", error));
       } catch (error) {
         console.error(error);
-      }
+      }      
     } else {
       setSErrors(newErrors);
     }
