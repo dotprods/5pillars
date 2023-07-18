@@ -22,29 +22,17 @@
 
     error_log(print_r($data, true));
 
-
     if ($data != null) {
-      $firstName = $data['firstName'];
-      $surName = $data['surName'];
-      $gender = $data['gender'];
-      $dob = $data['dob'];
-      $isAalim = $data['isAalim'];
-      $isHifdh = $data['isHifdh'];
-      $qualifications = $data['qualifications'];
-      $isTaughtOnline = $data['isTaughtOnline'];
-      $available = implode(",", $data['available']);
-      $experience = $data['experience'];
-      $about = $data['about'];
+      $email = $data['email'];
 	
-      $sql = "INSERT INTO Tutor (firstName, surName, gender, dob, isAalim, isHifdh, qualifications, isTaughtOnline, available, experience, about) 
-      VALUES ('$firstName', '$surName', '$gender', '$dob', '$isAalim', '$isHifdh', '$qualifications', '$isTaughtOnline', '$available', '$experience', '$about')";
+      $sql = "INSERT INTO Subscriber (email) VALUES ('$email')";
 
       if ($conn->query($sql) === TRUE) {
           echo json_encode(array('message' => "New record created successfully"));
       } else {
           echo json_encode(array('message' => "Error: " . $sql . "<br>" . $conn->error));
       }
-	} else {
+    } else {
         echo json_encode(array('message' => "No data to insert"));
     }
     $conn->close();

@@ -4,10 +4,10 @@
     header('Content-Type: application/json');
 
     // Database credentials
-    $host_name = 'db5013413146.hosting-data.io';
-    $database = 'dbs11243746';
-    $user_name = 'dbu5435933';
-    $password = '5.Pillars.DB';
+    $host_name = '';
+    $database = '';
+    $user_name = '';
+    $password = '';
 
     // Create connection
     $conn = new mysqli($host_name, $user_name, $password, $database);
@@ -34,7 +34,7 @@
         $package = $data['package'];
         $amount = $data['amount'];
 
-        $sql = "INSERT INTO StudentFormData (firstName, surname, gender, dob, phone, email, country, package, amount) 
+        $sql = "INSERT INTO Student (firstName, surname, gender, dob, phone, email, country, package, amount) 
         VALUES ('$firstName', '$surname', '$gender', '$dob', '$phone', '$email', '$country', '$package', '$amount')";
 
         if ($conn->query($sql) === TRUE) {
@@ -68,7 +68,7 @@
             ]
         ],
         'from' => [
-            'email' => 'fahim.20210482@iit.ac.lk'
+            'email' => 'info@5pillarsacademy.com'
         ],
         'template_id' => $templateId
     ];
