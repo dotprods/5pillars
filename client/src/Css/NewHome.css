@@ -838,6 +838,10 @@ p {
     align-items: center;
     text-align: center;
   }
+  .coo:hover .circle {
+    transform: none;
+    border: #056e13 2px solid;
+  }
 
   .coo p,
   .coo h3,

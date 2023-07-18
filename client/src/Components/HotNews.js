@@ -14,27 +14,45 @@ const HotNews = () => {
   //      }
   //    }, []);
 
+  // useEffect(() => {
+  //   const handleBeforeUnload = () => {
+  //     localStorage.removeItem("hasShownPopup");
+  //   };
+
+  //   window.addEventListener("beforeunload", handleBeforeUnload);
+
+  //   const hasShownPopup = localStorage.getItem("hasShownPopup");
+  //   if (!hasShownPopup) {
+  //     setShowPopup(true);
+  //     localStorage.setItem("hasShownPopup", true);
+  //   }
+
+  //   return () => {
+  //     window.removeEventListener("beforeunload", handleBeforeUnload);
+  //   };
+  // }, []);
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
+
   useEffect(() => {
     const handleBeforeUnload = () => {
-      localStorage.removeItem("hasShownPopup");
+      sessionStorage.removeItem("hasShownPopup");
     };
 
     window.addEventListener("beforeunload", handleBeforeUnload);
 
-    const hasShownPopup = localStorage.getItem("hasShownPopup");
+    const hasShownPopup = sessionStorage.getItem("hasShownPopup");
     if (!hasShownPopup) {
       setShowPopup(true);
-      localStorage.setItem("hasShownPopup", true);
+      sessionStorage.setItem("hasShownPopup", true);
     }
 
     return () => {
       window.removeEventListener("beforeunload", handleBeforeUnload);
     };
   }, []);
-
-  const handleClosePopup = () => {
-    setShowPopup(false);
-  };
 
   return (
     <div>

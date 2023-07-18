@@ -153,6 +153,9 @@
   background: #d9a25a;
   transition: background 0s;
 }
+.tutors-page ul {
+  list-style: none;
+}
 .testimonials-items {
   display: flex;
   flex-wrap: wrap;

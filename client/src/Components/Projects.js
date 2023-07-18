@@ -270,7 +270,7 @@ const Projects = () => {
                 individuals who are passionate about spreading the teachings of
                 the Quran. We understand that in today's fast-paced world,
                 finding the time and resources to learn the Quran can be
-                challenging. That is why wehave developed an innovative online
+                challenging. That is why we have developed an innovative online
                 platform that allows you to embark on this journey from the
                 comfort of your own home.
               </p>
@@ -411,7 +411,7 @@ const Projects = () => {
                   </p>
                   <p>
                     - Parenting with Islamic Principles: Providing resources and
-                    advice on raising children in
+                    advice on raising children
                   </p>
                   <p>
                     - Conflict Resolution: Tools and strategies to help families

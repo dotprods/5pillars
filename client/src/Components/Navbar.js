@@ -38,7 +38,10 @@ function Navbar() {
 
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`} ref={navRef}>
-      <img className="logo" src={logo} alt="Logo" />
+      <Link to="/" style={{ textDecoration: "none" }}>
+        <img className="logo" src={logo} alt="Logo" />
+      </Link>
+
       {/* <h1>Logo</h1> */}
       <ul className={mobile ? "nav-links-mobile" : "nav-links"}>
         <Link to="/" style={{ textDecoration: "none" }}>
