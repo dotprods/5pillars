@@ -50,8 +50,8 @@
     
     // Send confirmation email
     $url = 'https://api.sendgrid.com/v3/mail/send';
-    $apiKey = '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'; // replace with your SendGrid API Key
-    $templateId = 'd-87b31ed95abd454f9e9a429758887555'; // replace with your SendGrid template ID
+    $apiKey = 'SG.'; // replace with your SendGrid API Key
+    $templateId = 'd-'; // replace with your SendGrid template ID
 
     $jsonData = [
         'personalizations' => [
