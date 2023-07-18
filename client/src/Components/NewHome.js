@@ -370,7 +370,7 @@ const NewHome = () => {
             </div>
           </div>
           <div className=" feedback">
-            <h1>Student Feedbacks</h1>
+            <h1>Student Feedback</h1>
             <div className="feedback-items">
               <div
                 className="feedback-item item1"

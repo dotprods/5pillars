@@ -46,8 +46,9 @@ footer {
   color: grey;
 }
 .lnk p {
-  margin-left: 5px;
+  margin-left: 10px;
   color: gray;
+  margin-bottom: 13px;
 }
 @media (max-width: 768px) {
   .footer-head {

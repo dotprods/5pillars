@@ -40,7 +40,7 @@ const tutors = [
     numberOfStudents: "Number of students : 100+",
     experience: "Experience: 5+ Years",
     aboutMe:
-      " ☉ 5 years of experience as a Quran tutor working with students of all ages. \n☉ Highly innovative, creative and self motivated individual with a great enthusiasm and determination tosecure a permanent position with a progressive institution. Highly developed leadership skills and theability to prioritize a substantial workload.\n ☉ Believes in a student-centered approach to teaching, where the student's needs and interests are taken into account when designing lessons \n☉ Uses a variety of teaching methods, including lectures, discussions, readings, and multimedia materials, to engage students and foster critical thinking \n ☉ Tailors lessons to the student's learning style and pace, and provides regular feedback to help them improve.",
+      " ☉ 5 years of experience as a Quran tutor working with students of all ages. \n☉ Highly innovative, creative and self motivated individual with a great enthusiasm and determination to secure a permanent position with a progressive institution. Highly developed leadership skills and the ability to prioritize a substantial workload.\n ☉ Believes in a student-centered approach to teaching, where the student's needs and interests are taken into account when designing lessons \n☉ Uses a variety of teaching methods, including lectures, discussions, readings, and multimedia materials, to engage students and foster critical thinking \n ☉ Tailors lessons to the student's learning style and pace, and provides regular feedback to help them improve.",
   },
   {
     name: " Binth Hassan",
@@ -57,7 +57,7 @@ const tutors = [
     image: require("../assets/mUser.png"),
     hoursTaught: "Hours Taught: 804+",
     qualification:
-      " Hafidh, Alim and Special course in Thajweedh and Arabic languageAalima and Diploma in Counseling and Psychology",
+      " Hafidh, Alim and Special course in Thajweedh and Arabic language Aalima and Diploma in Counseling and Psychology",
     numberOfStudents: "Number of students : 64+",
     experience: "Experience: 6+ Years",
     aboutMe:
@@ -113,7 +113,7 @@ const tutors = [
     numberOfStudents: "Number of students : 180+",
     experience: "Experience: 3+ Years",
     aboutMe:
-      ": I can teach Quran and Tajweed with best of my knowledge that I gained. I have devised and well plan methodology to help students who are struggling with their revision moreover I can deliver the lesson more convenient and interesting manner which make them easier to understand the lessons. And also I motivate and encourage students to make them interesting over the lessons. May Allah bless you and grant you the knowledge of Quran.",
+      " I can teach Quran and Tajweed with best of my knowledge that I gained. I have devised and well plan methodology to help students who are struggling with their revision moreover I can deliver the lesson more convenient and interesting manner which make them easier to understand the lessons. And also I motivate and encourage students to make them interesting over the lessons. May Allah bless you and grant you the knowledge of Quran.",
   },
 ];
 const Tutors = () => {

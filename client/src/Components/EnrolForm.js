@@ -25,14 +25,10 @@ const EnrolForm = () => {
     "Qaida-Session 2": "https://buy.stripe.com/8wMeYM4le91acs8dRa",
     "Qaida-Session 3": "https://buy.stripe.com/28oeYMg3W5OY0Jq5kD",
     "Qaida-Session 4": "https://buy.stripe.com/00g7wkg3Wcdm63K3cu",
-    "Quran Recitation-Session 1":
-      "https://buy.stripe.com/3cscQE2d66T2eAgaEV",
-    "Quran Recitation-Session 2":
-      "https://buy.stripe.com/14kdUI7xq0uE0JqfZe",
-    "Quran Recitation-Session 3":
-      "https://buy.stripe.com/fZeeYMeZSb9i1NubIX",
-    "Quran Recitation-Session 4":
-      "https://buy.stripe.com/cN217W6tm2CM8bS14i",
+    "Quran Recitation-Session 1": "https://buy.stripe.com/3cscQE2d66T2eAgaEV",
+    "Quran Recitation-Session 2": "https://buy.stripe.com/14kdUI7xq0uE0JqfZe",
+    "Quran Recitation-Session 3": "https://buy.stripe.com/fZeeYMeZSb9i1NubIX",
+    "Quran Recitation-Session 4": "https://buy.stripe.com/cN217W6tm2CM8bS14i",
     "Selected Surah Hifdh-Session 1":
       "https://buy.stripe.com/aEU5ocdVOgtCgIocMW",
     "Selected Surah Hifdh-Session 2":
@@ -221,7 +217,10 @@ const EnrolForm = () => {
           .then((response) => response.json())
           .then((data) => {
             console.log(data);
-            if (data.db === "New record created successfully" && data.email === "Email sent successfully") {
+            if (
+              data.db === "New record created successfully" &&
+              data.email === "Email sent successfully"
+            ) {
               if (packageURL) {
                 window.location.href = packageURL;
               } else {
@@ -249,7 +248,7 @@ const EnrolForm = () => {
           .catch((error) => console.error("Fetch error:", error));
       } catch (error) {
         console.error(error);
-      }    
+      }
     } else {
       setPErrors(newErrors);
     }
@@ -333,7 +332,10 @@ const EnrolForm = () => {
           .then((response) => response.json())
           .then((data) => {
             console.log(data);
-            if (data.db === "New record created successfully" && data.email === "Email sent successfully") {
+            if (
+              data.db === "New record created successfully" &&
+              data.email === "Email sent successfully"
+            ) {
               // Reset the form fields
               if (packageURL) {
                 window.location.href = packageURL;
@@ -359,7 +361,7 @@ const EnrolForm = () => {
           .catch((error) => console.error("Fetch error:", error));
       } catch (error) {
         console.error(error);
-      }      
+      }
     } else {
       setSErrors(newErrors);
     }
@@ -497,7 +499,7 @@ const EnrolForm = () => {
                       />
                     </div> */}
                     <div className="form-group">
-                      <label htmlFor="country"> Country of Residnce:</label>
+                      <label htmlFor="country"> Country of Residence:</label>
                       <select
                         id="country"
                         name="country"
@@ -881,7 +883,7 @@ const EnrolForm = () => {
                     <h1>Your Child's details</h1>
                     <div className="form-group">
                       <label htmlFor="relationship">
-                        Your Child's firstName:
+                        Your Child's First Name:
                       </label>
                       <input
                         type="text"
@@ -896,7 +898,7 @@ const EnrolForm = () => {
                     </div>
                     <div className="form-group">
                       <label htmlFor="relationship">
-                        Your Child's surname:
+                        Your Child's Last Name:
                       </label>
                       <input
                         type="text"
@@ -941,7 +943,7 @@ const EnrolForm = () => {
                     </div>
                     <div className="form-group ">
                       <p className="terms" onClick={handleShowTerms}>
-                        Terms and conditions
+                        Terms and Conditions
                       </p>
                       {/* {errors.agree && <span className="error">{errors.agree}</span>}
               <Link
@@ -963,7 +965,7 @@ const EnrolForm = () => {
                   <h1>Your details</h1>
 
                   <div className="form-group">
-                    <label htmlFor="firstName">Your firstName:</label>
+                    <label htmlFor="firstName">Your First Name:</label>
                     <input
                       type="text"
                       id="firstName"
@@ -976,7 +978,7 @@ const EnrolForm = () => {
                     )}
                   </div>
                   <div className="form-group">
-                    <label htmlFor="surname">Your surname:</label>
+                    <label htmlFor="surname">Your Last Name:</label>
                     <input
                       type="text"
                       id="surname"
@@ -1058,7 +1060,7 @@ const EnrolForm = () => {
                     />
                   </div> */}
                   <div className="form-group">
-                    <label htmlFor="country"> Country of Residnce:</label>
+                    <label htmlFor="country"> Country of Residence:</label>
                     <select
                       id="country"
                       name="country"
@@ -1413,7 +1415,7 @@ const EnrolForm = () => {
                   </div>
                   <div className="form-group ">
                     <p className="terms" onClick={handleShowTerms}>
-                      Terms and conditions
+                      Terms and Conditions
                     </p>
 
                     {/* {errors.agree && <span className="error">{errors.agree}</span>}
@@ -1442,7 +1444,7 @@ const EnrolForm = () => {
                     </li>
                     <li>
                       If a student is late to a session, there is no guarantee
-                      that the tutor may be able to flifil the session time at
+                      that the tutor may be able to fulfill the session time at
                       the end as an extension.
                     </li>
                     <li>
@@ -1451,7 +1453,7 @@ const EnrolForm = () => {
                     </li>
                     <li>
                       Students must inform the tutor/admin in advance if they
-                      wish to reschedlie (atleast 2 hours) prior to the session
+                      wish to rescheduled (atleast 2 hours) prior to the session
                       starting, the tutor/admin will provide alternative
                       date/time to student.
                     </li>
@@ -1462,7 +1464,7 @@ const EnrolForm = () => {
                     </li>
                     <li>
                       If a student is absent without prior notice, it’s at the
-                      tutor’s discretion to arrange a reschedlied session.
+                      tutor’s discretion to arrange a rescheduled session.
                     </li>
                     <li>
                       If a student wishes to take a short break (e.g. two weeks)
