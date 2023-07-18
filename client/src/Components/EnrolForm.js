@@ -21,30 +21,30 @@ const EnrolForm = () => {
   const [amount, setAmount] = useState(7);
   const [packages, setPackage] = useState("Qaida");
   const sessionURLs = {
-    "Qaida-Session 1": "https://buy.stripe.com/test_8wM8xL3mU83X1zi28b",
-    "Qaida-Session 2": "https://buy.stripe.com/test_aEU15j1eMac5fq800i",
-    "Qaida-Session 3": "https://buy.stripe.com/test_14k15j4qY3NH2Dm3ct",
-    "Qaida-Session 4": "https://buy.stripe.com/test_aEU5lzaPm2JDfq87sI",
+    "Qaida-Session 1": "https://buy.stripe.com/9AQ5ocbNGdhqak07sN",
+    "Qaida-Session 2": "https://buy.stripe.com/8wMeYM4le91acs8dRa",
+    "Qaida-Session 3": "https://buy.stripe.com/28oeYMg3W5OY0Jq5kD",
+    "Qaida-Session 4": "https://buy.stripe.com/00g7wkg3Wcdm63K3cu",
     "Quran Recitation-Session 1":
-      "https://buy.stripe.com/test_4gw15jaPm6ZT5PyfZd",
+      "https://buy.stripe.com/3cscQE2d66T2eAgaEV",
     "Quran Recitation-Session 2":
-      "https://buy.stripe.com/test_6oE8xLbTq2JD6TC9AO",
+      "https://buy.stripe.com/14kdUI7xq0uE0JqfZe",
     "Quran Recitation-Session 3":
-      "https://buy.stripe.com/test_eVadS58Hefwpfq86oB",
+      "https://buy.stripe.com/fZeeYMeZSb9i1NubIX",
     "Quran Recitation-Session 4":
-      "https://buy.stripe.com/test_6oEcO1cXu981fq83co",
+      "https://buy.stripe.com/cN217W6tm2CM8bS14i",
     "Selected Surah Hifdh-Session 1":
-      "https://buy.stripe.com/test_fZeeW96z6fwp2Dm3ck",
+      "https://buy.stripe.com/aEU5ocdVOgtCgIocMW",
     "Selected Surah Hifdh-Session 2":
-      "https://buy.stripe.com/test_00g29n7DaeslgucdQZ",
+      "https://buy.stripe.com/28o4k88Budhq9fWaEN",
     "Selected Surah Hifdh-Session 3":
-      "https://buy.stripe.com/test_cN26pDcXu6ZTa5O6oy",
+      "https://buy.stripe.com/fZedUI7xq91adwc149",
     "Selected Surah Hifdh-Session 4":
-      "https://buy.stripe.com/test_fZe01f0aIesl6TC4gr",
-    "Hifdh-Sesson 1": "https://buy.stripe.com/4gw8xL1eMesl5Py3cj",
-    "Hidth-Session 2": "https://buy.stripe.com/test_28oeW92iQ0Bv91K14a",
-    "Hifdh-Session 3": "https://buy.stripe.com/test_fZeaFT3mU83X91K3ch",
-    "Hidth-Session 4": "https://buy.stripe.com/test_8wMdS5bTqfwp1zi3cg",
+      "https://buy.stripe.com/fZecQE5pigtCak0aEL",
+    "Hifdh-Sesson 1": "https://buy.stripe.com/aEU6sgdVO91a4ZG7sF",
+    "Hidth-Session 2": "https://buy.stripe.com/8wM7wk7xqfpycs84gs",
+    "Hifdh-Session 3": "https://buy.stripe.com/fZedUI7xq91adwc149",
+    "Hidth-Session 4": "https://buy.stripe.com/14k3g46tmfpy63K5kv",
   };
   const [pErrors, setPErrors] = useState({
     parentFName: "",
