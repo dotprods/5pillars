@@ -316,7 +316,7 @@ input[type="checkbox"] {
   cursor: pointer;
   color: #021b48;
 }
-.trems-container {
+.terms-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -434,9 +434,14 @@ input[type="checkbox"] {
   } */
   .terms-content {
     width: 90%;
+    text-align: left;
+    padding: 10px;
   }
   .terms-content ul li {
-    text-align: left;
-    margin: 0px 0;
+    text-align: center;
+    margin: 0;
+  }
+  .terms-content h1 {
+    font-size: x-large;
   }
 }

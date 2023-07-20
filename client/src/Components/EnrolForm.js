@@ -21,26 +21,26 @@ const EnrolForm = () => {
   const [amount, setAmount] = useState(7);
   const [packages, setPackage] = useState("");
   const sessionURLs = {
-    "Qaida-Session 1": "https://buy.stripe.com/9AQ5ocbNGdhqak07sN",
-    "Qaida-Session 2": "https://buy.stripe.com/8wMeYM4le91acs8dRa",
-    "Qaida-Session 3": "https://buy.stripe.com/28oeYMg3W5OY0Jq5kD",
-    "Qaida-Session 4": "https://buy.stripe.com/00g7wkg3Wcdm63K3cu",
-    "Quran Recitation-Session 1": "https://buy.stripe.com/3cscQE2d66T2eAgaEV",
-    "Quran Recitation-Session 2": "https://buy.stripe.com/14kdUI7xq0uE0JqfZe",
-    "Quran Recitation-Session 3": "https://buy.stripe.com/fZeeYMeZSb9i1NubIX",
-    "Quran Recitation-Session 4": "https://buy.stripe.com/cN217W6tm2CM8bS14i",
-    "Selected Surah Hifdh-Session 1":
+    "Qaida-2 Sessions": "https://buy.stripe.com/9AQ5ocbNGdhqak07sN",
+    "Qaida-3 Sessions": "https://buy.stripe.com/8wMeYM4le91acs8dRa",
+    "Qaida-4 Sessions": "https://buy.stripe.com/28oeYMg3W5OY0Jq5kD",
+    "Qaida-5 Sessions": "https://buy.stripe.com/00g7wkg3Wcdm63K3cu",
+    "Quran Recitation-2 Sessions": "https://buy.stripe.com/3cscQE2d66T2eAgaEV",
+    "Quran Recitation-3 Sessions": "https://buy.stripe.com/14kdUI7xq0uE0JqfZe",
+    "Quran Recitation-4 Sessions": "https://buy.stripe.com/fZeeYMeZSb9i1NubIX",
+    "Quran Recitation-5 Sessions": "https://buy.stripe.com/cN217W6tm2CM8bS14i",
+    "Selected Surah Hifdh-2 Sessions":
       "https://buy.stripe.com/aEU5ocdVOgtCgIocMW",
-    "Selected Surah Hifdh-Session 2":
+    "Selected Surah Hifdh-3 Sessions":
       "https://buy.stripe.com/28o4k88Budhq9fWaEN",
-    "Selected Surah Hifdh-Session 3":
+    "Selected Surah Hifdh-4 Sessions":
       "https://buy.stripe.com/fZedUI7xq91adwc149",
-    "Selected Surah Hifdh-Session 4":
+    "Selected Surah Hifdh-5 Sessions":
       "https://buy.stripe.com/fZecQE5pigtCak0aEL",
-    "Hifdh-Sesson 1": "https://buy.stripe.com/aEU6sgdVO91a4ZG7sF",
-    "Hidth-Session 2": "https://buy.stripe.com/8wM7wk7xqfpycs84gs",
-    "Hifdh-Session 3": "https://buy.stripe.com/fZedUI7xq91adwc149",
-    "Hidth-Session 4": "https://buy.stripe.com/14k3g46tmfpy63K5kv",
+    "Hifdh-2 Sessions": "https://buy.stripe.com/aEU6sgdVO91a4ZG7sF",
+    "Hifdh-3 Sessions": "https://buy.stripe.com/8wM7wk7xqfpycs84gs",
+    "Hifdh-4 Sessions": "https://buy.stripe.com/fZedUI7xq91adwc149",
+    "Hifdh-5 Sessions": "https://buy.stripe.com/14k3g46tmfpy63K5kv",
   };
   const [pErrors, setPErrors] = useState({
     parentFName: "",
@@ -1433,7 +1433,7 @@ const EnrolForm = () => {
               </div>
             </div>
             {showTerms && (
-              <div className="trems-container">
+              <div className="terms-container">
                 <div className="terms-content">
                   <h1>Terms And Conditions</h1>
                   <h3>General</h3>
