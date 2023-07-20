@@ -294,9 +294,7 @@ const QaidaEnrol = () => {
 
                     {isQaidaSession2 && (
                       <div className="star">
-                        <h2 style={{ fontWeight: "600", fontSize: "28px" }}>
-                          3 Sessions
-                        </h2>
+                        <h2>3 Sessions</h2>
                         <img src={Medal} className="medal"></img>
                       </div>
                     )}
@@ -490,9 +488,7 @@ const QaidaEnrol = () => {
 
                     {isSession2 && (
                       <div className="star">
-                        <h2 style={{ fontWeight: "600", fontSize: "28px" }}>
-                          3 Sessions
-                        </h2>
+                        <h2>3 Sessions</h2>
                         <img src={Medal} className="medal"></img>
                       </div>
                     )}

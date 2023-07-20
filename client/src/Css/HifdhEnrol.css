@@ -237,6 +237,8 @@
 }
 .star h2 {
   margin-left: 33px;
+  font-weight: 600;
+  font-size: 28px;
 }
 .session1-btn p,
 .session2-btn p {
@@ -338,6 +340,7 @@
   }
   .star h2 {
     margin-left: 13px;
+    font-size: 26px;
   }
   .blank {
     height: 50px;
