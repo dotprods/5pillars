@@ -57,7 +57,7 @@
 .photo img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 /* .photo {
@@ -104,7 +104,7 @@
 .modal-content img {
   width: 200px;
   height: 200px;
-  object-fit: cover;
+  object-fit: fill;
   margin: 0 auto 20px;
   border-radius: 50%;
 }

@@ -8,6 +8,7 @@ import Hisham from "../assets/members/Hisham.jpeg";
 import Salman from "../assets/members/salman.jpeg";
 import Wafiq from "../assets/members/wafiq.jpeg";
 import Wazeer from "../assets/members/shuhail_wazeer.jpeg";
+import Ammar from "../assets/members/Ammars profile.jpg";
 
 const AboutUs = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -35,6 +36,7 @@ const AboutUs = () => {
     {
       name: "Sheikh Ammar Cader",
       position: "Tutor/Co-ordinator",
+      photo: Ammar,
     },
 
     // Add more staff members here...
