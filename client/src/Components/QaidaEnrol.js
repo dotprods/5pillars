@@ -60,7 +60,7 @@ const QaidaEnrol = () => {
     setSession1(true);
     setSession1Opacity(1);
     setAmount(8);
-    setPackage("Quran Recitation-Session 1");
+    setPackage("Quran Recitation-2 Sessions");
   };
 
   const session2 = () => {
@@ -82,7 +82,7 @@ const QaidaEnrol = () => {
     // setSession1Opacity(isSession2 ? 1 : 0.3);
     setSession2Opacity(1);
     setAmount(7);
-    setPackage("Quran Recitation-Session 2");
+    setPackage("Quran Recitation-3 Sessions");
   };
   const session3 = () => {
     if (isSession1) {
@@ -102,7 +102,7 @@ const QaidaEnrol = () => {
     setSession3Opacity(1);
 
     setAmount(8);
-    setPackage("Quran Recitation-Session 3");
+    setPackage("Quran Recitation-4 Sessions");
   };
   const session4 = () => {
     if (isSession1) {
@@ -122,7 +122,7 @@ const QaidaEnrol = () => {
     setSession4Opacity(1);
 
     setAmount(8);
-    setPackage("Quran Recitation-Session 4");
+    setPackage("Quran Recitation-5 Sessions");
   };
   const Qidasession1 = () => {
     if (isQaidaSession2) {
@@ -144,7 +144,7 @@ const QaidaEnrol = () => {
     setQaidaSession1(true);
     setSession1QaidaOpacity(1);
     setQaidaAmount(6);
-    setQaidaPackage("Qaida-Session 1");
+    setQaidaPackage("Qaida-2 Sessions");
   };
 
   const Qidasession2 = () => {
@@ -167,7 +167,7 @@ const QaidaEnrol = () => {
     setQaidaSession2(true);
     setSession2QaidaOpacity(1);
     setQaidaAmount(6);
-    setQaidaPackage("Qaida-Session 2");
+    setQaidaPackage("Qaida-3 Sessions");
   };
   const Qidasession3 = () => {
     if (isQaidaSession1) {
@@ -189,7 +189,7 @@ const QaidaEnrol = () => {
     setQaidaSession3(true);
     setSession3QaidaOpacity(1);
     setQaidaAmount(6);
-    setQaidaPackage("Qaida-Session 3");
+    setQaidaPackage("Qaida-4 Sessions");
   };
   const Qidasession4 = () => {
     if (isQaidaSession1) {
@@ -211,7 +211,7 @@ const QaidaEnrol = () => {
     setQaidaSession4(true);
     setSessionQaida4Opacity(1);
     setQaidaAmount(6);
-    setQaidaPackage("Qaida-Session 4");
+    setQaidaPackage("Qaida-5 Sessions");
   };
 
   const QaidaEvent = () => {
@@ -288,14 +288,14 @@ const QaidaEnrol = () => {
                         className="other-session"
                         style={{ fontWeight: "600", fontSize: "28px" }}
                       >
-                        Session 1
+                        2 Sessions
                       </h2>
                     )}
 
                     {isQaidaSession2 && (
                       <div className="star">
                         <h2 style={{ fontWeight: "600", fontSize: "28px" }}>
-                          Session 2
+                          3 Sessions
                         </h2>
                         <img src={Medal} className="medal"></img>
                       </div>
@@ -305,7 +305,7 @@ const QaidaEnrol = () => {
                         className="other-session"
                         style={{ fontWeight: "600", fontSize: "28px" }}
                       >
-                        Session 3
+                        4 Sessions
                       </h2>
                     )}
                     {isQaidaSession4 && (
@@ -313,7 +313,7 @@ const QaidaEnrol = () => {
                         className="other-session"
                         style={{ fontWeight: "600", fontSize: "28px" }}
                       >
-                        Session 4
+                        5 Sessions
                       </h2>
                     )}
 
@@ -484,14 +484,14 @@ const QaidaEnrol = () => {
                         className="other-session"
                         style={{ fontWeight: "600", fontSize: "28px" }}
                       >
-                        Session 1
+                        2 Sessions
                       </h2>
                     )}
 
                     {isSession2 && (
                       <div className="star">
                         <h2 style={{ fontWeight: "600", fontSize: "28px" }}>
-                          Session 2
+                          3 Sessions
                         </h2>
                         <img src={Medal} className="medal"></img>
                       </div>
@@ -501,7 +501,7 @@ const QaidaEnrol = () => {
                         className="other-session"
                         style={{ fontWeight: "600", fontSize: "28px" }}
                       >
-                        Session 3
+                        4 Sessions
                       </h2>
                     )}
                     {isSession4 && (
@@ -509,7 +509,7 @@ const QaidaEnrol = () => {
                         className="other-session"
                         style={{ fontWeight: "600", fontSize: "28px" }}
                       >
-                        Session 4
+                        5 Sessions
                       </h2>
                     )}
 

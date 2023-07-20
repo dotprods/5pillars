@@ -81,7 +81,7 @@ const HifdhEnrol = () => {
     }
     setSession1(true);
     setSession1Opacity(1);
-    setPackage("Hifdh-Sesson 1");
+    setPackage("Hifdh-2 Sessions");
     setAmount(8);
   };
 
@@ -103,7 +103,7 @@ const HifdhEnrol = () => {
     setSession2(true);
     // setSession1Opacity(isSession2 ? 1 : 0.3);
     setSession2Opacity(1);
-    setPackage("Hifdh-Sesson 2");
+    setPackage("Hifdh-3 Sessions");
     setAmount(7);
   };
   const session3 = () => {
@@ -122,7 +122,7 @@ const HifdhEnrol = () => {
     }
     setSession3(true);
     setSession3Opacity(1);
-    setPackage("Hifdh-Sesson 3");
+    setPackage("Hifdh-4 Sessions");
     setAmount(7);
   };
   const session4 = () => {
@@ -143,7 +143,7 @@ const HifdhEnrol = () => {
     setSession4Opacity(1);
 
     setAmount(6);
-    setPackage("Hidth-Session 4");
+    setPackage("Hifdh-5 Sessions");
   };
 
   const Surahsession1 = () => {
@@ -166,7 +166,7 @@ const HifdhEnrol = () => {
     setSurahSession1(true);
     setSession1SurahOpacity(1);
     setSurahAmount(8);
-    setSurahPackage("Selected Surah Hifdh-Session 1");
+    setSurahPackage("Selected Surah Hifdh-2 Sessions");
   };
 
   const Surahsession2 = () => {
@@ -189,7 +189,7 @@ const HifdhEnrol = () => {
     setSurahSession2(true);
     setSession2SurahOpacity(1);
     setSurahAmount(7);
-    setSurahPackage("Selected Surah Hifdh-Session 2");
+    setSurahPackage("Selected Surah Hifdh-3 Sessions");
   };
   const Surahsession3 = () => {
     if (isSurahSession1) {
@@ -211,7 +211,7 @@ const HifdhEnrol = () => {
     setSurahSession3(true);
     setSession3SurahOpacity(1);
     setSurahAmount(7);
-    setSurahPackage("Selected Surah Hifdh-Session 3");
+    setSurahPackage("Selected Surah Hifdh-4 Sessions");
   };
   const Surahsession4 = () => {
     if (isSurahSession1) {
@@ -233,7 +233,7 @@ const HifdhEnrol = () => {
     setSurahSession4(true);
     setSessionSurah4Opacity(1);
     setSurahAmount(6);
-    setSurahPackage("Selected Surah Hifdh-Session 4");
+    setSurahPackage("Selected Surah Hifdh-5 Sessions");
   };
 
   useEffect(() => {
@@ -266,7 +266,7 @@ const HifdhEnrol = () => {
               </p>
             </div>
             <div className="hifdh-about">
-              <h2 className="hifdh-heading">Hifdh Page </h2>
+              <h2 className="hifdh-heading">Hifdh </h2>
               <p>
                 Our Hifdh program is designed to provide you with comprehensive
                 guidance and support as you memorise the Quran, one of the
@@ -298,14 +298,14 @@ const HifdhEnrol = () => {
                         className="other-session"
                         style={{ fontWeight: "600", fontSize: "28px" }}
                       >
-                        Session 1
+                        2 Sessions
                       </h2>
                     )}
 
                     {isSurahSession2 && (
                       <div className="star">
                         <h2 style={{ fontWeight: "600", fontSize: "28px" }}>
-                          Session 2
+                          3 Sessions
                         </h2>
                         <img src={Medal} className="medal"></img>
                       </div>
@@ -315,7 +315,7 @@ const HifdhEnrol = () => {
                         className="other-session"
                         style={{ fontWeight: "600", fontSize: "28px" }}
                       >
-                        Session 3
+                        4 Sessions
                       </h2>
                     )}
                     {isSurahSession4 && (
@@ -323,7 +323,7 @@ const HifdhEnrol = () => {
                         className="other-session"
                         style={{ fontWeight: "600", fontSize: "28px" }}
                       >
-                        Session 4
+                        5 Session
                       </h2>
                     )}
 
@@ -490,14 +490,14 @@ const HifdhEnrol = () => {
                         className="other-session"
                         style={{ fontWeight: "600", fontSize: "28px" }}
                       >
-                        Session 1
+                        2 Sessions
                       </h2>
                     )}
 
                     {isSession2 && (
                       <div className="star">
                         <h2 style={{ fontWeight: "600", fontSize: "28px" }}>
-                          Session 2
+                          3 Sessions
                         </h2>
                         <img src={Medal} className="medal"></img>
                       </div>
@@ -507,7 +507,7 @@ const HifdhEnrol = () => {
                         className="other-session"
                         style={{ fontWeight: "600", fontSize: "28px" }}
                       >
-                        Session 3
+                        4 Sessions
                       </h2>
                     )}
                     {isSession4 && (
@@ -515,7 +515,7 @@ const HifdhEnrol = () => {
                         className="other-session"
                         style={{ fontWeight: "600", fontSize: "28px" }}
                       >
-                        Session 4
+                        5 Sessions
                       </h2>
                     )}
 
