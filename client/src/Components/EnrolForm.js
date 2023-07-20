@@ -19,7 +19,7 @@ const EnrolForm = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isParent, setIsParent] = useState(true);
   const [amount, setAmount] = useState(7);
-  const [packages, setPackage] = useState("Qaida");
+  const [packages, setPackage] = useState("");
   const sessionURLs = {
     "Qaida-Session 1": "https://buy.stripe.com/9AQ5ocbNGdhqak07sN",
     "Qaida-Session 2": "https://buy.stripe.com/8wMeYM4le91acs8dRa",

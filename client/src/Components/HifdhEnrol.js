@@ -16,9 +16,9 @@ import Medal from "../assets/medal-col.png";
 
 const HifdhEnrol = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [packages, setPackage] = useState("Hidth-Session 2");
+  const [packages, setPackage] = useState("Hifdh-3 Sessions");
   const [SurahPackage, setSurahPackage] = useState(
-    "Selected Surah Hifdh-Session 2"
+    "Selected Surah Hifdh-3 Sessions"
   );
   const [amount, setAmount] = useState(7);
   const [SurahAmount, setSurahAmount] = useState(7);
