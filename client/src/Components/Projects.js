@@ -153,7 +153,7 @@ const Projects = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 4000);
+    }, 3000);
   }, []);
   useEffect(() => {
     Aos.init({ duration: 2000 });

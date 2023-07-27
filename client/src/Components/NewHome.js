@@ -86,7 +86,7 @@ const NewHome = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 4000);
+    }, 3000);
   }, []);
 
   const validateEmail = (email) => {
@@ -387,15 +387,13 @@ const NewHome = () => {
                 <div className="circle-1"></div>
 
                 <div className="feedback-img feed1"></div>
-                <h2 className="name">Umar</h2>
+                <h2 className="name">Zainab Akhthar</h2>
                 <h3 className="name-course">Hifdh student</h3>
                 <p className="feedback-text">
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less
-                  normal distribution of letters, as opposed to using 'Content
-                  here, content here', making it look like readable English.
-                  Many desktop publishing packages and web page editors now use
+                  Wonderful teaching services provided by 5Pillars Academy. Very
+                  Flexible timings offered. My daughter has got a fantastic
+                  teacher and I am very happy with the teaching offered by
+                  5Pillars Academy.
                 </p>
               </div>
               <div
@@ -412,15 +410,12 @@ const NewHome = () => {
                 </div>
                 <div className="circle-1"></div>
                 <div className="feedback-img feed2"></div>
-                <h2 className="name">AbuBakkar</h2>
+                <h2 className="name">Mohammed Riyaz</h2>
                 <h3 className="name-course">Hifdh student</h3>
                 <p className="feedback-text">
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less
-                  normal distribution of letters, as opposed to using 'Content
-                  here, content here', making it look like readable English.
-                  Many desktop publishing packages and web page editors now use
+                  Very professional and qualified teachers at 5pillars Academy.
+                  I have 2 of my daughters with 2 separate female teachers, both
+                  who are fabulous, kind, friendly and experienced.
                 </p>
               </div>
               <div
@@ -437,15 +432,13 @@ const NewHome = () => {
                 </div>
                 <div className="circle-1"></div>
                 <div className="feedback-img feed3"></div>
-                <h2 className="name">Ali</h2>
+                <h2 className="name">Maryam Al-Sammar</h2>
                 <h3 className="name-course">Hifdh student</h3>
                 <p className="feedback-text">
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less
-                  normal distribution of letters, as opposed to using 'Content
-                  here, content here', making it look like readable English.
-                  Many desktop publishing packages and web page editors now use
+                  5Pillars Academy is amazing to learn the Quran. Both my 8 year
+                  old daughter and 12 year old son love and enjoy learning the
+                  quran with their teachers. The teachers are very friendly and
+                  engaging. Highly Recommended!
                 </p>
               </div>
               <div
@@ -463,15 +456,13 @@ const NewHome = () => {
                 <div className="circle-1"></div>
 
                 <div className="feedback-img feed1"></div>
-                <h2 className="name">Usman</h2>
+                <h2 className="name">Moussa Ghanim</h2>
                 <h3 className="name-course">Hifdh student</h3>
                 <p className="feedback-text">
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less
-                  normal distribution of letters, as opposed to using 'Content
-                  here, content here', making it look like readable English.
-                  Many desktop publishing packages and web page editors now use
+                  Super convenient for me because they are very accommodative to
+                  my tight schedule where I work and go to university but still
+                  they are able to help me learn the Quran in my own time and at
+                  my own pace.
                 </p>
               </div>
             </div>
