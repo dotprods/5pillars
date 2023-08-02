@@ -340,6 +340,11 @@
   .arrow::after {
     left: -17px;
   }
+  .package {
+    /* width: 25%; */
+    width: 300px;
+    margin: 0px 12px;
+  }
 }
 
 /* #DBDBDB */

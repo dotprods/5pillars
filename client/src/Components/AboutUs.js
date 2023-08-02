@@ -4,11 +4,11 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "../Css/Staffmember.css";
 import Loader from "./Loader";
-import Hisham from "../assets/members/Hisham.jpeg";
-import Salman from "../assets/members/salman.jpeg";
-import Wafiq from "../assets/members/wafiq.jpeg";
-import Wazeer from "../assets/members/shuhail_wazeer.jpeg";
-import Ammar from "../assets/members/Ammars profile.jpg";
+import Hisham from "../assets/members/Hisham-N.png";
+import Salman from "../assets/members/Salman-N.png";
+import Wafiq from "../assets/members/Wafiq-N.png";
+import Wazeer from "../assets/members/Shuhail-N.png";
+import Ammar from "../assets/members/Ammar-N.png";
 
 const AboutUs = () => {
   const [isLoading, setIsLoading] = useState(true);
