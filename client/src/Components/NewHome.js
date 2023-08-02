@@ -12,7 +12,6 @@ import { FiPlus } from "react-icons/fi";
 import { FcFaq } from "react-icons/fc";
 import { IoIosArrowUp } from "react-icons/io";
 import { SiWhatsapp } from "react-icons/si";
-import Typical from "react-typical";
 import TypeWriterEffect from "react-typewriter-effect";
 import boy from "../assets/Boy.svg";
 import girl from "../assets/Girl.svg";
