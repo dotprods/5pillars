@@ -24,7 +24,8 @@
         "react-spinners": "^0.13.8",
         "react-typewriter-effect": "^1.1.0",
         "react-typical": "^0.1.3",
-        "web-vitals": "^2.1.4"
+        "web-vitals": "^2.1.4",
+        "react-dev-utils": "latest"
     },
     "scripts": {
         "start": "react-scripts start",
