@@ -144,7 +144,7 @@ const NewHome = () => {
       ) : (
         <>
           <div className="background" />
-          <HotNews />
+          {/* <HotNews /> */}
           <div
             className={`back-to-top-button ${isVisible ? "visible" : ""}`}
             onClick={scrollToTop}
