@@ -6,6 +6,7 @@ import "../Css/TutorForm.css";
 
 const TutorForm = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [tutorError, setError] = useState({
     firstName: "",
     surName: "",
@@ -45,6 +46,12 @@ const TutorForm = () => {
         available: prevState.available.filter((day) => day !== value),
       }));
     }
+  };
+  const handleSuccess = () => {
+    setShowSuccessMessage(true);
+    setTimeout(() => {
+      setShowSuccessMessage(false);
+    }, 2000); 
   };
   useEffect(() => {
     setTimeout(() => {
@@ -117,6 +124,20 @@ const TutorForm = () => {
       } catch (error) {
         console.tutorError(tutorError);
       }
+      handleSuccess();
+      setTutorDetails({
+        firstName: "",
+        surName: "",
+        gender: "",
+        dob: "",
+        isAalim: "",
+        isHifdh: "",
+        qualifications: "",
+        isTaughtOnline: "",
+        available: [],
+        experience: "",
+        about: "",
+      })
     } else {
       setError(newErrors);
       console.log(tutorDetails);
@@ -143,6 +164,11 @@ const TutorForm = () => {
             <Navbar />
           </div>
           <div className="blank"></div>
+          {showSuccessMessage && (
+        <div className="success-message">
+          Form submitted successfully!
+        </div>
+      )}
           <div className="tutor-form-container">
             <form className="tutor-form" onSubmit={handleSubmit}>
               <div className="tutor-form-group">

@@ -9,6 +9,7 @@ import "../Css/Contact.css";
 import Footer from "./Footer";
 const ContactUs = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [formData2, setFormData2] = useState({
     fullName: "",
     email: "",
@@ -19,6 +20,12 @@ const ContactUs = () => {
     email: false,
     message: false,
   });
+  const handleSuccess = () => {
+    setShowSuccessMessage(true);
+    setTimeout(() => {
+      setShowSuccessMessage(false);
+    }, 2000); 
+  };
   const handleChange = (e) => {
     const { name, value, type } = e.target;
     const fieldValue = value;
@@ -58,6 +65,12 @@ const ContactUs = () => {
     if (formIsValid) {
       // Perform form submission logic here
       console.log(formData2);
+      handleSuccess();
+      setFormData2({
+        fullName: "",
+        email: "",
+        message: "",
+      });
     } else {
       setErrors(newErrors);
     }
@@ -85,6 +98,11 @@ const ContactUs = () => {
             <Navbar />
           </div>
           <div className="blank"></div>
+          {showSuccessMessage && (
+        <div className="success-message">
+          Form submitted successfully!
+        </div>
+      )}
           <div className="contact-container">
             <div className="contact-form">
               <h1>Leave Us A Message</h1>
