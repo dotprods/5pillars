@@ -35,7 +35,7 @@ const AboutUs = () => {
     },
     {
       name: "Sheikh Ammar Cader",
-      position: "Tutor/Co-ordinator",
+      position: "Tutor/ operations executive",
       photo: Ammar,
     },
 

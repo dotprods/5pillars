@@ -349,7 +349,7 @@ const QaidaEnrol = () => {
                     )}
                   </div>
                 </div>
-                <p>How Sessions would you like per week ?</p>
+                <p style={{color:"white"}}>How many sessions would you like per week ?</p>
                 <div className="btn-row">
                   <div className="btn-row1">
                     <button
@@ -417,7 +417,7 @@ const QaidaEnrol = () => {
               {isQaidaSession1 && (
                 <div className="dropdown-content">
                   <h2>Free Trial Session</h2>
-                  <h2>Two sessions per week</h2>
+                  <h2>2 sessions per week</h2>
                   <h2>One to One Live sessions</h2>
                   <h2> 30 Mins per session</h2>
                   <h2>Weekly Progress report</h2>
@@ -427,7 +427,7 @@ const QaidaEnrol = () => {
               {isQaidaSession2 && (
                 <div className="dropdown-content">
                   <h2>Free Trial Session</h2>
-                  <h2>Three sessions per week</h2>
+                  <h2>3 sessions per week</h2>
                   <h2>One to One Live sessions</h2>
                   <h2> 30 Mins per session</h2>
                   <h2>Weekly Progress report</h2>
@@ -437,7 +437,7 @@ const QaidaEnrol = () => {
               {isQaidaSession3 && (
                 <div className="dropdown-content">
                   <h2>Free Trial Session</h2>
-                  <h2>Four sessions per week</h2>
+                  <h2>4 sessions per week</h2>
                   <h2>One to One Live sessions</h2>
                   <h2> 30 Mins per session</h2>
                   <h2>Weekly Progress report</h2>
@@ -447,7 +447,7 @@ const QaidaEnrol = () => {
               {isQaidaSession4 && (
                 <div className="dropdown-content">
                   <h2>Free Trial Session</h2>
-                  <h2>Five sessions per week</h2>
+                  <h2>5 sessions per week</h2>
                   <h2>One to One Live sessions</h2>
                   <h2> 30 Mins per session</h2>
                   <h2>Weekly Progress report</h2>
@@ -535,7 +535,7 @@ const QaidaEnrol = () => {
                     {isSession4 && <p>£120 Billed Monthly (5 sessions P/W)</p>}
                   </div>
                 </div>
-                <p>How Sessions would you like per week ?</p>
+                <p style={{color:"white"}}>How many sessions would you like per week ?</p>
 
                 <div className="btn-row">
                   <div className="btn-row1">
@@ -599,7 +599,7 @@ const QaidaEnrol = () => {
               {isSession1 && (
                 <div className="dropdown-content">
                   <h2>Free Trial Session</h2>
-                  <h2>Two sessions per week</h2>
+                  <h2>2 sessions per week</h2>
                   <h2>Reading</h2>
                   <h2>Thajweed</h2>
                   <h2>Bi-Weekly Feedback</h2>
@@ -613,7 +613,7 @@ const QaidaEnrol = () => {
                 <div className="dropdown-content">
                   {isSession2 && <h1 className="save">SAVE £ 144 ANNUALLY</h1>}
                   <h2>Free Trial Session</h2>
-                  <h2>Three sessions per week</h2>
+                  <h2>3 sessions per week</h2>
                   <h2>Reading</h2>
                   <h2>Thajweed</h2>
                   <h2>Two Islamic Studies session per month</h2>
@@ -627,7 +627,7 @@ const QaidaEnrol = () => {
               {isSession3 && (
                 <div className="dropdown-content">
                   <h2>Free Trial Session</h2>
-                  <h2>Four sessions per week</h2>
+                  <h2>4 sessions per week</h2>
                   <h2>Reading</h2>
                   <h2>Thajweed</h2>
                   <h2>Two Islamic Studies session per month</h2>
@@ -641,7 +641,7 @@ const QaidaEnrol = () => {
               {isSession4 && (
                 <div className="dropdown-content">
                   <h2>Free Trial Session</h2>
-                  <h2>Five sessions per week</h2>
+                  <h2>5 sessions per week</h2>
                   <h2>Reading</h2>
                   <h2>Thajweed</h2>
                   <h2>Two Islamic Studies session per month</h2>

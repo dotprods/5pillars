@@ -359,7 +359,7 @@ const HifdhEnrol = () => {
                     )}
                   </div>
                 </div>
-                <p>How Sessions would you like per week ?</p>
+                <p style={{color:"white"}}>How many sessions would you like per week ?</p>
                 <div className="btn-row">
                   <div className="btn-row1">
                     <button
@@ -418,7 +418,7 @@ const HifdhEnrol = () => {
               </div>
               {isSurahSession1 && (
                 <div className="dropdown-content">
-                  <h2> Two sessions per week</h2>
+                  <h2> 2 sessions per week</h2>
                   <h2>Perfect for adults</h2>
                   <h2>Selected surahs for memorisation</h2>
                   <h2> Reading</h2>
@@ -432,7 +432,7 @@ const HifdhEnrol = () => {
               )}
               {isSurahSession2 && (
                 <div className="dropdown-content">
-                  <h2> Three sessions per week</h2>
+                  <h2> 3 sessions per week</h2>
                   <h2>Perfect for adults</h2>
                   <h2>Selected surahs for memorisation</h2>
                   <h2> Reading</h2>
@@ -446,7 +446,7 @@ const HifdhEnrol = () => {
               )}
               {isSurahSession3 && (
                 <div className="dropdown-content">
-                  <h2> Four sessions per week</h2>
+                  <h2> 4 sessions per week</h2>
                   <h2>Perfect for adults</h2>
                   <h2>Selected surahs for memorisation</h2>
                   <h2> Reading</h2>
@@ -460,7 +460,7 @@ const HifdhEnrol = () => {
               )}
               {isSurahSession4 && (
                 <div className="dropdown-content">
-                  <h2> Five sessions per week</h2>
+                  <h2> 5 sessions per week</h2>
                   <h2>Perfect for adults</h2>
                   <h2>Selected surahs for memorisation</h2>
                   <h2> Reading</h2>
@@ -542,7 +542,7 @@ const HifdhEnrol = () => {
                     {isSession4 && <p>£120 Billed Monthly (5 sessions P/W)</p>}
                   </div>
                 </div>
-                <p>How Sessions would you like per week ?</p>
+                <p style={{color:"white"}}>How many sessions would you like per week ?</p>
                 <div className="btn-row">
                   <div className="btn-row1">
                     <button
@@ -600,7 +600,7 @@ const HifdhEnrol = () => {
               {isSession1 && (
                 <div className="dropdown-content">
                   <h2>Free Trial Session</h2>
-                  <h2>Two sessions per week</h2>
+                  <h2>2 sessions per week</h2>
                   <h2>Reading</h2>
                   <h2>Thajweed</h2>
                   <h2>Two Islamic Studies session per month</h2>
@@ -615,7 +615,7 @@ const HifdhEnrol = () => {
                 <div className="dropdown-content">
                   <h1 className="save">SAVE £ 144 ANNUALLY</h1>
                   <h2>Free Trial Session</h2>
-                  <h2>Three sessions per week</h2>
+                  <h2>3 sessions per week</h2>
                   <h2>Reading</h2>
                   <h2>Thajweed</h2>
                   <h2>Two Islamic Studies session per month</h2>
@@ -629,7 +629,7 @@ const HifdhEnrol = () => {
               {isSession3 && (
                 <div className="dropdown-content">
                   <h2>Free Trial Session</h2>
-                  <h2>Four sessions per week</h2>
+                  <h2>4 sessions per week</h2>
                   <h2>Reading</h2>
                   <h2>Thajweed</h2>
                   <h2>Two Islamic Studies session per month</h2>
@@ -643,7 +643,7 @@ const HifdhEnrol = () => {
               {isSession4 && (
                 <div className="dropdown-content">
                   <h2>Free Trial Session</h2>
-                  <h2>Five sessions per week</h2>
+                  <h2>5 sessions per week</h2>
                   <h2>Reading</h2>
                   <h2>Thajweed</h2>
                   <h2>Two Islamic Studies session per month</h2>

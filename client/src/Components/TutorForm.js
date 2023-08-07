@@ -169,6 +169,7 @@ const TutorForm = () => {
           Form submitted successfully!
         </div>
       )}
+        <h1 style={{marginBottom:"30px",marginTop:"0px"}}>Tutor registration</h1>
           <div className="tutor-form-container">
             <form className="tutor-form" onSubmit={handleSubmit}>
               <div className="tutor-form-group">

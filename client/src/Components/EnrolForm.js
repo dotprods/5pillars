@@ -922,7 +922,7 @@ const EnrolForm = () => {
                         <option value="">Select</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
-                        <option value="Other">Other</option>
+                        {/* <option value="Other">Other</option> */}
                       </select>
                       {pErrors.gender && (
                         <span className="error">{pErrors.gender}</span>
@@ -1001,7 +1001,7 @@ const EnrolForm = () => {
                       <option value="">Select</option>
                       <option value="Male">Male</option>
                       <option value="Female">Female</option>
-                      <option value="Other">Other</option>
+                      {/* <option value="Other">Other</option> */}
                     </select>
                     {sErrors.gender && (
                       <span className="error">{sErrors.gender}</span>

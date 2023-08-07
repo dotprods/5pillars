@@ -71,8 +71,8 @@ const Packages = () => {
               {isDropdownVisible && (
                 <div className="dropdown-content">
                   <h2>Free Trial Session</h2>
-                  <h2>Two to three sessions per week</h2>
-                  <h2>Two Islamic Studies session per month</h2>
+                  <h2>2 to 5 sessions per week</h2>
+                  <h2>2 Islamic Studies session per month</h2>
                   <h2>Bi-Weekly Feedback</h2>
                   <h2>One to One Live sessions</h2>
                   <h2>45 Mins per session</h2>
@@ -108,8 +108,8 @@ const Packages = () => {
               {isDropdownVisible1 && (
                 <div className="dropdown-content">
                   <h2>Free Trial Session</h2>
-                  <h2>Two to three sessions per week</h2>
-                  <h2>Two Islamic Studies session per month</h2>
+                  <h2>2 to 5 sessions per week</h2>
+                  <h2>2 Islamic Studies session per month</h2>
                   <h2>Bi-Weekly Feedback</h2>
                   <h2>One to One Live sessions</h2>
                   <h2>45 Mins per session</h2>
@@ -145,7 +145,7 @@ const Packages = () => {
               </div>
               {isDropdownVisible2 && (
                 <div className="dropdown-content">
-                  <h2>Two sessions per month</h2>
+                  <h2>2 sessions per month</h2>
                   <h2>45 Mins sessions</h2>
                   <h2> Set syllabus</h2>
                   <h2>Highly qualified sholars from the UK</h2>
