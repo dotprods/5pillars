@@ -16,6 +16,7 @@
   margin: 10px auto;
   align-items: center;
   margin-bottom: 100px;
+  touch-action: manipulation;
 }
 
 .tutor-form-container button:active {
