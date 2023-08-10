@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Loader from "./Loader";
-import "../Css/TutorForm.css";
+// import "../Css/TutorForm.css";
 
 const TutorForm = () => {
   const [isLoading, setIsLoading] = useState(true);
