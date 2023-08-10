@@ -128,4 +128,13 @@
     width: 90%;
     border: none;
   }
+  .tutor-form-container .tutor-form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: black;
+    font-family: inherit;
+    background-color: transparent;
+    border: 1px solid #414141;
+  }
 }
