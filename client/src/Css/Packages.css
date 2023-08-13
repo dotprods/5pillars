@@ -166,8 +166,8 @@
 /* Triangle shape */
 .steps .trianglee1 {
   position: absolute;
-  top: 18%;
-  right: 0%;
+  top: 14%;
+  right: 16%;
   transition: opacity 0.6s ease-in-out;
   opacity: 0;
 }
@@ -177,7 +177,7 @@
 .steps .pluss {
   position: absolute;
   top: 20%;
-  left: 0%;
+  left: 16%;
   transition: opacity 0.7s ease-in-out;
   opacity: 0;
 }
@@ -186,8 +186,8 @@
 }
 .steps .circlee-1 {
   position: absolute;
-  top: 68%;
-  left: 14%;
+  top: 60%;
+  left: 24%;
   width: 12px;
   height: 12px;
   background: transparent;
@@ -199,8 +199,8 @@
 /* Square shape */
 .steps .squaree {
   position: absolute;
-  top: 56%;
-  right: 0%;
+  top: 54%;
+  right: 18%;
   width: 12px;
   height: 12px;
   border: 2px solid green;
@@ -208,12 +208,13 @@
   opacity: 0;
 }
 .steps {
+  width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   /* background-color: #d9a25a; */
   align-items: center;
-  margin: 0 80px;
+  margin: 0 20px;
   position: relative;
   padding: 25px;
 }
@@ -277,7 +278,7 @@
   height: 4px;
   background-color: transparent;
   position: relative;
-  width: 190px;
+  width: 235px;
 }
 .arrow::before {
   position: absolute;
@@ -314,36 +315,46 @@
   background-size: 10px 5px;
   background-position: 0 100%;
   position: absolute;
-  right: -76%;
-  top: 40%;
+  right: -34.5%;
+  top: 33%;
   transition: background-image 0.8s ease;
 }
 
 /* css for tabs */
-@media screen and (min-width: 767px) and (max-width: 1023px) {
+@media screen and (min-width: 767px) and (max-width: 1024px) {
   .steps {
+    width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     /* background-color: #d9a25a; */
     align-items: center;
-    margin: 0 20px;
+    margin: 0 ;
     position: relative;
     padding: 25px;
   }
   .arrow {
-    width: 190px;
+    width: 175px;
   }
   .arrow::before {
-    right: 100px;
+    right: 0px;
   }
   .arrow::after {
-    left: -17px;
+    left: 0px;
   }
   .package {
     /* width: 25%; */
     width: 300px;
     margin: 0px 12px;
+  }
+  .dotted {
+    background-image: linear-gradient(90deg, #000 5px, #fff 0);
+    background-size: 10px 5px;
+    background-position: 0 100%;
+    position: absolute;
+    right: -25.5%;
+    top: 33%;
+    transition: background-image 0.8s ease;
   }
 }
 

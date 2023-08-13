@@ -167,6 +167,10 @@ const Packages = () => {
               <div className="circlee-1"></div>
               <div className="circle-steps1"></div>
               <h2>Enrol</h2>
+              <p>
+                Register on our website with all your details and select a
+                package that suits you.
+              </p>
               <div className="arrow dotted"></div>
             </div>
 
@@ -181,6 +185,11 @@ const Packages = () => {
               <div className="circlee-1"></div>
               <div className="circle-steps2"></div>
               <h2>Free Trial</h2>
+              <p>
+                We will arrange the assessment and trial session with you to
+                determine your level of learning and confirm the timing of your
+                lessons
+              </p>
               <div className="arrow dotted"></div>
             </div>
 
@@ -195,6 +204,11 @@ const Packages = () => {
               <div className="circlee-1"></div>
               <div className="circle-steps3"></div>
               <h2>Tutor Allocated</h2>
+              <p>
+                Within 48 Hours you will be allocated a tutor and you will
+                recieve the profile of the tutor and the link to their online
+                class via email.
+              </p>
             </div>
             {/* <div className="arrow1"></div> */}
             {/* <div className="circle-steps2"></div> */}
