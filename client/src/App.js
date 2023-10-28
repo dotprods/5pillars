@@ -15,6 +15,7 @@ import EnrolForm from "./Components/EnrolForm";
 import NewHome from "./Components/NewHome";
 import TutorForm from "./Components/TutorForm";
 import HotEventPage from "./Components/HotEventPage";
+import Webinar from "./Components/Webinar";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/contactUs" element={<ContactUs />} />
         <Route path="/tutorForm" element={<TutorForm />} />
         <Route path="/event" element={<HotEventPage />} />
+        <Route path="/webinar" element={<Webinar />} />
       </Routes>
     </>
   );
