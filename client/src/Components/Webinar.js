@@ -28,6 +28,12 @@ const Webinar = () => {
       });
     }
   };
+  const handleSuccess = () => {
+    setSubmitted(true);
+    setTimeout(() => {
+      setSubmitted(false);
+    }, 2000);
+  };
 
   const validateForm = () => {
     let isValid = true;
@@ -62,11 +68,19 @@ const Webinar = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
- 
 
     if (validateForm()) {
-      console.log(formData)
-      console.log(confirmEmail)
+      handleSuccess();
+      console.log(formData);
+      console.log(confirmEmail);
+      setSubmitted(true);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+      });
+      setConfirmEmail("");
       fetch('"https://www.5pillarsacademy.com/api/addWebinar.php', {
         method: "POST",
         headers: {
@@ -107,96 +121,104 @@ const Webinar = () => {
             {/* {submitted ? (
               <div>Form submitted successfully!</div>
             ) : ( */}
+            {submitted && (
+              <div className="success-message">
+                Form submitted successfully!
+              </div>
+            )}
             <div className="webinar-about">
               <h2> Limited places Available </h2>
               <p>
-                5 Pillars Academy presents “Parenting with Purpose” a seminar for
-                parents, focused on the importance of nurturing and guiding our
-                children in the light of Islamic teachings in this modern age.
-                <br />  <br /> 
+                5 Pillars Academy presents “Parenting with Purpose” a seminar
+                for parents, focused on the importance of nurturing and guiding
+                our children in the light of Islamic teachings in this modern
+                age.
+                <br /> <br />
                 Teaching our children empathy, kindness, and respect is
-                essential. As parents, we are their first and most important role
-                models. <br />  <br /> 
+                essential. As parents, we are their first and most important
+                role models. <br /> <br />
                 Join us on the 12th & 19th November for a two-part online
-                seminar lead by renowned specialist <span>Sheikh Ruzaik Ismath</span> <br /> <br />
-                Sign up below! <br />  <br /> 
+                seminar lead by renowned specialist{" "}
+                <span>Sheikh Ruzaik Ismath</span> <br /> <br />
+                Sign up below! <br /> <br />
                 Keep an eye out for the confirmation email.
-               
               </p>
             </div>
             <div class="form-container-webinar">
-            <form onSubmit={handleSubmit} className="form-webinar">
-              <div className="form-group-webinar">
-                <label className="lable">First Name</label>
-                <input
-                  className="input"
-                  type="text"
-                  name="firstName"
-                  value={formData.firstName}
-                  onChange={handleChange}
-                />
-                {errors.firstName && (
-                  <div className="error">{errors.firstName}</div>
-                )}
-              </div>
-              <div className="form-group-webinar">
-                <label className="lable">Last Name</label>
-                <input
-                  className="input"
-                  type="text"
-                  name="lastName"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                />
-                {errors.lastName && (
-                  <div className="error">{errors.lastName}</div>
-                )}
-                <div className="topline"></div>
-                <div className="underline"></div>
-              </div>
-              <div className="form-group-webinar">
-                <label className="lable">Email</label>
-                <input
-                  className="input"
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                />
-                {errors.email && <div className="error">{errors.email}</div>}
-                <div className="topline"></div>
-                <div className="underline"></div>
-              </div>
-              <div className="form-group-webinar">
-                <label className="lable">Confirm Email</label>
-                <input
-                  className="input"
-                  type="email"
-                  name="confirmEmail"
-                  value={confirmEmail}
-                  onChange={handleChange}
-                />
-              </div>
+              <form onSubmit={handleSubmit} className="form-webinar">
+                <div className="form-group-webinar">
+                  <label className="lable">First Name</label>
+                  <input
+                    className="input"
+                    type="text"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                  />
+                  {errors.firstName && (
+                    <div className="error">{errors.firstName}</div>
+                  )}
+                </div>
+                <div className="form-group-webinar">
+                  <label className="lable">Last Name</label>
+                  <input
+                    className="input"
+                    type="text"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                  />
+                  {errors.lastName && (
+                    <div className="error">{errors.lastName}</div>
+                  )}
+                  <div className="topline"></div>
+                  <div className="underline"></div>
+                </div>
+                <div className="form-group-webinar">
+                  <label className="lable">Email</label>
+                  <input
+                    className="input"
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                  />
+                  {errors.email && <div className="error">{errors.email}</div>}
+                  <div className="topline"></div>
+                  <div className="underline"></div>
+                </div>
+                <div className="form-group-webinar">
+                  <label className="lable">Confirm Email</label>
+                  <input
+                    className="input"
+                    type="email"
+                    name="confirmEmail"
+                    value={confirmEmail}
+                    onChange={handleChange}
+                  />
+                </div>
 
-              <div className="form-group-webinar">
-                <label className="lable">Phone</label>
-                <input
-                  className="input"
-                  type="tel"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                />
-                {errors.phone && <div className="error">{errors.phone}</div>}
-                <div className="topline"></div>
-                <div className="underline"></div>
-              </div>
-              <button type="submit" className="webinar-Subbtn">Submit</button>
-            </form>
+                <div className="form-group-webinar">
+                  <label className="lable">Phone</label>
+                  <input
+                    className="input"
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                  />
+                  {errors.phone && <div className="error">{errors.phone}</div>}
+                  <div className="topline"></div>
+                  <div className="underline"></div>
+                </div>
+                <button type="submit" className="webinar-Subbtn">
+                  Submit
+                </button>
+              </form>
             </div>
             {/* )} */}
           </div>
-          <Footer/>
+          <Footer />
         </>
       )}
     </>
