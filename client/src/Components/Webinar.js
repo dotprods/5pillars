@@ -70,7 +70,6 @@ const Webinar = () => {
     e.preventDefault();
 
     if (validateForm()) {
-      handleSuccess();
       console.log(formData);
       console.log(confirmEmail);
       setSubmitted(true);
@@ -81,7 +80,7 @@ const Webinar = () => {
         phone: "",
       });
       setConfirmEmail("");
-      fetch('"https://www.5pillarsacademy.com/api/addWebinar.php', {
+      fetch('https://www.5pillarsacademy.com/api/addWebinar.php', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -90,7 +89,8 @@ const Webinar = () => {
       })
         .then((response) => {
           if (response.status === 200) {
-            setSubmitted(true);
+            handleSuccess();
+            console.log(response)
           } else {
             console.error("Failed to submit the form");
           }
@@ -144,7 +144,7 @@ const Webinar = () => {
                 Keep an eye out for the confirmation email.
               </p>
             </div>
-            <div class="form-container-webinar">
+            <div className="form-container-webinar">
               <form onSubmit={handleSubmit} className="form-webinar">
                 <div className="form-group-webinar">
                   <label className="lable">First Name</label>
