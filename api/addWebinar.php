@@ -4,9 +4,9 @@
     header('Content-Type: application/json');
 
     // Database credentials
-    $host_name = '';
-    $database = '';
-    $user_name = '';
+    $host_name = 'localhost';
+    $database = '5Pillars';
+    $user_name = 'root';
     $password = '';
 
     // Create connection

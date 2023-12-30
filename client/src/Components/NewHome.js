@@ -103,13 +103,6 @@ const NewHome = () => {
     }
   };
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentSlide((prevSlide) => (prevSlide + 1) % 5);
-  //   }, 3000);
-
-  //   return () => clearInterval(interval);
-  // }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -245,7 +238,7 @@ const NewHome = () => {
                     issues
                   </p>
                   <Link to="/islamicStudies" style={{ textDecoration: "none" }}>
-                    <h2 className="learn-btn"> Coming Soon</h2>
+                    <h2 className="learn-btn"> Learn more</h2>
                   </Link>
                   <hr className="line" />
                 </div>

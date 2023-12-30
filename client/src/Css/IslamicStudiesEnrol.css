@@ -1,10 +1,27 @@
+.islamic-about{
+  margin: 0 auto 30px  auto;
+  max-width: 800px;
+  align-items: center;
+  border: 2px solid #d9a25a;
+  border-radius: 10px;
+  padding: 20px;
+}
+.islamic-about h2 {
+  font-size: xx-large;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.islamic-heading {
+  font-size: 50px;
+}
 .islamic-studies {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
 .islamic-studies-package {
-  width: 550px;
+  width: 400px;
 }
 .islamic-studies-package-def {
   display: flex;
@@ -106,6 +123,16 @@
   color: white;
 }
 @media (max-width: 767px) {
+  .islamic-about{
+    margin: 0px auto 0 auto;
+    width: 90%;
+    align-items: center;
+    border: none;
+  }
+  .islamic-heading {
+    font-size: 35px;
+  }
+
   .islamic-studies {
     flex-direction: column;
     justify-content: center;

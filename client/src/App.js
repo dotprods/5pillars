@@ -1,7 +1,6 @@
 import logo from "./logo.svg";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import Home from "./Components/Home";
 import Register from "./Components/Register";
 import Packages from "./Components/Packages";
 import QaidaEnrol from "./Components/QaidaEnrol";
@@ -16,6 +15,7 @@ import NewHome from "./Components/NewHome";
 import TutorForm from "./Components/TutorForm";
 import HotEventPage from "./Components/HotEventPage";
 import Webinar from "./Components/Webinar";
+import IslamicRegister from "./Components/IslamicRegister";
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<NewHome />} />
         <Route path="/register" element={<EnrolForm />} />
+        <Route path="/register-islamic-studies" element={<IslamicRegister />} />
         <Route path="/packages" element={<Packages />} />
         <Route path="/qaida" element={<QaidaEnrol />} />
         <Route path="/aboutus" element={<AboutUs />} />
