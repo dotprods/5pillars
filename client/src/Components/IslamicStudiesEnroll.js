@@ -26,7 +26,7 @@ const IslamicStudiesEnrol = () => {
 
   const IslamicEvent = () => {
     navigate({
-      pathname: "/register-islamic-studies",
+      pathname: "/register",
       search: createSearchParams({
         package: "islamic lessons",
         fee: 5,
