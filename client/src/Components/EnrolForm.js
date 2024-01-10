@@ -41,6 +41,7 @@ const EnrolForm = () => {
     "Hifdh-3 Sessions": "https://buy.stripe.com/8wM7wk7xqfpycs84gs",
     "Hifdh-4 Sessions": "https://buy.stripe.com/fZedUI7xq91adwc149",
     "Hifdh-5 Sessions": "https://buy.stripe.com/14k3g46tmfpy63K5kv",
+    "islamic lessons":"https://buy.stripe.com/00g7wkg3W4KUbo49AY",
   };
   const [pErrors, setPErrors] = useState({
     parentFName: "",

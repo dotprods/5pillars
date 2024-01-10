@@ -130,7 +130,7 @@ const Packages = () => {
                       <span className="cir-btn">
                         <span className="arrow-btn"></span>
                       </span>
-                      <span className="text-btn">Coming Soon</span>
+                      <span className="text-btn">Learn more</span>
                     </button>
                   </Link>
                 </div>
@@ -149,8 +149,6 @@ const Packages = () => {
                   <h2>45 Mins sessions</h2>
                   <h2> Set syllabus</h2>
                   <h2>Highly qualified sholars from the UK</h2>
-
-                  <h3>Coming Soon June 2023</h3>
                 </div>
               )}
             </div>

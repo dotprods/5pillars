@@ -50,8 +50,8 @@ const IslamicStudiesEnrol = () => {
               <h2 className="islamic-heading">“Faith Essentials” – Islamic Studies Program </h2>
               <p>
                 Introduction: Our Islamic studies program has been meticulously designed to impart
-                essen/al Islamic knowledge, recognizing the pivotal role of foundational understanding for
-                Muslims. Tailored to three dis/nct age groups—6-9 year olds, 10-15 year olds, and 16+ -
+                essential Islamic knowledge, recognizing the pivotal role of foundational understanding for
+                Muslims. Tailored to three distinct age groups 6-9 year olds, 10-15 year olds, and 16+
                 each category possesses a dedicated syllabus. The curriculum comprehensively covers
                 fundamental aspects such as Wudhu, Salah, Akhlaaq, and extends its purview to encompass
                 contemporary issues, family life, and relationships.
