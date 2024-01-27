@@ -32,15 +32,14 @@
   border-radius: 25% 0;
   background-color: #056e13;
   height: auto;
-  padding: 20px;
 }
 .islamic-studies-package-def h3 {
-  margin-top: 15px;
+  margin-top: 25px;
   font-size: xx-large;
   font-family: "Quicksand", sans-serif;
 }
 .islamic-studies-package-def h1 {
-  font-size: 80px;
+  font-size: 45px;
   font-family: "Quicksand", sans-serif;
 }
 .islamic-studies-package-def p {
@@ -121,6 +120,10 @@
 
 .islamic-studies-package-button button:hover .text-btn {
   color: white;
+}
+
+.islamic-studies-enrol-button{
+  margin-bottom: 40px;
 }
 @media (max-width: 767px) {
   .islamic-about{

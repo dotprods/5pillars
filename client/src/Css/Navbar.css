@@ -133,6 +133,7 @@ button {
     color: white;
   }
   .logo {
+    width: 12em;
     margin-left: 1em;
   }
 }

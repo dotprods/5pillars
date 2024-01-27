@@ -930,7 +930,7 @@ const IslamicRegister = () => {
                                                 <option value="">Select</option>
                                                 <option value="6-9 Years">6-9 Years</option>
                                                 <option value="10-15 Years">10-15 Years</option>
-                                                 <option value="16+">16+</option>
+                                                 <option value="16-22">16-22 Years</option>
                                             </select>
                                             {pErrors.gender && (
                                                 <span className="error">{pErrors.ageGroup}</span>
