@@ -195,7 +195,7 @@ const IslamicRegister = () => {
             console.log(JSON.stringify(dataToSend));
 
             try {
-                fetch("https://www.5pillarsacademy.com/api/addParentStudent.php", {
+                fetch("https://www.5pillarsacademy.com/api/addParentStudentIslamicLessons.php", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -315,7 +315,7 @@ const IslamicRegister = () => {
             console.log(JSON.stringify(dataToSend));
 
             try {
-                fetch("https://www.5pillarsacademy.com/api/addStudent.php", {
+                fetch("https://www.5pillarsacademy.com/api/addStudentIslamicLessons.php", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -923,7 +923,7 @@ const IslamicRegister = () => {
                                                 <option value="">Select</option>
                                                 <option value="6-9 Years">6-9 Years</option>
                                                 <option value="10-15 Years">10-15 Years</option>
-                                                 <option value="16-22">16-22 Years</option>
+                                                 <option value="16-22 Years">16-22 Years</option>
                                             </select>
                                             {pErrors.gender && (
                                                 <span className="error">{pErrors.ageGroup}</span>
@@ -1012,7 +1012,7 @@ const IslamicRegister = () => {
                                             <option value="">Select</option>
                                             <option value="6-9 Years">6-9 Years</option>
                                             <option value="10-15 Years">10-15 Years</option>
-                                            <option value="16-22">16-22 Years</option>
+                                            <option value="16-22 Years">16-22 Years</option>
                                         </select>
                                         {sErrors.gender && (
                                             <span className="error">{sErrors.ageGroup}</span>
