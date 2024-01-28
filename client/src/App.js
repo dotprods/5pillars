@@ -34,7 +34,6 @@ function App() {
         <Route path="/contactUs" element={<ContactUs />} />
         <Route path="/tutorForm" element={<TutorForm />} />
         <Route path="/event" element={<HotEventPage />} />
-        <Route path="/webinar" element={<Webinar />} />
       </Routes>
     </>
   );

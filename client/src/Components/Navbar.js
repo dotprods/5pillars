@@ -62,9 +62,7 @@ function Navbar() {
         <Link to="/contactUs" style={{ textDecoration: "none" }}>
           <li>Contact Us</li>
         </Link>
-        <Link className="webinar-btn" to="/webinar" style={{ textDecoration: "none" }}>
-          <li>Webinar</li>
-        </Link>
+
       </ul>
       <button className="mobile-menu-icon" onClick={handleMobileMenu}>
         {mobile ? <RiCloseLine size={30} /> : <RiMenu3Line size={30} />}
