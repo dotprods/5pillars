@@ -1,5 +1,5 @@
 import "../Css/EnrolForm.css";
-import { useState, useEffect } from  "react";
+import React, { useState, useEffect } from  "react";
 import Navbar from "./Navbar";
 import Loader from "./Loader";
 import {
@@ -34,6 +34,7 @@ const IslamicRegister = () => {
         gender: "",
         ageGroup:"",
         dob: "",
+        error:""
     });
     const [sErrors, setSErrors] = useState({
         firstName: "",
@@ -44,6 +45,8 @@ const IslamicRegister = () => {
         phone: "",
         email: "",
         country: "",
+        error:""
+
     });
 
     const [parentData, setParentData] = useState({
@@ -82,12 +85,19 @@ const IslamicRegister = () => {
     }, []);
 
     const handleSTermsAndCondition = () => {
-        setSChecked(true);
+        if (!sChecked){
+            sErrors.error=""
+        }
+        setSChecked(!sChecked);
+
         console.log("Student: ", sChecked);
-        setShowTerms(!showTerms);
     };
     const handlePTermsAndCondition = () => {
-        setPChecked(true);
+        if (!pChecked){
+            pErrors.error=""
+        }
+        setPChecked(!pChecked);
+
         console.log("parent: ", pChecked);
     };
     const handleShowTerms = () => {
@@ -120,7 +130,7 @@ const IslamicRegister = () => {
 
         if (!sChecked) {
             formIsValid = false;
-            setShowTerms(true);
+            // setShowTerms(true);
         }
         if (parentData.parentFName === "") {
             formIsValid = false;
@@ -169,6 +179,12 @@ const IslamicRegister = () => {
             formIsValid = false;
             newErrors.surname = "Please enter the sur name";
         }
+
+        if (pChecked === false) {
+            formIsValid = false;
+            newErrors.error = "Please accept the terms and condition ";
+        }
+
         // Validate packages and amount
         if (packages === "") {
             formIsValid = false;
@@ -251,7 +267,7 @@ const IslamicRegister = () => {
 
         if (!sChecked) {
             formIsValid = false;
-            setShowTerms(true);
+            // setShowTerms(true);
         }
         if (studentData.firstName === "") {
             formIsValid = false;
@@ -287,6 +303,10 @@ const IslamicRegister = () => {
         if (studentData.country === "") {
             formIsValid = false;
             newErrors.country = "Please select your country";
+        }
+        if (sChecked === false) {
+            formIsValid = false;
+            newErrors.error = "Please accept the terms and condition ";
         }
         // Validate packages and amount
         if (packages === "") {
@@ -923,7 +943,7 @@ const IslamicRegister = () => {
                                                 <option value="">Select</option>
                                                 <option value="6-9 Years">6-9 Years</option>
                                                 <option value="10-15 Years">10-15 Years</option>
-                                                 <option value="16-22 Years">16-22 Years</option>
+                                                <option value="16-22 Years">16-22 Years</option>
                                             </select>
                                             {pErrors.gender && (
                                                 <span className="error">{pErrors.ageGroup}</span>
@@ -942,12 +962,16 @@ const IslamicRegister = () => {
                                                 <span className="error">{pErrors.dob}</span>
                                             )}
                                         </div>
-                                        <div className="form-group ">
+                                        <div className=" terms-group ">
+                                            <input type={"checkbox"} checked={pChecked}
+                                                   onChange={handlePTermsAndCondition}/>
                                             <p className="terms" onClick={handleShowTerms}>
                                                 Terms and Conditions
                                             </p>
                                         </div>
                                     </div>
+                                    {pErrors.error && <span className="error">{pErrors.error}</span>}
+
 
                                     <button type="submit">Submit</button>
                                 </form>
@@ -1425,20 +1449,13 @@ const IslamicRegister = () => {
                                             <span className="error">{sErrors.country}</span>
                                         )}
                                     </div>
-                                    <div className="form-group ">
+                                    <div className=" terms-group ">
+                                        <input type={"checkbox"}  checked={sChecked} onChange={handleSTermsAndCondition}/>
                                         <p className="terms" onClick={handleShowTerms}>
                                             Terms and Conditions
                                         </p>
-
-                                        {/* {errors.agree && <span className="error">{errors.agree}</span>}
-              <Link
-                to="/condition"
-                target="_blank"
-                style={{ textDecoration: "none" }}
-              >
-                <li>Terms & Conditions</li>
-              </Link> */}
                                     </div>
+                                    {sErrors.error && <span className="error">{sErrors.error}</span>}
 
                                     <button type="submit">Submit</button>
                                 </form>
@@ -1637,7 +1654,7 @@ const IslamicRegister = () => {
                                     </p>
                                     <div className="terms-btn">
                                         <button onClick={handleShowTerms}>Close</button>
-                                        <button onClick={handleSTermsAndCondition}>Accept</button>
+                                        {/*<button onClick={handleSTermsAndCondition}>Accept</button>*/}
                                     </div>
                                 </div>
                             </div>

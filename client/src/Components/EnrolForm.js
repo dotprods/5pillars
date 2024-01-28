@@ -53,6 +53,7 @@ const EnrolForm = () => {
     surname: "",
     gender: "",
     dob: "",
+    error:""
   });
   const [sErrors, setSErrors] = useState({
     firstName: "",
@@ -62,6 +63,7 @@ const EnrolForm = () => {
     phone: "",
     email: "",
     country: "",
+    error:""
   });
 
   const [parentData, setParentData] = useState({
@@ -98,12 +100,19 @@ const EnrolForm = () => {
   }, []);
 
   const handleSTermsAndCondition = () => {
-    setSChecked(true);
+    if (!sChecked){
+      sErrors.error=""
+    }
+    setSChecked(!sChecked);
+
     console.log("Student: ", sChecked);
-    setShowTerms(!showTerms);
   };
   const handlePTermsAndCondition = () => {
-    setPChecked(true);
+    if (!pChecked){
+      pErrors.error=""
+    }
+    setPChecked(!pChecked);
+
     console.log("parent: ", pChecked);
   };
   const handleShowTerms = () => {
@@ -136,7 +145,7 @@ const EnrolForm = () => {
 
     if (!sChecked) {
       formIsValid = false;
-      setShowTerms(true);
+      // setShowTerms(true);
     }
     if (parentData.parentFName === "") {
       formIsValid = false;
@@ -180,6 +189,10 @@ const EnrolForm = () => {
     if (parentData.surname === "") {
       formIsValid = false;
       newErrors.surname = "Please enter the sur name";
+    }
+    if (pChecked === false) {
+      formIsValid = false;
+      newErrors.error = "Please accept the terms and condition ";
     }
     // Validate packages and amount
     if (packages === "") {
@@ -250,19 +263,19 @@ const EnrolForm = () => {
         console.error(error);
       }
     } else {
+      console.log(newErrors)
       setPErrors(newErrors);
     }
   };
 
   const handleSubmitStudent = async (e) => {
     e.preventDefault();
-    // Store the data in the database or perform any other desired action
     let formIsValid = true;
     const newErrors = { ...sErrors };
 
     if (!sChecked) {
       formIsValid = false;
-      setShowTerms(true);
+      // setShowTerms(true);
     }
     if (studentData.firstName === "") {
       formIsValid = false;
@@ -295,6 +308,10 @@ const EnrolForm = () => {
       formIsValid = false;
       newErrors.country = "Please select your country";
     }
+    if (sChecked === false) {
+      formIsValid = false;
+      newErrors.error = "Please accept the terms and condition";
+    }
     // Validate packages and amount
     if (packages === "") {
       formIsValid = false;
@@ -305,8 +322,8 @@ const EnrolForm = () => {
       newErrors.amount = "Please enter the amount";
     }
 
+
     if (formIsValid && sChecked) {
-      // Perform form submission logic here
       console.log(studentData);
       console.log("Package is: ", packages);
       console.log("Amount is: ", amount);
@@ -363,6 +380,7 @@ const EnrolForm = () => {
         console.error(error);
       }
     } else {
+      console.log(newErrors)
       setSErrors(newErrors);
     }
   };
@@ -390,10 +408,6 @@ const EnrolForm = () => {
           </div>
           <div className="blank"></div>
           <div className="form-page">
-            {/* <div className="amount-card">
-          <h2 style={{ fontSize: "26px" }}>{packages}</h2>
-          <h1 style={{ fontSize: "35px" }}>£{amount}/Session</h1>
-        </div> */}
             <div className="amount-card">
               <div className="amount-circle"></div>
               <div className="amount-circle"></div>
@@ -488,16 +502,6 @@ const EnrolForm = () => {
                         <span className="error">{pErrors.email}</span>
                       )}
                     </div>
-                    {/* <div className="form-group">
-                      <label htmlFor="confirmEmail">
-                        Confirm Email Address:
-                      </label>
-                      <input
-                        type="email"
-                        id="confirmEmail"
-                        name="confirmEmail"
-                      />
-                    </div> */}
                     <div className="form-group">
                       <label htmlFor="country"> Country of Residence:</label>
                       <select
@@ -941,20 +945,15 @@ const EnrolForm = () => {
                         <span className="error">{pErrors.dob}</span>
                       )}
                     </div>
-                    <div className="form-group ">
+                    <div className=" terms-group ">
+                      <input type={"checkbox"} checked={pChecked} onChange={handlePTermsAndCondition}/>
                       <p className="terms" onClick={handleShowTerms}>
                         Terms and Conditions
                       </p>
-                      {/* {errors.agree && <span className="error">{errors.agree}</span>}
-              <Link
-                to="/condition"
-                target="_blank"
-                style={{ textDecoration: "none" }}
-              >
-                <li>Terms & Conditions</li>
-              </Link> */}
                     </div>
                   </div>
+                  {pErrors.error && <span className="error">{pErrors.error}</span>}
+
 
                   <button type="submit">Submit</button>
                 </form>
@@ -1413,20 +1412,13 @@ const EnrolForm = () => {
                       <span className="error">{sErrors.country}</span>
                     )}
                   </div>
-                  <div className="form-group ">
+                  <div className=" terms-group ">
+                    <input type={"checkbox"}  checked={sChecked} onChange={handleSTermsAndCondition}/>
                     <p className="terms" onClick={handleShowTerms}>
                       Terms and Conditions
                     </p>
-
-                    {/* {errors.agree && <span className="error">{errors.agree}</span>}
-              <Link
-                to="/condition"
-                target="_blank"
-                style={{ textDecoration: "none" }}
-              >
-                <li>Terms & Conditions</li>
-              </Link> */}
                   </div>
+                  {sErrors.error && <span className="error">{sErrors.error}</span>}
 
                   <button type="submit">Submit</button>
                 </form>
@@ -1625,7 +1617,7 @@ const EnrolForm = () => {
                   </p>
                   <div className="terms-btn">
                     <button onClick={handleShowTerms}>Close</button>
-                    <button onClick={handleSTermsAndCondition}>Accept</button>
+                    {/*<button onClick={handleSTermsAndCondition}>Accept</button>*/}
                   </div>
                 </div>
               </div>
