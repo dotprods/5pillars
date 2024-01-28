@@ -19,26 +19,8 @@ const IslamicRegister = () => {
     const [amount, setAmount] = useState(7);
     const [packages, setPackage] = useState("");
     const sessionURLs = {
-        "Qaida-2 Sessions": "https://buy.stripe.com/9AQ5ocbNGdhqak07sN",
-        "Qaida-3 Sessions": "https://buy.stripe.com/8wMeYM4le91acs8dRa",
-        "Qaida-4 Sessions": "https://buy.stripe.com/28oeYMg3W5OY0Jq5kD",
-        "Qaida-5 Sessions": "https://buy.stripe.com/00g7wkg3Wcdm63K3cu",
-        "Quran Recitation-2 Sessions": "https://buy.stripe.com/3cscQE2d66T2eAgaEV",
-        "Quran Recitation-3 Sessions": "https://buy.stripe.com/14kdUI7xq0uE0JqfZe",
-        "Quran Recitation-4 Sessions": "https://buy.stripe.com/fZeeYMeZSb9i1NubIX",
-        "Quran Recitation-5 Sessions": "https://buy.stripe.com/cN217W6tm2CM8bS14i",
-        "Selected Surah Hifdh-2 Sessions":
-            "https://buy.stripe.com/aEU5ocdVOgtCgIocMW",
-        "Selected Surah Hifdh-3 Sessions":
-            "https://buy.stripe.com/28o4k88Budhq9fWaEN",
-        "Selected Surah Hifdh-4 Sessions":
-            "https://buy.stripe.com/fZedUI7xq91adwc149",
-        "Selected Surah Hifdh-5 Sessions":
-            "https://buy.stripe.com/fZecQE5pigtCak0aEL",
-        "Hifdh-2 Sessions": "https://buy.stripe.com/aEU6sgdVO91a4ZG7sF",
-        "Hifdh-3 Sessions": "https://buy.stripe.com/8wM7wk7xqfpycs84gs",
-        "Hifdh-4 Sessions": "https://buy.stripe.com/fZedUI7xq91adwc149",
-        "Hifdh-5 Sessions": "https://buy.stripe.com/14k3g46tmfpy63K5kv",
+        "Islamic lessons - Monthly": "https://buy.stripe.com/14k9Es5pia5e4ZGbJ7",
+        "Islamic lessons - Full course": "https://buy.stripe.com/3cs5oc7xq5OYak0dRg",
     };
     const [pErrors, setPErrors] = useState({
         parentFName: "",
@@ -57,6 +39,7 @@ const IslamicRegister = () => {
         firstName: "",
         surname: "",
         gender: "",
+        ageGroup:"",
         dob: "",
         phone: "",
         email: "",
@@ -80,6 +63,7 @@ const IslamicRegister = () => {
         firstName: "",
         surname: "",
         gender: "",
+        ageGroup:"",
         dob: "",
         phone: "",
         email: "",
@@ -88,7 +72,7 @@ const IslamicRegister = () => {
     useEffect(() => {
         setAmount(prevAmount);
         setPackage(prevPackage);
-        console.log(packages);
+        console.log("packages",packages,prevAmount);
     }, [prevAmount, prevPackage]);
 
     useEffect(() => {
@@ -281,6 +265,10 @@ const IslamicRegister = () => {
             formIsValid = false;
             newErrors.gender = "Please select your gender";
         }
+        if (studentData.ageGroup === "") {
+            formIsValid = false;
+            newErrors.ageGroup = "Please select your age group";
+        }
         if (studentData.dob === "") {
             formIsValid = false;
             newErrors.dob = "Please enter your dob";
@@ -352,6 +340,7 @@ const IslamicRegister = () => {
                                 firstName: "",
                                 surname: "",
                                 gender: "",
+                                ageGroup: "",
                                 dob: "",
                                 phone: "",
                                 email: "",
@@ -378,7 +367,6 @@ const IslamicRegister = () => {
     };
 
     const isValidEmail = (email) => {
-        // Basic email validation regex
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     };
@@ -400,7 +388,12 @@ const IslamicRegister = () => {
                             <div className="amount-circle"></div>
                             <div className="card-inner">
                                 <h2 style={{ fontSize: "26px" }}>{packages}</h2>
-                                <h1 style={{ fontSize: "35px" }}>£{amount}/Session</h1>
+                                {packages === "Islamic lessons - Monthly" &&
+                                    <h1 style={{fontSize: "35px"}}>£{amount}/Month</h1>
+                                }
+                                {packages === "Islamic lessons - Full course" &&
+                                    <h1 style={{fontSize: "35px"}}>£{amount}/Course</h1>
+                                }
                                 <Link to="/packages" style={{ textDecoration: "none" }}>
                                     <button className="pack">
                                         <span></span>
@@ -953,14 +946,6 @@ const IslamicRegister = () => {
                                             <p className="terms" onClick={handleShowTerms}>
                                                 Terms and Conditions
                                             </p>
-                                            {/* {errors.agree && <span className="error">{errors.agree}</span>}
-              <Link
-                to="/condition"
-                target="_blank"
-                style={{ textDecoration: "none" }}
-              >
-                <li>Terms & Conditions</li>
-              </Link> */}
                                         </div>
                                     </div>
 
@@ -1015,6 +1000,25 @@ const IslamicRegister = () => {
                                             <span className="error">{sErrors.gender}</span>
                                         )}
                                     </div>
+
+                                    <div className="form-group">
+                                        <label htmlFor="gender">Age group:</label>
+                                        <select
+                                            id="ageGroup"
+                                            name="ageGroup"
+                                            value={studentData.ageGroup}
+                                            onChange={(e) => handleFormChange(e, "student")}
+                                        >
+                                            <option value="">Select</option>
+                                            <option value="6-9 Years">6-9 Years</option>
+                                            <option value="10-15 Years">10-15 Years</option>
+                                            <option value="16-22">16-22 Years</option>
+                                        </select>
+                                        {sErrors.gender && (
+                                            <span className="error">{sErrors.ageGroup}</span>
+                                        )}
+                                    </div>
+
                                     <div className="form-group">
                                         <label htmlFor="dob">Your DOB:</label>
                                         <input
@@ -1445,7 +1449,7 @@ const IslamicRegister = () => {
                                 <div className="terms-content">
                                     <h1>Terms And Conditions</h1>
                                     <h3>General</h3>
-                                    <ul style={{ listStyle: "bullets" }}>
+                                    <ul style={{listStyle: "bullets"}}>
                                         <li>
                                             Students are required to be logged in and ready 5 minutes
                                             prior to session starting.
@@ -1639,7 +1643,7 @@ const IslamicRegister = () => {
                             </div>
                         )}
                     </div>
-                    {sChecked && <p>Valid</p>}
+
                 </>
             )}
         </>
