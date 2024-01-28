@@ -147,7 +147,7 @@ select {
 }
 
 input[type="checkbox"] {
-    margin-top: 10px;
+    margin-top: 2px;
     cursor: pointer;
 }
 
@@ -377,10 +377,18 @@ input[type="checkbox"] {
     list-style-type: disc;
     color: black;
     margin-top: 8px;
+
+}
+.terms-content ol li {
+    color: black;
+    margin-top: 8px;
+    list-style-type: lower-alpha;
+    margin-left: 20px;
 }
 
 .terms-content p {
     color: black;
+    margin-bottom: 5px;
 }
 
 .terms-content h4 {
@@ -484,6 +492,6 @@ input[type="checkbox"] {
     }
 
     .terms-content h1 {
-        font-size: x-large;
+        font-size:23px;
     }
 }

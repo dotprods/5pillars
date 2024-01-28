@@ -27,9 +27,12 @@ footer {
   display: flex;
   flex-direction: column;
 }
+
 .first-head p,
 .second-head p {
   color: aliceblue;
+  margin-bottom: 20px;
+
 }
 .second-head {
   display: flex;
