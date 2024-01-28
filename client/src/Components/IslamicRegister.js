@@ -1464,194 +1464,49 @@ const IslamicRegister = () => {
                         {showTerms && (
                             <div className="terms-container">
                                 <div className="terms-content">
-                                    <h1>Terms And Conditions</h1>
-                                    <h3>General</h3>
-                                    <ul style={{listStyle: "bullets"}}>
-                                        <li>
-                                            Students are required to be logged in and ready 5 minutes
-                                            prior to session starting.
-                                        </li>
-                                        <li>
-                                            If a student is late to a session, there is no guarantee
-                                            that the tutor may be able to fulfill the session time at
-                                            the end as an extension.
-                                        </li>
-                                        <li>
-                                            Each session may vary from 30 minutes to 45 minutes,
-                                            depending on package.
-                                        </li>
-                                        <li>
-                                            Students must inform the tutor/admin in advance if they
-                                            wish to rescheduled (atleast 2 hours) prior to the session
-                                            starting, the tutor/admin will provide alternative
-                                            date/time to student.
-                                        </li>
-                                        <li>
-                                            Student must reschedule the missed session within four
-                                            weeks, as the tutor will be paid for the session at
-                                            original scheduled time & date.
-                                        </li>
-                                        <li>
-                                            If a student is absent without prior notice, it’s at the
-                                            tutor’s discretion to arrange a rescheduled session.
-                                        </li>
-                                        <li>
-                                            If a student wishes to take a short break (e.g. two weeks)
-                                            they must inform the Admin via info@5pillarsacademy.com at
-                                            least two weeks prior. Their subscription can be paused
-                                            for that period.
-                                        </li>
-                                        <li>
-                                            If a student is not satisfied with their tutor, they must
-                                            inform management via info@5pillarsacademy.com or by
-                                            calling us on +44775 639 3994.
-                                        </li>
-                                        <li>Terms & Conditions are subject to change. </li>
-                                    </ul>
-                                    <h3>Payment</h3>
-                                    <ul>
-                                        <li>
-                                            Payments are collected in advance of each month via a
-                                            subscription’s payment method.
-                                        </li>
-                                        <li>
-                                            The student will automatically be charged each month based
-                                            on their start date for a period of four weeks.
-                                        </li>
-                                        <li>
-                                            f we fail to collect payment for any reason, they sessions
-                                            will be suspended until the arrears are brought up to
-                                            date.
-                                        </li>
-                                        <li>
-                                            Students must ensure they always provide updated card
-                                            details.
-                                        </li>
-                                    </ul>
-                                    <h3>Coupons & Discounts </h3>
-                                    <ul>
-                                        <li>
-                                            Only one coupon maybe applied to each subscription at any
-                                            given time and reserve the right to withdraw any code at
-                                            any time.
-                                        </li>
-                                        <li>
-                                            Family discount can only be applied to immediate
-                                            siblings/parents.
-                                        </li>
-                                        <li>
-                                            Family discount is subject to change and withdrawal at any
-                                            time.
-                                        </li>
-                                    </ul>
-                                    <h3>Refunds </h3>
-                                    <p>
-                                        At 5pillars Academy, we are committed to providing a
-                                        high-quality online learning experience for our students.
-                                        However, we understand that there may be instances where a
-                                        refund is requested. Our refund policy is as follows:
-                                    </p>
-                                    <ul>
-                                        <li>
-                                            If a student has not taken their first online class, they
-                                            are eligible for a refund of their fee minus £10 admin
-                                            charge.
-                                        </li>
-                                        <li>
-                                            If a student has taken 50% or less than their scheduled
-                                            classes for that month, then they will be refunded on a
-                                            pro-rata basis.
-                                        </li>
-                                    </ul>
-                                    <p>
-                                        To request a refund or cancel your subscription, please
-                                        contact our customer support team at
-                                        <span> refunds@5pillarsacademy.com</span>. We will process
-                                        your request as quickly as possible. Please note that any
-                                        refunds will be issued using the same payment method that
-                                        was used for the original transaction. Refunds may take up
-                                        to 7 -10 working days to process.
-                                    </p>
-                                    <h3>Exceptions:</h3>
-                                    <p>
-                                        In some cases, we may make exceptions to our refund policy.
-                                        For example, if there are extenuating circumstances that
-                                        prevented a student from attending classes or if there was a
-                                        technical issue with our platform that prevented a student
-                                        from accessing course materials. In such cases, we will
-                                        review the request on a case-by-case basis and determine
-                                        whether a refund is appropriate.
-                                    </p>
-                                    <h3>Cancellation: </h3>
-                                    <p>
-                                        If a student wishes to cancel their enrolment at 5pillars
-                                        Academy, they can do so at any time by contacting our
-                                        customer support team. If the cancellation request is
-                                        received before the start of the month, the fee for that
-                                        month will not be charged. If the cancellation request is
-                                        received after the start of the month, the fee for that
-                                        month will not be refunded.
-                                    </p>
-                                    <h3>Privacy Policy </h3>
-                                    <p>
-                                        At 5pillars Academy Ltd, we take the privacy of our
-                                        customers and users seriously and are committed to
-                                        protecting their personal data in accordance with the
-                                        General Data Protection Regulation (GDPR). This privacy
-                                        policy outlines how we collect, process, and use personal
-                                        data.
-                                    </p>
-                                    <h4>What data we collect:</h4>
-                                    <p>
-                                        We may collect personal data such as name, address, email
-                                        address, phone number, and payment information from our
-                                        customers and users. We may also collect non-personal data
-                                        such as website usage information.
-                                    </p>
-                                    <h4>How we use the data: </h4>
-                                    <p>
-                                        We will only use personal data for internal purposes such as
-                                        providing our products and services, processing payments,
-                                        and communicating with our customers and users. We may also
-                                        use personal data to send marketing communications about our
-                                        products and services, but only if the individual has given
-                                        their explicit consent. We will not share personal data with
-                                        any third party without the individual's explicit consent,
-                                        except where required by law.
-                                    </p>
-                                    <h4>How we protect the data: </h4>
-                                    <p>
-                                        We take appropriate technical and organizational measures to
-                                        protect personal data from unauthorized access, accidental
-                                        loss, or destruction. We ensure that our employees,
-                                        contractors, and service providers who have access to
-                                        personal data are bound by appropriate confidentiality
-                                        obligations.
-                                    </p>
-                                    <h4>Data retention: </h4>
-                                    <p>
-                                        We will only retain personal data for as long as necessary
-                                        to fulfill the purposes for which it was collected,
-                                        including any legal or accounting requirements.
-                                    </p>
-                                    <h4>Individual rights: </h4>
-                                    <p>
-                                        Individuals have the right to request access to,
-                                        rectification, erasure, or restriction of their personal
-                                        data. They also have the right to object to the processing
-                                        of their personal data or to withdraw their consent at any
-                                        time. Individuals have the right to lodge a complaint with a
-                                        supervisory authority if they believe that their data has
-                                        been processed in violation of GDPR.
-                                    </p>
-                                    <h3>Contact us: </h3>
-                                    <p>
-                                        If you have any questions or concerns about our use of
-                                        personal data or would like to exercise your individual
-                                        rights, please contact us at{" "}
-                                        <span>info@5pillarsacademy.com</span> or call us on{" "}
-                                        <span>+44775 639 3994.</span>
-                                    </p>
+                                    <h1>Faith Essentials Program - Terms and Conditions with Refund Policy</h1>
+                                    <h3>1. Introduction</h3>
+                                    <p>Welcome to the Faith Essentials Program, a specialized initiative by 5pillars Academy designed to provide basic Islamic studies for students aged 6 and above. By enrolling in this program, you agree to abide by the following terms and conditions, including the refund policy.</p>
+                                     <h3>2. Registration and Enrolment</h3>
+                                    <p>2.1 Eligibility: Enrolment in the Faith Essentials Program is open to students aged 6 and above.</p>
+                                    <p>2.2 Registration: To enrol in the program, parents or legal guardians must complete the online registration form and provide accurate and up-to-date information.</p>
+                                    <h3>3. Program Structure and Content</h3>
+                                    <p>3.1 Curriculum: The Faith Essentials Program follows a structured curriculum covering fundamental Islamic studies, including but not limited to Quranic studies, Islamic history, ethics, and basic Islamic practices.</p>
+                                    <p>3.2 Modifications: 5pillars Academy reserves the right to modify the curriculum, course materials, and teaching methodologies to enhance the learning experience.</p>
+                                    <h3>4. Fees and Payments</h3>
+                                    <p>4.1 Tuition Fees: Tuition fees for the Faith Essentials Program are outlined in the fee schedule provided upon registration.</p>
+                                    <p>4.2 Payment: Payment must be made in accordance with the payment schedule specified. Failure to meet payment deadlines may result in suspension from the program.</p>
+                                    <h3>5. Refund Policy</h3>
+                                    <p>5.1 Refund Eligibility: Refunds are only applicable under the following circumstances:</p>
+                                    <ol>
+                                        <li>Withdrawal before the start of the program: A full refund will be provided if the withdrawal occurs before the program commences.</li>
+                                        <li>Withdrawal for monthly paying students: A partial refund may be granted if the withdrawal occurs after once class is completed.</li>
+                                        <li>Withdrawal for annual paying students: If the student withdraws after 50% of sessions have been completed, they will receive 50% of the remaining balance, if the student withdraws after 75% of sessions have been completed then there will be no refund.</li>
+                                        <li>Technical Issues: Refunds may be considered in cases of technical issues preventing access to the online platform, subject to verification by 5pillars Academy.</li>
+                                    </ol>
+                                    <p>5.2 Refund Request Procedure: To request a refund, parents or legal guardians must submit a written request to the academy's administration, explaining the reason for withdrawal and providing necessary documentation.</p>
+                                    <p>5.3 Refund Processing: Refunds will be processed within a reasonable timeframe, and any applicable administrative fees will be deducted from the refunded amount.</p>
+                                    <h3>6. Attendance and Participation</h3>
+                                    <p>6.1 Regular Attendance: Students are expected to attend all scheduled classes. Absences must be communicated to the academy in advance, and missed lessons may be made up through supplementary materials.</p>
+                                    <p>6.2 Participation: Active participation in class discussions, assignments, and activities is encouraged for a comprehensive learning experience.</p>
+                                    <h3>7. Code of Conduct</h3>
+                                    <p>7.1 Respect: Students are expected to treat teachers and fellow students with respect and courtesy, fostering a positive learning environment.</p>
+                                    <p>7.2 Discipline: Any disruptive behaviour, violation of academy policies, or failure to adhere to the code of conduct may result in disciplinary action, including suspension or expulsion from the program.</p>
+                                    <h3>8. Parental Involvement</h3>
+                                    <p>8.1 Communication: Parents or legal guardians are encouraged to maintain open communication with the academy regarding their child's progress, concerns, or feedback.</p>
+                                    <p>8.2 Support: Parents are expected to provide support for their child's learning, ensuring completion of assignments and participation in extracurricular activities.</p>
+                                    <h3>9. Intellectual Property</h3>
+                                    <p>9.1 Materials: All course materials provided during the Faith Essentials Program are the intellectual property of 5pillars Academy and may not be reproduced, distributed, or shared without prior written consent.</p>
+                                    <h3>10. Rescheduling Clause</h3>
+                                    <p>10.1 Technical Issues: In the event of technical issues preventing a student from accessing a class, the academy will make reasonable efforts to reschedule the missed session.</p>
+                                    <p>10.2 Teacher Absence: If a scheduled class is missed due to the absence of a teacher, the academy will make every effort to allocate replacement teacher reschedule the session at a convenient time.</p>
+                                    <h3>11. Termination</h3>
+                                    <p>11.1 Termination: 5pillars Academy reserves the right to terminate a student's enrolment in the Faith Essentials Program for non-compliance with these terms and conditions or for other valid reasons.</p>
+                                    <h3>12. Miscellaneous</h3>
+                                    <p>12.1 Governing Law: These terms and conditions are governed by the laws of [Jurisdiction], and any disputes shall be resolved in accordance with these laws.</p>
+                                    <p>12.2 Amendments: 5pillars Academy may amend these terms and conditions, including the refund policy, as necessary. Notice of any changes will be communicated to enrolled students and their parents or legal guardians.</p>
+                                    <br/>
+                                    <p>By enrolling in the Faith Essentials Program, you acknowledge that you have read, understood, and agreed to these terms and conditions, including the refund policy. If you have any questions, please contact the academy's administration for clarification.</p>
                                     <div className="terms-btn">
                                         <button onClick={handleShowTerms}>Close</button>
                                         {/*<button onClick={handleSTermsAndCondition}>Accept</button>*/}
