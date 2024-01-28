@@ -129,6 +129,10 @@ const NewHome = () => {
       behavior: "smooth",
     });
   };
+
+  const navigateToCourse=(path)=>{
+    window.location.href=path
+  }
   return (
     <>
       {isLoading ? (
@@ -141,21 +145,11 @@ const NewHome = () => {
             className={`back-to-top-button ${isVisible ? "visible" : ""}`}
             onClick={scrollToTop}
           >
-            {/* <IoIosArrowUp size={35} /> */}
             <img src={Arrowup}></img>
           </div>
-          {/* <a href="https://wa.me/447756393994">
-            <div className="chat"></div>
-          </a> */}
-
           <div className=" floating-container">
             <div className="floating-button">+</div>
             <div className="element-container">
-              {/* <a href="google.com">
-                <span className="float-element tooltip-left">
-                  <FcFaq size={40} />
-                </span>
-              </a> */}
               <a href="https://wa.me/447756393994">
                 <span className="float-element">
                   <SiWhatsapp size={30} />
@@ -172,7 +166,6 @@ const NewHome = () => {
 
             <div className="home-content">
               <div className=" home-content-text">
-                {/* <div style={{ display: "flex", alignItems: "center" }}> */}
                 <h1 style={{ marginBottom: "-10px" }}>Learn</h1>
                 <h1>
                   <TypeWriterEffect
@@ -200,7 +193,7 @@ const NewHome = () => {
               <img src={mosque} alt="mosque image" className="palli"></img>
 
               <div className=" course" data-aos="fade-down">
-                <div className=" coo c1">
+                <div className=" coo c1" onClick={()=>navigateToCourse('/qaida')}>
                   <div className="circle cir1"></div>
                   <div className="loader"></div>
                   <h3>Quran Recitation</h3>
@@ -209,12 +202,10 @@ const NewHome = () => {
                     Qaida and Quran recitation, working with you to achieve your
                     goals.
                   </p>
-                  <Link to="/qaida" style={{ textDecoration: "none" }}>
                     <h2 className="learn-btn"> Learn more</h2>
-                  </Link>
                   <hr className="line" />
                 </div>
-                <div className=" coo c2">
+                <div className=" coo c2" onClick={()=>navigateToCourse('/hifdh')}>
                   <div className="circle cir2"></div>
                   <div className="loader"></div>
                   <h3>Hifdh Lessons</h3>
@@ -223,12 +214,10 @@ const NewHome = () => {
                     the Quran and our Selected Surahs program is for anyone who
                     wants to memorise the important and often recited surahs
                   </p>
-                  <Link to="/hifdh" style={{ textDecoration: "none" }}>
                     <h2 className="learn-btn"> Learn more</h2>
-                  </Link>
                   <hr className="line" />
                 </div>
-                <div className="coo  c3">
+                <div className="coo  c3" onClick={()=>navigateToCourse('/islamicStudies')}>
                   <div className="circle cir3"></div>
                   <div className="loader"></div>
                   <h3>Islamic Lessons</h3>
@@ -237,9 +226,7 @@ const NewHome = () => {
                     Fiqh, Seerah & Islamic History, Aqeedah and contemporary
                     issues
                   </p>
-                  <Link to="/islamicStudies" style={{ textDecoration: "none" }}>
                     <h2 className="learn-btn"> Learn more</h2>
-                  </Link>
                   <hr className="line" />
                 </div>
               </div>
