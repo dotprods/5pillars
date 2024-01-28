@@ -32,50 +32,6 @@ const testimonials = [
 ];
 const tutors = [
   {
-    name: "Muhammadh Sirajdeen",
-    image: require("../assets/mUser.png"),
-    hoursTaught: " Hours Taught: 1500+(only one to one)",
-    qualification:
-      " Hafidh, Alim and Special course in Thajweedh and Arabic language",
-    numberOfStudents: "Number of students : 100+",
-    experience: "Experience: 5+ Years",
-    aboutMe:
-      " ☉ 5 years of experience as a Quran tutor working with students of all ages. \n☉ Highly innovative, creative and self motivated individual with a great enthusiasm and determination to secure a permanent position with a progressive institution. Highly developed leadership skills and the ability to prioritize a substantial workload.\n ☉ Believes in a student-centered approach to teaching, where the student's needs and interests are taken into account when designing lessons \n☉ Uses a variety of teaching methods, including lectures, discussions, readings, and multimedia materials, to engage students and foster critical thinking \n ☉ Tailors lessons to the student's learning style and pace, and provides regular feedback to help them improve.",
-  },
-  {
-    name: " Binth Hassan",
-    image: require("../assets/mUser.png"),
-    hoursTaught: "Hours Taught: 100+",
-    qualification: "Hafidha , Aalima , Qaaria  ",
-    numberOfStudents: "Number of students : 100+",
-    experience: "Experience: 6+ years",
-    aboutMe:
-      " Enthusiastic and ambitious tutor with a Degree in Islamic studies and Qur’anic sciences with experience in guiding students. Motivating the young and old towards Learning the Qur’an in its various fields is my passion.Analysing a range of effective ways of teaching and approaches that would benefit students, expanding my repertoire of knowledge in order to guide holistically and to nuture progressively is what I firmly believe as a teacher. strive towards creating an amicable environment for my students ,making it interactive, interesting and simple, building a positive and loving approach to learning the Qur’an and help achieve their goals in their Qur’anic journey successfully.",
-  },
-  {
-    name: "Noorah Ahamadeen",
-    image: require("../assets/mUser.png"),
-    hoursTaught: "Hours Taught: 804+",
-    qualification:
-      " Hafidh, Alim and Special course in Thajweedh and Arabic language Aalima and Diploma in Counseling and Psychology",
-    numberOfStudents: "Number of students : 64+",
-    experience: "Experience: 6+ Years",
-    aboutMe:
-      "I am Noorah Ahamadeen, an experienced tutor with a passion for teaching. Since graduating, I have solely focused on teaching and have gained extensive experience in handling all types of children. I believe in committing myself to everything I do and being punctual, as I understand the importance of valuing other people's time. My qualifications as an Aalima and a Diploma in Counseling and Psychology have allowed me to have a holistic approach in guiding my students. Seeing the positive outcomes of my teaching has only reaffirmed my belief that this is where my passion lies.",
-  },
-  {
-    name: "Kathija Ahamadeen ",
-    image: require("../assets/wUser.png"),
-    hoursTaught: "Hours Taught: 750+",
-    qualification:
-      " Hafidh, Alim and Special course in Thajweedh and Arabic language",
-    numberOfStudents: "Number of students : 66+",
-    experience:
-      "Experience: In Ain evening class 2 Years ,International classes: 3 years",
-    aboutMe:
-      "Im a graduate of CIT previously known as Ain institute ladies section of the batch 2021. Alhamdulillah I’ve graduated with a certification of very good and I hope to use my qualifications to provide the best teaching service I can provide to my students, to help them understand the beauty of their religion and the bounties of their Creator. I actively believe in the learning power of students and pursuing the limits of their knowledge and in making the lessons engaging and insightful.",
-  },
-  {
     name: "Usaidh Fazlur Rahman",
     image: require("../assets/mUser.png"),
     hoursTaught: "Hours Taught: 1050+",
@@ -104,17 +60,7 @@ const tutors = [
     experience: "Experience: 12+ Years",
     aboutMe:
       "I’m a dedicated Quran , Arabic and Islamic Studies educator on the journey of enabling my students to achieve their best.In this world that we live in I believe spirituality is the common saviour for all, it is my duty as an educator of the religious studies to facilitate this path and make it accessible and easy upon my students.May Allah guide us and keep us steadfast in His path. Aameen",
-  },
-  {
-    name: "Mymoona Mohamed Zahir",
-    image: require("../assets/wUser.png"),
-    hoursTaught: "Hours Taught: 2000+(only one to one)",
-    qualification: " Hafidha",
-    numberOfStudents: "Number of students : 180+",
-    experience: "Experience: 3+ Years",
-    aboutMe:
-      " I can teach Quran and Tajweed with best of my knowledge that I gained. I have devised and well plan methodology to help students who are struggling with their revision moreover I can deliver the lesson more convenient and interesting manner which make them easier to understand the lessons. And also I motivate and encourage students to make them interesting over the lessons. May Allah bless you and grant you the knowledge of Quran.",
-  },
+  }
 ];
 const Tutors = () => {
   const [isLoading, setIsLoading] = useState(true);
