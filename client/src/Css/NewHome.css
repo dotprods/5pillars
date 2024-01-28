@@ -307,7 +307,6 @@ html, body {
 }
 
 .home-content-text button {
-  padding: 0.5rem 1rem;
   font-size: 1.4rem;
   border-radius: 8px;
   background: #056e13;
@@ -315,7 +314,8 @@ html, body {
   font-weight: 400;
   padding: 10px;
   cursor: pointer;
-  box-shadow: 0px 0px 10px 2px rgba(7, 115, 7, 0.2);
+  /*box-shadow: 0px 0px 10px 2px rgba(7, 115, 7, 0.2);*/
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   position: absolute;
   left: 0;
   font-family: "Quicksand", sans-serif;
@@ -364,9 +364,10 @@ html, body {
   justify-content: center;
   text-align: center;
   align-items: center;
+  cursor: pointer;
 }
 .coo:hover .circle {
-  transform: translate(-10%, -30%) scale(1.2);
+  transform: translate(0%, -30%) scale(1.2);
   border: #056e13 2px solid;
 }
 .c1 {
@@ -427,23 +428,19 @@ html, body {
   top: 2%;
 }
 .cir1 {
-  background: url("../assets/icon1.svg");
   background-size: cover;
-  background-position: center;
+  background: url("../assets/icon1.svg") center;
 }
 .cir2 {
-  background: url("../assets/icon2.svg");
   background-size: cover;
-  background-position: center;
+  background: url("../assets/icon2.svg") center;
 }
 .cir3 {
-  background: url("../assets/icon3.svg");
   background-size: cover;
-  background-position: center;
+  background: url("../assets/icon3.svg") center;
 }
 .learn-btn {
   position: absolute;
-  color: #fff;
   font-size: large;
   border-radius: 10px;
   background: transparent;
@@ -506,6 +503,7 @@ html, body {
 .count-in p {
   font-family: "Quicksand", sans-serif;
   color: #0e8d1e;
+  text-align: center;
 }
 
 /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -721,9 +719,10 @@ html, body {
   border-radius: 10px;
 }
 .subscribe-text h2,
-p {
+.subscribe-text p {
   color: #757575;
   font-family: "Quicksand", sans-serif;
+  text-align: justify;
 }
 
 .subscribe-text p {
@@ -837,6 +836,7 @@ p {
     justify-content: center;
     align-items: center;
     text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   }
   .coo:hover .circle {
     transform: none;
@@ -852,10 +852,10 @@ p {
     font-size: large;
   }
   .learn-btn {
-    margin-bottom: 40px;
+    margin-bottom: 16px;
   }
   .c2 .learn-btn {
-    margin-bottom: -15px;
+    margin-bottom: 10px;
   }
   .count {
     margin-top: 10px;
