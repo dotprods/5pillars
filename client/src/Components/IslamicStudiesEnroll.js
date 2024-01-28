@@ -128,18 +128,18 @@ const IslamicStudiesEnrol = () => {
                                         )}
                                         {isIslamicLesson2 && (
                                             <h1>
-                                                £85/<span>Course</span>
+                                                £85<span></span>
                                             </h1>
                                         )}
                                         {isIslamicLesson1 && (
                                             <p>£10 Billed Monthly (20 sessions P/M)</p>
                                         )}
                                         {isIslamicLesson2 && (
-                                            <p>£85 Billed 10 Months (20 sessions P/M)</p>
+                                            <p>£85 Billed For Full Course With 15% Discount</p>
                                         )}
                                     </div>
                                 </div>
-                                <p style={{color: "white"}}>How many sessions would you like per week ?</p>
+                                <p style={{color: "white"}}>Choose your convenient package ?</p>
                                 <div className="btn-row">
                                     <div className="btn-row1">
                                         <button
@@ -186,19 +186,31 @@ const IslamicStudiesEnrol = () => {
                             </div>
                             {isIslamicLesson1 && (
                                 <div className="dropdown-content">
-                                    <h2> Twenty sessions per month</h2>
+                                    <h2> Two sessions per month</h2>
                                     <h2>45 min sessions</h2>
                                     <h2>Set syllabus</h2>
                                     <h2> Highly qualified sholars from the UK</h2>
+                                    <h2>Class Timings:</h2>
+                                    <ul>
+                                        <li>6-9 YEAR OLDS: SATURDAYS 9:30AM - 10-30AM</li>
+                                        <li>10-15 YEAR OLDS: SATURDAYS 10:30AM - 11:30AM</li>
+                                        <li>16-22 YEAR OLDS: SUNDAYS 4:30PM - 5:30PM</li>
+                                    </ul>
                                 </div>
                             )}
                             {isIslamicLesson2 && (
                                 <div className="dropdown-content">
                                     <h1 className="save">SAVE £ 15 ANNUALLY</h1>
-                                    <h2> Twenty sessions per month</h2>
+                                    <h2> Two sessions per month</h2>
                                     <h2>45 min sessions</h2>
                                     <h2>Set syllabus</h2>
                                     <h2> Highly qualified sholars from the UK</h2>
+                                    <h2>Class Timings:</h2>
+                                    <ul>
+                                        <li>6-9 YEAR OLDS: SATURDAYS 9:30AM - 10-30AM</li>
+                                        <li>10-15 YEAR OLDS: SATURDAYS 10:30AM - 11:30AM</li>
+                                        <li>16-22 YEAR OLDS: SUNDAYS 4:30PM - 5:30PM</li>
+                                    </ul>
                                 </div>
                             )}
                         </div>
