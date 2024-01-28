@@ -392,7 +392,7 @@ const IslamicRegister = () => {
                                     <h1 style={{fontSize: "35px"}}>£{amount}/Month</h1>
                                 }
                                 {packages === "Islamic lessons - Full course" &&
-                                    <h1 style={{fontSize: "35px"}}>£{amount}/Course</h1>
+                                    <h1 style={{fontSize: "35px"}}>£{amount}</h1>
                                 }
                                 <Link to="/packages" style={{ textDecoration: "none" }}>
                                     <button className="pack">

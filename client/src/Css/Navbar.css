@@ -120,7 +120,7 @@ button {
   .nav-links-mobile li {
     color: #d48c2d;
   }
-  ul li {
+ nav ul li {
     padding: 25px 32px;
     width: 100%;
     transition: all 0.5s ease-in-out;
