@@ -132,7 +132,7 @@ const IslamicStudiesEnrol = () => {
                                             </h1>
                                         )}
                                         {isIslamicLesson1 && (
-                                            <p>£10 Billed Monthly (20 sessions P/M)</p>
+                                            <p>£10 Billed Monthly (2 sessions P/M)</p>
                                         )}
                                         {isIslamicLesson2 && (
                                             <p>£85 Billed For Full Course With 15% Discount</p>
