@@ -321,7 +321,7 @@ const HifdhEnrol = () => {
                         className="other-session"
                         style={{ fontWeight: "600", fontSize: "28px" }}
                       >
-                        5 Session
+                        5 Sessions
                       </h2>
                     )}
 
