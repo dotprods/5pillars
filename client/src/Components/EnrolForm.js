@@ -143,7 +143,7 @@ const EnrolForm = () => {
     let formIsValid = true;
     const newErrors = { ...pErrors };
 
-    if (!sChecked) {
+    if (!pChecked) {
       formIsValid = false;
       // setShowTerms(true);
     }
@@ -204,7 +204,7 @@ const EnrolForm = () => {
       newErrors.amount = "Please enter the amount";
     }
 
-    if (formIsValid && sChecked) {
+    if (formIsValid && pChecked) {
       console.log(parentData);
       console.log("Package is: ", packages);
       console.log("Amount is: ", amount);
@@ -948,7 +948,7 @@ const EnrolForm = () => {
                     <div className=" terms-group ">
                       <input type={"checkbox"} checked={pChecked} onChange={handlePTermsAndCondition}/>
                       <p className="terms" onClick={handleShowTerms}>
-                        Terms and Conditions
+                        I accept the Terms & Conditions
                       </p>
                     </div>
                   </div>
@@ -1415,7 +1415,7 @@ const EnrolForm = () => {
                   <div className=" terms-group ">
                     <input type={"checkbox"}  checked={sChecked} onChange={handleSTermsAndCondition}/>
                     <p className="terms" onClick={handleShowTerms}>
-                      Terms and Conditions
+                      I accept the Terms & Conditions
                     </p>
                   </div>
                   {sErrors.error && <span className="error">{sErrors.error}</span>}

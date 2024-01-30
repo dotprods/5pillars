@@ -128,7 +128,7 @@ const IslamicRegister = () => {
         let formIsValid = true;
         const newErrors = { ...pErrors };
 
-        if (!sChecked) {
+        if (!pChecked) {
             formIsValid = false;
             // setShowTerms(true);
         }
@@ -195,7 +195,9 @@ const IslamicRegister = () => {
             newErrors.amount = "Please enter the amount";
         }
 
-        if (formIsValid && sChecked) {
+        console.log("isValid",formIsValid,sChecked)
+
+        if (formIsValid && pChecked) {
             console.log(parentData);
             console.log("Package is: ", packages);
             console.log("Amount is: ", amount);
@@ -317,6 +319,7 @@ const IslamicRegister = () => {
             formIsValid = false;
             newErrors.amount = "Please enter the amount";
         }
+        console.log("isValid",formIsValid,sChecked)
 
         if (formIsValid && sChecked) {
             // Perform form submission logic here
@@ -966,7 +969,7 @@ const IslamicRegister = () => {
                                             <input type={"checkbox"} checked={pChecked}
                                                    onChange={handlePTermsAndCondition}/>
                                             <p className="terms" onClick={handleShowTerms}>
-                                                Terms and Conditions
+                                                I accept the Terms & Conditions
                                             </p>
                                         </div>
                                     </div>
@@ -1452,7 +1455,7 @@ const IslamicRegister = () => {
                                     <div className=" terms-group ">
                                         <input type={"checkbox"}  checked={sChecked} onChange={handleSTermsAndCondition}/>
                                         <p className="terms" onClick={handleShowTerms}>
-                                            Terms and Conditions
+                                            I accept the Terms & Conditions
                                         </p>
                                     </div>
                                     {sErrors.error && <span className="error">{sErrors.error}</span>}
