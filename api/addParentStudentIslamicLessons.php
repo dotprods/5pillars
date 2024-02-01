@@ -54,8 +54,8 @@ $conn->close();
 
 // Send confirmation email
 $url = 'https://api.sendgrid.com/v3/mail/send';
-$apiKey = ''; // replace with your SendGrid API Key
-$templateId = ''; // replace with your SendGrid template ID
+$apiKey = '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'; // replace with your SendGrid API Key
+$templateId = 'd-6048c1ec13d54c75983d1f42589c0ae0'; // replace with your SendGrid template ID
 
 $jsonData = [
     'personalizations' => [
@@ -74,7 +74,15 @@ $jsonData = [
     'from' => [
         'email' => 'info@5pillarsacademy.com'
     ],
-    'template_id' => $templateId
+    'template_id' => $templateId,
+    'attachments' => [
+        [
+            'content' => base64_encode(file_get_contents('/Faith Essentials Introduction New Students.pdf')),
+            'filename' => 'Faith Essentials Introduction New Students.pdf',
+            'type' => 'application/pdf',
+            'disposition' => 'attachment'
+        ]
+    ]
 ];
 
 
