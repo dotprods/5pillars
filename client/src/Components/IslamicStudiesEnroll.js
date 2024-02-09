@@ -186,7 +186,7 @@ const IslamicStudiesEnrol = () => {
                             </div>
                             {isIslamicLesson1 && (
                                 <div className="dropdown-content">
-                                    <h2> Two sessions per month</h2>
+                                    <h2> 2 sessions per month</h2>
                                     <h2>45 min sessions</h2>
                                     <h2>Set syllabus</h2>
                                     <h2> Highly qualified scholars </h2>
