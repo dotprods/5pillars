@@ -189,7 +189,7 @@ const IslamicStudiesEnrol = () => {
                                     <h2> Two sessions per month</h2>
                                     <h2>45 min sessions</h2>
                                     <h2>Set syllabus</h2>
-                                    <h2> Highly qualified sholars from the UK</h2>
+                                    <h2> Highly qualified scholars </h2>
                                     <h2>Class Timings:</h2>
                                     <ul>
                                         <li>6-9 YEAR OLDS: SATURDAYS 9:30AM - 10-30AM</li>
@@ -204,7 +204,7 @@ const IslamicStudiesEnrol = () => {
                                     <h2> Two sessions per month</h2>
                                     <h2>45 min sessions</h2>
                                     <h2>Set syllabus</h2>
-                                    <h2> Highly qualified sholars from the UK</h2>
+                                    <h2> Highly qualified scholars</h2>
                                     <h2>Class Timings:</h2>
                                     <ul>
                                         <li>6-9 YEAR OLDS: SATURDAYS 9:30AM - 10-30AM</li>
