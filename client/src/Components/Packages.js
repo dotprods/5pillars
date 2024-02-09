@@ -148,7 +148,7 @@ const Packages = () => {
                   <h2>2 sessions per month</h2>
                   <h2>45 Mins sessions</h2>
                   <h2> Set syllabus</h2>
-                  <h2>Highly qualified sholars from the UK</h2>
+                  <h2>Highly qualified scholars </h2>
                 </div>
               )}
             </div>
