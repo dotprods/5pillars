@@ -29,7 +29,7 @@ if ($data != null) {
     $message = $data['message'];
 
     $sql = "INSERT INTO enquiryForm (fullName, email, message) 
-      VALUES ('fullName', 'email', 'message')";
+      VALUES ('$fullName', '$email', '$message')";
 
     if ($conn->query($sql) === TRUE) {
         $response['db'] = "New record created successfully";
