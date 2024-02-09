@@ -66,12 +66,12 @@ const ContactUs = () => {
       // Perform form submission logic here
       console.log(formData2);
       try {
-        fetch("https://www.5pillarsacademy.com/api/addParentStudent.php", {
+        fetch("https://www.5pillarsacademy.com/api/addContactUs.php", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(dataToSend),
+          body: JSON.stringify(formData2),
         })
             .then((response) => response.json())
             .then((data) => {
