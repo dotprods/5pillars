@@ -65,6 +65,29 @@ const ContactUs = () => {
     if (formIsValid) {
       // Perform form submission logic here
       console.log(formData2);
+      try {
+        fetch("https://www.5pillarsacademy.com/api/addParentStudent.php", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(dataToSend),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+              console.log(data);
+              if (
+                  data.db === "New record created successfully"
+              ) {
+                console.log(data.db)
+              } else {
+                console.error("Server error:", data);
+              }
+            })
+            .catch((error) => console.error("Fetch error:", error));
+      } catch (error) {
+        console.error(error);
+      }
       handleSuccess();
       setFormData2({
         fullName: "",
