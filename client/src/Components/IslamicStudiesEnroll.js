@@ -202,7 +202,7 @@ const IslamicStudiesEnrol = () => {
                                     <ul>
                                         <li>6-9 YEAR OLDS: SUNDAY 10:30AM - 11-30 PM</li>
                                         <li>10-15 YEAR OLDS: SATURDAYS 10:30AM - 11:30 PM</li>
-                                        <li>16+ YEAR OLDS: SUNDAYS 4:30PM - 5:30PM</li>
+                                        <li>16+ YEAR OLDS (Coming Soon in September)</li>
                                     </ul>
                                 </div>
                             )}
