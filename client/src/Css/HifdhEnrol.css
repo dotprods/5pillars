@@ -303,7 +303,7 @@
     border-radius: 0 25%;
     text-align: left;
     transition: opacity 0.8s ease;
-    padding: 10px;
+    padding: 10px 0 30px 10px;
 }
 
 .dropdown-content h2 {

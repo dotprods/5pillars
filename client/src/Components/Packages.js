@@ -145,9 +145,17 @@ const Packages = () => {
               </div>
               {isDropdownVisible2 && (
                 <div className="dropdown-content">
-                  <h2>2 sessions per month</h2>
+                  <h2>4 sessions per month</h2>
                   <h2>45 Mins sessions</h2>
-                  <h2> Set syllabus</h2>
+                  <h2>20 Sessions over 6 months will cover :</h2>
+                  <ul>
+                    <li>Aqeeda</li>
+                    <li>Hadith</li>
+                    <li>Seerah</li>
+                    <li>Fiqh</li>
+                    <li>Akhlaaq</li>
+                    <li>& Many more topics</li>
+                  </ul>
                   <h2>Highly qualified scholars </h2>
                 </div>
               )}

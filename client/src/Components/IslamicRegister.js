@@ -19,7 +19,7 @@ const IslamicRegister = () => {
     const [amount, setAmount] = useState(7);
     const [packages, setPackage] = useState("");
     const sessionURLs = {
-        "Islamic lessons - Monthly": "https://buy.stripe.com/14k9Es5pia5e4ZGbJ7",
+        "Islamic lessons - Monthly": "https://buy.stripe.com/fZe03SeZSfpy2Ry4gN",
         "Islamic lessons - Full course": "https://buy.stripe.com/3cs5oc7xq5OYak0dRg",
     };
     const [pErrors, setPErrors] = useState({

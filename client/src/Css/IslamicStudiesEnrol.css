@@ -29,7 +29,7 @@
 .dropdown-content ul{
   margin-top: -20px;
   margin-left: 50px;
-  padding-bottom: 20px;
+  /*padding-bottom: 20px;*/
 }
 .dropdown-content ul li {
   color: gray;
