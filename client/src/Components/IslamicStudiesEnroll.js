@@ -123,7 +123,7 @@ const IslamicStudiesEnrol = () => {
 
                                         {isIslamicLesson1 && (
                                             <h1 className="fff">
-                                                £10/<span>Month</span>
+                                                £20/<span>Month</span>
                                             </h1>
                                         )}
                                         {isIslamicLesson2 && (
@@ -132,7 +132,7 @@ const IslamicStudiesEnrol = () => {
                                             </h1>
                                         )}
                                         {isIslamicLesson1 && (
-                                            <p>£10 Billed Monthly (2 sessions P/M)</p>
+                                            <p>£20 Billed Monthly (4 sessions P/M)</p>
                                         )}
                                         {isIslamicLesson2 && (
                                             <p>£85 Billed For Full Course With 15% Discount</p>
@@ -186,15 +186,23 @@ const IslamicStudiesEnrol = () => {
                             </div>
                             {isIslamicLesson1 && (
                                 <div className="dropdown-content">
-                                    <h2> 2 sessions per month</h2>
+                                    <h2> 4 sessions per month</h2>
                                     <h2>45 min sessions</h2>
-                                    <h2>Set syllabus</h2>
+                                    <h2>20 Sessions over 6 months will cover :</h2>
+                                    <ul>
+                                        <li>Aqeeda</li>
+                                        <li>Hadith</li>
+                                        <li>Seerah</li>
+                                        <li>Fiqh</li>
+                                        <li>Akhlaaq</li>
+                                        <li>& Many more topics</li>
+                                    </ul>
                                     <h2> Highly qualified scholars </h2>
                                     <h2>Class Timings:</h2>
                                     <ul>
-                                        <li>6-9 YEAR OLDS: SATURDAYS 9:30AM - 10-30AM</li>
-                                        <li>10-15 YEAR OLDS: SATURDAYS 10:30AM - 11:30AM</li>
-                                        <li>16-22 YEAR OLDS: SUNDAYS 4:30PM - 5:30PM</li>
+                                        <li>6-9 YEAR OLDS: SUNDAY 10:30AM - 11-30 PM</li>
+                                        <li>10-15 YEAR OLDS: SATURDAYS 10:30AM - 11:30 PM</li>
+                                        <li>16+ YEAR OLDS: SUNDAYS 4:30PM - 5:30PM</li>
                                     </ul>
                                 </div>
                             )}
