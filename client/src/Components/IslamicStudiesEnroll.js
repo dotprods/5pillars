@@ -186,7 +186,7 @@ const IslamicStudiesEnrol = () => {
                             </div>
                             {isIslamicLesson1 && (
                                 <div className="dropdown-content">
-                                    <h2> 4 sessions per month</h2>
+                                    <h2> Four sessions per month</h2>
                                     <h2>45 min sessions</h2>
                                     <h2>20 Sessions over 6 months will cover :</h2>
                                     <ul>
@@ -200,24 +200,31 @@ const IslamicStudiesEnrol = () => {
                                     <h2> Highly qualified scholars </h2>
                                     <h2>Class Timings:</h2>
                                     <ul>
-                                        <li>6-9 YEAR OLDS: SUNDAY 10:30AM - 11-30 PM</li>
-                                        <li>10-15 YEAR OLDS: SATURDAYS 10:30AM - 11:30 PM</li>
+                                        <li>6-9 YEAR OLDS: SUNDAY 10:30AM - 11-30 PM (UK)</li>
+                                        <li>10-15 YEAR OLDS: SATURDAYS 10:30AM - 11:30 PM (UK)</li>
                                         <li>16+ YEAR OLDS (Coming Soon in September)</li>
                                     </ul>
                                 </div>
                             )}
                             {isIslamicLesson2 && (
                                 <div className="dropdown-content">
-                                    <h1 className="save">SAVE £ 15 ANNUALLY</h1>
-                                    <h2> Two sessions per month</h2>
+                                    <h2> Four sessions per month</h2>
                                     <h2>45 min sessions</h2>
-                                    <h2>Set syllabus</h2>
-                                    <h2> Highly qualified scholars</h2>
+                                    <h2>20 Sessions over 6 months will cover :</h2>
+                                    <ul>
+                                        <li>Aqeeda</li>
+                                        <li>Hadith</li>
+                                        <li>Seerah</li>
+                                        <li>Fiqh</li>
+                                        <li>Akhlaaq</li>
+                                        <li>& Many more topics</li>
+                                    </ul>
+                                    <h2> Highly qualified scholars </h2>
                                     <h2>Class Timings:</h2>
                                     <ul>
-                                        <li>6-9 YEAR OLDS: SATURDAYS 9:30AM - 10-30AM</li>
-                                        <li>10-15 YEAR OLDS: SATURDAYS 10:30AM - 11:30AM</li>
-                                        <li>16-22 YEAR OLDS: SUNDAYS 4:30PM - 5:30PM</li>
+                                        <li>6-9 YEAR OLDS: SUNDAY 10:30AM - 11-30 PM (UK)</li>
+                                        <li>10-15 YEAR OLDS: SATURDAYS 10:30AM - 11:30 PM (UK)</li>
+                                        <li>16+ YEAR OLDS (Coming Soon in September)</li>
                                     </ul>
                                 </div>
                             )}
