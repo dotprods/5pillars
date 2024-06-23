@@ -30,7 +30,7 @@ const IslamicStudiesEnrol = () => {
 
         setSurahSession1(true);
         setIslamicLessonMonthlyOpacity(1);
-        setAmount(10);
+        setAmount(20);
         setIslamicLessonPackage("Islamic lessons - Monthly");
     };
 
